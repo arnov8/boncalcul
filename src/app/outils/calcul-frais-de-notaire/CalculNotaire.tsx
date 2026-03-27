@@ -3,7 +3,124 @@
 import { useState, useMemo } from "react";
 
 type TypeBien = "ancien" | "neuf";
-type TauxDepartement = "standard" | "reduit";
+
+interface Departement {
+  code: string;
+  nom: string;
+  taux: number;
+}
+
+const DEPARTEMENTS: Departement[] = [
+  { code: "01", nom: "Ain", taux: 4.50 },
+  { code: "02", nom: "Aisne", taux: 4.50 },
+  { code: "03", nom: "Allier", taux: 4.50 },
+  { code: "04", nom: "Alpes-de-Haute-Provence", taux: 4.50 },
+  { code: "05", nom: "Hautes-Alpes", taux: 4.50 },
+  { code: "06", nom: "Alpes-Maritimes", taux: 4.50 },
+  { code: "07", nom: "Ard\u00e8che", taux: 4.50 },
+  { code: "08", nom: "Ardennes", taux: 4.50 },
+  { code: "09", nom: "Ari\u00e8ge", taux: 4.50 },
+  { code: "10", nom: "Aube", taux: 4.50 },
+  { code: "11", nom: "Aude", taux: 4.50 },
+  { code: "12", nom: "Aveyron", taux: 4.50 },
+  { code: "13", nom: "Bouches-du-Rh\u00f4ne", taux: 4.50 },
+  { code: "14", nom: "Calvados", taux: 4.50 },
+  { code: "15", nom: "Cantal", taux: 4.50 },
+  { code: "16", nom: "Charente", taux: 4.50 },
+  { code: "17", nom: "Charente-Maritime", taux: 4.50 },
+  { code: "18", nom: "Cher", taux: 4.50 },
+  { code: "19", nom: "Corr\u00e8ze", taux: 4.50 },
+  { code: "2A", nom: "Corse-du-Sud", taux: 4.50 },
+  { code: "2B", nom: "Haute-Corse", taux: 4.50 },
+  { code: "21", nom: "C\u00f4te-d'Or", taux: 4.50 },
+  { code: "22", nom: "C\u00f4tes-d'Armor", taux: 4.50 },
+  { code: "23", nom: "Creuse", taux: 4.50 },
+  { code: "24", nom: "Dordogne", taux: 4.50 },
+  { code: "25", nom: "Doubs", taux: 4.50 },
+  { code: "26", nom: "Dr\u00f4me", taux: 4.50 },
+  { code: "27", nom: "Eure", taux: 4.50 },
+  { code: "28", nom: "Eure-et-Loir", taux: 4.50 },
+  { code: "29", nom: "Finist\u00e8re", taux: 4.50 },
+  { code: "30", nom: "Gard", taux: 4.50 },
+  { code: "31", nom: "Haute-Garonne", taux: 4.50 },
+  { code: "32", nom: "Gers", taux: 4.50 },
+  { code: "33", nom: "Gironde", taux: 4.50 },
+  { code: "34", nom: "H\u00e9rault", taux: 4.50 },
+  { code: "35", nom: "Ille-et-Vilaine", taux: 4.50 },
+  { code: "36", nom: "Indre", taux: 3.80 },
+  { code: "37", nom: "Indre-et-Loire", taux: 4.50 },
+  { code: "38", nom: "Is\u00e8re", taux: 3.80 },
+  { code: "39", nom: "Jura", taux: 4.50 },
+  { code: "40", nom: "Landes", taux: 4.50 },
+  { code: "41", nom: "Loir-et-Cher", taux: 4.50 },
+  { code: "42", nom: "Loire", taux: 4.50 },
+  { code: "43", nom: "Haute-Loire", taux: 4.50 },
+  { code: "44", nom: "Loire-Atlantique", taux: 4.50 },
+  { code: "45", nom: "Loiret", taux: 4.50 },
+  { code: "46", nom: "Lot", taux: 4.50 },
+  { code: "47", nom: "Lot-et-Garonne", taux: 4.50 },
+  { code: "48", nom: "Loz\u00e8re", taux: 4.50 },
+  { code: "49", nom: "Maine-et-Loire", taux: 4.50 },
+  { code: "50", nom: "Manche", taux: 4.50 },
+  { code: "51", nom: "Marne", taux: 4.50 },
+  { code: "52", nom: "Haute-Marne", taux: 4.50 },
+  { code: "53", nom: "Mayenne", taux: 4.50 },
+  { code: "54", nom: "Meurthe-et-Moselle", taux: 4.50 },
+  { code: "55", nom: "Meuse", taux: 4.50 },
+  { code: "56", nom: "Morbihan", taux: 3.80 },
+  { code: "57", nom: "Moselle", taux: 4.50 },
+  { code: "58", nom: "Ni\u00e8vre", taux: 4.50 },
+  { code: "59", nom: "Nord", taux: 4.50 },
+  { code: "60", nom: "Oise", taux: 4.50 },
+  { code: "61", nom: "Orne", taux: 4.50 },
+  { code: "62", nom: "Pas-de-Calais", taux: 4.50 },
+  { code: "63", nom: "Puy-de-D\u00f4me", taux: 4.50 },
+  { code: "64", nom: "Pyr\u00e9n\u00e9es-Atlantiques", taux: 4.50 },
+  { code: "65", nom: "Hautes-Pyr\u00e9n\u00e9es", taux: 4.50 },
+  { code: "66", nom: "Pyr\u00e9n\u00e9es-Orientales", taux: 4.50 },
+  { code: "67", nom: "Bas-Rhin", taux: 4.50 },
+  { code: "68", nom: "Haut-Rhin", taux: 4.50 },
+  { code: "69", nom: "Rh\u00f4ne", taux: 4.50 },
+  { code: "70", nom: "Haute-Sa\u00f4ne", taux: 4.50 },
+  { code: "71", nom: "Sa\u00f4ne-et-Loire", taux: 4.50 },
+  { code: "72", nom: "Sarthe", taux: 4.50 },
+  { code: "73", nom: "Savoie", taux: 4.50 },
+  { code: "74", nom: "Haute-Savoie", taux: 4.50 },
+  { code: "75", nom: "Paris", taux: 4.50 },
+  { code: "76", nom: "Seine-Maritime", taux: 4.50 },
+  { code: "77", nom: "Seine-et-Marne", taux: 4.50 },
+  { code: "78", nom: "Yvelines", taux: 4.50 },
+  { code: "79", nom: "Deux-S\u00e8vres", taux: 4.50 },
+  { code: "80", nom: "Somme", taux: 4.50 },
+  { code: "81", nom: "Tarn", taux: 4.50 },
+  { code: "82", nom: "Tarn-et-Garonne", taux: 4.50 },
+  { code: "83", nom: "Var", taux: 4.50 },
+  { code: "84", nom: "Vaucluse", taux: 4.50 },
+  { code: "85", nom: "Vend\u00e9e", taux: 4.50 },
+  { code: "86", nom: "Vienne", taux: 4.50 },
+  { code: "87", nom: "Haute-Vienne", taux: 4.50 },
+  { code: "88", nom: "Vosges", taux: 4.50 },
+  { code: "89", nom: "Yonne", taux: 4.50 },
+  { code: "90", nom: "Territoire de Belfort", taux: 4.50 },
+  { code: "91", nom: "Essonne", taux: 4.50 },
+  { code: "92", nom: "Hauts-de-Seine", taux: 4.50 },
+  { code: "93", nom: "Seine-Saint-Denis", taux: 4.50 },
+  { code: "94", nom: "Val-de-Marne", taux: 4.50 },
+  { code: "95", nom: "Val-d'Oise", taux: 4.50 },
+  { code: "971", nom: "Guadeloupe", taux: 4.50 },
+  { code: "972", nom: "Martinique", taux: 4.50 },
+  { code: "973", nom: "Guyane", taux: 4.50 },
+  { code: "974", nom: "R\u00e9union", taux: 4.50 },
+  { code: "976", nom: "Mayotte", taux: 3.80 },
+];
+
+function getDepartement(code: string): Departement {
+  return DEPARTEMENTS.find((d) => d.code === code) ?? DEPARTEMENTS[0];
+}
+
+function formatTaux(taux: number): string {
+  return taux.toFixed(2).replace(".", ",");
+}
 
 function calculerEmoluments(prix: number): number {
   let emoluments = 0;
@@ -31,7 +148,7 @@ function calculerEmoluments(prix: number): number {
 function calculerDroitsMutation(
   prix: number,
   type: TypeBien,
-  tauxDept: TauxDepartement
+  tauxDepartement: number
 ): { total: number; departement: number; commune: number; etat: number } {
   if (type === "neuf") {
     const taxePub = prix * 0.00715;
@@ -43,11 +160,11 @@ function calculerDroitsMutation(
     };
   }
 
-  const tauxDepartement = tauxDept === "standard" ? 0.045 : 0.038;
+  const tauxDept = tauxDepartement / 100;
   const tauxCommune = 0.012;
   const tauxEtat = 0.001;
 
-  const departement = prix * tauxDepartement;
+  const departement = prix * tauxDept;
   const commune = prix * tauxCommune;
   const etat = prix * tauxEtat;
 
@@ -71,7 +188,9 @@ function formatEuro(n: number): string {
 export default function CalculNotaire() {
   const [prixAchat, setPrixAchat] = useState<string>("250000");
   const [typeBien, setTypeBien] = useState<TypeBien>("ancien");
-  const [tauxDept, setTauxDept] = useState<TauxDepartement>("standard");
+  const [deptCode, setDeptCode] = useState<string>("75");
+
+  const dept = useMemo(() => getDepartement(deptCode), [deptCode]);
 
   const prix = useMemo(() => {
     const p = parseFloat(prixAchat.replace(/\s/g, ""));
@@ -81,7 +200,7 @@ export default function CalculNotaire() {
   const resultats = useMemo(() => {
     if (prix === 0) return null;
 
-    const droits = calculerDroitsMutation(prix, typeBien, tauxDept);
+    const droits = calculerDroitsMutation(prix, typeBien, dept.taux);
     const emoluments = calculerEmoluments(prix);
     const fraisDivers = typeBien === "ancien" ? 1200 : 1000;
 
@@ -97,7 +216,7 @@ export default function CalculNotaire() {
       prixTotal,
       pourcentage,
     };
-  }, [prix, typeBien, tauxDept]);
+  }, [prix, typeBien, dept]);
 
   return (
     <div className="bg-white rounded-2xl shadow-lg p-6 sm:p-8">
@@ -153,27 +272,26 @@ export default function CalculNotaire() {
           </select>
         </div>
 
-        {/* Taux département */}
+        {/* Département */}
         <div>
           <label
             htmlFor="dept"
             className="block text-sm font-medium text-gray-700 mb-1"
           >
-            Taux du d&eacute;partement
+            D&eacute;partement
           </label>
           <select
             id="dept"
-            value={tauxDept}
-            onChange={(e) => setTauxDept(e.target.value as TauxDepartement)}
+            value={deptCode}
+            onChange={(e) => setDeptCode(e.target.value)}
             className="w-full rounded-lg border border-gray-300 px-4 py-3 text-base focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition bg-white"
             disabled={typeBien === "neuf"}
           >
-            <option value="standard">
-              Taux standard 4,5&nbsp;% (majorit&eacute; des d&eacute;partements)
-            </option>
-            <option value="reduit">
-              Taux r&eacute;duit 3,8&nbsp;% (Indre, Is&egrave;re, Morbihan, Mayotte)
-            </option>
+            {DEPARTEMENTS.map((d) => (
+              <option key={d.code} value={d.code}>
+                {d.code} - {d.nom} ({formatTaux(d.taux)}&nbsp;%)
+              </option>
+            ))}
           </select>
           {typeBien === "neuf" && (
             <p className="text-xs text-gray-500 mt-1">
@@ -215,7 +333,7 @@ export default function CalculNotaire() {
                 <>
                   <div className="flex justify-between pl-4">
                     <dt className="text-gray-500">
-                      &rarr; Taxe d&eacute;partementale ({tauxDept === "standard" ? "4,5" : "3,8"}&nbsp;%)
+                      &rarr; Taxe d&eacute;partementale &mdash; {dept.nom} ({formatTaux(dept.taux)}&nbsp;%)
                     </dt>
                     <dd className="text-gray-700">
                       {formatEuro(resultats.droits.departement)}
@@ -223,7 +341,7 @@ export default function CalculNotaire() {
                   </div>
                   <div className="flex justify-between pl-4">
                     <dt className="text-gray-500">
-                      &rarr; Taxe communale (1,2&nbsp;%)
+                      &rarr; Taxe communale (1,20&nbsp;%)
                     </dt>
                     <dd className="text-gray-700">
                       {formatEuro(resultats.droits.commune)}
@@ -231,7 +349,7 @@ export default function CalculNotaire() {
                   </div>
                   <div className="flex justify-between pl-4">
                     <dt className="text-gray-500">
-                      &rarr; Taxe &Eacute;tat (0,1&nbsp;%)
+                      &rarr; Taxe &Eacute;tat (0,10&nbsp;%)
                     </dt>
                     <dd className="text-gray-700">
                       {formatEuro(resultats.droits.etat)}

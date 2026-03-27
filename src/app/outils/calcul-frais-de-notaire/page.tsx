@@ -96,8 +96,31 @@ export default function PageFraisNotaire() {
           <AdBanner slot="notaire-mid" format="horizontal" />
         </div>
 
+        {/* ---------- FAQ ---------- */}
+        <section className="bg-gray-50 rounded-2xl py-10 px-6 mb-10">
+          <h2 className="text-2xl font-bold text-gray-800 mb-6">
+            Questions fr&eacute;quentes sur les frais de notaire
+          </h2>
+          <div className="space-y-3">
+            {faqQuestions.map((faq, i) => (
+              <details
+                key={i}
+                className="bg-white rounded-xl shadow-sm border border-gray-100 p-5 group"
+              >
+                <summary className="font-semibold text-gray-800 cursor-pointer list-none flex items-center justify-between gap-4">
+                  <span>{faq.question}</span>
+                  <span className="text-gray-400 group-open:rotate-180 transition-transform shrink-0">&#9660;</span>
+                </summary>
+                <p className="mt-3 text-gray-600 text-sm leading-relaxed">
+                  {faq.answer}
+                </p>
+              </details>
+            ))}
+          </div>
+        </section>
+
         {/* ---------- Contenu SEO ---------- */}
-        <article className="prose prose-blue max-w-none">
+        <article className="prose prose-lg prose-blue max-w-none">
           <h2>Qu&apos;est-ce que les frais de notaire&nbsp;?</h2>
           <p>
             Lorsque vous achetez un bien immobilier en France, vous devez
@@ -252,31 +275,6 @@ export default function PageFraisNotaire() {
         <div className="my-10">
           <AdBanner slot="notaire-bottom" format="horizontal" />
         </div>
-
-        {/* ---------- FAQ ---------- */}
-        <section className="mt-12">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">
-            Questions fr&eacute;quentes sur les frais de notaire
-          </h2>
-          <div className="space-y-4">
-            {faqQuestions.map((faq, i) => (
-              <details
-                key={i}
-                className="group bg-white border border-gray-200 rounded-xl"
-              >
-                <summary className="flex items-center justify-between cursor-pointer px-5 py-4 text-gray-900 font-medium hover:text-blue-600 transition">
-                  {faq.question}
-                  <span className="ml-4 shrink-0 text-gray-400 group-open:rotate-180 transition-transform">
-                    &#9662;
-                  </span>
-                </summary>
-                <div className="px-5 pb-4 text-gray-600 text-sm leading-relaxed">
-                  {faq.answer}
-                </div>
-              </details>
-            ))}
-          </div>
-        </section>
 
         {/* ---------- Pub ---------- */}
         <div className="mt-10">

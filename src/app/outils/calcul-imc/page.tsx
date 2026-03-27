@@ -93,9 +93,34 @@ export default function PageCalculIMC() {
         <AdBanner slot="imc-mid" format="horizontal" className="my-8" />
       </div>
 
+      {/* FAQ */}
+      <section className="bg-gray-50 py-12">
+        <div className="max-w-4xl mx-auto px-4">
+          <h2 className="text-2xl font-bold text-gray-800 mb-6">
+            Questions frequentes sur l&apos;IMC
+          </h2>
+          <div className="space-y-3">
+            {faqQuestions.map((q, i) => (
+              <details
+                key={i}
+                className="bg-white rounded-xl shadow-sm border border-gray-100 p-5 group"
+              >
+                <summary className="font-semibold text-gray-800 cursor-pointer list-none flex items-center justify-between gap-4">
+                  <span>{q.question}</span>
+                  <span className="text-gray-400 group-open:rotate-180 transition-transform shrink-0">&#9660;</span>
+                </summary>
+                <p className="mt-3 text-gray-600 text-sm leading-relaxed">
+                  {q.answer}
+                </p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* SEO Content */}
       <section className="max-w-4xl mx-auto px-4 py-8">
-        <div className="prose prose-gray max-w-none">
+        <div className="prose prose-lg prose-gray max-w-none">
           <h2>Qu&apos;est-ce que l&apos;IMC (Indice de Masse Corporelle) ?</h2>
           <p>
             L&apos;<strong>Indice de Masse Corporelle</strong>, ou{" "}
@@ -300,32 +325,9 @@ export default function PageCalculIMC() {
         <AdBanner slot="imc-content" format="auto" className="my-8" />
       </div>
 
-      {/* FAQ */}
-      <section className="max-w-4xl mx-auto px-4 py-8">
-        <h2 className="text-2xl font-bold text-gray-800 mb-6">
-          Questions frequentes sur l&apos;IMC
-        </h2>
-        <div className="space-y-4">
-          {faqQuestions.map((q, i) => (
-            <details
-              key={i}
-              className="bg-white rounded-xl shadow p-5 group"
-            >
-              <summary className="font-semibold text-gray-800 cursor-pointer list-none flex items-center justify-between">
-                {q.question}
-                <span className="text-gray-400 group-open:rotate-180 transition-transform ml-2">
-                  &#9660;
-                </span>
-              </summary>
-              <p className="mt-3 text-gray-600 text-sm leading-relaxed">
-                {q.answer}
-              </p>
-            </details>
-          ))}
-        </div>
-
-        <AdBanner slot="imc-bottom" format="horizontal" className="mt-8" />
-      </section>
+      <div className="max-w-4xl mx-auto px-4 py-8">
+        <AdBanner slot="imc-bottom" format="horizontal" />
+      </div>
     </>
   );
 }
