@@ -11,7 +11,8 @@ export interface OutilMeta {
 export const categories = [
   { id: "finance", label: "Finance & Immobilier", icon: "💰" },
   { id: "quotidien", label: "Vie quotidienne", icon: "🏠" },
-  { id: "sante", label: "Santé", icon: "❤️" },
+  { id: "auto", label: "Auto & Transport", icon: "🚗" },
+  { id: "sante", label: "Santé & Bien-être", icon: "❤️" },
 ] as const;
 
 export const outils: OutilMeta[] = [
@@ -158,6 +159,158 @@ export const outils: OutilMeta[] = [
       "calcul indemnité",
       "rupture conventionnelle",
       "indemnité légale",
+    ],
+  },
+  // --- Batch 4 : Quotidien & Pratique ---
+  {
+    slug: "conversion-unites",
+    title: "Conversion d'unités — Convertisseur en ligne gratuit",
+    shortTitle: "Conversion d'unités",
+    description:
+      "Convertissez instantanément entre les unités de longueur, masse, volume, température, surface et vitesse.",
+    categorie: "quotidien",
+    icon: "📏",
+    keywords: [
+      "conversion unités",
+      "convertisseur",
+      "mètres pieds",
+      "kg livres",
+    ],
+  },
+  {
+    slug: "calcul-age",
+    title: "Calculer son âge exact — Calculateur en ligne gratuit",
+    shortTitle: "Calcul d'âge",
+    description:
+      "Calculez votre âge exact en années, mois, jours, semaines et heures. Découvrez votre jour de naissance et signe astrologique.",
+    categorie: "quotidien",
+    icon: "🎂",
+    keywords: [
+      "calculer son âge",
+      "âge exact",
+      "date de naissance",
+      "nombre de jours",
+    ],
+  },
+  {
+    slug: "calcul-duree-entre-dates",
+    title: "Calcul jours entre deux dates — Calculateur gratuit",
+    shortTitle: "Durée entre dates",
+    description:
+      "Calculez le nombre de jours, semaines, mois entre deux dates. Jours ouvrés et week-ends inclus.",
+    categorie: "quotidien",
+    icon: "📅",
+    keywords: [
+      "jours entre deux dates",
+      "durée entre dates",
+      "nombre de jours",
+      "jours ouvrés",
+    ],
+  },
+  {
+    slug: "calcul-consommation-essence",
+    title: "Calcul consommation essence — Calculateur gratuit",
+    shortTitle: "Consommation essence",
+    description:
+      "Calculez votre consommation de carburant en L/100km et estimez le coût d'un trajet en fonction de la distance et du prix au litre.",
+    categorie: "auto",
+    icon: "⛽",
+    keywords: [
+      "consommation essence",
+      "L/100km",
+      "coût trajet",
+      "consommation carburant",
+    ],
+  },
+  {
+    slug: "cout-km-voiture",
+    title: "Coût au kilomètre voiture — Calculateur gratuit",
+    shortTitle: "Coût au km",
+    description:
+      "Calculez le coût réel au kilomètre de votre voiture : carburant, assurance, entretien, décote et contrôle technique.",
+    categorie: "auto",
+    icon: "🚗",
+    keywords: [
+      "coût km voiture",
+      "prix kilomètre",
+      "budget voiture",
+      "coût automobile",
+    ],
+  },
+  // --- Batch 5 : Santé & Bien-être ---
+  {
+    slug: "calcul-date-accouchement",
+    title: "Calcul date d'accouchement — Date prévue gratuit",
+    shortTitle: "Date d'accouchement",
+    description:
+      "Calculez votre date prévue d'accouchement à partir de la date de vos dernières règles ou de la date de conception.",
+    categorie: "sante",
+    icon: "🤰",
+    keywords: [
+      "date accouchement",
+      "DPA",
+      "semaines grossesse",
+      "date prévue",
+    ],
+  },
+  {
+    slug: "calcul-calories",
+    title: "Calcul calories par jour — Besoins caloriques gratuit",
+    shortTitle: "Besoins caloriques",
+    description:
+      "Calculez vos besoins caloriques journaliers selon votre âge, sexe, taille, poids et niveau d'activité. Formule Mifflin-St Jeor.",
+    categorie: "sante",
+    icon: "🍎",
+    keywords: [
+      "calcul calories",
+      "besoins caloriques",
+      "TDEE",
+      "métabolisme de base",
+    ],
+  },
+  {
+    slug: "calcul-poids-ideal",
+    title: "Calcul poids idéal — Estimez votre poids de forme",
+    shortTitle: "Poids idéal",
+    description:
+      "Estimez votre poids idéal avec 4 formules reconnues : Lorentz, Devine, Creff et plage IMC. Résultats comparés.",
+    categorie: "sante",
+    icon: "🏋️",
+    keywords: [
+      "poids idéal",
+      "calcul poids",
+      "poids de forme",
+      "formule Lorentz",
+    ],
+  },
+  {
+    slug: "calcul-img",
+    title: "Calcul IMG — Indice de masse grasse en ligne",
+    shortTitle: "Masse grasse (IMG)",
+    description:
+      "Calculez votre indice de masse grasse (IMG) avec la formule de Deurenberg. Interprétation par sexe et catégorie.",
+    categorie: "sante",
+    icon: "📊",
+    keywords: [
+      "calcul IMG",
+      "indice masse grasse",
+      "taux graisse corporelle",
+      "Deurenberg",
+    ],
+  },
+  {
+    slug: "calcul-ovulation",
+    title: "Calcul ovulation — Calculez votre période fertile",
+    shortTitle: "Calcul ovulation",
+    description:
+      "Calculez votre date d'ovulation et votre fenêtre de fertilité à partir de la date de vos dernières règles et la durée de votre cycle.",
+    categorie: "sante",
+    icon: "🌸",
+    keywords: [
+      "calcul ovulation",
+      "période fertile",
+      "cycle menstruel",
+      "fenêtre fertilité",
     ],
   },
 ];
