@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { JsonLd } from "@/lib/jsonld";
+
+const GA_ID = "G-1SRYNGFWJE";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://boncalcul.fr"),
@@ -72,6 +75,18 @@ export default function RootLayout({
     <html lang="fr">
       <head>
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="gtag-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_ID}');
+          `}
+        </Script>
         <JsonLd data={websiteJsonLd} />
       </head>
       <body className="min-h-screen flex flex-col">
