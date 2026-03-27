@@ -21,6 +21,28 @@ export const articles: Article[] = [
     readTime: "8 min",
     tags: ["immobilier", "frais de notaire", "achat immobilier", "2026"],
   },
+  {
+    slug: "comment-calculer-capacite-emprunt-2026",
+    title:
+      "Comment calculer sa capacité d'emprunt en 2026 : le guide complet",
+    description:
+      "Découvrez comment calculer votre capacité d'emprunt immobilier : règle des 35%, facteurs clés et astuces pour emprunter plus.",
+    datePublished: "2026-03-27",
+    dateModified: "2026-03-27",
+    readTime: "10 min",
+    tags: ["immobilier", "capacité emprunt", "crédit immobilier", "2026"],
+  },
+  {
+    slug: "interets-composes-guide-epargne",
+    title:
+      "Intérêts composés : comment faire fructifier votre épargne en 2026",
+    description:
+      "Comprendre les intérêts composés, la formule, des exemples concrets avec les placements français et les stratégies pour optimiser votre épargne.",
+    datePublished: "2026-03-27",
+    dateModified: "2026-03-27",
+    readTime: "9 min",
+    tags: ["épargne", "intérêts composés", "investissement", "placement"],
+  },
 ];
 
 export function getArticle(slug: string) {
