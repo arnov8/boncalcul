@@ -22,22 +22,22 @@ export default function MentionsLegales() {
           </p>
           <ul>
             <li>
-              <strong>Nom :</strong> [Votre nom ou raison sociale]
+              <strong>Nom :</strong> AGENCE 140
             </li>
             <li>
-              <strong>Statut :</strong> [Auto-entrepreneur / SAS / SARL...]
+              <strong>Statut :</strong> SARL
             </li>
             <li>
-              <strong>SIRET :</strong> [Votre numéro SIRET]
+              <strong>SIRET :</strong> 530 379 551 00019
             </li>
             <li>
-              <strong>Adresse :</strong> [Votre adresse]
+              <strong>Adresse :</strong> Bd de la Marne, 97200 Fort-de-France
             </li>
             <li>
               <strong>Email :</strong> contact@boncalcul.fr
             </li>
             <li>
-              <strong>Directeur de la publication :</strong> [Votre nom]
+              <strong>Directeur de la publication :</strong> AGENCE 140
             </li>
           </ul>
         </section>
