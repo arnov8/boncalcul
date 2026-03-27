@@ -276,7 +276,7 @@ export default function CalculDureeEntreDates() {
               <p className="text-xs font-medium text-gray-500 uppercase tracking-wide mb-2">
                 Jours de week-end
               </p>
-              <p className="text-2xl font-bold text-gray-900">
+              <p className="text-xl md:text-2xl font-bold text-gray-900">
                 {formatNumber(resultats.weekendDays)} jour{resultats.weekendDays > 1 ? "s" : ""}
                 <span className="text-sm font-normal text-gray-500 ml-2">
                   ({resultats.nbWeekends} week-end{resultats.nbWeekends > 1 ? "s" : ""} complet{resultats.nbWeekends > 1 ? "s" : ""})
@@ -293,7 +293,7 @@ export default function CalculDureeEntreDates() {
           Durees courantes de reference
         </h3>
 
-        <div className="overflow-x-auto -mx-2">
+        <div className="overflow-x-auto">
           <table className="w-full text-sm">
             <thead>
               <tr className="border-b border-gray-200">

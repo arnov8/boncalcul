@@ -68,7 +68,7 @@ export default function CalculPourcentage() {
 
         {/* Tabs */}
         <div className="mb-6">
-          <div className="flex gap-2">
+          <div className="flex flex-wrap gap-2">
             {TABS.map((tab) => (
               <button
                 key={tab.key}
@@ -383,7 +383,7 @@ export default function CalculPourcentage() {
           Exemples de calculs courants
         </h3>
 
-        <div className="overflow-x-auto -mx-2">
+        <div className="overflow-x-auto">
           <table className="w-full text-sm">
             <thead>
               <tr className="border-b border-gray-200">

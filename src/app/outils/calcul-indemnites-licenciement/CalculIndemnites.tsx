@@ -78,7 +78,8 @@ export default function CalculIndemnites() {
           </label>
           <input
             id="salaire12"
-            type="number"
+            type="text"
+            inputMode="decimal"
             min="0"
             step="100"
             value={salaire12Mois}
@@ -98,7 +99,8 @@ export default function CalculIndemnites() {
           </label>
           <input
             id="salaire3"
-            type="number"
+            type="text"
+            inputMode="decimal"
             min="0"
             step="100"
             value={salaire3Mois}
@@ -126,7 +128,8 @@ export default function CalculIndemnites() {
               </label>
               <input
                 id="annees"
-                type="number"
+                type="text"
+                inputMode="decimal"
                 min="0"
                 max="50"
                 step="1"
@@ -145,7 +148,8 @@ export default function CalculIndemnites() {
               </label>
               <input
                 id="mois"
-                type="number"
+                type="text"
+                inputMode="decimal"
                 min="0"
                 max="11"
                 step="1"
@@ -204,7 +208,7 @@ export default function CalculIndemnites() {
                   ? "(rupture conventionnelle)"
                   : "(licenciement)"}
               </p>
-              <p className="text-4xl font-bold text-blue-700">
+              <p className="text-2xl sm:text-4xl font-bold text-blue-700">
                 {formatMontant(result.indemniteLegale)}&nbsp;&euro;
               </p>
               <p className="text-sm text-blue-500 mt-1">
@@ -218,7 +222,7 @@ export default function CalculIndemnites() {
                 Salaire de reference
               </h3>
               <div className="space-y-2 text-sm">
-                <div className="flex justify-between">
+                <div className="flex justify-between flex-wrap gap-1">
                   <span className="text-gray-600">
                     Moyenne des 12 derniers mois
                   </span>
@@ -226,7 +230,7 @@ export default function CalculIndemnites() {
                     {formatMontant(parseFloat(salaire12Mois) || 0)} &euro;
                   </span>
                 </div>
-                <div className="flex justify-between">
+                <div className="flex justify-between flex-wrap gap-1">
                   <span className="text-gray-600">
                     Moyenne des 3 derniers mois
                   </span>
@@ -235,7 +239,7 @@ export default function CalculIndemnites() {
                   </span>
                 </div>
                 <hr className="border-gray-200" />
-                <div className="flex justify-between font-semibold text-green-700">
+                <div className="flex justify-between flex-wrap gap-1 font-semibold text-green-700">
                   <span>Salaire retenu ({result.methodeRetenue})</span>
                   <span>{formatMontant(result.salaireReference)} &euro;</span>
                 </div>
@@ -248,7 +252,7 @@ export default function CalculIndemnites() {
                 Detail du calcul
               </h3>
               <div className="space-y-2 text-sm">
-                <div className="flex justify-between">
+                <div className="flex justify-between flex-wrap gap-1">
                   <span className="text-gray-600">
                     Anciennete totale
                   </span>
@@ -263,7 +267,7 @@ export default function CalculIndemnites() {
                   </span>
                 </div>
                 {result.anneesJusqua10 > 0 && (
-                  <div className="flex justify-between">
+                  <div className="flex justify-between flex-wrap gap-1">
                     <span className="text-gray-600">
                       1/4 de mois &times;{" "}
                       {result.anneesJusqua10.toLocaleString("fr-FR", {
@@ -278,7 +282,7 @@ export default function CalculIndemnites() {
                   </div>
                 )}
                 {result.anneesAuDela10 > 0 && (
-                  <div className="flex justify-between">
+                  <div className="flex justify-between flex-wrap gap-1">
                     <span className="text-gray-600">
                       1/3 de mois &times;{" "}
                       {result.anneesAuDela10.toLocaleString("fr-FR", {
@@ -293,7 +297,7 @@ export default function CalculIndemnites() {
                   </div>
                 )}
                 <hr className="border-gray-200" />
-                <div className="flex justify-between font-semibold text-blue-700">
+                <div className="flex justify-between flex-wrap gap-1 font-semibold text-blue-700">
                   <span>Indemnite legale brute</span>
                   <span>{formatMontant(result.indemniteLegale)} &euro;</span>
                 </div>

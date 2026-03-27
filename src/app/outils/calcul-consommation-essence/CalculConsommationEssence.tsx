@@ -278,7 +278,7 @@ export default function CalculConsommationEssence() {
           Tableau comparatif pour {formatNumber(distanceAffichee)}&nbsp;km
         </h3>
 
-        <div className="overflow-x-auto -mx-2">
+        <div className="overflow-x-auto">
           <table className="w-full text-sm">
             <thead>
               <tr className="border-b border-gray-200">

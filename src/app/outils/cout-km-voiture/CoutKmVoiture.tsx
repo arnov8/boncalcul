@@ -281,7 +281,7 @@ export default function CoutKmVoiture() {
             <p className="text-xs font-medium text-gray-500 uppercase tracking-wide mb-1">
               Cout annuel
             </p>
-            <p className="text-2xl font-bold text-gray-900">
+            <p className="text-xl md:text-2xl font-bold text-gray-900">
               {formatEuro(result.totalAnnuel)}&nbsp;&euro;
             </p>
           </div>
@@ -289,7 +289,7 @@ export default function CoutKmVoiture() {
             <p className="text-xs font-medium text-blue-600 uppercase tracking-wide mb-1">
               Cout au kilometre
             </p>
-            <p className="text-2xl font-bold text-blue-700">
+            <p className="text-xl md:text-2xl font-bold text-blue-700">
               {formatEuro(result.coutKm)}&nbsp;&euro;
             </p>
           </div>
@@ -297,7 +297,7 @@ export default function CoutKmVoiture() {
             <p className="text-xs font-medium text-gray-500 uppercase tracking-wide mb-1">
               Cout mensuel
             </p>
-            <p className="text-2xl font-bold text-gray-900">
+            <p className="text-xl md:text-2xl font-bold text-gray-900">
               {formatEuro(result.totalMensuel)}&nbsp;&euro;
             </p>
           </div>
@@ -308,7 +308,7 @@ export default function CoutKmVoiture() {
           <p className="text-sm opacity-90 mb-1">
             Pour {formatEuro(result.km)} km par an
           </p>
-          <p className="text-2xl font-bold">
+          <p className="text-xl md:text-2xl font-bold">
             {formatEuro(result.coutKm)} &euro; / km
           </p>
         </div>
@@ -327,7 +327,7 @@ export default function CoutKmVoiture() {
               maxPoste > 0 ? (poste.montant / maxPoste) * 100 : 0;
             return (
               <div key={i}>
-                <div className="flex items-center justify-between text-sm mb-1">
+                <div className="flex items-center justify-between flex-wrap gap-1 text-sm mb-1">
                   <div className="flex items-center gap-2">
                     <span
                       className={`inline-block w-3 h-3 rounded-full ${COLORS[i].bg}`}

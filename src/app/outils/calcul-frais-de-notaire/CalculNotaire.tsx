@@ -309,7 +309,7 @@ export default function CalculNotaire() {
             <p className="text-sm text-blue-600 font-medium uppercase tracking-wide mb-1">
               Frais de notaire estim&eacute;s
             </p>
-            <p className="text-4xl font-extrabold text-blue-700">
+            <p className="text-2xl sm:text-4xl font-extrabold text-blue-700">
               {formatEuro(resultats.totalFrais)}
             </p>
             <p className="text-sm text-blue-500 mt-1">
@@ -323,7 +323,7 @@ export default function CalculNotaire() {
               D&eacute;tail du calcul
             </h3>
             <dl className="space-y-3 text-sm">
-              <div className="flex justify-between">
+              <div className="flex flex-wrap justify-between gap-1">
                 <dt className="text-gray-600">Droits de mutation</dt>
                 <dd className="font-semibold text-gray-900">
                   {formatEuro(resultats.droits.total)}
@@ -331,7 +331,7 @@ export default function CalculNotaire() {
               </div>
               {typeBien === "ancien" && (
                 <>
-                  <div className="flex justify-between pl-4">
+                  <div className="flex flex-wrap justify-between gap-1 pl-4">
                     <dt className="text-gray-500">
                       &rarr; Taxe d&eacute;partementale &mdash; {dept.nom} ({formatTaux(dept.taux)}&nbsp;%)
                     </dt>
@@ -339,7 +339,7 @@ export default function CalculNotaire() {
                       {formatEuro(resultats.droits.departement)}
                     </dd>
                   </div>
-                  <div className="flex justify-between pl-4">
+                  <div className="flex flex-wrap justify-between gap-1 pl-4">
                     <dt className="text-gray-500">
                       &rarr; Taxe communale (1,20&nbsp;%)
                     </dt>
@@ -347,7 +347,7 @@ export default function CalculNotaire() {
                       {formatEuro(resultats.droits.commune)}
                     </dd>
                   </div>
-                  <div className="flex justify-between pl-4">
+                  <div className="flex flex-wrap justify-between gap-1 pl-4">
                     <dt className="text-gray-500">
                       &rarr; Taxe &Eacute;tat (0,10&nbsp;%)
                     </dt>
@@ -357,13 +357,13 @@ export default function CalculNotaire() {
                   </div>
                 </>
               )}
-              <div className="flex justify-between">
+              <div className="flex flex-wrap justify-between gap-1">
                 <dt className="text-gray-600">&Eacute;moluments du notaire</dt>
                 <dd className="font-semibold text-gray-900">
                   {formatEuro(resultats.emoluments)}
                 </dd>
               </div>
-              <div className="flex justify-between">
+              <div className="flex flex-wrap justify-between gap-1">
                 <dt className="text-gray-600">
                   Frais divers &amp; d&eacute;bours (forfait)
                 </dt>
@@ -374,7 +374,7 @@ export default function CalculNotaire() {
 
               <hr className="border-gray-200" />
 
-              <div className="flex justify-between text-base">
+              <div className="flex flex-wrap justify-between gap-1 text-base">
                 <dt className="font-semibold text-gray-800">
                   Prix total (bien + frais)
                 </dt>
@@ -394,26 +394,26 @@ export default function CalculNotaire() {
               <table className="w-full text-sm text-left">
                 <thead>
                   <tr className="border-b border-gray-200 text-gray-600">
-                    <th className="py-2 pr-4">Tranche</th>
-                    <th className="py-2">Taux</th>
+                    <th className="py-2 pr-4 whitespace-nowrap">Tranche</th>
+                    <th className="py-2 whitespace-nowrap">Taux</th>
                   </tr>
                 </thead>
                 <tbody className="text-gray-800">
                   <tr className="border-b border-gray-100">
-                    <td className="py-2 pr-4">0 &agrave; 6 500 &euro;</td>
-                    <td className="py-2">3,870&nbsp;%</td>
+                    <td className="py-2 pr-4 whitespace-nowrap">0 &agrave; 6 500 &euro;</td>
+                    <td className="py-2 whitespace-nowrap">3,870&nbsp;%</td>
                   </tr>
                   <tr className="border-b border-gray-100">
-                    <td className="py-2 pr-4">6 500 &agrave; 17 000 &euro;</td>
-                    <td className="py-2">1,596&nbsp;%</td>
+                    <td className="py-2 pr-4 whitespace-nowrap">6 500 &agrave; 17 000 &euro;</td>
+                    <td className="py-2 whitespace-nowrap">1,596&nbsp;%</td>
                   </tr>
                   <tr className="border-b border-gray-100">
-                    <td className="py-2 pr-4">17 000 &agrave; 60 000 &euro;</td>
-                    <td className="py-2">1,064&nbsp;%</td>
+                    <td className="py-2 pr-4 whitespace-nowrap">17 000 &agrave; 60 000 &euro;</td>
+                    <td className="py-2 whitespace-nowrap">1,064&nbsp;%</td>
                   </tr>
                   <tr>
-                    <td className="py-2 pr-4">Au-del&agrave; de 60 000 &euro;</td>
-                    <td className="py-2">0,799&nbsp;%</td>
+                    <td className="py-2 pr-4 whitespace-nowrap">Au-del&agrave; de 60 000 &euro;</td>
+                    <td className="py-2 whitespace-nowrap">0,799&nbsp;%</td>
                   </tr>
                 </tbody>
               </table>

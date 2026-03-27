@@ -344,7 +344,7 @@ export default function ConversionUnites() {
             <p className="text-xs font-medium text-gray-500 uppercase tracking-wide mb-1">
               Valeur source
             </p>
-            <p className="text-2xl font-bold text-gray-900">
+            <p className="text-xl md:text-2xl font-bold text-gray-900">
               {formatNumber(parseInput(inputValue))}{" "}
               <span className="text-base font-medium text-gray-500">
                 {fromUnitDef?.symbol}
@@ -355,7 +355,7 @@ export default function ConversionUnites() {
             <p className="text-xs font-medium text-blue-600 uppercase tracking-wide mb-1">
               Resultat
             </p>
-            <p className="text-2xl font-bold text-blue-700">
+            <p className="text-xl md:text-2xl font-bold text-blue-700">
               {formatPrecise(result)}{" "}
               <span className="text-base font-medium text-blue-500">
                 {toUnitDef?.symbol}
@@ -368,7 +368,7 @@ export default function ConversionUnites() {
           <p className="text-sm opacity-90 mb-1">
             {formatNumber(parseInput(inputValue))} {fromUnitDef?.symbol} =
           </p>
-          <p className="text-2xl font-bold">
+          <p className="text-xl md:text-2xl font-bold">
             {formatPrecise(result)} {toUnitDef?.symbol}
           </p>
         </div>
@@ -380,7 +380,7 @@ export default function ConversionUnites() {
           Conversions rapides ({CATEGORIES[category].label})
         </h3>
 
-        <div className="overflow-x-auto -mx-2">
+        <div className="overflow-x-auto">
           <table className="w-full text-sm">
             <thead>
               <tr className="border-b border-gray-200">

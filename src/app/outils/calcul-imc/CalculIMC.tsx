@@ -120,11 +120,8 @@ export default function CalculIMC() {
           </label>
           <input
             id="poids"
-            type="number"
+            type="text"
             inputMode="decimal"
-            min="1"
-            max="500"
-            step="0.1"
             placeholder="Ex : 72"
             value={poids}
             onChange={(e) => setPoids(e.target.value)}
@@ -142,11 +139,8 @@ export default function CalculIMC() {
           </label>
           <input
             id="taille"
-            type="number"
+            type="text"
             inputMode="decimal"
-            min="50"
-            max="300"
-            step="1"
             placeholder="Ex : 175"
             value={taille}
             onChange={(e) => setTaille(e.target.value)}
@@ -164,7 +158,7 @@ export default function CalculIMC() {
               Votre IMC
             </p>
             <p
-              className="text-6xl font-extrabold mb-2"
+              className="text-4xl md:text-6xl font-extrabold mb-2"
               style={{ color: result.cat.color }}
             >
               {result.imc.toFixed(1)}
@@ -210,7 +204,7 @@ export default function CalculIMC() {
                 }}
               />
             </div>
-            <div className="flex justify-between text-xs text-gray-400">
+            <div className="flex justify-between text-[10px] sm:text-xs text-gray-400">
               <span>10</span>
               <span>16.5</span>
               <span>18.5</span>

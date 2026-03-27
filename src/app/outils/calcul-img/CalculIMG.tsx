@@ -183,8 +183,8 @@ export default function CalculIMG() {
           </label>
           <input
             id="age"
-            type="number"
-            inputMode="numeric"
+            type="text"
+            inputMode="decimal"
             min="15"
             max="120"
             step="1"
@@ -205,7 +205,7 @@ export default function CalculIMG() {
           </label>
           <input
             id="taille"
-            type="number"
+            type="text"
             inputMode="decimal"
             min="50"
             max="300"
@@ -227,7 +227,7 @@ export default function CalculIMG() {
           </label>
           <input
             id="poids"
-            type="number"
+            type="text"
             inputMode="decimal"
             min="1"
             max="500"
@@ -249,7 +249,7 @@ export default function CalculIMG() {
               Votre IMG
             </p>
             <p
-              className="text-6xl font-extrabold mb-2"
+              className="text-4xl md:text-6xl font-extrabold mb-2"
               style={{ color: result.cat.color }}
             >
               {result.img.toFixed(1)}%
@@ -294,7 +294,7 @@ export default function CalculIMG() {
                 }}
               />
             </div>
-            <div className="flex justify-between text-xs text-gray-400">
+            <div className="flex justify-between text-[10px] sm:text-xs text-gray-400">
               {sexe === "homme" ? (
                 <>
                   <span>0%</span>
@@ -318,7 +318,7 @@ export default function CalculIMG() {
           </div>
 
           {/* Categories legend */}
-          <div className="grid grid-cols-2 sm:grid-cols-5 gap-2">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2">
             {categories.map((cat, i) => (
               <div
                 key={i}

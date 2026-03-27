@@ -150,7 +150,7 @@ export default function SimulateurImpot() {
           <span className="block text-sm font-medium text-gray-700 mb-2">
             Situation familiale
           </span>
-          <div className="grid grid-cols-3 gap-3">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
             {([
               { value: "celibataire" as Situation, label: "Celibataire" },
               { value: "marie" as Situation, label: "Marie / Pacse" },
@@ -276,20 +276,20 @@ export default function SimulateurImpot() {
           puis multiplie par {parts} part{parts > 1 ? "s" : ""}.
         </p>
 
-        <div className="overflow-x-auto -mx-2">
+        <div className="overflow-x-auto">
           <table className="w-full text-sm">
             <thead>
               <tr className="border-b border-gray-200">
-                <th className="text-left py-3 px-2 font-semibold text-gray-600">
+                <th className="text-left py-3 px-2 font-semibold text-gray-600 whitespace-nowrap">
                   Tranche
                 </th>
-                <th className="text-right py-3 px-2 font-semibold text-gray-600">
+                <th className="text-right py-3 px-2 font-semibold text-gray-600 whitespace-nowrap">
                   Taux
                 </th>
-                <th className="text-right py-3 px-2 font-semibold text-gray-600">
+                <th className="text-right py-3 px-2 font-semibold text-gray-600 whitespace-nowrap">
                   Assiette
                 </th>
-                <th className="text-right py-3 px-2 font-semibold text-gray-600">
+                <th className="text-right py-3 px-2 font-semibold text-gray-600 whitespace-nowrap">
                   Impot
                 </th>
               </tr>
@@ -304,16 +304,16 @@ export default function SimulateurImpot() {
                       : "hover:bg-gray-50"
                   }`}
                 >
-                  <td className="py-3 px-2 font-medium text-gray-800">
+                  <td className="py-3 px-2 font-medium text-gray-800 whitespace-nowrap">
                     {row.tranche}
                   </td>
-                  <td className="py-3 px-2 text-right text-gray-700">
+                  <td className="py-3 px-2 text-right text-gray-700 whitespace-nowrap">
                     {row.taux} %
                   </td>
-                  <td className="py-3 px-2 text-right text-gray-700">
+                  <td className="py-3 px-2 text-right text-gray-700 whitespace-nowrap">
                     {formatEuro(row.base)}&nbsp;&euro;
                   </td>
-                  <td className="py-3 px-2 text-right text-blue-600 font-semibold">
+                  <td className="py-3 px-2 text-right text-blue-600 font-semibold whitespace-nowrap">
                     {formatEuro(row.impot)}&nbsp;&euro;
                   </td>
                 </tr>
@@ -321,11 +321,11 @@ export default function SimulateurImpot() {
               <tr className="border-t-2 border-gray-300">
                 <td
                   colSpan={3}
-                  className="py-3 px-2 font-bold text-gray-800 text-right"
+                  className="py-3 px-2 font-bold text-gray-800 text-right whitespace-nowrap"
                 >
                   Impot par part :
                 </td>
-                <td className="py-3 px-2 text-right font-bold text-blue-700">
+                <td className="py-3 px-2 text-right font-bold text-blue-700 whitespace-nowrap">
                   {formatEuro(
                     result.details.reduce((sum, r) => sum + r.impot, 0)
                   )}
@@ -335,11 +335,11 @@ export default function SimulateurImpot() {
               <tr>
                 <td
                   colSpan={3}
-                  className="py-3 px-2 font-bold text-gray-800 text-right"
+                  className="py-3 px-2 font-bold text-gray-800 text-right whitespace-nowrap"
                 >
                   x {parts} part{parts > 1 ? "s" : ""} = Impot total :
                 </td>
-                <td className="py-3 px-2 text-right font-bold text-blue-700 text-lg">
+                <td className="py-3 px-2 text-right font-bold text-blue-700 text-lg whitespace-nowrap">
                   {formatEuro(result.impotTotal)}&nbsp;&euro;
                 </td>
               </tr>

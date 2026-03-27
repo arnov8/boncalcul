@@ -156,7 +156,7 @@ export default function CalculPoidsIdeal() {
           </label>
           <input
             id="taille"
-            type="number"
+            type="text"
             inputMode="decimal"
             min="100"
             max="250"
@@ -176,8 +176,8 @@ export default function CalculPoidsIdeal() {
           </label>
           <input
             id="age"
-            type="number"
-            inputMode="numeric"
+            type="text"
+            inputMode="decimal"
             min="18"
             max="120"
             step="1"
@@ -222,7 +222,7 @@ export default function CalculPoidsIdeal() {
           </label>
           <input
             id="tourPoignet"
-            type="number"
+            type="text"
             inputMode="decimal"
             min="10"
             max="25"
@@ -267,9 +267,9 @@ export default function CalculPoidsIdeal() {
                 key={f.nom}
                 className="bg-white rounded-xl border border-gray-200 shadow-sm p-4"
               >
-                <div className="flex items-center justify-between mb-2">
+                <div className="flex items-center justify-between flex-wrap gap-1 mb-2">
                   <h3 className="font-semibold text-gray-800">{f.nom}</h3>
-                  <span className="text-2xl font-bold text-blue-600">
+                  <span className="text-xl md:text-2xl font-bold text-blue-600">
                     {f.poids.toFixed(1)} kg
                   </span>
                 </div>
@@ -281,9 +281,9 @@ export default function CalculPoidsIdeal() {
 
             {/* IMC range card */}
             <div className="bg-white rounded-xl border border-gray-200 shadow-sm p-4">
-              <div className="flex items-center justify-between mb-2">
+              <div className="flex items-center justify-between flex-wrap gap-1 mb-2">
                 <h3 className="font-semibold text-gray-800">Plage IMC sain</h3>
-                <span className="text-2xl font-bold text-green-600">
+                <span className="text-xl md:text-2xl font-bold text-green-600">
                   {results.imcRange.min.toFixed(1)}-
                   {results.imcRange.max.toFixed(1)} kg
                 </span>

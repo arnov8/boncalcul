@@ -124,8 +124,8 @@ export default function CalculCalories() {
           </label>
           <input
             id="age"
-            type="number"
-            inputMode="numeric"
+            type="text"
+            inputMode="decimal"
             min="1"
             max="120"
             step="1"
@@ -144,8 +144,8 @@ export default function CalculCalories() {
           </label>
           <input
             id="taille"
-            type="number"
-            inputMode="numeric"
+            type="text"
+            inputMode="decimal"
             min="50"
             max="300"
             step="1"
@@ -164,7 +164,7 @@ export default function CalculCalories() {
           </label>
           <input
             id="poids"
-            type="number"
+            type="text"
             inputMode="decimal"
             min="1"
             max="500"
@@ -218,7 +218,7 @@ export default function CalculCalories() {
               <p className="text-sm text-gray-500 uppercase tracking-wide mb-1">
                 Metabolisme de base (BMR)
               </p>
-              <p className="text-4xl font-extrabold text-gray-800">
+              <p className="text-2xl sm:text-4xl font-extrabold text-gray-800">
                 {Math.round(result.bmr)}
               </p>
               <p className="text-sm text-gray-500 mt-1">kcal / jour</p>
@@ -227,7 +227,7 @@ export default function CalculCalories() {
               <p className="text-sm text-blue-600 uppercase tracking-wide font-medium mb-1">
                 Besoins journaliers (TDEE)
               </p>
-              <p className="text-4xl font-extrabold text-blue-700">
+              <p className="text-2xl sm:text-4xl font-extrabold text-blue-700">
                 {Math.round(result.tdee)}
               </p>
               <p className="text-sm text-blue-500 mt-1">kcal / jour</p>
@@ -294,7 +294,7 @@ export default function CalculCalories() {
                   title="Lipides 30%"
                 />
               </div>
-              <div className="grid grid-cols-3 gap-4 text-center">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
                 <div>
                   <div className="inline-block w-3 h-3 rounded-full bg-blue-500 mr-1" />
                   <p className="text-sm font-semibold text-gray-800">

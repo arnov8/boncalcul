@@ -111,9 +111,8 @@ export default function CalculSalaire() {
           </label>
           <input
             id="montant"
-            type="number"
-            min="0"
-            step="100"
+            type="text"
+            inputMode="decimal"
             value={montant}
             onChange={(e) => setMontant(e.target.value)}
             className="w-full border border-gray-300 rounded-lg px-4 py-3 text-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition"
@@ -213,7 +212,7 @@ export default function CalculSalaire() {
           <p className="text-sm text-blue-600 font-medium mb-1">
             {convertedLabel} {periode === "annuel" ? "annuel" : "mensuel"}
           </p>
-          <p className="text-4xl font-bold text-blue-700">
+          <p className="text-2xl sm:text-4xl font-bold text-blue-700">
             {formatMontant(convertedMensuel)}&nbsp;&euro;
             <span className="text-lg font-normal text-blue-500">
               {" "}
@@ -232,14 +231,14 @@ export default function CalculSalaire() {
             Recapitulatif mensuel / annuel
           </h3>
           <div className="space-y-2 text-sm">
-            <div className="flex justify-between">
+            <div className="flex flex-wrap justify-between gap-1">
               <span className="text-gray-600">Salaire brut</span>
               <span className="font-medium text-gray-800">
                 {formatMontant(result.brutMensuel)} &euro; /{" "}
                 {formatMontant(result.brutAnnuel)} &euro;
               </span>
             </div>
-            <div className="flex justify-between text-red-600">
+            <div className="flex flex-wrap justify-between gap-1 text-red-600">
               <span>Total cotisations salariales</span>
               <span className="font-medium">
                 &minus; {formatMontant(result.totalChargesMensuel)} &euro; /{" "}
@@ -247,7 +246,7 @@ export default function CalculSalaire() {
               </span>
             </div>
             <hr className="border-gray-200" />
-            <div className="flex justify-between font-semibold text-green-700">
+            <div className="flex flex-wrap justify-between gap-1 font-semibold text-green-700">
               <span>Salaire net</span>
               <span>
                 {formatMontant(result.netMensuel)} &euro; /{" "}
@@ -263,7 +262,7 @@ export default function CalculSalaire() {
             Detail approximatif des cotisations (mensuel)
           </h3>
           <div className="space-y-2 text-sm">
-            <div className="flex justify-between">
+            <div className="flex flex-wrap justify-between gap-1">
               <span className="text-gray-600">
                 CSG-CRDS{" "}
                 <span className="text-gray-400 text-xs">(~9,7%)</span>
@@ -272,7 +271,7 @@ export default function CalculSalaire() {
                 {formatMontant(result.detailCharges.csgCrds)} &euro;
               </span>
             </div>
-            <div className="flex justify-between">
+            <div className="flex flex-wrap justify-between gap-1">
               <span className="text-gray-600">
                 Retraite (base + complementaire){" "}
                 <span className="text-gray-400 text-xs">
@@ -283,7 +282,7 @@ export default function CalculSalaire() {
                 {formatMontant(result.detailCharges.retraite)} &euro;
               </span>
             </div>
-            <div className="flex justify-between">
+            <div className="flex flex-wrap justify-between gap-1">
               <span className="text-gray-600">
                 Assurance chomage{" "}
                 <span className="text-gray-400 text-xs">(0%)</span>
@@ -292,7 +291,7 @@ export default function CalculSalaire() {
                 {formatMontant(result.detailCharges.chomage)} &euro;
               </span>
             </div>
-            <div className="flex justify-between">
+            <div className="flex flex-wrap justify-between gap-1">
               <span className="text-gray-600">
                 Complementaire sante{" "}
                 <span className="text-gray-400 text-xs">(~1,5%)</span>
@@ -302,7 +301,7 @@ export default function CalculSalaire() {
               </span>
             </div>
             {result.detailCharges.autres > 0.01 && (
-              <div className="flex justify-between">
+              <div className="flex flex-wrap justify-between gap-1">
                 <span className="text-gray-600">
                   Autres cotisations{" "}
                   <span className="text-gray-400 text-xs">(divers)</span>
@@ -313,7 +312,7 @@ export default function CalculSalaire() {
               </div>
             )}
             <hr className="border-gray-200" />
-            <div className="flex justify-between font-semibold text-gray-800">
+            <div className="flex flex-wrap justify-between gap-1 font-semibold text-gray-800">
               <span>
                 Total (~{(result.tauxTotal * 100).toFixed(0)}% du brut)
               </span>

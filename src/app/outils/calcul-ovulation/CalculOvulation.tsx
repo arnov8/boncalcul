@@ -140,7 +140,7 @@ export default function CalculOvulation() {
           </label>
           <input
             id="duree"
-            type="number"
+            type="text"
             inputMode="numeric"
             min="21"
             max="35"
@@ -213,7 +213,7 @@ export default function CalculOvulation() {
                   <div
                     key={i}
                     title={`J${i + 1} — ${title || "Jour normal"}`}
-                    className={`w-9 h-9 rounded-lg flex items-center justify-center text-xs font-medium ${bgClass} transition-colors`}
+                    className={`w-8 h-8 sm:w-9 sm:h-9 rounded-lg flex items-center justify-center text-xs font-medium ${bgClass} transition-colors`}
                   >
                     {day.date.getDate()}
                   </div>

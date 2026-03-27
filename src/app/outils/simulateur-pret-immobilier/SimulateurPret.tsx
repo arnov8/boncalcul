@@ -218,7 +218,7 @@ export default function SimulateurPret() {
               <p className="text-sm text-blue-600 font-medium">
                 Mensualite (hors assurance)
               </p>
-              <p className="text-2xl font-bold text-blue-700 mt-1">
+              <p className="text-xl md:text-2xl font-bold text-blue-700 mt-1">
                 {formatEur(resultats.mensualite)}
               </p>
             </div>
@@ -227,7 +227,7 @@ export default function SimulateurPret() {
               <p className="text-sm text-blue-600 font-medium">
                 Mensualite assurance
               </p>
-              <p className="text-2xl font-bold text-blue-700 mt-1">
+              <p className="text-xl md:text-2xl font-bold text-blue-700 mt-1">
                 {formatEur(resultats.mensualiteAssurance)}
               </p>
             </div>
@@ -236,7 +236,7 @@ export default function SimulateurPret() {
               <p className="text-sm font-medium text-blue-100">
                 Mensualite totale
               </p>
-              <p className="text-2xl font-bold mt-1">
+              <p className="text-xl md:text-2xl font-bold mt-1">
                 {formatEur(resultats.mensualiteTotale)}
               </p>
             </div>
@@ -290,19 +290,19 @@ export default function SimulateurPret() {
                 <table className="w-full text-sm border-collapse">
                   <thead>
                     <tr className="bg-gray-100">
-                      <th className="text-left py-2 px-3 font-medium text-gray-600 rounded-tl-lg">
+                      <th className="text-left py-2 px-3 font-medium text-gray-600 rounded-tl-lg whitespace-nowrap">
                         Mois
                       </th>
-                      <th className="text-right py-2 px-3 font-medium text-gray-600">
+                      <th className="text-right py-2 px-3 font-medium text-gray-600 whitespace-nowrap">
                         Capital rembourse
                       </th>
-                      <th className="text-right py-2 px-3 font-medium text-gray-600">
+                      <th className="text-right py-2 px-3 font-medium text-gray-600 whitespace-nowrap">
                         Interets
                       </th>
-                      <th className="text-right py-2 px-3 font-medium text-gray-600">
+                      <th className="text-right py-2 px-3 font-medium text-gray-600 whitespace-nowrap">
                         Assurance
                       </th>
-                      <th className="text-right py-2 px-3 font-medium text-gray-600 rounded-tr-lg">
+                      <th className="text-right py-2 px-3 font-medium text-gray-600 rounded-tr-lg whitespace-nowrap">
                         Capital restant
                       </th>
                     </tr>
@@ -317,7 +317,7 @@ export default function SimulateurPret() {
                             : ""
                         }`}
                       >
-                        <td className="py-2 px-3 text-gray-700">
+                        <td className="py-2 px-3 text-gray-700 whitespace-nowrap">
                           {i === 12 && resultats.nbMois > 13 ? (
                             <span className="font-medium">
                               ...{" "}mois {ligne.mois}
@@ -326,16 +326,16 @@ export default function SimulateurPret() {
                             ligne.mois
                           )}
                         </td>
-                        <td className="py-2 px-3 text-right text-gray-700">
+                        <td className="py-2 px-3 text-right text-gray-700 whitespace-nowrap">
                           {formatEur(ligne.capitalRembourse)}
                         </td>
-                        <td className="py-2 px-3 text-right text-gray-700">
+                        <td className="py-2 px-3 text-right text-gray-700 whitespace-nowrap">
                           {formatEur(ligne.interets)}
                         </td>
-                        <td className="py-2 px-3 text-right text-gray-700">
+                        <td className="py-2 px-3 text-right text-gray-700 whitespace-nowrap">
                           {formatEur(ligne.assurance)}
                         </td>
-                        <td className="py-2 px-3 text-right text-gray-700">
+                        <td className="py-2 px-3 text-right text-gray-700 whitespace-nowrap">
                           {formatEur(ligne.capitalRestant)}
                         </td>
                       </tr>

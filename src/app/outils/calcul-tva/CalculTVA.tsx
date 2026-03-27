@@ -189,7 +189,7 @@ export default function CalculTVA() {
             <p className="text-xs font-medium text-gray-500 uppercase tracking-wide mb-1">
               Montant HT
             </p>
-            <p className="text-2xl font-bold text-gray-900">
+            <p className="text-xl md:text-2xl font-bold text-gray-900">
               {formatEuro(result.ht)}&nbsp;&euro;
             </p>
           </div>
@@ -197,7 +197,7 @@ export default function CalculTVA() {
             <p className="text-xs font-medium text-blue-600 uppercase tracking-wide mb-1">
               TVA ({useCustom ? customTaux || "0" : TAUX_TVA[tauxIndex].label})
             </p>
-            <p className="text-2xl font-bold text-blue-700">
+            <p className="text-xl md:text-2xl font-bold text-blue-700">
               {formatEuro(result.tva)}&nbsp;&euro;
             </p>
           </div>
@@ -205,7 +205,7 @@ export default function CalculTVA() {
             <p className="text-xs font-medium text-gray-500 uppercase tracking-wide mb-1">
               Montant TTC
             </p>
-            <p className="text-2xl font-bold text-gray-900">
+            <p className="text-xl md:text-2xl font-bold text-gray-900">
               {formatEuro(result.ttc)}&nbsp;&euro;
             </p>
           </div>
@@ -218,7 +218,7 @@ export default function CalculTVA() {
               ? `${formatEuro(montantNum)} € HT + ${formatEuro(result.tva)} € de TVA`
               : `${formatEuro(result.ttc)} € TTC - ${formatEuro(result.tva)} € de TVA`}
           </p>
-          <p className="text-2xl font-bold">
+          <p className="text-xl md:text-2xl font-bold">
             {direction === "ht-to-ttc"
               ? `= ${formatEuro(result.ttc)} € TTC`
               : `= ${formatEuro(result.ht)} € HT`}
@@ -233,7 +233,7 @@ export default function CalculTVA() {
           {direction === "ht-to-ttc" ? "HT" : "TTC"}
         </h3>
 
-        <div className="overflow-x-auto -mx-2">
+        <div className="overflow-x-auto">
           <table className="w-full text-sm">
             <thead>
               <tr className="border-b border-gray-200">

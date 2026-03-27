@@ -93,7 +93,8 @@ export default function CalculCapaciteEmprunt() {
           </label>
           <div className="relative">
             <input
-              type="number"
+              type="text"
+              inputMode="decimal"
               value={revenus}
               onChange={(e) => setRevenus(e.target.value)}
               className="w-full border border-gray-300 rounded-lg px-4 py-3 pr-10 text-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none"
@@ -116,7 +117,8 @@ export default function CalculCapaciteEmprunt() {
           </label>
           <div className="relative">
             <input
-              type="number"
+              type="text"
+              inputMode="decimal"
               value={charges}
               onChange={(e) => setCharges(e.target.value)}
               className="w-full border border-gray-300 rounded-lg px-4 py-3 pr-10 text-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none"
@@ -139,7 +141,8 @@ export default function CalculCapaciteEmprunt() {
           </label>
           <div className="relative">
             <input
-              type="number"
+              type="text"
+              inputMode="decimal"
               value={taux}
               onChange={(e) => setTaux(e.target.value)}
               step="0.01"
@@ -160,7 +163,8 @@ export default function CalculCapaciteEmprunt() {
           </label>
           <div className="relative">
             <input
-              type="number"
+              type="text"
+              inputMode="decimal"
               value={tauxAssurance}
               onChange={(e) => setTauxAssurance(e.target.value)}
               step="0.01"
@@ -209,7 +213,7 @@ export default function CalculCapaciteEmprunt() {
               <p className="text-sm font-medium text-blue-100">
                 Montant empruntable
               </p>
-              <p className="text-2xl font-bold mt-1">
+              <p className="text-xl md:text-2xl font-bold mt-1">
                 {formatEur(resultats.capitalEmpruntable)}
               </p>
             </div>
@@ -218,7 +222,7 @@ export default function CalculCapaciteEmprunt() {
               <p className="text-sm text-blue-600 font-medium">
                 Mensualite maximale
               </p>
-              <p className="text-2xl font-bold text-blue-700 mt-1">
+              <p className="text-xl md:text-2xl font-bold text-blue-700 mt-1">
                 {formatEur(resultats.mensualiteTotale)}
               </p>
               <p className="text-xs text-blue-400 mt-1">
@@ -230,7 +234,7 @@ export default function CalculCapaciteEmprunt() {
               <p className="text-sm text-blue-600 font-medium">
                 Taux d&apos;endettement
               </p>
-              <p className="text-2xl font-bold text-blue-700 mt-1">
+              <p className="text-xl md:text-2xl font-bold text-blue-700 mt-1">
                 {formatNumber(resultats.tauxEndettement)} %
               </p>
               <p className="text-xs text-blue-400 mt-1">

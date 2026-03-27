@@ -116,7 +116,8 @@ export default function CalculInteretsComposes() {
           </label>
           <div className="relative">
             <input
-              type="number"
+              type="text"
+              inputMode="decimal"
               value={capitalInitial}
               onChange={(e) => setCapitalInitial(e.target.value)}
               className="w-full border border-gray-300 rounded-lg px-4 py-3 pr-10 text-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none"
@@ -136,7 +137,8 @@ export default function CalculInteretsComposes() {
           </label>
           <div className="relative">
             <input
-              type="number"
+              type="text"
+              inputMode="decimal"
               value={versementMensuel}
               onChange={(e) => setVersementMensuel(e.target.value)}
               className="w-full border border-gray-300 rounded-lg px-4 py-3 pr-10 text-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none"
@@ -156,7 +158,8 @@ export default function CalculInteretsComposes() {
           </label>
           <div className="relative">
             <input
-              type="number"
+              type="text"
+              inputMode="decimal"
               value={tauxAnnuel}
               onChange={(e) => setTauxAnnuel(e.target.value)}
               step="0.1"
@@ -177,7 +180,8 @@ export default function CalculInteretsComposes() {
           </label>
           <div className="relative">
             <input
-              type="number"
+              type="text"
+              inputMode="decimal"
               value={duree}
               onChange={(e) => setDuree(e.target.value)}
               className="w-full border border-gray-300 rounded-lg px-4 py-3 pr-14 text-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none"
@@ -280,16 +284,16 @@ export default function CalculInteretsComposes() {
                 <table className="w-full text-sm border-collapse">
                   <thead>
                     <tr className="bg-gray-100">
-                      <th className="text-left py-2 px-3 font-medium text-gray-600 rounded-tl-lg">
+                      <th className="text-left py-2 px-3 font-medium text-gray-600 whitespace-nowrap rounded-tl-lg">
                         Annee
                       </th>
-                      <th className="text-right py-2 px-3 font-medium text-gray-600">
+                      <th className="text-right py-2 px-3 font-medium text-gray-600 whitespace-nowrap">
                         Versements cumules
                       </th>
-                      <th className="text-right py-2 px-3 font-medium text-gray-600">
+                      <th className="text-right py-2 px-3 font-medium text-gray-600 whitespace-nowrap">
                         Interets cumules
                       </th>
-                      <th className="text-right py-2 px-3 font-medium text-gray-600 rounded-tr-lg">
+                      <th className="text-right py-2 px-3 font-medium text-gray-600 whitespace-nowrap rounded-tr-lg">
                         Capital total
                       </th>
                     </tr>
@@ -300,16 +304,16 @@ export default function CalculInteretsComposes() {
                         key={ligne.annee}
                         className="border-b border-gray-100 hover:bg-gray-50"
                       >
-                        <td className="py-2 px-3 text-gray-700 font-medium">
+                        <td className="py-2 px-3 text-gray-700 font-medium whitespace-nowrap">
                           {ligne.annee}
                         </td>
-                        <td className="py-2 px-3 text-right text-gray-700">
+                        <td className="py-2 px-3 text-right text-gray-700 whitespace-nowrap">
                           {formatEur(ligne.versementsCumules)}
                         </td>
-                        <td className="py-2 px-3 text-right text-green-600 font-medium">
+                        <td className="py-2 px-3 text-right text-green-600 font-medium whitespace-nowrap">
                           {formatEur(ligne.interetsCumules)}
                         </td>
-                        <td className="py-2 px-3 text-right text-gray-900 font-semibold">
+                        <td className="py-2 px-3 text-right text-gray-900 font-semibold whitespace-nowrap">
                           {formatEur(ligne.capitalTotal)}
                         </td>
                       </tr>
