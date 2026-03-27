@@ -85,6 +85,81 @@ export const outils: OutilMeta[] = [
       "IMC adulte",
     ],
   },
+  {
+    slug: "calcul-capacite-emprunt",
+    title: "Calcul capacité d'emprunt 2026 — Simulateur gratuit",
+    shortTitle: "Capacité d'emprunt",
+    description:
+      "Calculez votre capacité d'emprunt immobilier en fonction de vos revenus, charges et du taux d'intérêt. Règle des 35% HCSF appliquée.",
+    categorie: "finance",
+    icon: "🏦",
+    keywords: [
+      "capacité d'emprunt",
+      "calcul emprunt",
+      "combien emprunter",
+      "taux endettement",
+    ],
+  },
+  {
+    slug: "calcul-pourcentage",
+    title: "Calcul pourcentage — Calculateur en ligne gratuit",
+    shortTitle: "Calcul pourcentage",
+    description:
+      "Calculez un pourcentage facilement : X% d'un nombre, proportion, variation en pourcentage. Trois modes de calcul instantanés.",
+    categorie: "quotidien",
+    icon: "🔢",
+    keywords: [
+      "calcul pourcentage",
+      "calculer pourcentage",
+      "pourcentage en ligne",
+      "variation pourcentage",
+    ],
+  },
+  {
+    slug: "calcul-interets-composes",
+    title: "Calcul intérêts composés — Simulateur d'épargne gratuit",
+    shortTitle: "Intérêts composés",
+    description:
+      "Simulez la croissance de votre épargne grâce aux intérêts composés. Capital initial, versements mensuels et tableau d'évolution année par année.",
+    categorie: "finance",
+    icon: "📈",
+    keywords: [
+      "intérêts composés",
+      "simulateur épargne",
+      "calcul placement",
+      "rendement épargne",
+    ],
+  },
+  {
+    slug: "simulateur-impot-revenu",
+    title: "Simulateur impôt sur le revenu 2026 — Calcul gratuit",
+    shortTitle: "Impôt sur le revenu",
+    description:
+      "Estimez votre impôt sur le revenu 2026 avec le barème progressif, le quotient familial et le détail par tranche. Simulateur gratuit et instantané.",
+    categorie: "finance",
+    icon: "🏛️",
+    keywords: [
+      "simulateur impôt",
+      "calcul impôt revenu",
+      "barème impôt 2026",
+      "quotient familial",
+    ],
+  },
+  {
+    slug: "calcul-indemnites-licenciement",
+    title: "Calcul indemnité de licenciement 2026 — Simulateur gratuit",
+    shortTitle: "Indemnités licenciement",
+    description:
+      "Calculez votre indemnité légale de licenciement ou de rupture conventionnelle en fonction de votre salaire et ancienneté.",
+    categorie: "finance",
+    icon: "📄",
+    keywords: [
+      "indemnité licenciement",
+      "calcul indemnité",
+      "rupture conventionnelle",
+      "indemnité légale",
+    ],
+  },
 ];
 
 export function getOutil(slug: string) {
