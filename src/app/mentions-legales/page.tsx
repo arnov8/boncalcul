@@ -36,9 +36,6 @@ export default function MentionsLegales() {
             <li>
               <strong>Email :</strong> contact@boncalcul.fr
             </li>
-            <li>
-              <strong>Directeur de la publication :</strong> AGENCE 140
-            </li>
           </ul>
         </section>
 
