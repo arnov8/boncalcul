@@ -91,20 +91,11 @@ export default function PageIndemnitesLicenciement() {
         </div>
       </section>
 
-      {/* Ad before tool */}
-      <div className="max-w-4xl mx-auto px-4 mt-8">
-        <AdBanner slot="indemnites-top" format="horizontal" className="mb-6" />
-      </div>
-
       {/* Tool */}
       <section className="max-w-4xl mx-auto px-4 py-8">
         <CalculIndemnites />
+        <AdBanner slot="tool-after-result" format="auto" className="mt-8" />
       </section>
-
-      {/* Ad after results */}
-      <div className="max-w-4xl mx-auto px-4">
-        <AdBanner slot="indemnites-mid" format="auto" className="my-8" />
-      </div>
 
       {/* FAQ */}
       <section className="bg-gray-50 py-12">
@@ -130,6 +121,10 @@ export default function PageIndemnitesLicenciement() {
           </div>
         </div>
       </section>
+
+      <div className="max-w-5xl mx-auto px-4 py-4">
+        <AdBanner slot="tool-after-faq" format="horizontal" />
+      </div>
 
       {/* SEO Content */}
       <section className="max-w-5xl mx-auto px-4 py-12">
@@ -182,9 +177,8 @@ export default function PageIndemnitesLicenciement() {
         </div>
       </section>
 
-      {/* Ad before footer */}
-      <div className="max-w-4xl mx-auto px-4 pb-12">
-        <AdBanner slot="indemnites-bottom" format="horizontal" />
+      <div className="max-w-4xl mx-auto px-4 py-8">
+        <AdBanner slot="tool-bottom" format="horizontal" />
       </div>
     </>
   );

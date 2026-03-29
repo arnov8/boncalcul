@@ -87,11 +87,9 @@ export default function PageCalculIMC() {
       {/* Calculator */}
       <section className="max-w-3xl mx-auto px-4 -mt-4 relative z-10">
         <CalculIMC />
-      </section>
 
-      <div className="max-w-4xl mx-auto px-4">
-        <AdBanner slot="imc-mid" format="horizontal" className="my-8" />
-      </div>
+        <AdBanner slot="tool-after-result" format="auto" className="mt-8" />
+      </section>
 
       {/* FAQ */}
       <section className="bg-gray-50 py-12">
@@ -117,6 +115,10 @@ export default function PageCalculIMC() {
           </div>
         </div>
       </section>
+
+      <div className="max-w-5xl mx-auto px-4 py-4">
+        <AdBanner slot="tool-after-faq" format="horizontal" />
+      </div>
 
       {/* SEO Content */}
       <section className="max-w-5xl mx-auto px-4 py-12">
@@ -169,12 +171,8 @@ export default function PageCalculIMC() {
         </div>
       </section>
 
-      <div className="max-w-4xl mx-auto px-4">
-        <AdBanner slot="imc-content" format="auto" className="my-8" />
-      </div>
-
       <div className="max-w-4xl mx-auto px-4 py-8">
-        <AdBanner slot="imc-bottom" format="horizontal" />
+        <AdBanner slot="tool-bottom" format="horizontal" />
       </div>
     </>
   );

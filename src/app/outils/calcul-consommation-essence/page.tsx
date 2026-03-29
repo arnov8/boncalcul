@@ -90,11 +90,8 @@ export default function PageCalculConsommationEssence() {
 
       {/* Calculateur */}
       <section className="max-w-3xl mx-auto px-4 py-10">
-        <AdBanner slot="essence-top" format="horizontal" className="mb-8" />
-
         <CalculConsommationEssence />
-
-        <AdBanner slot="essence-mid" format="auto" className="mt-8" />
+        <AdBanner slot="tool-after-result" format="auto" className="mt-8" />
       </section>
 
       {/* FAQ */}
@@ -121,6 +118,10 @@ export default function PageCalculConsommationEssence() {
           </div>
         </div>
       </section>
+
+      <div className="max-w-5xl mx-auto px-4 py-4">
+        <AdBanner slot="tool-after-faq" format="horizontal" />
+      </div>
 
       {/* Contenu SEO */}
       <section className="max-w-5xl mx-auto px-4 py-12">
@@ -160,7 +161,7 @@ export default function PageCalculConsommationEssence() {
       </section>
 
       <div className="max-w-4xl mx-auto px-4 py-8">
-        <AdBanner slot="essence-bottom" format="horizontal" />
+        <AdBanner slot="tool-bottom" format="horizontal" />
       </div>
     </>
   );

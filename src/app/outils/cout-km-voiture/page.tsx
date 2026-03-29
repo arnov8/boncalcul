@@ -92,11 +92,8 @@ export default function PageCoutKmVoiture() {
 
       {/* Calculateur */}
       <section className="max-w-3xl mx-auto px-4 py-10">
-        <AdBanner slot="coutkm-top" format="horizontal" className="mb-8" />
-
         <CoutKmVoiture />
-
-        <AdBanner slot="coutkm-mid" format="auto" className="mt-8" />
+        <AdBanner slot="tool-after-result" format="auto" className="mt-8" />
       </section>
 
       {/* FAQ */}
@@ -123,6 +120,10 @@ export default function PageCoutKmVoiture() {
           </div>
         </div>
       </section>
+
+      <div className="max-w-5xl mx-auto px-4 py-4">
+        <AdBanner slot="tool-after-faq" format="horizontal" />
+      </div>
 
       {/* Contenu SEO */}
       <section className="max-w-5xl mx-auto px-4 py-12">
@@ -162,7 +163,7 @@ export default function PageCoutKmVoiture() {
       </section>
 
       <div className="max-w-4xl mx-auto px-4 py-8">
-        <AdBanner slot="coutkm-bottom" format="horizontal" />
+        <AdBanner slot="tool-bottom" format="horizontal" />
       </div>
     </>
   );

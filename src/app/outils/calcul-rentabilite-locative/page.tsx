@@ -86,18 +86,10 @@ export default function PageRentabiliteLocative() {
           </p>
         </header>
 
-        {/* ---------- Pub ---------- */}
-        <div className="mb-8">
-          <AdBanner slot="rentabilite-top" format="horizontal" />
-        </div>
-
         {/* ---------- Calculateur ---------- */}
         <CalculRentabilite />
 
-        {/* ---------- Pub ---------- */}
-        <div className="my-10">
-          <AdBanner slot="rentabilite-mid" format="horizontal" />
-        </div>
+        <AdBanner slot="tool-after-result" format="auto" className="mt-8" />
 
         {/* ---------- FAQ ---------- */}
         <section className="bg-gray-50 rounded-2xl py-10 px-6 mb-10">
@@ -121,6 +113,10 @@ export default function PageRentabiliteLocative() {
             ))}
           </div>
         </section>
+
+        <div className="max-w-5xl mx-auto px-4 py-4">
+          <AdBanner slot="tool-after-faq" format="horizontal" />
+        </div>
 
         {/* ---------- Contenu SEO ---------- */}
         <section className="max-w-5xl mx-auto px-0 py-12">
@@ -159,9 +155,8 @@ export default function PageRentabiliteLocative() {
           </div>
         </section>
 
-        {/* ---------- Pub ---------- */}
-        <div className="mt-10">
-          <AdBanner slot="rentabilite-bottom" format="auto" />
+        <div className="max-w-4xl mx-auto px-4 py-8">
+          <AdBanner slot="tool-bottom" format="horizontal" />
         </div>
       </div>
     </>

@@ -91,10 +91,7 @@ export default function PageFraisNotaire() {
         {/* ---------- Calculateur ---------- */}
         <CalculNotaire />
 
-        {/* ---------- Pub ---------- */}
-        <div className="my-10">
-          <AdBanner slot="notaire-mid" format="horizontal" />
-        </div>
+        <AdBanner slot="tool-after-result" format="auto" className="mt-8" />
 
         {/* ---------- FAQ ---------- */}
         <section className="bg-gray-50 rounded-2xl py-10 px-6 mb-10">
@@ -118,6 +115,10 @@ export default function PageFraisNotaire() {
             ))}
           </div>
         </section>
+
+        <div className="max-w-5xl mx-auto px-4 py-4">
+          <AdBanner slot="tool-after-faq" format="horizontal" />
+        </div>
 
         {/* ---------- Contenu SEO ---------- */}
         <section className="max-w-5xl mx-auto px-0 py-12">
@@ -170,14 +171,8 @@ export default function PageFraisNotaire() {
           </div>
         </section>
 
-        {/* ---------- Pub ---------- */}
-        <div className="my-10">
-          <AdBanner slot="notaire-bottom" format="horizontal" />
-        </div>
-
-        {/* ---------- Pub ---------- */}
-        <div className="mt-10">
-          <AdBanner slot="notaire-footer" format="auto" />
+        <div className="max-w-4xl mx-auto px-4 py-8">
+          <AdBanner slot="tool-bottom" format="horizontal" />
         </div>
       </div>
     </>

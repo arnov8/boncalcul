@@ -58,7 +58,7 @@ export default function HomePage() {
 
       {/* Outils par catégorie */}
       <section id="outils" className="max-w-6xl mx-auto px-4 py-8 md:py-12 scroll-mt-16">
-        <AdBanner slot="home-top" format="horizontal" className="mb-8" />
+        <AdBanner slot="home-after-hero" format="horizontal" className="mb-8" />
 
         {categories.map((cat) => {
           const outilsCat = outils.filter((o) => o.categorie === cat.id);
@@ -80,7 +80,7 @@ export default function HomePage() {
 
       {/* Contenu SEO */}
       <section className="max-w-5xl mx-auto px-4 py-12">
-        <AdBanner slot="home-mid" format="auto" className="mb-8" />
+        <AdBanner slot="home-after-tools" format="auto" className="mb-8" />
 
         <div className="text-center mb-10">
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">
@@ -198,7 +198,7 @@ export default function HomePage() {
           ))}
         </div>
 
-        <AdBanner slot="home-bottom" format="horizontal" className="mt-8" />
+        <AdBanner slot="home-after-faq" format="horizontal" className="mt-8" />
       </section>
     </>
   );
