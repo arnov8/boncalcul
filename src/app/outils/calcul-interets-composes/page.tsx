@@ -140,181 +140,62 @@ export default function CalculInteretsComposesPage() {
       </section>
 
       {/* Contenu SEO */}
-      <section className="max-w-4xl mx-auto px-4 py-12">
-        <div className="prose prose-lg prose-gray max-w-none">
-          <h2>Qu&apos;est-ce que les interets composes ?</h2>
-          <p>
-            Les <strong>interets composes</strong> sont un mecanisme financier
-            dans lequel les interets generes par un placement sont reinvestis et
-            produisent eux-memes des interets lors des periodes suivantes. Ce
-            phenomene de &quot;capitalisation&quot; cree une croissance
-            exponentielle du capital, contrairement aux interets simples qui ne
-            generent qu&apos;une croissance lineaire. C&apos;est le principe
-            fondamental qui sous-tend la plupart des produits d&apos;epargne et
-            d&apos;investissement : livrets bancaires, assurance-vie, placements
-            boursiers et plans d&apos;epargne retraite.
-          </p>
-          <p>
-            Pour illustrer, prenons un placement de 10 000 euros a 5% par an.
-            La premiere annee, vous gagnez 500 euros d&apos;interets. La
-            deuxieme annee, les interets sont calcules sur 10 500 euros (votre
-            capital initial plus les interets de la premiere annee), soit
-            525 euros. La troisieme annee, les interets portent sur 11 025 euros,
-            soit 551,25 euros. Et ainsi de suite, chaque annee un peu plus que
-            la precedente. Au bout de 30 ans, votre capital atteint
-            43 219 euros, dont 33 219 euros d&apos;interets cumules, soit plus
-            de trois fois le capital de depart.
-          </p>
+      <section className="max-w-5xl mx-auto px-4 py-12">
+        <h2 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-8">
+          Tout comprendre sur les interets composes
+        </h2>
 
-          <h2>La formule des interets composes</h2>
-          <p>
-            Le calcul des interets composes repose sur une formule mathematique
-            elegante, applicable a tout placement avec reinvestissement des
-            gains :
-          </p>
-          <p className="bg-gray-50 border border-gray-200 rounded-lg p-4 text-center font-mono text-lg">
-            A = P &times; (1 + r/n)<sup>n&times;t</sup>
-          </p>
-          <p>
-            Dans cette formule, <strong>A</strong> represente le montant final
-            (capital + interets), <strong>P</strong> est le capital initial
-            investi, <strong>r</strong> est le taux d&apos;interet annuel
-            exprime en decimal (par exemple 0,05 pour 5%), <strong>n</strong>{" "}
-            est le nombre de fois ou les interets sont capitalises par an
-            (12 pour une capitalisation mensuelle, 4 pour trimestrielle, 1 pour
-            annuelle), et <strong>t</strong> est la duree du placement en
-            annees.
-          </p>
-          <p>
-            Lorsque vous effectuez des versements reguliers (par exemple chaque
-            mois), il faut ajouter un second terme a la formule pour prendre en
-            compte la croissance de ces versements successifs. Le montant final
-            devient alors :
-          </p>
-          <p className="bg-gray-50 border border-gray-200 rounded-lg p-4 text-center font-mono text-lg">
-            A = P &times; (1 + r/n)<sup>n&times;t</sup> + PMT &times;
-            [((1 + r/n)<sup>n&times;t</sup> - 1) / (r/n)]
-          </p>
-          <p>
-            Ou <strong>PMT</strong> represente le montant du versement
-            periodique (mensuel si n = 12). Notre simulateur effectue ces
-            calculs automatiquement et vous presente les resultats de maniere
-            claire et detaillee.
-          </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-6">
+            <h3 className="font-bold text-gray-800 mb-3">Qu&apos;est-ce que les interets composes ?</h3>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              Les <strong>interets composes</strong> sont un mecanisme ou les interets generes par un placement sont reinvestis et produisent eux-memes des interets. Cette <strong>capitalisation</strong> cree une croissance exponentielle, contrairement aux interets simples (croissance lineaire). C&apos;est le principe fondamental des livrets bancaires, assurance-vie, placements boursiers et plans d&apos;epargne retraite. Exemple : 10 000 euros a 5% pendant 30 ans atteignent 43 219 euros, dont 33 219 euros d&apos;interets cumules.
+            </p>
+          </div>
 
-          <h2>
-            Interets simples vs interets composes : la puissance du temps
-          </h2>
-          <p>
-            La difference entre interets simples et interets composes devient
-            spectaculaire sur de longues periodes. Avec les interets simples,
-            un capital de 10 000 euros place a 5% rapporte exactement 500 euros
-            chaque annee, quel que soit le nombre d&apos;annees. Au bout de
-            30 ans, vous avez gagne 15 000 euros d&apos;interets (30 &times;
-            500 euros), pour un total de 25 000 euros.
-          </p>
-          <p>
-            Avec les interets composes a 5%, le meme capital de 10 000 euros
-            atteint 43 219 euros au bout de 30 ans, soit{" "}
-            <strong>18 219 euros de plus</strong> qu&apos;avec les interets
-            simples. Cet ecart s&apos;explique par les &quot;interets sur les
-            interets&quot; qui s&apos;accumulent de maniere exponentielle au fil
-            du temps. C&apos;est pourquoi commencer a epargner tot, meme de
-            petites sommes, est bien plus efficace que d&apos;attendre pour
-            investir des montants plus importants.
-          </p>
+          <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-6">
+            <h3 className="font-bold text-gray-800 mb-3">La formule des interets composes</h3>
+            <p className="bg-gray-50 border border-gray-200 rounded-lg p-3 text-center font-mono text-sm mb-3">
+              A = P &times; (1 + r/n)<sup>n&times;t</sup>
+            </p>
+            <p className="text-sm text-gray-600 leading-relaxed mb-2">
+              <strong>A</strong> = montant final, <strong>P</strong> = capital initial, <strong>r</strong> = taux annuel en decimal, <strong>n</strong> = frequence de capitalisation par an, <strong>t</strong> = duree en annees.
+            </p>
+            <p className="bg-gray-50 border border-gray-200 rounded-lg p-3 text-center font-mono text-sm mb-3">
+              A = P &times; (1 + r/n)<sup>n&times;t</sup> + PMT &times; [((1 + r/n)<sup>n&times;t</sup> - 1) / (r/n)]
+            </p>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              Avec versements reguliers, <strong>PMT</strong> represente le montant periodique (mensuel si n = 12). Notre simulateur effectue ces calculs automatiquement.
+            </p>
+          </div>
 
-          <h2>Exemples concrets avec des placements francais</h2>
-          <p>
-            Voici comment les interets composes fonctionnent avec les principaux
-            produits d&apos;epargne disponibles en France :
-          </p>
-          <p>
-            <strong>Livret A (3% en 2024) :</strong> Un capital de 10 000 euros
-            place sur un Livret A avec des versements mensuels de 200 euros
-            pendant 20 ans atteint environ 75 641 euros, dont 17 641 euros
-            d&apos;interets nets d&apos;impots (le Livret A etant exonere de
-            fiscalite). Les interets du Livret A sont capitalises le 1er
-            janvier et le 1er juillet, soit deux fois par an.
-          </p>
-          <p>
-            <strong>Assurance-vie en fonds euros (2,5% en moyenne) :</strong>{" "}
-            Le meme placement de 10 000 euros avec 200 euros par mois pendant
-            20 ans donne environ 71 780 euros. Apres application des
-            prelevements sociaux (17,2%) et de la fiscalite avantageuse apres
-            8 ans (abattement de 4 600 euros ou 9 200 euros pour un couple), le
-            rendement net reste attractif. L&apos;assurance-vie capitalise les
-            interets annuellement.
-          </p>
-          <p>
-            <strong>Investissement en bourse (7% historique moyen) :</strong>{" "}
-            Historiquement, les marches actions ont offert un rendement annuel
-            moyen d&apos;environ 7% (dividendes reinvestis, avant inflation).
-            Avec le meme schema de 10 000 euros initiaux et 200 euros par mois
-            pendant 20 ans, le capital atteint environ 114 562 euros, dont
-            56 562 euros de gains. Attention cependant : ce rendement n&apos;est
-            pas garanti et les marches connaissent des fluctuations importantes
-            a court terme. L&apos;investissement en bourse via un PEA
-            (Plan d&apos;Epargne en Actions) beneficie d&apos;une fiscalite
-            avantageuse apres 5 ans de detention.
-          </p>
+          <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-6">
+            <h3 className="font-bold text-gray-800 mb-3">Interets simples vs composes : la puissance du temps</h3>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              Avec les <strong>interets simples</strong>, 10 000 euros a 5% rapportent 500 euros/an, soit 25 000 euros apres 30 ans. Avec les <strong>interets composes</strong>, le meme capital atteint 43 219 euros, soit <strong>18 219 euros de plus</strong>. Cet ecart provient des &quot;interets sur les interets&quot; qui s&apos;accumulent de maniere exponentielle. C&apos;est pourquoi commencer a epargner tot est bien plus efficace que d&apos;attendre pour investir des montants plus importants.
+            </p>
+          </div>
 
-          <h2>Comment maximiser l&apos;effet des interets composes ?</h2>
-          <p>
-            Quatre leviers permettent de maximiser la puissance des interets
-            composes sur votre patrimoine :
-          </p>
-          <p>
-            <strong>Commencez le plus tot possible.</strong> Le temps est
-            l&apos;allie numero un des interets composes. Une personne qui
-            commence a epargner 200 euros par mois a 25 ans aura accumule bien
-            plus a 65 ans qu&apos;une personne qui commence a 35 ans avec
-            400 euros par mois, malgre un effort d&apos;epargne mensuel deux
-            fois moins important. Chaque annee supplementaire permet a
-            l&apos;effet boule de neige de s&apos;amplifier.
-          </p>
-          <p>
-            <strong>Epargnez regulierement.</strong> Les versements mensuels
-            reguliers, meme modestes, ont un impact considerable sur le long
-            terme. La regularite est plus importante que le montant. Mettre en
-            place un virement automatique le jour du salaire est la strategie
-            la plus efficace pour epargner sans y penser.
-          </p>
-          <p>
-            <strong>Reinvestissez tous les gains.</strong> Pour beneficier
-            pleinement des interets composes, les interets, dividendes et
-            plus-values doivent etre reinvestis plutot que retires. Chaque euro
-            retire est un euro qui ne produira plus d&apos;interets futurs.
-            C&apos;est pourquoi les enveloppes fiscales qui capitalisent
-            automatiquement (assurance-vie, PEA, PER) sont particulierement
-            adaptees.
-          </p>
-          <p>
-            <strong>Recherchez le meilleur rendement ajuste au risque.</strong>{" "}
-            Un ecart de rendement apparemment faible a un impact enorme sur le
-            long terme. Un placement a 5% au lieu de 3% sur 30 ans ne rapporte
-            pas &quot;un peu plus&quot; mais pratiquement le double d&apos;interets. Utilisez
-            notre simulateur pour comparer differents scenarios et trouver
-            l&apos;equilibre optimal entre rendement et risque selon votre
-            horizon de placement.
-          </p>
+          <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-6">
+            <h3 className="font-bold text-gray-800 mb-3">Exemples avec des placements francais</h3>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              <strong>Livret A (3%) :</strong> 10 000 euros + 200 euros/mois pendant 20 ans = environ 75 641 euros, nets d&apos;impots. <strong>Assurance-vie fonds euros (2,5%) :</strong> meme schema = environ 71 780 euros, avec fiscalite avantageuse apres 8 ans. <strong>Bourse (7% historique) :</strong> meme schema = environ 114 562 euros, dont 56 562 euros de gains. Le PEA beneficie d&apos;une fiscalite reduite apres 5 ans.
+            </p>
+          </div>
 
-          <h2>Interets composes et fiscalite</h2>
-          <p>
-            En France, la fiscalite a un impact direct sur le rendement reel
-            de votre epargne. Le prelevement forfaitaire unique (PFU ou
-            &quot;flat tax&quot;) de 30% s&apos;applique par defaut aux revenus
-            de l&apos;epargne (12,8% d&apos;impot sur le revenu + 17,2% de
-            prelevements sociaux). Cependant, certaines enveloppes permettent
-            de differer ou de reduire cette fiscalite. Le Livret A et le LDDS
-            sont totalement exoneres. L&apos;assurance-vie beneficie d&apos;un
-            abattement apres 8 ans. Le PEA est exonere d&apos;impot sur le
-            revenu apres 5 ans (seuls les prelevements sociaux de 17,2%
-            s&apos;appliquent). Le PER permet de deduire les versements du
-            revenu imposable. Choisir la bonne enveloppe fiscale est donc
-            essentiel pour optimiser l&apos;effet des interets composes sur le
-            long terme.
-          </p>
+          <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-6">
+            <h3 className="font-bold text-gray-800 mb-3">Comment maximiser l&apos;effet des interets composes ?</h3>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              <strong>Commencez tot</strong> : le temps est l&apos;allie numero un. 200 euros/mois des 25 ans rapportent plus que 400 euros/mois des 35 ans. <strong>Epargnez regulierement</strong> : la regularite compte plus que le montant. <strong>Reinvestissez tous les gains</strong> : chaque euro retire ne produira plus d&apos;interets futurs. Privilegiez les enveloppes qui capitalisent automatiquement (assurance-vie, PEA, PER). <strong>Optimisez le rendement</strong> : 5% au lieu de 3% sur 30 ans rapporte pratiquement le double.
+            </p>
+          </div>
+
+          <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-6">
+            <h3 className="font-bold text-gray-800 mb-3">Interets composes et fiscalite</h3>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              Le <strong>prelevement forfaitaire unique (PFU)</strong> de 30% s&apos;applique par defaut aux revenus de l&apos;epargne (12,8% IR + 17,2% prelevements sociaux). Cependant, certaines enveloppes reduisent cette charge : le <strong>Livret A</strong> et le <strong>LDDS</strong> sont totalement exoneres, l&apos;<strong>assurance-vie</strong> beneficie d&apos;un abattement apres 8 ans, le <strong>PEA</strong> est exonere d&apos;IR apres 5 ans, et le <strong>PER</strong> permet de deduire les versements du revenu imposable.
+            </p>
+          </div>
         </div>
       </section>
 

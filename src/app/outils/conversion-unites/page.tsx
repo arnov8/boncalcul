@@ -123,113 +123,53 @@ export default function PageConversionUnites() {
       </section>
 
       {/* Contenu SEO */}
-      <section className="max-w-4xl mx-auto px-4 py-12">
-        <div className="prose prose-lg prose-gray max-w-none">
-          <h2>Qu'est-ce que la conversion d'unites ?</h2>
-          <p>
-            La <strong>conversion d'unites</strong> consiste a exprimer une
-            meme grandeur physique dans une unite differente. Par exemple,
-            1 kilometre equivaut a 1 000 metres, ou encore 1 kilogramme
-            correspond a 2,205 livres. Cette operation est indispensable des
-            que l'on travaille avec des donnees provenant de systemes de
-            mesure differents, que ce soit en cuisine, en science, en
-            ingenierie ou dans la vie courante.
-          </p>
-          <p>
-            Notre convertisseur couvre six grandes categories de grandeurs
-            physiques : la longueur, la masse, le volume, la temperature,
-            la surface et la vitesse. Chaque conversion est calculee
-            instantanement dans votre navigateur, sans aucun envoi de
-            donnees a un serveur externe.
-          </p>
+      <section className="max-w-5xl mx-auto px-4 py-12">
+        <h2 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-8">
+          Guide complet de la conversion d'unites
+        </h2>
 
-          <h2>Les principaux systemes d'unites</h2>
-          <p>
-            Le monde utilise principalement deux grands systemes de mesure.
-            Le <strong>Systeme international d'unites (SI)</strong>, aussi
-            appele systeme metrique, est le standard adopte par la
-            quasi-totalite des pays. Il repose sur des unites de base comme
-            le metre (longueur), le kilogramme (masse), le litre (volume)
-            et le degre Celsius (temperature). Sa force reside dans sa
-            coherence : toutes les unites derivent les unes des autres par
-            des puissances de 10.
-          </p>
-          <p>
-            Le <strong>systeme imperial</strong> (ou systeme anglo-saxon)
-            est encore utilise au quotidien aux Etats-Unis et, partiellement,
-            au Royaume-Uni. Il emploie des unites comme le pouce, le pied,
-            le yard, le mile, la livre, l'once et le gallon. Les facteurs
-            de conversion entre unites imperiales ne suivent pas de logique
-            decimale : 1 pied = 12 pouces, 1 yard = 3 pieds, 1 mile =
-            1 760 yards.
-          </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-6">
+            <h3 className="font-bold text-gray-800 mb-3">Qu'est-ce que la conversion d'unites ?</h3>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              La <strong>conversion d'unites</strong> consiste a exprimer une meme grandeur physique dans une unite differente (ex. 1 km = 1 000 m, 1 kg = 2,205 livres). Cette operation est indispensable en cuisine, en science, en ingenierie et dans la vie courante. Notre convertisseur couvre six categories : longueur, masse, volume, temperature, surface et vitesse, avec des calculs instantanes directement dans votre navigateur.
+            </p>
+          </div>
 
-          <h2>Conversions de longueur les plus courantes</h2>
-          <p>
-            Les conversions de longueur sont parmi les plus recherchees. Le
-            rapport fondamental est : <strong>1 pouce = 2,54 cm</strong>
-            {" "}(definition exacte depuis 1959). A partir de cette valeur,
-            on peut deriver toutes les autres conversions : 1 pied = 30,48 cm,
-            1 yard = 91,44 cm, 1 mile = 1,609344 km. Dans l'autre sens,
-            1 metre = 3,281 pieds et 1 kilometre = 0,6214 miles.
-          </p>
-          <p>
-            Ces conversions sont utiles pour interpreter les tailles en
-            pouces (ecrans, vetements americains), les distances sur une
-            carte anglo-saxonne, ou les specifications techniques de
-            produits importes.
-          </p>
+          <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-6">
+            <h3 className="font-bold text-gray-800 mb-3">Les principaux systemes d'unites</h3>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              Le <strong>Systeme international (SI)</strong>, ou systeme metrique, est le standard mondial. Il repose sur le metre, le kilogramme, le litre et le degre Celsius, avec des unites liees par des puissances de 10. Le <strong>systeme imperial</strong> (anglo-saxon), utilise aux Etats-Unis et partiellement au Royaume-Uni, emploie pouces, pieds, livres et gallons avec des facteurs de conversion non decimaux (1 pied = 12 pouces, 1 mile = 1 760 yards).
+            </p>
+          </div>
 
-          <h2>Conversions de masse et de poids</h2>
-          <p>
-            Le kilogramme est l'unite de base du systeme metrique pour la
-            masse. Dans le systeme imperial, les unites courantes sont
-            l'once (oz) et la livre (lb). Les rapports cles sont :{" "}
-            <strong>1 livre = 453,592 grammes</strong> et{" "}
-            <strong>1 once = 28,3495 grammes</strong>. Ainsi, 1 kg equivaut
-            a environ 2,205 livres.
-          </p>
-          <p>
-            Ces conversions sont frequemment utilisees en cuisine
-            (recettes americaines), en sport (poids du corps en livres), et
-            dans le commerce international (poids d'un colis en livres ou
-            en kilogrammes).
-          </p>
+          <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-6">
+            <h3 className="font-bold text-gray-800 mb-3">Conversions de longueur</h3>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              Le rapport fondamental est <strong>1 pouce = 2,54 cm</strong> (definition exacte depuis 1959). On en derive : 1 pied = 30,48 cm, 1 yard = 91,44 cm, 1 mile = 1,609344 km. Dans l'autre sens : 1 metre = 3,281 pieds, 1 kilometre = 0,6214 miles. Utile pour les tailles en pouces (ecrans, vetements americains), les distances anglo-saxonnes et les specifications techniques de produits importes.
+            </p>
+          </div>
 
-          <h2>Conversions de temperature</h2>
-          <p>
-            La temperature est la seule grandeur dont la conversion ne se
-            reduit pas a une simple multiplication. Les trois echelles
-            principales sont le <strong>degre Celsius</strong> (utilise dans
-            la majorite du monde), le <strong>degre Fahrenheit</strong>{" "}
-            (utilise aux Etats-Unis) et le <strong>Kelvin</strong> (echelle
-            absolue utilisee en science).
-          </p>
-          <p>
-            Les formules de conversion sont : C = (F - 32) x 5/9, F = C x
-            9/5 + 32, et K = C + 273,15. Par exemple, la temperature du
-            corps humain est d'environ 37 °C = 98,6 °F = 310,15 K. Le
-            zero absolu (0 K) correspond a -273,15 °C.
-          </p>
+          <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-6">
+            <h3 className="font-bold text-gray-800 mb-3">Conversions de masse et de poids</h3>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              Les rapports cles sont : <strong>1 livre = 453,592 grammes</strong> et <strong>1 once = 28,3495 grammes</strong>, soit 1 kg = environ 2,205 livres. Ces conversions sont frequemment utilisees en cuisine (recettes americaines), en sport (poids du corps en livres) et dans le commerce international pour le poids des colis.
+            </p>
+          </div>
 
-          <h2>Bref historique des systemes de mesure</h2>
-          <p>
-            Le systeme metrique est ne en France pendant la Revolution
-            francaise, en 1795. L'objectif etait de creer un systeme
-            universel base sur des grandeurs naturelles : le metre etait
-            defini comme la dix-millionieme partie du quart du meridien
-            terrestre. Ce systeme a ete progressivement adopte par la
-            plupart des pays au cours des XIXe et XXe siecles.
-          </p>
-          <p>
-            Le systeme imperial trouve ses origines dans les unites de
-            mesure anglaises du Moyen Age, elles-memes heritees des
-            systemes romain et germanique. Malgre sa complexite (12 pouces
-            dans un pied, 3 pieds dans un yard, 5 280 pieds dans un mile),
-            il reste fermement ancre dans la culture americaine. Seuls trois
-            pays n'ont pas officiellement adopte le systeme metrique :
-            les Etats-Unis, le Liberia et la Birmanie.
-          </p>
+          <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-6">
+            <h3 className="font-bold text-gray-800 mb-3">Conversions de temperature</h3>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              La temperature est la seule grandeur dont la conversion ne se reduit pas a une simple multiplication. Les trois echelles principales : <strong>Celsius</strong> (mondial), <strong>Fahrenheit</strong> (Etats-Unis), <strong>Kelvin</strong> (science). Formules : C = (F - 32) x 5/9, F = C x 9/5 + 32, K = C + 273,15. Exemple : 37 °C = 98,6 °F = 310,15 K. Le zero absolu (0 K) correspond a -273,15 °C.
+            </p>
+          </div>
+
+          <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-6">
+            <h3 className="font-bold text-gray-800 mb-3">Bref historique des systemes de mesure</h3>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              Le <strong>systeme metrique</strong> est ne en France en 1795 pendant la Revolution, avec le metre defini comme la dix-millionieme partie du quart du meridien terrestre. Il a ete adopte progressivement par la quasi-totalite des pays. Le <strong>systeme imperial</strong> trouve ses origines dans les unites anglaises du Moyen Age. Seuls trois pays ne l'ont pas officiellement abandonne : les Etats-Unis, le Liberia et la Birmanie.
+            </p>
+          </div>
         </div>
       </section>
 

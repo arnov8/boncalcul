@@ -125,110 +125,39 @@ export default function PageCoutKmVoiture() {
       </section>
 
       {/* Contenu SEO */}
-      <section className="max-w-4xl mx-auto px-4 py-12">
-        <div className="prose prose-lg prose-gray max-w-none">
-          <h2>Qu'est-ce que le cout reel au kilometre ?</h2>
-          <p>
-            Le <strong>cout au kilometre</strong> d'une voiture ne se limite pas
-            a la seule depense de carburant. Il englobe l'ensemble des frais
-            lies a la possession et a l'utilisation d'un vehicule : carburant,
-            assurance, entretien, decote (perte de valeur), controle technique
-            et eventuellement stationnement ou peages. Connaitre ce cout reel
-            permet de mieux gerer son budget et de comparer objectivement
-            differentes solutions de mobilite.
-          </p>
-          <p>
-            Selon les etudes de l'Automobile Club Association, le cout moyen
-            annuel d'une voiture en France depasse 6 000 euros pour un vehicule
-            de gamme moyenne parcourant 15 000 km par an. Ramenee au kilometre,
-            cette somme represente entre 0,35 et 0,50 euro selon le modele, le
-            type de motorisation et les habitudes de conduite.
-          </p>
+      <section className="max-w-5xl mx-auto px-4 py-12">
+        <h2 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-8">
+          Comprendre le cout reel au kilometre de votre voiture
+        </h2>
 
-          <h2>Les principaux postes de depenses</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-6">
+            <h3 className="font-bold text-gray-800 mb-3">Qu&apos;est-ce que le cout reel au kilometre ?</h3>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              Le <strong>cout au kilometre</strong> englobe l&apos;ensemble des frais lies a un vehicule : carburant, assurance, entretien, <strong>decote</strong>, controle technique, stationnement et peages. Selon l&apos;Automobile Club Association, le cout moyen annuel depasse 6 000 euros pour un vehicule de gamme moyenne parcourant 15 000 km/an, soit <strong>0,35 a 0,50 &euro;/km</strong> selon le modele et la motorisation.
+            </p>
+          </div>
 
-          <h3>Carburant</h3>
-          <p>
-            Le carburant represente en moyenne 20 a 30 % du cout total d'un
-            vehicule. Son impact depend de trois facteurs : la consommation
-            du vehicule (exprimee en litres aux 100 km), le prix du carburant
-            a la pompe et le kilometrage annuel. Une voiture consommant 7 L/100
-            km avec un litre a 1,75 euro depense 0,1225 euro de carburant par
-            kilometre, soit environ 1 838 euros par an pour 15 000 km.
-          </p>
+          <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-6">
+            <h3 className="font-bold text-gray-800 mb-3">Les principaux postes de depenses</h3>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              <strong>Carburant</strong> : 20 a 30 % du cout total. A 7 L/100km et 1,75 &euro;/L, comptez 0,12 &euro;/km soit ~1 838 &euro;/an. <strong>Assurance</strong> : obligatoire, entre 400 et 900 &euro;/an selon le profil et les garanties. <strong>Entretien</strong> : 800 a 1 500 &euro;/an (vidange, freins, pneus), +30 % apres 8 ans. <strong>Controle technique</strong> : 70 a 90 &euro; tous les 2 ans. <strong>Decote</strong> : poste souvent le plus important, un vehicule neuf perd 20 a 25 % la premiere annee puis 10 a 15 % par la suite.
+            </p>
+          </div>
 
-          <h3>Assurance automobile</h3>
-          <p>
-            L'assurance auto est obligatoire en France. Son cout varie
-            fortement selon le profil du conducteur (age, bonus-malus,
-            historique de sinistres), le type de vehicule et le niveau de
-            garanties choisi. En moyenne, les Francais paient entre 400 et
-            900 euros par an pour leur assurance auto. Les jeunes conducteurs
-            ou les vehicules puissants sont soumis a des primes plus elevees.
-          </p>
+          <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-6">
+            <h3 className="font-bold text-gray-800 mb-3">Voiture vs transports en commun</h3>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              En milieu urbain, les transports en commun sont presque toujours plus economiques : 360 a 1 030 &euro;/an contre 4 000 a 7 000 &euro; pour une voiture. Velo, trottinette electrique et autopartage sont aussi des alternatives competitives. En zone rurale, la voiture reste souvent indispensable. Pour reduire le cout : <strong>eco-conduite</strong> (-15 %), covoiturage, vehicule adapte, entretien preventif et comparaison d&apos;assurance annuelle.
+            </p>
+          </div>
 
-          <h3>Entretien et reparations</h3>
-          <p>
-            L'entretien regroupe les operations courantes (vidange, filtres,
-            plaquettes de frein, pneus, batterie) et les reparations
-            imprevues. Un budget annuel de 800 a 1 500 euros est realiste pour
-            un vehicule de gamme moyenne. Ce poste augmente avec l'age du
-            vehicule : une voiture de plus de 8 ans coute en moyenne 30 % de
-            plus en entretien qu'un vehicule recent.
-          </p>
-
-          <h3>Controle technique</h3>
-          <p>
-            Le controle technique est obligatoire tous les deux ans pour les
-            vehicules de plus de 4 ans. Son cout moyen se situe entre 70 et
-            90 euros. En cas de contre-visite, des frais supplementaires
-            s'ajoutent. Ramene a l'annee, ce poste reste modeste (environ 40
-            euros par an) mais doit etre integre au calcul global.
-          </p>
-
-          <h3>Decote et amortissement</h3>
-          <p>
-            La <strong>decote</strong> est souvent le poste le plus important
-            et le plus sous-estime. Un vehicule neuf perd en moyenne 20 a 25 %
-            de sa valeur la premiere annee, puis environ 10 a 15 % les annees
-            suivantes. Pour un vehicule achete 20 000 euros et conserve 7 ans,
-            la decote annuelle moyenne est d'environ 2 857 euros, soit 0,19
-            euro par kilometre pour 15 000 km annuels. Acheter un vehicule
-            d'occasion permet de reduire significativement ce poste.
-          </p>
-
-          <h2>Voiture vs transports en commun : la comparaison</h2>
-          <p>
-            En milieu urbain, les transports en commun sont presque toujours
-            plus economiques que la voiture individuelle. Un abonnement mensuel
-            de transport en commun coute entre 30 et 86 euros selon les villes,
-            soit 360 a 1 030 euros par an, contre 4 000 a 7 000 euros pour une
-            voiture. Le velo, la trottinette electrique ou l'autopartage
-            constituent egalement des alternatives competitives pour les
-            deplacements quotidiens.
-          </p>
-          <p>
-            En revanche, en zone rurale ou periurbaine, la voiture reste
-            souvent indispensable faute d'alternative. Dans ce cas, quelques
-            strategies permettent de reduire le cout au kilometre :
-            eco-conduite (jusqu'a 15 % d'economie de carburant), covoiturage,
-            choix d'un vehicule adapte a ses besoins reels, entretien
-            preventif regulier et comparaison des offres d'assurance chaque
-            annee.
-          </p>
-
-          <h2>Vehicule electrique : quel cout au kilometre ?</h2>
-          <p>
-            Les vehicules electriques affichent un cout energetique nettement
-            inferieur : environ 2 a 3 euros aux 100 km contre 8 a 12 euros
-            pour un vehicule thermique. L'entretien est egalement reduit (pas
-            de vidange, moins d'usure des freins grace au freinage
-            regeneratif). Cependant, le prix d'achat plus eleve et la
-            depreciation de la batterie doivent etre pris en compte. Sur la
-            duree de vie du vehicule, le cout total peut etre equivalent ou
-            inferieur a celui d'un modele thermique comparable, surtout avec
-            les aides a l'achat disponibles.
-          </p>
+          <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-6">
+            <h3 className="font-bold text-gray-800 mb-3">Vehicule electrique : quel cout au kilometre ?</h3>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              Les vehicules electriques affichent un <strong>cout energetique</strong> nettement inferieur : environ 2 a 3 &euro;/100km contre 8 a 12 &euro; en thermique. L&apos;entretien est aussi reduit (pas de vidange, moins d&apos;usure des freins grace au freinage regeneratif). Cependant, le prix d&apos;achat plus eleve et la depreciation de la batterie doivent etre pris en compte. Sur la duree de vie, le cout total peut etre equivalent ou inferieur a un modele thermique comparable, surtout avec les aides a l&apos;achat.
+            </p>
+          </div>
         </div>
       </section>
 

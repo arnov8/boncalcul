@@ -119,205 +119,53 @@ export default function PageCalculIMC() {
       </section>
 
       {/* SEO Content */}
-      <section className="max-w-4xl mx-auto px-4 py-8">
-        <div className="prose prose-lg prose-gray max-w-none">
-          <h2>Qu&apos;est-ce que l&apos;IMC (Indice de Masse Corporelle) ?</h2>
-          <p>
-            L&apos;<strong>Indice de Masse Corporelle</strong>, ou{" "}
-            <strong>IMC</strong> (en anglais <em>Body Mass Index</em> ou{" "}
-            <em>BMI</em>), est un indicateur qui permet d&apos;evaluer la
-            corpulence d&apos;une personne en fonction de sa taille et de son
-            poids. Developpe par le mathematicien belge Adolphe Quetelet au XIXe
-            siecle, il est aujourd&apos;hui utilise dans le monde entier par les
-            professionnels de sante comme outil de depistage du surpoids et de
-            l&apos;obesite.
-          </p>
-          <p>
-            L&apos;Organisation mondiale de la sante (OMS) a adopte l&apos;IMC
-            comme reference internationale pour classifier les differentes
-            categories de corpulence chez l&apos;adulte. C&apos;est un outil
-            simple, rapide et non invasif qui donne une premiere indication sur
-            les risques pour la sante lies au poids.
-          </p>
+      <section className="max-w-5xl mx-auto px-4 py-12">
+        <h2 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-8">
+          Tout savoir sur l&apos;IMC
+        </h2>
 
-          <h2>Comment calculer son IMC ?</h2>
-          <p>
-            La formule de calcul de l&apos;IMC est tres simple. Il suffit de
-            diviser votre <strong>poids</strong> (exprime en kilogrammes) par le{" "}
-            <strong>carre de votre taille</strong> (exprimee en metres) :
-          </p>
-          <p className="text-center">
-            <strong className="text-lg">
-              IMC = Poids (kg) / Taille (m) x Taille (m)
-            </strong>
-          </p>
-          <p>
-            Par exemple, pour une personne pesant 68 kg et mesurant 1,72 m :{" "}
-            <em>IMC = 68 / (1,72 x 1,72) = 68 / 2,9584 = 22,99</em>. Cet IMC
-            de 23,0 se situe dans la categorie &laquo; poids normal &raquo;
-            selon les criteres de l&apos;OMS. Notre calculateur effectue ce
-            calcul automatiquement : il vous suffit d&apos;entrer votre poids en
-            kilogrammes et votre taille en centimetres pour obtenir
-            instantanement votre resultat.
-          </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-6">
+            <h3 className="font-bold text-gray-800 mb-3">Qu&apos;est-ce que l&apos;IMC ?</h3>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              L&apos;<strong>Indice de Masse Corporelle</strong> (<strong>IMC</strong>, ou <em>Body Mass Index / BMI</em>) est un indicateur qui evalue la corpulence d&apos;une personne en fonction de sa taille et de son poids. Developpe par Adolphe Quetelet au XIXe siecle, il est utilise dans le monde entier comme outil de depistage du <strong>surpoids</strong> et de l&apos;<strong>obesite</strong>. L&apos;OMS l&apos;a adopte comme reference internationale : c&apos;est un outil simple, rapide et non invasif pour evaluer les risques de sante lies au poids.
+            </p>
+          </div>
 
-          <h2>Les categories de l&apos;OMS</h2>
-          <p>
-            L&apos;OMS a defini des seuils precis pour interpreter la valeur de
-            l&apos;IMC chez l&apos;adulte (a partir de 18 ans). Ces categories
-            sont les memes pour les hommes et les femmes :
-          </p>
-          <ul>
-            <li>
-              <strong>Denutrition</strong> (IMC &lt; 16,5) : poids tres
-              insuffisant, risque majeur pour la sante. Des carences
-              nutritionnelles graves peuvent entrainer des troubles cardiaques,
-              immunitaires et hormonaux.
-            </li>
-            <li>
-              <strong>Maigreur</strong> (IMC 16,5 - 18,5) : poids insuffisant.
-              Un suivi medical est recommande pour identifier les causes
-              (alimentation, maladie, troubles du comportement alimentaire).
-            </li>
-            <li>
-              <strong>Poids normal</strong> (IMC 18,5 - 25) : poids
-              correspondant a un risque minimal pour la sante. C&apos;est la
-              fourchette consideree comme ideale pour la majorite des adultes.
-            </li>
-            <li>
-              <strong>Surpoids</strong> (IMC 25 - 30) : poids legerement
-              excessif. Le risque de maladies cardiovasculaires, de diabete de
-              type 2 et d&apos;hypertension commence a augmenter.
-            </li>
-            <li>
-              <strong>Obesite moderee</strong> (IMC 30 - 35) : le risque pour la
-              sante est nettement accru. Un accompagnement medical et un
-              changement d&apos;hygiene de vie sont generalement recommandes.
-            </li>
-            <li>
-              <strong>Obesite severe</strong> (IMC 35 - 40) : risque eleve de
-              complications de sante. Une prise en charge medicale pluridisciplinaire
-              est necessaire.
-            </li>
-            <li>
-              <strong>Obesite morbide</strong> (IMC &gt; 40) : risque tres eleve
-              de comorbidites graves. La chirurgie bariatrique peut etre
-              envisagee dans certains cas.
-            </li>
-          </ul>
+          <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-6">
+            <h3 className="font-bold text-gray-800 mb-3">Comment calculer son IMC ?</h3>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              Divisez votre <strong>poids</strong> (kg) par le <strong>carre de votre taille</strong> (m) : <strong>IMC = Poids / (Taille x Taille)</strong>. Exemple : 68 kg pour 1,72 m donne IMC = 68 / 2,9584 = 22,99, soit un <strong>poids normal</strong> selon l&apos;OMS. Notre calculateur effectue ce calcul automatiquement : entrez votre poids en kilogrammes et votre taille en centimetres pour un resultat instantane.
+            </p>
+          </div>
 
-          <h2>Les limites de l&apos;IMC</h2>
-          <p>
-            Si l&apos;IMC est un indicateur utile pour le depistage a grande
-            echelle, il presente plusieurs <strong>limites importantes</strong>{" "}
-            qu&apos;il convient de connaitre :
-          </p>
-          <ul>
-            <li>
-              <strong>Il ne distingue pas la masse musculaire de la masse
-              graisseuse.</strong> Un sportif ou un bodybuilder peut avoir un IMC
-              superieur a 25 tout en etant en excellente sante, car ses kilos
-              supplementaires sont dus au muscle et non a la graisse.
-            </li>
-            <li>
-              <strong>Il ne prend pas en compte la repartition des graisses.</strong>{" "}
-              Or, la graisse abdominale (graisse viscerale) est bien plus
-              dangereuse pour la sante que la graisse situee sur les hanches ou
-              les cuisses. Le tour de taille est un indicateur complementaire
-              important.
-            </li>
-            <li>
-              <strong>Il ne tient pas compte de l&apos;age.</strong> La
-              composition corporelle evolue avec l&apos;age : apres 60-65 ans,
-              une legere surcharge ponderale (IMC 25-27) peut meme etre
-              protectrice.
-            </li>
-            <li>
-              <strong>Il n&apos;est pas adapte aux enfants et aux
-              adolescents.</strong> Pour les moins de 18 ans, des courbes de
-              corpulence specifiques tenant compte de l&apos;age et du sexe sont
-              utilisees.
-            </li>
-            <li>
-              <strong>Il ne convient pas aux femmes enceintes</strong>, dont la
-              prise de poids est normale et necessaire pour le bon developpement
-              du bebe.
-            </li>
-          </ul>
+          <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-6">
+            <h3 className="font-bold text-gray-800 mb-3">Les categories de l&apos;OMS</h3>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              L&apos;OMS definit des seuils precis pour les adultes (hommes et femmes) : <strong>Denutrition</strong> (IMC &lt; 16,5) avec risque majeur de carences. <strong>Maigreur</strong> (16,5 - 18,5) necessitant un suivi medical. <strong>Poids normal</strong> (18,5 - 25) correspondant a un risque minimal. <strong>Surpoids</strong> (25 - 30) avec risque accru de maladies cardiovasculaires et diabete. <strong>Obesite moderee</strong> (30 - 35), <strong>severe</strong> (35 - 40) et <strong>morbide</strong> (&gt; 40) necessitant une prise en charge medicale adaptee.
+            </p>
+          </div>
 
-          <h2>Quand consulter un medecin ?</h2>
-          <p>
-            L&apos;IMC est un outil de depistage, pas un diagnostic. Il est
-            recommande de consulter un professionnel de sante dans les
-            situations suivantes :
-          </p>
-          <ul>
-            <li>
-              Votre IMC est <strong>inferieur a 18,5</strong> ou{" "}
-              <strong>superieur a 30</strong>.
-            </li>
-            <li>
-              Votre IMC se situe entre 25 et 30 et vous presentez d&apos;autres
-              facteurs de risque : hypertension arterielle, diabete, cholesterol
-              eleve, antecedents familiaux de maladies cardiovasculaires.
-            </li>
-            <li>
-              Vous constatez une <strong>prise ou perte de poids rapide et
-              inexpliquee</strong>.
-            </li>
-            <li>
-              Vous avez des <strong>difficultes a maintenir un poids stable</strong>{" "}
-              malgre une alimentation equilibree.
-            </li>
-          </ul>
-          <p>
-            Votre medecin pourra completer l&apos;evaluation par d&apos;autres
-            mesures (tour de taille, bilan sanguin, impedancemetrie) et vous
-            proposer un accompagnement adapte a votre situation.
-          </p>
+          <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-6">
+            <h3 className="font-bold text-gray-800 mb-3">Les limites de l&apos;IMC</h3>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              L&apos;IMC presente plusieurs <strong>limites importantes</strong>. Il ne distingue pas la <strong>masse musculaire</strong> de la masse graisseuse : un sportif muscle peut avoir un IMC eleve sans surpoids reel. Il ignore la <strong>repartition des graisses</strong> (la graisse abdominale est plus dangereuse). Il ne tient pas compte de l&apos;<strong>age</strong> (apres 60-65 ans, un IMC 25-27 peut etre protecteur). Enfin, il n&apos;est pas adapte aux <strong>enfants, adolescents et femmes enceintes</strong>.
+            </p>
+          </div>
 
-          <h2>Conseils pour maintenir un poids sain</h2>
-          <p>
-            Maintenir un poids de forme ne se resume pas a un chiffre sur la
-            balance. Voici quelques recommandations fondees sur les
-            preconisations des autorites de sante :
-          </p>
-          <ul>
-            <li>
-              <strong>Adoptez une alimentation equilibree</strong> : privilegiez
-              les fruits, legumes, cereales completes, proteines maigres et
-              bonnes graisses. Limitez les produits ultra-transformes, le sucre
-              ajoute et les graisses saturees.
-            </li>
-            <li>
-              <strong>Pratiquez une activite physique reguliere</strong> :{" "}
-              l&apos;OMS recommande au moins 150 minutes d&apos;activite
-              moderee par semaine (marche rapide, velo, natation) ou 75 minutes
-              d&apos;activite intense.
-            </li>
-            <li>
-              <strong>Dormez suffisamment</strong> : le manque de sommeil
-              favorise la prise de poids en perturbant les hormones de la faim
-              (gheline et leptine). Visez 7 a 9 heures par nuit.
-            </li>
-            <li>
-              <strong>Gerez votre stress</strong> : le stress chronique peut
-              entrainer des comportements alimentaires compulsifs et favoriser
-              le stockage de graisse abdominale.
-            </li>
-            <li>
-              <strong>Evitez les regimes restrictifs</strong> : ils sont souvent
-              contre-productifs a long terme (effet yoyo). Privilegiez des
-              changements d&apos;habitudes progressifs et durables.
-            </li>
-          </ul>
-          <p>
-            N&apos;oubliez pas que l&apos;IMC n&apos;est qu&apos;un indicateur
-            parmi d&apos;autres. Votre bien-etre general, votre niveau
-            d&apos;energie, votre sante mentale et votre qualite de vie sont
-            tout aussi importants que le chiffre affiche sur la balance ou dans
-            un calcul d&apos;IMC.
-          </p>
+          <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-6">
+            <h3 className="font-bold text-gray-800 mb-3">Quand consulter un medecin ?</h3>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              L&apos;IMC est un outil de depistage, pas un diagnostic. Consultez un professionnel de sante si votre IMC est <strong>inferieur a 18,5</strong> ou <strong>superieur a 30</strong>, ou entre 25 et 30 avec des facteurs de risque (hypertension, diabete, cholesterol, antecedents cardiovasculaires). Une <strong>prise ou perte de poids rapide et inexpliquee</strong> justifie egalement une consultation. Le medecin completera l&apos;evaluation par d&apos;autres mesures (tour de taille, bilan sanguin, impedancemetrie).
+            </p>
+          </div>
+
+          <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-6">
+            <h3 className="font-bold text-gray-800 mb-3">Conseils pour un poids sain</h3>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              <strong>Alimentation equilibree</strong> : privilegiez fruits, legumes, cereales completes et proteines maigres, en limitant les produits ultra-transformes. <strong>Activite physique</strong> : l&apos;OMS recommande 150 min d&apos;activite moderee ou 75 min intense par semaine. <strong>Sommeil</strong> : 7 a 9 heures par nuit pour eviter le dereglement des hormones de la faim. <strong>Gestion du stress</strong> pour limiter le stockage de graisse abdominale. Evitez les <strong>regimes restrictifs</strong> (effet yoyo) et privilegiez des changements d&apos;habitudes progressifs et durables.
+            </p>
+          </div>
         </div>
       </section>
 

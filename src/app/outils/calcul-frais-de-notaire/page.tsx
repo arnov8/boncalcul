@@ -120,156 +120,55 @@ export default function PageFraisNotaire() {
         </section>
 
         {/* ---------- Contenu SEO ---------- */}
-        <article className="prose prose-lg prose-blue max-w-none">
-          <h2>Qu&apos;est-ce que les frais de notaire&nbsp;?</h2>
-          <p>
-            Lorsque vous achetez un bien immobilier en France, vous devez
-            r&eacute;gler, en plus du prix de vente, ce que l&apos;on appelle
-            couramment les &laquo;&nbsp;frais de notaire&nbsp;&raquo;. Cette
-            appellation est en r&eacute;alit&eacute; trompeuse, car la
-            r&eacute;mun&eacute;ration du notaire (&eacute;moluments) ne
-            repr&eacute;sente qu&apos;une part minoritaire du total. La majeure
-            partie de ces frais est constitu&eacute;e de taxes collect&eacute;es
-            pour le compte de l&apos;&Eacute;tat, du d&eacute;partement et de la
-            commune. Il est donc plus juste de parler de &laquo;&nbsp;frais
-            d&apos;acquisition&nbsp;&raquo;.
-          </p>
-          <p>
-            Concr&egrave;tement, les frais de notaire se d&eacute;composent en
-            trois cat&eacute;gories&nbsp;: les droits de mutation (ou taxe de
-            publicit&eacute; fonci&egrave;re pour le neuf), les
-            &eacute;moluments du notaire et les frais divers (d&eacute;bours,
-            formalit&eacute;s, copies d&apos;actes, etc.). Leur montant total
-            varie consid&eacute;rablement selon que vous achetez un bien ancien
-            ou neuf.
-          </p>
-
-          <h2>
-            Frais de notaire dans l&apos;ancien vs. dans le neuf&nbsp;: quelles
-            diff&eacute;rences&nbsp;?
+        <section className="max-w-5xl mx-auto px-0 py-12">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-8">
+            Tout savoir sur les frais de notaire
           </h2>
-          <p>
-            Pour un <strong>bien ancien</strong> (construit depuis plus de 5
-            ans), les frais de notaire repr&eacute;sentent g&eacute;n&eacute;ralement
-            entre <strong>7&nbsp;% et 8&nbsp;%</strong> du prix de vente. Cette
-            proportion &eacute;lev&eacute;e s&apos;explique par les droits de mutation
-            &agrave; titre on&eacute;reux (DMTO), qui se composent de la taxe
-            d&eacute;partementale (4,5&nbsp;% dans la quasi-totalit&eacute; des
-            d&eacute;partements, 3,8&nbsp;% dans quelques exceptions), de la
-            taxe communale (1,2&nbsp;%) et d&apos;un pr&eacute;l&egrave;vement pour
-            l&apos;&Eacute;tat (0,1&nbsp;%).
-          </p>
-          <p>
-            Pour un <strong>bien neuf</strong> (moins de 5 ans ou achat sur
-            plan en VEFA), les frais de notaire sont nettement inf&eacute;rieurs&nbsp;:
-            entre <strong>2&nbsp;% et 3&nbsp;%</strong> du prix d&apos;achat.
-            En effet, l&apos;acqu&eacute;reur paie la TVA immobili&egrave;re
-            (20&nbsp;%, d&eacute;j&agrave; incluse dans le prix de vente) mais
-            b&eacute;n&eacute;ficie d&apos;une taxe de publicit&eacute;
-            fonci&egrave;re r&eacute;duite &agrave; 0,715&nbsp;% au lieu des
-            droits de mutation classiques. C&apos;est l&apos;un des avantages
-            financiers majeurs de l&apos;achat dans le neuf.
-          </p>
 
-          <h2>Comment sont calcul&eacute;s les &eacute;moluments du notaire&nbsp;?</h2>
-          <p>
-            Les &eacute;moluments du notaire sont fix&eacute;s par un
-            bar&egrave;me officiel, publi&eacute; par d&eacute;cret, et
-            appliqu&eacute; de mani&egrave;re identique par tous les notaires de
-            France. Ce bar&egrave;me est <strong>d&eacute;gressif</strong>&nbsp;:
-            plus le prix du bien est &eacute;lev&eacute;, plus le taux appliqu&eacute;
-            diminue. Les tranches actuelles sont les suivantes&nbsp;: 3,870&nbsp;%
-            jusqu&apos;&agrave; 6&nbsp;500&nbsp;&euro;, 1,596&nbsp;% de
-            6&nbsp;500 &agrave; 17&nbsp;000&nbsp;&euro;, 1,064&nbsp;% de
-            17&nbsp;000 &agrave; 60&nbsp;000&nbsp;&euro;, et 0,799&nbsp;%
-            au-del&agrave; de 60&nbsp;000&nbsp;&euro;.
-          </p>
-          <p>
-            Pour un bien &agrave; 250&nbsp;000&nbsp;&euro; par exemple, les
-            &eacute;moluments repr&eacute;sentent environ 2&nbsp;000&nbsp;&euro;,
-            soit moins de 1&nbsp;% du prix de vente. C&apos;est donc bien
-            loin de la totalit&eacute; des &laquo;&nbsp;frais de
-            notaire&nbsp;&raquo; que l&apos;on r&egrave;gle.
-          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+            <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-6">
+              <h3 className="font-bold text-gray-800 mb-3">Qu&apos;est-ce que les frais de notaire&nbsp;?</h3>
+              <p className="text-sm text-gray-600 leading-relaxed">
+                Les &laquo;&nbsp;<strong>frais de notaire</strong>&nbsp;&raquo; (plus justement &laquo;&nbsp;frais d&apos;acquisition&nbsp;&raquo;) se d&eacute;composent en trois cat&eacute;gories&nbsp;: les <strong>droits de mutation</strong> (taxes revers&eacute;es &agrave; l&apos;&Eacute;tat, au d&eacute;partement et &agrave; la commune), les <strong>&eacute;moluments du notaire</strong> (sa r&eacute;mun&eacute;ration selon un bar&egrave;me officiel) et les <strong>frais divers</strong> (d&eacute;bours, formalit&eacute;s, copies d&apos;actes). La r&eacute;mun&eacute;ration du notaire ne repr&eacute;sente qu&apos;environ 1&nbsp;% du prix de vente, la majeure partie &eacute;tant constitu&eacute;e de taxes.
+              </p>
+            </div>
 
-          <h2>
-            Peut-on n&eacute;gocier les frais de notaire&nbsp;?
-          </h2>
-          <p>
-            La partie fiscale (droits de mutation, taxe de publicit&eacute;
-            fonci&egrave;re) n&apos;est absolument pas n&eacute;gociable&nbsp;:
-            ce sont des taxes l&eacute;gales. En revanche, depuis la loi
-            Macron de 2015 et ses ajustements ult&eacute;rieurs, le notaire
-            peut consentir une <strong>remise pouvant aller jusqu&apos;&agrave;
-            20&nbsp;%</strong> sur ses &eacute;moluments lorsque le prix du
-            bien d&eacute;passe 100&nbsp;000&nbsp;&euro;. Cette remise,
-            si elle est appliqu&eacute;e, doit l&apos;&ecirc;tre de
-            mani&egrave;re &eacute;gale &agrave; l&apos;ensemble des clients
-            de l&apos;&eacute;tude. N&apos;h&eacute;sitez pas &agrave;
-            poser la question &agrave; votre notaire.
-          </p>
+            <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-6">
+              <h3 className="font-bold text-gray-800 mb-3">Ancien vs neuf&nbsp;: quelles diff&eacute;rences&nbsp;?</h3>
+              <p className="text-sm text-gray-600 leading-relaxed">
+                Pour un <strong>bien ancien</strong> (+5 ans), les frais repr&eacute;sentent <strong>7 &agrave; 8&nbsp;%</strong> du prix, en raison des droits de mutation (taxe d&eacute;partementale 4,5&nbsp;%, communale 1,2&nbsp;%, &Eacute;tat 0,1&nbsp;%). Pour un <strong>bien neuf</strong> (VEFA ou -5 ans), ils ne sont que de <strong>2 &agrave; 3&nbsp;%</strong> gr&acirc;ce &agrave; une taxe de publicit&eacute; fonci&egrave;re r&eacute;duite &agrave; 0,715&nbsp;% au lieu des droits de mutation classiques. C&apos;est un avantage financier majeur de l&apos;achat dans le neuf.
+              </p>
+            </div>
 
-          <h2>Astuces pour r&eacute;duire vos frais de notaire</h2>
-          <p>
-            M&ecirc;me si les marges de man&oelig;uvre sont limit&eacute;es,
-            plusieurs leviers permettent de diminuer la facture&nbsp;:
-          </p>
-          <ul>
-            <li>
-              <strong>D&eacute;duire le mobilier&nbsp;:</strong> la cuisine
-              &eacute;quip&eacute;e, les meubles fix&eacute;s ou les
-              &eacute;quipements &eacute;lectrom&eacute;nagers peuvent &ecirc;tre
-              valoris&eacute;s s&eacute;par&eacute;ment. Les frais ne sont
-              calcul&eacute;s que sur la valeur immobili&egrave;re.
-            </li>
-            <li>
-              <strong>S&eacute;parer les frais d&apos;agence&nbsp;:</strong> si
-              les honoraires d&apos;agence sont &agrave; la charge de
-              l&apos;acqu&eacute;reur (mandat de recherche), le prix net
-              vendeur servant de base au calcul des frais est plus faible.
-            </li>
-            <li>
-              <strong>Demander la remise de 20&nbsp;%&nbsp;:</strong> comme
-              expliqu&eacute; ci-dessus, cette remise sur les &eacute;moluments
-              est l&eacute;gale et peut repr&eacute;senter quelques centaines
-              d&apos;euros d&apos;&eacute;conomie.
-            </li>
-            <li>
-              <strong>Comparer les d&eacute;partements&nbsp;:</strong> quelques
-              d&eacute;partements appliquent encore un taux r&eacute;duit de
-              3,8&nbsp;% au lieu de 4,5&nbsp;%, ce qui r&eacute;duit les droits
-              de mutation.
-            </li>
-          </ul>
+            <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-6">
+              <h3 className="font-bold text-gray-800 mb-3">Bar&egrave;me des &eacute;moluments du notaire</h3>
+              <p className="text-sm text-gray-600 leading-relaxed">
+                Les &eacute;moluments suivent un <strong>bar&egrave;me officiel d&eacute;gressif</strong> identique dans toute la France&nbsp;: 3,870&nbsp;% jusqu&apos;&agrave; 6&nbsp;500&nbsp;&euro;, 1,596&nbsp;% de 6&nbsp;500 &agrave; 17&nbsp;000&nbsp;&euro;, 1,064&nbsp;% de 17&nbsp;000 &agrave; 60&nbsp;000&nbsp;&euro;, et 0,799&nbsp;% au-del&agrave;. Pour un bien &agrave; 250&nbsp;000&nbsp;&euro;, les &eacute;moluments repr&eacute;sentent environ 2&nbsp;000&nbsp;&euro;, soit moins de 1&nbsp;% du prix de vente.
+              </p>
+            </div>
 
-          <h2>Quand et comment payer les frais de notaire&nbsp;?</h2>
-          <p>
-            Les frais de notaire sont r&eacute;gl&eacute;s au moment de la
-            signature de l&apos;acte authentique de vente, chez le notaire.
-            Quelques jours avant cette date, le notaire vous adresse un appel de
-            fonds d&eacute;taillant le montant &agrave; provisionner. Si la
-            provision s&apos;av&egrave;re sup&eacute;rieure au montant
-            d&eacute;finitif (ce qui est fr&eacute;quent), le notaire vous
-            restitue le trop-per&ccedil;u dans les semaines suivantes.
-          </p>
-          <p>
-            Il est important de noter que les frais de notaire ne peuvent
-            g&eacute;n&eacute;ralement pas &ecirc;tre inclus dans votre
-            pr&ecirc;t immobilier principal. Vous devez les financer sur fonds
-            propres ou via un pr&ecirc;t compl&eacute;mentaire. C&apos;est
-            pourquoi les banques exigent souvent un apport personnel
-            repr&eacute;sentant au minimum le montant des frais de notaire, soit
-            7 &agrave; 10&nbsp;% du prix du bien dans l&apos;ancien.
-          </p>
-          <p>
-            Utilisez notre simulateur ci-dessus pour obtenir une estimation
-            fiable de vos frais de notaire et mieux pr&eacute;parer votre
-            budget d&apos;acquisition. Le calcul est bas&eacute; sur le
-            bar&egrave;me officiel en vigueur en 2026 et prend en compte le
-            type de bien (ancien ou neuf) ainsi que le taux d&eacute;partemental
-            applicable.
-          </p>
-        </article>
+            <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-6">
+              <h3 className="font-bold text-gray-800 mb-3">N&eacute;gocier les frais de notaire</h3>
+              <p className="text-sm text-gray-600 leading-relaxed">
+                Les droits de mutation (taxes l&eacute;gales) ne sont pas n&eacute;gociables. En revanche, depuis la <strong>loi Macron (2015)</strong>, le notaire peut accorder une <strong>remise jusqu&apos;&agrave; 20&nbsp;%</strong> sur ses &eacute;moluments pour les biens de plus de 100&nbsp;000&nbsp;&euro;. Cette remise doit &ecirc;tre appliqu&eacute;e uniform&eacute;ment &agrave; tous les clients de l&apos;&eacute;tude. N&apos;h&eacute;sitez pas &agrave; la demander.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-6">
+              <h3 className="font-bold text-gray-800 mb-3">Astuces pour r&eacute;duire la facture</h3>
+              <p className="text-sm text-gray-600 leading-relaxed">
+                <strong>D&eacute;duire le mobilier</strong>&nbsp;: cuisine &eacute;quip&eacute;e, meubles fix&eacute;s et &eacute;lectrom&eacute;nager peuvent &ecirc;tre valoris&eacute;s s&eacute;par&eacute;ment, les frais ne portant que sur la valeur immobili&egrave;re. <strong>S&eacute;parer les frais d&apos;agence</strong>&nbsp;: si les honoraires sont &agrave; charge de l&apos;acqu&eacute;reur, le prix net vendeur (base de calcul) est plus faible. <strong>Comparer les d&eacute;partements</strong>&nbsp;: quelques-uns appliquent encore 3,8&nbsp;% au lieu de 4,5&nbsp;% de taxe d&eacute;partementale.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-6">
+              <h3 className="font-bold text-gray-800 mb-3">Quand et comment payer&nbsp;?</h3>
+              <p className="text-sm text-gray-600 leading-relaxed">
+                Les frais sont r&eacute;gl&eacute;s le jour de la <strong>signature de l&apos;acte authentique</strong>. Le notaire adresse un appel de fonds quelques jours avant et restitue le trop-per&ccedil;u &eacute;ventuel dans les semaines suivantes. Ces frais ne peuvent g&eacute;n&eacute;ralement pas &ecirc;tre int&eacute;gr&eacute;s au pr&ecirc;t immobilier principal&nbsp;: les banques exigent souvent un <strong>apport personnel</strong> couvrant au minimum 7 &agrave; 10&nbsp;% du prix du bien dans l&apos;ancien. Notre simulateur, bas&eacute; sur le bar&egrave;me officiel 2026, vous aide &agrave; estimer ce poste pr&eacute;cis&eacute;ment.
+              </p>
+            </div>
+          </div>
+        </section>
 
         {/* ---------- Pub ---------- */}
         <div className="my-10">

@@ -123,162 +123,46 @@ export default function PageCalculTVA() {
       </section>
 
       {/* Contenu SEO */}
-      <section className="max-w-4xl mx-auto px-4 py-12">
-        <div className="prose prose-lg prose-gray max-w-none">
-          <h2>Qu'est-ce que la TVA ?</h2>
-          <p>
-            La <strong>TVA (Taxe sur la Valeur Ajoutee)</strong> est un impot
-            indirect sur la consommation, preleve a chaque etape de la chaine de
-            production et de distribution. Instauree en France en 1954, elle
-            represente aujourd'hui la premiere source de recettes fiscales de
-            l'Etat, devant l'impot sur le revenu. Contrairement a ce que l'on
-            pense souvent, ce n'est pas l'entreprise qui supporte la charge
-            finale de la TVA, mais bien le consommateur final. Les entreprises
-            jouent le role de collecteur : elles facturent la TVA a leurs
-            clients, deduisent la TVA qu'elles ont payee sur leurs propres
-            achats, et reversent la difference au Tresor public.
-          </p>
-          <p>
-            La TVA s'applique a la quasi-totalite des biens et services vendus
-            en France. Seules quelques operations en sont exonerees, comme
-            certaines activites medicales, les operations bancaires et
-            financieres, ou encore l'enseignement.
-          </p>
+      <section className="max-w-5xl mx-auto px-4 py-12">
+        <h2 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-8">
+          Tout savoir sur la TVA en France
+        </h2>
 
-          <h2>Les 4 taux de TVA en France</h2>
-          <p>
-            La legislation francaise prevoit quatre taux de TVA, chacun
-            s'appliquant a des categories specifiques de biens et services :
-          </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-6">
+            <h3 className="font-bold text-gray-800 mb-3">Qu&apos;est-ce que la TVA ?</h3>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              La <strong>TVA (Taxe sur la Valeur Ajoutee)</strong> est un impot indirect sur la consommation, preleve a chaque etape de la production et de la distribution. Instauree en France en 1954, elle est la premiere source de recettes fiscales de l&apos;Etat. Ce n&apos;est pas l&apos;entreprise qui supporte la charge finale, mais le <strong>consommateur final</strong>. Les entreprises collectent la TVA, deduisent celle payee sur leurs achats et reversent la difference au Tresor public. Elle s&apos;applique a la quasi-totalite des biens et services, sauf certaines activites medicales, bancaires et l&apos;enseignement.
+            </p>
+          </div>
 
-          <h3>Taux normal : 20 %</h3>
-          <p>
-            C'est le taux par defaut qui s'applique a la majorite des biens et
-            des prestations de services : electronique, vetements, mobilier,
-            electromenager, services de conseil, honoraires d'avocats,
-            prestations informatiques, etc. Si aucun taux specifique n'est
-            prevu par la loi, c'est le taux de 20 % qui s'applique.
-          </p>
+          <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-6">
+            <h3 className="font-bold text-gray-800 mb-3">Les 4 taux de TVA en France</h3>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              <strong>Taux normal (20 %)</strong> : s&apos;applique par defaut a la majorite des biens et services (electronique, vetements, mobilier, prestations informatiques, etc.). <strong>Taux intermediaire (10 %)</strong> : restauration sur place, travaux de renovation, transports, hebergement, spectacles vivants. <strong>Taux reduit (5,5 %)</strong> : alimentation, livres, abonnements gaz et electricite, travaux d&apos;amelioration energetique, cinema, cantines scolaires. <strong>Taux super reduit (2,1 %)</strong> : medicaments rembourses, presse, redevance audiovisuelle, et certains cas en Corse et DOM.
+            </p>
+          </div>
 
-          <h3>Taux intermediaire : 10 %</h3>
-          <p>
-            Le taux de 10 % concerne notamment la restauration sur place (hors
-            boissons alcoolisees), les travaux de renovation et d'amelioration
-            des logements de plus de deux ans, les transports de voyageurs,
-            l'hebergement en hotel, les produits agricoles non transformes,
-            les medicaments non remboursables, et les spectacles vivants
-            (theatre, concerts).
-          </p>
+          <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-6">
+            <h3 className="font-bold text-gray-800 mb-3">Comment calculer la TVA ?</h3>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              <strong>Du HT vers le TTC :</strong> Montant TTC = Montant HT x (1 + taux). Exemple : 500 € HT a 20 % = 500 x 1,20 = 600 € TTC (TVA = 100 €). <strong>Du TTC vers le HT :</strong> Montant HT = Montant TTC / (1 + taux). Exemple : 600 € TTC a 20 % = 600 / 1,20 = 500 € HT. Pour obtenir uniquement la TVA : TVA = HT x taux, ou depuis le TTC : TVA = TTC - (TTC / (1 + taux)).
+            </p>
+          </div>
 
-          <h3>Taux reduit : 5,5 %</h3>
-          <p>
-            Ce taux s'applique aux produits de premiere necessite et aux biens
-            consideres comme essentiels : alimentation (sauf confiseries,
-            chocolat noir, caviar et certains produits de luxe), livres
-            (imprimes et numeriques), abonnements au gaz et a l'electricite,
-            equipements pour personnes handicapees, travaux d'amelioration
-            energetique des logements, billets de cinema, et cantines
-            scolaires.
-          </p>
+          <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-6">
+            <h3 className="font-bold text-gray-800 mb-3">Auto-entrepreneur et TVA</h3>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              Les <strong>auto-entrepreneurs</strong> beneficient de la <strong>franchise en base de TVA</strong> : ils ne facturent pas la TVA et ne la reversent pas, mais ne peuvent pas la deduire sur leurs achats. Ce regime s&apos;applique sous les seuils annuels (2024) : <strong>91 900 €</strong> pour les activites de vente et hebergement, <strong>36 800 €</strong> pour les prestations de services (BIC/BNC). Au-dela, la TVA doit etre facturee des le premier jour du mois de depassement. L&apos;option volontaire pour la TVA peut etre avantageuse si les achats professionnels sont importants.
+            </p>
+          </div>
 
-          <h3>Taux super reduit : 2,1 %</h3>
-          <p>
-            Le taux le plus bas est reserve a un nombre limite de produits :
-            les medicaments rembourses par la Securite sociale, la presse
-            (journaux et publications periodiques, y compris en ligne), la
-            redevance de contribution a l'audiovisuel public, et les
-            representations theatrales dans certains cas. Ce taux s'applique
-            egalement en Corse et dans les DOM, ou des taux specifiques encore
-            plus bas peuvent exister.
-          </p>
-
-          <h2>Comment calculer la TVA ?</h2>
-          <p>
-            Le calcul de la TVA repose sur deux formules simples selon que vous
-            partez du montant <strong>HT (Hors Taxes)</strong> ou du montant{" "}
-            <strong>TTC (Toutes Taxes Comprises)</strong> :
-          </p>
-          <p>
-            <strong>Du HT vers le TTC :</strong> Montant TTC = Montant HT x
-            (1 + taux de TVA). Par exemple, pour 500 € HT avec une TVA a 20 % :
-            500 x 1,20 = 600 € TTC. La TVA est de 500 x 0,20 = 100 €.
-          </p>
-          <p>
-            <strong>Du TTC vers le HT :</strong> Montant HT = Montant TTC /
-            (1 + taux de TVA). Par exemple, pour 600 € TTC avec TVA a 20 % :
-            600 / 1,20 = 500 € HT. La TVA est de 600 - 500 = 100 €.
-          </p>
-          <p>
-            Pour obtenir uniquement le montant de la TVA a partir du HT, il
-            suffit de multiplier le montant HT par le taux : TVA = HT x taux.
-            A partir du TTC, on utilise la formule : TVA = TTC - (TTC /
-            (1 + taux)).
-          </p>
-
-          <h2>Auto-entrepreneur et TVA</h2>
-          <p>
-            Les <strong>auto-entrepreneurs</strong> (ou micro-entrepreneurs)
-            beneficient d'un regime simplifie appele{" "}
-            <strong>franchise en base de TVA</strong>. Cela signifie qu'ils ne
-            facturent pas la TVA a leurs clients et ne la reversent pas a
-            l'Etat. En contrepartie, ils ne peuvent pas deduire la TVA sur
-            leurs achats professionnels.
-          </p>
-          <p>
-            Ce regime s'applique tant que le chiffre d'affaires annuel ne
-            depasse pas les seuils suivants (valeurs 2024) :
-          </p>
-          <ul>
-            <li>
-              <strong>91 900 €</strong> pour les activites de vente de
-              marchandises, objets, fournitures et denrees a emporter ou a
-              consommer sur place, et les prestations d'hebergement ;
-            </li>
-            <li>
-              <strong>36 800 €</strong> pour les prestations de services
-              relevant des BIC (benefices industriels et commerciaux) et les
-              professions liberales relevant des BNC (benefices non
-              commerciaux).
-            </li>
-          </ul>
-          <p>
-            En cas de depassement, l'auto-entrepreneur doit commencer a
-            facturer la TVA a compter du premier jour du mois de depassement.
-            Il peut aussi opter volontairement pour l'assujettissement a la
-            TVA s'il le souhaite, ce qui peut etre avantageux lorsqu'il
-            realise des achats importants soumis a TVA.
-          </p>
-
-          <h2>TVA intracommunautaire : les bases</h2>
-          <p>
-            Lorsque des entreprises realisent des echanges de biens ou de
-            services au sein de l'Union europeenne, des regles specifiques
-            s'appliquent. Chaque entreprise assujettie a la TVA dans l'UE
-            dispose d'un <strong>numero de TVA intracommunautaire</strong>,
-            qui permet d'identifier les operations transfrontalieres.
-          </p>
-          <p>
-            Pour les <strong>ventes de biens</strong> entre professionnels
-            (B2B), la TVA n'est generalement pas facturee par le vendeur : c'est
-            l'acheteur qui auto-liquide la TVA dans son pays. Cette mecanique
-            permet d'eviter la double imposition. Le vendeur doit toutefois
-            mentionner le numero de TVA intracommunautaire de l'acheteur sur
-            sa facture et declarer l'operation dans sa Declaration Europeenne
-            de Services (DES) ou sa Declaration d'Echanges de Biens (DEB).
-          </p>
-          <p>
-            Pour les <strong>prestations de services</strong> en B2B, la TVA
-            est en principe due dans le pays de l'acheteur (autoliquidation).
-            En B2C (vente aux particuliers), la TVA est generalement due dans
-            le pays du prestataire, sauf pour les services electroniques ou le
-            systeme du guichet unique (OSS) peut s'appliquer.
-          </p>
-          <p>
-            Comprendre ces mecanismes est essentiel pour toute entreprise qui
-            realise des operations avec des partenaires europeens. En cas de
-            doute, il est recommande de consulter un expert-comptable ou les
-            services fiscaux.
-          </p>
+          <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-6 md:col-span-2">
+            <h3 className="font-bold text-gray-800 mb-3">TVA intracommunautaire : les bases</h3>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              Pour les echanges au sein de l&apos;UE, chaque entreprise assujettie dispose d&apos;un <strong>numero de TVA intracommunautaire</strong>. En B2B, les <strong>ventes de biens</strong> ne sont pas facturees avec TVA par le vendeur : l&apos;acheteur auto-liquide la TVA dans son pays, evitant la double imposition. Le vendeur doit mentionner le numero intracommunautaire sur sa facture et declarer l&apos;operation (DES ou DEB). Pour les <strong>prestations de services</strong> en B2B, la TVA est due dans le pays de l&apos;acheteur. En B2C, elle est due dans le pays du prestataire, sauf pour les services electroniques (guichet unique OSS).
+            </p>
+          </div>
         </div>
       </section>
 

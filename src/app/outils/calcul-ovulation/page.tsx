@@ -123,168 +123,46 @@ export default function PageCalculOvulation() {
       </div>
 
       {/* SEO Content */}
-      <section className="max-w-4xl mx-auto px-4 py-8">
-        <div className="prose prose-lg prose-gray max-w-none">
-          <h2>Qu&apos;est-ce que l&apos;ovulation ?</h2>
-          <p>
-            L&apos;<strong>ovulation</strong> est le processus par lequel un
-            ovaire libere un ovule mature dans la trompe de Fallope, ou il
-            pourra etre feconde par un spermatozoide. Ce phenomene se produit
-            une fois par cycle menstruel et constitue le moment le plus fertile
-            du cycle. L&apos;ovule libere reste viable pendant 12 a 24 heures,
-            ce qui fait de l&apos;ovulation un evenement bref mais essentiel
-            pour la conception.
-          </p>
-          <p>
-            L&apos;ovulation est declenchee par un pic de l&apos;hormone
-            luteinisante (LH), produite par l&apos;hypophyse. Ce pic hormonal
-            survient environ 24 a 36 heures avant la liberation de
-            l&apos;ovule. C&apos;est ce mecanisme que detectent les tests
-            d&apos;ovulation disponibles en pharmacie.
-          </p>
+      <section className="max-w-5xl mx-auto px-4 py-12">
+        <h2 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-8">
+          Tout savoir sur l&apos;ovulation et la fertilite
+        </h2>
 
-          <h2>Comprendre le cycle menstruel</h2>
-          <p>
-            Le <strong>cycle menstruel</strong> se divise en plusieurs phases
-            distinctes. La <strong>phase folliculaire</strong> debute le premier
-            jour des regles et dure jusqu&apos;a l&apos;ovulation. Pendant
-            cette periode, les follicules ovariens se developpent sous
-            l&apos;effet des hormones FSH et estrogenes. La duree de cette
-            phase est variable d&apos;une femme a l&apos;autre, ce qui explique
-            les differences de longueur de cycle.
-          </p>
-          <p>
-            Apres l&apos;ovulation commence la{" "}
-            <strong>phase luteale</strong>, qui dure generalement 14 jours
-            (entre 12 et 16 jours). Le follicule vide se transforme en corps
-            jaune et produit de la progesterone, qui prepare l&apos;uterus a
-            une eventuelle grossesse. Si l&apos;ovule n&apos;est pas feconde,
-            le corps jaune degenere, les taux hormonaux chutent et les regles
-            surviennent, marquant le debut d&apos;un nouveau cycle.
-          </p>
-          <p>
-            C&apos;est la relative constance de la phase luteale (environ 14
-            jours) qui permet d&apos;estimer la date d&apos;ovulation en
-            soustrayant 14 jours a la duree totale du cycle. Ainsi, pour un
-            cycle de 28 jours, l&apos;ovulation a lieu vers le jour 14 ; pour
-            un cycle de 32 jours, vers le jour 18.
-          </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-6">
+            <h3 className="font-bold text-gray-800 mb-3">Qu&apos;est-ce que l&apos;ovulation ?</h3>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              L&apos;<strong>ovulation</strong> est la liberation d&apos;un ovule mature par l&apos;ovaire dans la trompe de Fallope, une fois par <strong>cycle menstruel</strong>. L&apos;ovule reste viable 12 a 24 heures. Ce processus est declenche par un pic de l&apos;hormone luteinisante (<strong>LH</strong>), produit par l&apos;hypophyse 24 a 36 heures avant la liberation de l&apos;ovule. C&apos;est ce mecanisme que detectent les tests d&apos;ovulation en pharmacie.
+            </p>
+          </div>
 
-          <h2>Comment identifier sa fenetre fertile ?</h2>
-          <p>
-            La <strong>fenetre de fertilite</strong> correspond a la periode du
-            cycle ou un rapport sexuel peut mener a une grossesse. Elle
-            s&apos;etend sur environ 6 jours : les 5 jours precedant
-            l&apos;ovulation et le jour de l&apos;ovulation lui-meme. Cette
-            duree s&apos;explique par la capacite des spermatozoides a survivre
-            jusqu&apos;a 5 jours dans les voies genitales feminines, combinee a
-            la duree de vie de l&apos;ovule (12 a 24 heures).
-          </p>
-          <p>
-            Pour identifier cette fenetre, plusieurs methodes peuvent etre
-            combinees :
-          </p>
-          <ul>
-            <li>
-              <strong>Le calcul calendaire</strong> : basee sur la duree
-              habituelle de votre cycle, cette methode est celle utilisee par
-              notre calculateur. Elle fonctionne mieux pour les femmes ayant des
-              cycles reguliers.
-            </li>
-            <li>
-              <strong>La courbe de temperature</strong> : la temperature basale
-              augmente de 0,2 a 0,5 °C apres l&apos;ovulation sous l&apos;effet
-              de la progesterone. En prenant votre temperature chaque matin
-              avant de vous lever, vous pouvez reperer cette hausse. Cette
-              methode confirme l&apos;ovulation a posteriori.
-            </li>
-            <li>
-              <strong>L&apos;observation de la glaire cervicale</strong> : a
-              l&apos;approche de l&apos;ovulation, la glaire devient abondante,
-              transparente et filante (aspect &laquo; blanc d&apos;oeuf
-              &raquo;). Ce changement facilite le passage des spermatozoides
-              vers l&apos;uterus.
-            </li>
-            <li>
-              <strong>Les tests d&apos;ovulation</strong> : ces tests urinaires
-              detectent le pic de LH qui precede l&apos;ovulation de 24 a 36
-              heures, offrant une indication precise du moment le plus fertile.
-            </li>
-          </ul>
+          <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-6">
+            <h3 className="font-bold text-gray-800 mb-3">Comprendre le cycle menstruel</h3>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              Le cycle comporte deux phases principales. La <strong>phase folliculaire</strong> debute au premier jour des regles et dure jusqu&apos;a l&apos;ovulation (duree variable). La <strong>phase luteale</strong> suit l&apos;ovulation et dure generalement 14 jours (12 a 16). C&apos;est cette constance qui permet d&apos;estimer la date d&apos;ovulation : cycle de 28 jours = ovulation vers J14 ; cycle de 32 jours = ovulation vers J18.
+            </p>
+          </div>
 
-          <h2>Les signes de l&apos;ovulation</h2>
-          <p>
-            Outre la glaire cervicale et la temperature, certaines femmes
-            ressentent des <strong>signes physiques</strong> au moment de
-            l&apos;ovulation :
-          </p>
-          <ul>
-            <li>
-              <strong>Douleur ovarienne</strong> (Mittelschmerz) : une douleur
-              legere a moderee d&apos;un cote du bas-ventre, correspondant au
-              cote de l&apos;ovaire qui ovule. Cette douleur peut durer
-              quelques minutes a quelques heures.
-            </li>
-            <li>
-              <strong>Spotting</strong> : de legeres pertes rosees ou brunes
-              peuvent survenir au moment de l&apos;ovulation chez certaines
-              femmes, dues a la chute breve des estrogenes.
-            </li>
-            <li>
-              <strong>Sensibilite mammaire</strong> : les seins peuvent etre
-              plus sensibles ou legerement douloureux autour de
-              l&apos;ovulation, en raison des fluctuations hormonales.
-            </li>
-            <li>
-              <strong>Augmentation de la libido</strong> : de nombreuses femmes
-              rapportent une augmentation du desir sexuel dans les jours
-              precedant l&apos;ovulation, un mecanisme lie a la hausse des
-              estrogenes.
-            </li>
-            <li>
-              <strong>Modification du col de l&apos;uterus</strong> : a
-              l&apos;approche de l&apos;ovulation, le col devient plus haut,
-              plus mou et plus ouvert pour faciliter le passage des
-              spermatozoides.
-            </li>
-          </ul>
+          <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-6">
+            <h3 className="font-bold text-gray-800 mb-3">Identifier sa fenetre fertile</h3>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              La <strong>fenetre de fertilite</strong> dure environ 6 jours : 5 jours avant l&apos;ovulation + le jour meme (les spermatozoides survivent jusqu&apos;a 5 jours). Pour l&apos;identifier, combinez le <strong>calcul calendaire</strong> (notre methode), la <strong>courbe de temperature</strong> (+0,2 a 0,5 °C apres ovulation), l&apos;<strong>observation de la glaire cervicale</strong> (transparente et filante a l&apos;approche) et les <strong>tests d&apos;ovulation</strong> urinaires (detectent le pic de LH).
+            </p>
+          </div>
 
-          <h2>Quand consulter un medecin ?</h2>
-          <p>
-            Si vous utilisez le calcul d&apos;ovulation dans le cadre d&apos;un
-            projet de conception, certaines situations meritent une consultation
-            medicale :
-          </p>
-          <ul>
-            <li>
-              Vous essayez de concevoir depuis <strong>plus de 12 mois</strong>{" "}
-              sans succes (ou 6 mois si vous avez plus de 35 ans).
-            </li>
-            <li>
-              Vos cycles sont tres <strong>irreguliers</strong> (duree variant
-              de plus de 7 jours d&apos;un cycle a l&apos;autre) ou tres courts
-              (moins de 21 jours) ou tres longs (plus de 35 jours).
-            </li>
-            <li>
-              Vous n&apos;avez <strong>pas de regles</strong> (amenorrhee) en
-              dehors d&apos;une grossesse.
-            </li>
-            <li>
-              Vous ressentez des <strong>douleurs pelviennes intenses</strong>{" "}
-              pendant vos regles ou en dehors de celles-ci.
-            </li>
-            <li>
-              Vous avez des <strong>antecedents</strong> de problemes
-              gynecologiques (endometriose, syndrome des ovaires polykystiques,
-              fibromes) ou des antecedents de fausse couche a repetition.
-            </li>
-          </ul>
-          <p>
-            Un gynecologue pourra realiser un bilan de fertilite complet
-            (dosages hormonaux, echographie pelvienne, hysterosalpingographie)
-            et vous orienter vers un accompagnement adapte, y compris vers un
-            centre de procreation medicalement assistee (PMA) si necessaire.
-          </p>
+          <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-6">
+            <h3 className="font-bold text-gray-800 mb-3">Les signes de l&apos;ovulation</h3>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              Certaines femmes ressentent des <strong>signes physiques</strong> : <strong>douleur ovarienne</strong> (Mittelschmerz) d&apos;un cote du bas-ventre, <strong>spotting</strong> (legeres pertes rosees dues a la chute des estrogenes), <strong>sensibilite mammaire</strong> liee aux fluctuations hormonales, <strong>augmentation de la libido</strong> sous l&apos;effet des estrogenes, et modification du col de l&apos;uterus qui devient plus haut, mou et ouvert.
+            </p>
+          </div>
+
+          <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-6 md:col-span-2">
+            <h3 className="font-bold text-gray-800 mb-3">Quand consulter un medecin ?</h3>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              Consultez si vous essayez de concevoir depuis <strong>plus de 12 mois</strong> sans succes (6 mois apres 35 ans), si vos cycles sont tres <strong>irreguliers</strong> (&lt; 21 jours ou &gt; 35 jours), en cas d&apos;<strong>amenorrhee</strong>, de <strong>douleurs pelviennes intenses</strong>, ou d&apos;<strong>antecedents</strong> gynecologiques (endometriose, SOPK, fibromes, fausses couches). Un gynecologue pourra realiser un bilan de fertilite complet et vous orienter vers un centre de <strong>PMA</strong> si necessaire.
+            </p>
+          </div>
         </div>
       </section>
 

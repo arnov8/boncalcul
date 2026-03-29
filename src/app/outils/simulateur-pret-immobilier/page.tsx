@@ -139,153 +139,54 @@ export default function SimulateurPretImmobilierPage() {
       </section>
 
       {/* Contenu SEO */}
-      <section className="max-w-4xl mx-auto px-4 py-12">
-        <div className="prose prose-lg prose-gray max-w-none">
-          <h2>Comment fonctionne notre simulateur de pret immobilier ?</h2>
-          <p>
-            Notre simulateur de pret immobilier vous permet d&apos;estimer en
-            quelques secondes le montant de vos mensualites et le cout total de
-            votre credit. Il vous suffit de renseigner le montant que vous
-            souhaitez emprunter, le taux d&apos;interet propose par votre banque,
-            la duree souhaitee du pret et le taux d&apos;assurance emprunteur. Le
-            calcul est effectue directement dans votre navigateur, sans qu&apos;aucune
-            donnee personnelle ne soit envoyee a nos serveurs.
-          </p>
-          <p>
-            L&apos;outil genere instantanement un recapitulatif complet comprenant la
-            mensualite hors assurance, la mensualite d&apos;assurance, la mensualite
-            totale, le cout total des interets, le cout total de l&apos;assurance et
-            le montant global rembourse sur toute la duree du pret. Vous pouvez
-            egalement consulter un tableau d&apos;amortissement detaille qui vous
-            montre, mois par mois, la repartition entre capital rembourse,
-            interets et assurance.
-          </p>
+      <section className="max-w-5xl mx-auto px-4 py-12">
+        <h2 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-8">
+          Tout comprendre sur le pret immobilier
+        </h2>
 
-          <h2>La formule de calcul des mensualites</h2>
-          <p>
-            Le calcul des mensualites d&apos;un pret immobilier repose sur la formule
-            mathematique de l&apos;annuite constante, utilisee par toutes les banques
-            francaises. Cette formule s&apos;ecrit :
-          </p>
-          <p className="bg-gray-50 border border-gray-200 rounded-lg p-4 text-center font-mono text-lg">
-            M = C &times; (t/12) / (1 - (1 + t/12)<sup>-n&times;12</sup>)
-          </p>
-          <p>
-            Dans cette formule, <strong>M</strong> represente la mensualite hors
-            assurance, <strong>C</strong> est le capital emprunte (montant du pret
-            moins l&apos;apport personnel), <strong>t</strong> est le taux d&apos;interet
-            annuel exprime en decimal (par exemple 0,035 pour 3,5%) et{" "}
-            <strong>n</strong> est la duree du pret en annees. Le terme t/12
-            correspond au taux mensuel, tandis que n&times;12 donne le nombre
-            total de mensualites.
-          </p>
-          <p>
-            Cette formule garantit que chaque mensualite est identique tout au
-            long du pret (on parle de pret a annuites constantes). Au debut du
-            pret, la part des interets dans chaque mensualite est elevee et la
-            part du capital remboursee est faible. Au fil du temps, cette
-            proportion s&apos;inverse progressivement : on rembourse de plus en plus
-            de capital et de moins en moins d&apos;interets. C&apos;est ce que montre
-            clairement le tableau d&apos;amortissement.
-          </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-6">
+            <h3 className="font-bold text-gray-800 mb-3">Comment fonctionne notre simulateur ?</h3>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              Notre <strong>simulateur de pret immobilier</strong> calcule en quelques secondes vos <strong>mensualites</strong> et le <strong>cout total du credit</strong>. Renseignez le montant emprunte, le taux d&apos;interet, la duree et le taux d&apos;assurance emprunteur. Le calcul s&apos;effectue dans votre navigateur, sans envoi de donnees personnelles. L&apos;outil genere un recapitulatif complet (mensualite hors assurance, mensualite totale, cout des interets, cout de l&apos;assurance) ainsi qu&apos;un <strong>tableau d&apos;amortissement</strong> detaillant mois par mois la repartition entre capital, interets et assurance.
+            </p>
+          </div>
 
-          <h2>Comment obtenir le meilleur taux pour votre pret immobilier ?</h2>
-          <p>
-            Le taux d&apos;interet est le facteur qui influence le plus le cout
-            total de votre credit immobilier. Une difference de seulement 0,5
-            point peut representer plusieurs milliers d&apos;euros sur la duree du
-            pret. Voici les strategies les plus efficaces pour obtenir le
-            meilleur taux possible.
-          </p>
-          <p>
-            <strong>Comparez les offres de plusieurs banques.</strong> Les taux
-            varient significativement d&apos;un etablissement a l&apos;autre. Ne vous
-            contentez pas de la premiere proposition de votre banque principale.
-            Sollicitez au minimum trois ou quatre banques differentes pour mettre
-            les offres en concurrence. Un courtier en credit immobilier peut
-            egalement vous aider a acceder aux meilleurs taux du marche, car il
-            negocie des volumes importants avec les banques partenaires.
-          </p>
-          <p>
-            <strong>Soignez votre profil emprunteur.</strong> Les banques
-            accordent les meilleurs taux aux profils les plus solides. Un apport
-            personnel d&apos;au moins 10% du prix du bien (idealement 20%), une
-            situation professionnelle stable (CDI, anciennete), un taux
-            d&apos;endettement inferieur a 35% et une gestion saine de vos comptes
-            bancaires (pas de decouvert) sont autant d&apos;elements qui jouent en
-            votre faveur. Les banques analysent generalement vos trois derniers
-            releves de compte.
-          </p>
-          <p>
-            <strong>Choisissez la bonne duree.</strong> Plus la duree du pret est
-            courte, plus le taux propose sera bas. Un pret sur 15 ans sera
-            generalement propose avec un taux inferieur a un pret sur 25 ans.
-            Neanmoins, une duree plus courte implique des mensualites plus
-            elevees. Utilisez notre simulateur pour trouver le meilleur compromis
-            entre mensualite supportable et cout total acceptable.
-          </p>
+          <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-6">
+            <h3 className="font-bold text-gray-800 mb-3">La formule de calcul des mensualites</h3>
+            <p className="text-sm text-gray-600 leading-relaxed mb-3">
+              Le calcul repose sur la formule de l&apos;<strong>annuite constante</strong>, utilisee par toutes les banques francaises :
+            </p>
+            <p className="bg-gray-50 border border-gray-200 rounded-lg p-3 text-center font-mono text-sm mb-3">
+              M = C &times; (t/12) / (1 - (1 + t/12)<sup>-n&times;12</sup>)
+            </p>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              <strong>M</strong> = mensualite hors assurance, <strong>C</strong> = capital emprunte, <strong>t</strong> = taux annuel en decimal, <strong>n</strong> = duree en annees. Au debut du pret, la part des interets est elevee ; elle s&apos;inverse progressivement au profit du capital rembourse, comme le montre le tableau d&apos;amortissement.
+            </p>
+          </div>
 
-          <h2>L&apos;importance de l&apos;assurance emprunteur</h2>
-          <p>
-            L&apos;assurance emprunteur est souvent sous-estimee par les acheteurs
-            immobiliers, alors qu&apos;elle peut representer jusqu&apos;a 30% du cout
-            total du credit. Elle couvre le remboursement du pret en cas de deces,
-            d&apos;invalidite ou d&apos;incapacite de travail de l&apos;emprunteur. Bien que
-            non obligatoire par la loi, toutes les banques l&apos;exigent en pratique
-            pour accorder un pret.
-          </p>
-          <p>
-            Le taux d&apos;assurance moyen se situe autour de 0,30% a 0,40% du
-            capital emprunte par an pour les contrats de groupe proposes par les
-            banques. Cependant, en faisant jouer la concurrence grace a la
-            delegation d&apos;assurance, il est possible d&apos;obtenir des taux bien
-            plus bas, parfois inferieurs a 0,10% pour les profils jeunes et en
-            bonne sante. Depuis la loi Lemoine de 2022, vous pouvez changer
-            d&apos;assurance emprunteur a tout moment, sans frais et sans delai de
-            preavis. C&apos;est un levier puissant pour reduire le cout de votre
-            credit.
-          </p>
-          <p>
-            Notre simulateur integre le taux d&apos;assurance dans le calcul afin de
-            vous donner une vision realiste du cout total de votre emprunt. Le
-            taux par defaut de 0,34% correspond a la moyenne des contrats de
-            groupe bancaires, mais nous vous encourageons a ajuster cette valeur
-            en fonction des devis que vous aurez obtenus.
-          </p>
+          <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-6">
+            <h3 className="font-bold text-gray-800 mb-3">Obtenir le meilleur taux immobilier</h3>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              Le <strong>taux d&apos;interet</strong> influence le plus le cout total : 0,5 point d&apos;ecart represente plusieurs milliers d&apos;euros. <strong>Comparez les offres</strong> d&apos;au moins 3-4 banques ou faites appel a un <strong>courtier en credit immobilier</strong>. <strong>Soignez votre profil</strong> : apport personnel d&apos;au moins 10 % (idealement 20 %), CDI avec anciennete, taux d&apos;endettement sous 35 %, comptes bancaires sans decouvert. <strong>Choisissez la bonne duree</strong> : un pret sur 15 ans offre un taux inferieur a un pret sur 25 ans, mais avec des mensualites plus elevees. Notre simulateur vous aide a trouver le meilleur compromis.
+            </p>
+          </div>
 
-          <h2>Conseils pour reussir votre projet immobilier</h2>
-          <p>
-            Au-dela du calcul des mensualites, plusieurs elements sont essentiels
-            pour mener a bien votre projet d&apos;achat immobilier. Tout d&apos;abord,
-            definissez clairement votre budget global en incluant non seulement
-            le prix du bien, mais aussi les frais de notaire (environ 7 a 8% dans
-            l&apos;ancien, 2 a 3% dans le neuf), les eventuels travaux, les frais de
-            demenagement et une reserve de securite. Notre{" "}
-            <a
-              href="/outils/calcul-frais-de-notaire"
-              className="text-blue-600 hover:underline"
-            >
-              calculateur de frais de notaire
-            </a>{" "}
-            peut vous aider a estimer precisement ce poste.
-          </p>
-          <p>
-            Pensez egalement a verifier votre eligibilite aux aides a
-            l&apos;accession comme le Pret a Taux Zero (PTZ) pour les
-            primo-accedants, le pret Action Logement (ex-1% patronal) si votre
-            employeur y cotise, ou encore les aides des collectivites locales.
-            Ces dispositifs peuvent significativement reduire le montant que vous
-            devez emprunter au taux du marche.
-          </p>
-          <p>
-            Enfin, gardez a l&apos;esprit que votre capacite d&apos;emprunt ne se resume
-            pas au montant maximal que la banque accepte de vous preter. Il est
-            prudent de conserver une marge de manoeuvre dans votre budget mensuel
-            pour faire face aux imprevus : reparations, augmentation des charges,
-            evolution de la situation familiale. Un taux d&apos;endettement de 30%
-            est generalement plus confortable que le plafond de 35% impose par
-            le Haut Conseil de stabilite financiere.
-          </p>
+          <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-6">
+            <h3 className="font-bold text-gray-800 mb-3">L&apos;assurance emprunteur</h3>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              L&apos;<strong>assurance emprunteur</strong> peut representer jusqu&apos;a <strong>30 % du cout total</strong> du credit. Elle couvre deces, invalidite et incapacite de travail. Le taux moyen des contrats de groupe bancaires est de 0,30 a 0,40 %, mais la <strong>delegation d&apos;assurance</strong> permet d&apos;obtenir des taux inferieurs a 0,10 % pour les profils jeunes. Depuis la <strong>loi Lemoine (2022)</strong>, vous pouvez changer d&apos;assurance a tout moment, sans frais ni preavis. Notre simulateur integre ce taux pour une estimation realiste.
+            </p>
+          </div>
+
+          <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-6 md:col-span-2">
+            <h3 className="font-bold text-gray-800 mb-3">Conseils pour reussir votre projet immobilier</h3>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              Definissez votre <strong>budget global</strong> en incluant le prix du bien, les <strong>frais de notaire</strong> (7-8 % dans l&apos;ancien, 2-3 % dans le neuf), les travaux et une reserve de securite. Notre{" "}
+              <a href="/outils/calcul-frais-de-notaire" className="text-blue-600 hover:underline">calculateur de frais de notaire</a>{" "}
+              peut vous aider. Verifiez votre eligibilite au <strong>PTZ</strong> (primo-accedants), au pret Action Logement ou aux aides locales pour reduire le montant emprunte au taux du marche. Conservez une marge de manoeuvre : un taux d&apos;endettement de 30 % est plus confortable que le plafond de 35 % du HCSF, pour faire face aux imprevus.
+            </p>
+          </div>
         </div>
       </section>
 

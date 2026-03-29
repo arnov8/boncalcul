@@ -132,152 +132,53 @@ export default function PageIndemnitesLicenciement() {
       </section>
 
       {/* SEO Content */}
-      <section className="max-w-4xl mx-auto px-4 py-12">
-        <div className="prose prose-lg prose-gray max-w-none">
-          <h2>Comprendre l&apos;indemnite de licenciement en France</h2>
-          <p>
-            L&apos;indemnite de licenciement est une somme versee par
-            l&apos;employeur au salarie dont le contrat de travail a duree
-            indeterminee (CDI) est rompu. Elle vise a compenser la perte
-            d&apos;emploi et a reconnaitre l&apos;anciennete du salarie dans
-            l&apos;entreprise. Tout salarie licencie ayant au moins 8 mois
-            d&apos;anciennete y a droit, sauf en cas de faute grave ou lourde.
-          </p>
+      <section className="max-w-5xl mx-auto px-4 py-12">
+        <h2 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-8">
+          Tout savoir sur l&apos;indemnite de licenciement
+        </h2>
 
-          <h3>Qui a droit a l&apos;indemnite legale de licenciement ?</h3>
-          <p>
-            Pour beneficier de l&apos;indemnite legale de licenciement, le
-            salarie doit remplir deux conditions cumulatives :
-          </p>
-          <ul>
-            <li>
-              <strong>Etre en CDI</strong> : les salaries en CDD ne sont pas
-              concernes par l&apos;indemnite de licenciement (ils percoivent une
-              indemnite de precarite a la fin de leur contrat).
-            </li>
-            <li>
-              <strong>Justifier d&apos;au moins 8 mois d&apos;anciennete</strong>{" "}
-              ininterrompue au service du meme employeur. Cette duree
-              s&apos;apprecie a la date d&apos;envoi de la lettre de
-              licenciement.
-            </li>
-          </ul>
-          <p>
-            <strong>Attention</strong> : le salarie licencie pour faute grave ou
-            faute lourde perd son droit a l&apos;indemnite legale de
-            licenciement. En revanche, un licenciement pour motif personnel
-            (insuffisance professionnelle, inaptitude) ou economique ouvre droit
-            a cette indemnite.
-          </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-6">
+            <h3 className="font-bold text-gray-800 mb-3">Comprendre l&apos;indemnite de licenciement</h3>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              L&apos;<strong>indemnite de licenciement</strong> est versee par l&apos;employeur au salarie en CDI dont le contrat est rompu. Elle compense la perte d&apos;emploi et reconnait l&apos;anciennete. Pour y avoir droit, il faut <strong>etre en CDI</strong> et justifier d&apos;au moins <strong>8 mois d&apos;anciennete</strong> ininterrompue (depuis les ordonnances Macron 2017). <strong>Attention</strong> : le licenciement pour faute grave ou lourde supprime ce droit. Les licenciements pour motif personnel ou economique ouvrent droit a l&apos;indemnite.
+            </p>
+          </div>
 
-          <h3>Comment calculer l&apos;indemnite legale de licenciement ?</h3>
-          <p>
-            Le calcul de l&apos;indemnite legale de licenciement repose sur deux
-            elements : le <strong>salaire de reference</strong> et
-            l&apos;<strong>anciennete</strong> du salarie. La formule, fixee par
-            l&apos;article R.1234-2 du Code du travail, est la suivante :
-          </p>
-          <ul>
-            <li>
-              <strong>1/4 de mois de salaire</strong> par annee d&apos;anciennete
-              pour les 10 premieres annees.
-            </li>
-            <li>
-              <strong>1/3 de mois de salaire</strong> par annee d&apos;anciennete
-              au-dela de 10 ans.
-            </li>
-          </ul>
-          <p>
-            Le salaire de reference est le montant le plus avantageux entre la
-            moyenne mensuelle des 12 derniers mois et le tiers de la
-            remuneration des 3 derniers mois. Les primes exceptionnelles, le 13e
-            mois et les gratifications sont inclus au prorata.
-          </p>
+          <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-6">
+            <h3 className="font-bold text-gray-800 mb-3">Calcul de l&apos;indemnite legale</h3>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              La formule (article R.1234-2 du Code du travail) repose sur le <strong>salaire de reference</strong> et l&apos;<strong>anciennete</strong> : <strong>1/4 de mois de salaire</strong> par annee pour les 10 premieres annees, puis <strong>1/3 de mois</strong> par annee au-dela. Le salaire de reference est le plus avantageux entre la moyenne des 12 derniers mois et le tiers des 3 derniers mois (primes incluses au prorata). Exemple : 15 ans d&apos;anciennete, 3 000 euros brut = 7 500 + 5 000 = <strong>12 500 euros</strong>.
+            </p>
+          </div>
 
-          <h3>Exemple concret de calcul</h3>
-          <p>
-            Prenons l&apos;exemple d&apos;un salarie avec 15 ans
-            d&apos;anciennete et un salaire de reference de 3 000 euros brut :
-          </p>
-          <ul>
-            <li>
-              <strong>Pour les 10 premieres annees</strong> : 3 000 &times; 1/4
-              &times; 10 = 7 500 euros.
-            </li>
-            <li>
-              <strong>Pour les 5 annees suivantes</strong> : 3 000 &times; 1/3
-              &times; 5 = 5 000 euros.
-            </li>
-            <li>
-              <strong>Indemnite totale</strong> : 7 500 + 5 000 ={" "}
-              <strong>12 500 euros brut</strong>.
-            </li>
-          </ul>
+          <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-6">
+            <h3 className="font-bold text-gray-800 mb-3">Indemnite legale vs conventionnelle</h3>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              La plupart des <strong>conventions collectives</strong> prevoient des indemnites plus favorables que le minimum legal, notamment dans la metallurgie, la banque, le commerce de gros et les telecoms. L&apos;employeur doit verser l&apos;indemnite la plus avantageuse pour le salarie. Notre calculateur estime l&apos;indemnite legale ; pensez a verifier votre convention collective pour connaitre vos droits exacts.
+            </p>
+          </div>
 
-          <h3>Indemnite legale vs indemnite conventionnelle</h3>
-          <p>
-            La plupart des conventions collectives prevoient des indemnites de
-            licenciement plus favorables que le minimum legal. C&apos;est le cas
-            notamment dans la metallurgie, la banque, le commerce de gros ou
-            encore le secteur des telecoms. L&apos;employeur est tenu de verser
-            l&apos;indemnite la plus avantageuse pour le salarie. Notre
-            calculateur estime l&apos;indemnite legale ; pensez a verifier
-            votre convention collective pour connaitre vos droits exacts.
-          </p>
+          <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-6">
+            <h3 className="font-bold text-gray-800 mb-3">Regime fiscal et social</h3>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              L&apos;indemnite beneficie d&apos;un regime avantageux. <strong>Exoneration d&apos;impot sur le revenu</strong> : la fraction legale ou conventionnelle est totalement exoneree. Au-dela, l&apos;exoneration est plafonnee au plus avantageux entre 2 fois la remuneration annuelle brute ou 50% de l&apos;indemnite, dans la limite de 6 PASS (environ 278 208 euros en 2026). <strong>Exoneration de cotisations sociales</strong> dans les memes limites ; la CSG-CRDS ne s&apos;applique que sur la fraction excedentaire.
+            </p>
+          </div>
 
-          <h3>Regime fiscal et social de l&apos;indemnite de licenciement</h3>
-          <p>
-            L&apos;indemnite de licenciement beneficie d&apos;un regime fiscal
-            et social avantageux :
-          </p>
-          <ul>
-            <li>
-              <strong>Exoneration d&apos;impot sur le revenu</strong> : la
-              fraction de l&apos;indemnite correspondant au montant legal ou
-              conventionnel est totalement exoneree. Au-dela, l&apos;exoneration
-              est plafonnee au plus avantageux entre 2 fois la remuneration
-              annuelle brute ou 50% de l&apos;indemnite, dans la limite de 6
-              PASS (environ 278 208 euros en 2026).
-            </li>
-            <li>
-              <strong>Exoneration de cotisations sociales</strong> : dans les
-              memes limites, l&apos;indemnite est exoneree de cotisations
-              sociales. La CSG-CRDS s&apos;applique uniquement sur la fraction
-              excedant le montant legal ou conventionnel.
-            </li>
-          </ul>
+          <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-6">
+            <h3 className="font-bold text-gray-800 mb-3">La rupture conventionnelle</h3>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              La <strong>rupture conventionnelle</strong> permet de mettre fin au CDI d&apos;un commun accord. L&apos;indemnite specifique ne peut etre inferieure a l&apos;<strong>indemnite legale de licenciement</strong> (meme formule de calcul). En pratique, elle est souvent negociee a la hausse (indemnite supra-legale). Le salarie beneficie egalement du droit aux <strong>allocations chomage</strong>, un avantage majeur de ce mode de rupture.
+            </p>
+          </div>
 
-          <h3>La rupture conventionnelle : memes regles de calcul</h3>
-          <p>
-            La rupture conventionnelle permet a l&apos;employeur et au salarie
-            de mettre fin au CDI d&apos;un commun accord. L&apos;indemnite
-            specifique de rupture conventionnelle ne peut etre inferieure a
-            l&apos;indemnite legale de licenciement. En pratique, elle est
-            souvent negociee a la hausse. Le salarie beneficie egalement du
-            droit aux allocations chomage, ce qui constitue l&apos;un des
-            principaux avantages de ce mode de rupture.
-          </p>
-
-          <h3>Cas particuliers a connaitre</h3>
-          <ul>
-            <li>
-              <strong>Temps partiel</strong> : si le salarie a travaille a temps
-              partiel pendant une partie de sa carriere, l&apos;indemnite est
-              calculee proportionnellement aux periodes a temps plein et a temps
-              partiel.
-            </li>
-            <li>
-              <strong>Anciennete incomplete</strong> : les annees incompletes
-              sont prises en compte au prorata. Par exemple, 7 ans et 6 mois
-              d&apos;anciennete comptent pour 7,5 annees.
-            </li>
-            <li>
-              <strong>Inaptitude d&apos;origine professionnelle</strong> : en
-              cas de licenciement pour inaptitude consecutive a un accident du
-              travail ou une maladie professionnelle, l&apos;indemnite est
-              doublee.
-            </li>
-          </ul>
+          <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-6">
+            <h3 className="font-bold text-gray-800 mb-3">Cas particuliers a connaitre</h3>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              <strong>Temps partiel :</strong> l&apos;indemnite est calculee proportionnellement aux periodes a temps plein et a temps partiel. <strong>Anciennete incomplete :</strong> les annees incompletes sont prises en compte au prorata (ex. 7 ans et 6 mois = 7,5 annees). <strong>Inaptitude professionnelle :</strong> en cas de licenciement pour inaptitude consecutive a un accident du travail ou une maladie professionnelle, l&apos;indemnite est <strong>doublee</strong>.
+            </p>
+          </div>
         </div>
       </section>
 

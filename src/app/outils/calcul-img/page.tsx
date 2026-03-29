@@ -124,205 +124,59 @@ export default function PageCalculIMG() {
       </div>
 
       {/* SEO Content */}
-      <section className="max-w-4xl mx-auto px-4 py-8">
-        <div className="prose prose-lg prose-gray max-w-none">
-          <h2>
-            Qu&apos;est-ce que l&apos;IMG (Indice de Masse Grasse) ?
-          </h2>
-          <p>
-            L&apos;<strong>Indice de Masse Grasse</strong>, ou{" "}
-            <strong>IMG</strong> (en anglais <em>Body Fat Percentage</em>),
-            est un indicateur qui estime la proportion de graisse dans le
-            corps par rapport au poids total. Contrairement a l&apos;
-            <strong>IMC</strong> (Indice de Masse Corporelle) qui se contente
-            d&apos;un ratio poids/taille, l&apos;IMG prend en compte le{" "}
-            <strong>sexe</strong> et l&apos;<strong>age</strong> de la
-            personne pour fournir une estimation plus fine de la composition
-            corporelle.
-          </p>
-          <p>
-            La graisse corporelle joue un role essentiel dans le
-            fonctionnement de l&apos;organisme : isolation thermique,
-            protection des organes, reserve d&apos;energie et regulation
-            hormonale. Cependant, un exces de masse grasse est associe a un
-            risque accru de maladies cardiovasculaires, de diabete de type 2,
-            de certains cancers et de troubles musculo-squelettiques.
-          </p>
+      <section className="max-w-5xl mx-auto px-4 py-12">
+        <h2 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-8">
+          Comprendre l&apos;Indice de Masse Grasse
+        </h2>
 
-          <h2>Difference entre IMG et IMC</h2>
-          <p>
-            L&apos;<strong>IMC</strong> est un indicateur simple et rapide,
-            mais il ne distingue pas la masse musculaire de la masse
-            graisseuse. Un sportif tres muscle peut ainsi avoir un IMC eleve
-            (superieur a 25) tout en ayant un taux de graisse corporelle tres
-            bas. A l&apos;inverse, une personne sedentaire avec un IMC normal
-            peut avoir un pourcentage de graisse excessif (on parle
-            d&apos;&laquo; obesite a poids normal &raquo; ou{" "}
-            <em>skinny fat</em>).
-          </p>
-          <p>
-            L&apos;<strong>IMG</strong> corrige en partie ce biais en
-            integrant le sexe et l&apos;age dans le calcul. Les femmes ont
-            naturellement un taux de graisse plus eleve que les hommes (en
-            moyenne 5 a 10 points de plus) en raison de besoins
-            physiologiques lies a la reproduction. De meme, le pourcentage de
-            graisse tend a augmenter avec l&apos;age, meme a poids constant,
-            car la masse musculaire diminue progressivement.
-          </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-6">
+            <h3 className="font-bold text-gray-800 mb-3">Qu&apos;est-ce que l&apos;IMG ?</h3>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              L&apos;<strong>Indice de Masse Grasse</strong> (<strong>IMG</strong>, <em>Body Fat Percentage</em>) estime la proportion de graisse dans le corps. Contrairement a l&apos;<strong>IMC</strong> (ratio poids/taille), l&apos;IMG integre le <strong>sexe</strong> et l&apos;<strong>age</strong> pour une estimation plus fine. La graisse corporelle est essentielle (isolation, protection, energie, hormones), mais un exces augmente les risques de maladies cardiovasculaires, diabete de type 2 et certains cancers.
+            </p>
+          </div>
 
-          <h2>La formule de Deurenberg</h2>
-          <p>
-            Notre calculateur utilise la{" "}
-            <strong>formule de Deurenberg</strong> (1991), l&apos;une des plus
-            repandues pour estimer la masse grasse a partir de l&apos;IMC.
-            Elle s&apos;exprime ainsi :
-          </p>
-          <p className="text-center">
-            <strong className="text-lg">
+          <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-6">
+            <h3 className="font-bold text-gray-800 mb-3">Difference entre IMG et IMC</h3>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              L&apos;<strong>IMC</strong> ne distingue pas muscle et graisse : un sportif muscle peut avoir un IMC &gt; 25 avec un taux de graisse bas, tandis qu&apos;une personne sedentaire peut avoir un IMC normal mais un exces de graisse (<em>skinny fat</em>). L&apos;<strong>IMG</strong> corrige ce biais en integrant sexe et age. Les femmes ont naturellement 5 a 10 points de graisse de plus que les hommes, et le taux augmente avec l&apos;age meme a poids constant.
+            </p>
+          </div>
+
+          <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-6">
+            <h3 className="font-bold text-gray-800 mb-3">La formule de Deurenberg</h3>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              Notre calculateur utilise la <strong>formule de Deurenberg</strong> (1991), validee par pesee hydrostatique :
+            </p>
+            <p className="text-sm text-gray-800 font-semibold text-center my-2">
               IMG = (1,20 x IMC) + (0,23 x age) - (10,8 x S) - 5,4
-            </strong>
-          </p>
-          <p>
-            ou <strong>S = 1</strong> pour les hommes et{" "}
-            <strong>S = 0</strong> pour les femmes, et ou l&apos;IMC se
-            calcule par la formule classique : poids (kg) / taille (m)&sup2;.
-            Cette equation a ete validee par comparaison avec des mesures de
-            densite corporelle par pesee hydrostatique et presente une bonne
-            correlation pour la population adulte generale.
-          </p>
+            </p>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              ou <strong>S = 1</strong> pour les hommes et <strong>S = 0</strong> pour les femmes, et IMC = poids (kg) / taille (m)&sup2;. Bonne correlation pour la population adulte generale.
+            </p>
+          </div>
 
-          <h2>
-            Plages de reference selon le sexe
-          </h2>
-          <p>
-            L&apos;interpretation de l&apos;IMG differe entre hommes et
-            femmes en raison des differences physiologiques naturelles :
-          </p>
-          <h3>Chez l&apos;homme</h3>
-          <ul>
-            <li>
-              <strong>Moins de 6 %</strong> : masse grasse insuffisante. Ce
-              taux tres bas peut entrainer des troubles hormonaux, une fatigue
-              chronique et une baisse de l&apos;immunite.
-            </li>
-            <li>
-              <strong>6 a 14 %</strong> : profil athletique. Ce taux est
-              courant chez les sportifs entraines. La definition musculaire
-              est bien visible.
-            </li>
-            <li>
-              <strong>14 a 18 %</strong> : taux normal et sain. C&apos;est la
-              fourchette recommandee pour la majorite des hommes adultes.
-            </li>
-            <li>
-              <strong>18 a 25 %</strong> : surpoids. Un exces de graisse
-              commence a s&apos;accumuler, augmentant les risques pour la
-              sante.
-            </li>
-            <li>
-              <strong>Plus de 25 %</strong> : obesite. Un suivi medical et un
-              changement d&apos;hygiene de vie sont recommandes.
-            </li>
-          </ul>
-          <h3>Chez la femme</h3>
-          <ul>
-            <li>
-              <strong>Moins de 14 %</strong> : masse grasse insuffisante.
-              Peut provoquer une amenorrhee (arret des regles), des troubles
-              hormonaux et une fragilite osseuse.
-            </li>
-            <li>
-              <strong>14 a 21 %</strong> : profil athletique. Taux courant
-              chez les sportives de haut niveau.
-            </li>
-            <li>
-              <strong>21 a 25 %</strong> : taux normal et sain pour la
-              majorite des femmes adultes.
-            </li>
-            <li>
-              <strong>25 a 32 %</strong> : surpoids. L&apos;exces de graisse
-              augmente les risques metaboliques et cardiovasculaires.
-            </li>
-            <li>
-              <strong>Plus de 32 %</strong> : obesite. Une prise en charge
-              medicale est conseillee.
-            </li>
-          </ul>
+          <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-6">
+            <h3 className="font-bold text-gray-800 mb-3">Plages de reference</h3>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              <strong>Chez l&apos;homme</strong> : &lt; 6 % masse grasse insuffisante (risques hormonaux), <strong>6-14 %</strong> profil athletique, <strong>14-18 %</strong> taux normal et sain, 18-25 % surpoids, &gt; 25 % obesite. <strong>Chez la femme</strong> : &lt; 14 % insuffisant (risque d&apos;amenorrhee), <strong>14-21 %</strong> profil athletique, <strong>21-25 %</strong> taux normal, 25-32 % surpoids, &gt; 32 % obesite.
+            </p>
+          </div>
 
-          <h2>Pourquoi la masse grasse est-elle importante ?</h2>
-          <p>
-            Connaitre son pourcentage de graisse corporelle est plus parlant
-            que le simple poids affiche sur la balance. Deux personnes de meme
-            poids et de meme taille peuvent avoir des compositions corporelles
-            radicalement differentes : l&apos;une avec beaucoup de muscle et
-            peu de graisse, l&apos;autre dans la situation inverse. Seul le
-            taux de masse grasse permet de faire cette distinction.
-          </p>
-          <p>
-            Un exces de graisse corporelle, en particulier la{" "}
-            <strong>graisse viscerale</strong> (situee autour des organes
-            abdominaux), est un facteur de risque majeur pour de nombreuses
-            pathologies : maladies cardiovasculaires, diabete de type 2,
-            syndrome metabolique, apnee du sommeil, certains cancers
-            (colorectal, sein, endometre) et troubles articulaires.
-          </p>
-          <p>
-            A l&apos;inverse, un taux de graisse trop bas est egalement
-            problematique. La graisse corporelle est indispensable au bon
-            fonctionnement hormonal, a la thermoregulation et a la protection
-            des organes internes. Chez la femme, un deficit de masse grasse
-            peut entrainer une amenorrhee et augmenter le risque
-            d&apos;osteoporose.
-          </p>
+          <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-6">
+            <h3 className="font-bold text-gray-800 mb-3">Pourquoi la masse grasse compte</h3>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              Deux personnes de meme poids peuvent avoir des compositions corporelles radicalement differentes. Seul le taux de masse grasse fait la distinction. L&apos;exces de <strong>graisse viscerale</strong> (autour des organes) est un facteur de risque majeur pour les maladies cardiovasculaires, le syndrome metabolique et certains cancers. A l&apos;inverse, un taux trop bas perturbe les hormones, la thermoregulation et peut entrainer une amenorrhee chez la femme.
+            </p>
+          </div>
 
-          <h2>Methodes de mesure de la masse grasse</h2>
-          <p>
-            La formule de Deurenberg utilisee dans ce calculateur fournit une{" "}
-            <strong>estimation</strong> basee sur des donnees facilement
-            accessibles (poids, taille, age, sexe). Pour une mesure plus
-            precise, plusieurs methodes existent :
-          </p>
-          <ul>
-            <li>
-              <strong>Impedancemetrie bioelectrique</strong> : un faible
-              courant electrique traverse le corps. La graisse et le muscle
-              conduisent l&apos;electricite differemment, ce qui permet
-              d&apos;estimer la composition corporelle. De nombreuses balances
-              connectees utilisent cette technologie.
-            </li>
-            <li>
-              <strong>Mesure des plis cutanes</strong> (adipometre ou
-              caliper) : un professionnel mesure l&apos;epaisseur des plis de
-              peau a differents endroits du corps (triceps, abdomen, cuisse,
-              etc.) a l&apos;aide d&apos;une pince calibree. Les valeurs sont
-              ensuite reportees dans des equations specifiques.
-            </li>
-            <li>
-              <strong>DEXA</strong> (absorptiometrie biphotonique a rayons X) :
-              consideree comme la methode de reference, elle permet de
-              distinguer avec precision la masse grasse, la masse maigre et
-              la masse osseuse. Elle necessite un equipement medical
-              specialise.
-            </li>
-            <li>
-              <strong>Pesee hydrostatique</strong> : le sujet est immerge dans
-              l&apos;eau et sa densite corporelle est calculee a partir du
-              volume d&apos;eau deplace. Methode tres precise mais peu
-              pratique au quotidien.
-            </li>
-            <li>
-              <strong>Bodpod</strong> (pletismographie par deplacement
-              d&apos;air) : similaire a la pesee hydrostatique, mais utilise
-              l&apos;air au lieu de l&apos;eau pour mesurer le volume
-              corporel. Plus confortable et tout aussi precis.
-            </li>
-          </ul>
-          <p>
-            Quelle que soit la methode choisie, l&apos;important est de
-            toujours utiliser la meme pour suivre son evolution dans le temps,
-            car les valeurs absolues peuvent varier d&apos;une technique a
-            l&apos;autre.
-          </p>
+          <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-6">
+            <h3 className="font-bold text-gray-800 mb-3">Methodes de mesure alternatives</h3>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              Pour plus de precision que la formule de Deurenberg : l&apos;<strong>impedancemetrie bioelectrique</strong> (balances connectees), la <strong>mesure des plis cutanes</strong> (adipometre), le <strong>DEXA</strong> (methode de reference par rayons X), la <strong>pesee hydrostatique</strong> et le <strong>Bodpod</strong> (deplacement d&apos;air). L&apos;essentiel est d&apos;utiliser toujours la meme methode pour suivre son evolution dans le temps.
+            </p>
+          </div>
         </div>
       </section>
 

@@ -141,185 +141,52 @@ export default function PageCalculCapaciteEmprunt() {
       </section>
 
       {/* Contenu SEO */}
-      <section className="max-w-4xl mx-auto px-4 py-12">
-        <div className="prose prose-lg prose-gray max-w-none">
-          <h2>Qu&apos;est-ce que la capacite d&apos;emprunt ?</h2>
-          <p>
-            La <strong>capacite d&apos;emprunt</strong> (ou capacite
-            d&apos;endettement) designe le montant maximum qu&apos;un menage peut
-            emprunter aupres d&apos;une banque pour financer un projet immobilier,
-            tout en conservant un niveau de charges compatible avec ses revenus.
-            C&apos;est le premier indicateur a calculer avant de se lancer dans
-            une recherche de bien immobilier, car il definit concretement le
-            budget dont vous disposez.
-          </p>
-          <p>
-            Connaitre sa capacite d&apos;emprunt permet d&apos;eviter deux ecueils
-            frequents : viser des biens trop chers que la banque refusera de
-            financer, ou se limiter inutilement en sous-estimant ses
-            possibilites. Un calcul precis vous donne une base solide pour
-            negocier avec les agents immobiliers et les banques en toute
-            connaissance de cause.
-          </p>
+      <section className="max-w-5xl mx-auto px-4 py-12">
+        <h2 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-8">
+          Tout comprendre sur la capacite d&apos;emprunt
+        </h2>
 
-          <h2>Comment calculer sa capacite d&apos;emprunt ?</h2>
-          <p>
-            Le calcul de la capacite d&apos;emprunt repose sur un principe simple
-            impose par le{" "}
-            <strong>Haut Conseil de stabilite financiere (HCSF)</strong> : le
-            total de vos charges de credit ne doit pas depasser{" "}
-            <strong>35 % de vos revenus nets mensuels</strong>. Ce taux de 35 %
-            inclut tous vos credits en cours (credit auto, credit a la
-            consommation, etc.) ainsi que l&apos;assurance emprunteur du futur pret
-            immobilier.
-          </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-6">
+            <h3 className="font-bold text-gray-800 mb-3">Qu&apos;est-ce que la capacite d&apos;emprunt ?</h3>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              La <strong>capacite d&apos;emprunt</strong> (ou capacite d&apos;endettement) designe le montant maximum qu&apos;un menage peut emprunter pour financer un projet immobilier, tout en conservant des charges compatibles avec ses revenus. C&apos;est le premier indicateur a calculer avant toute recherche de bien : il evite de viser trop haut ou de se limiter inutilement, et donne une base solide pour negocier avec les banques et agents immobiliers.
+            </p>
+          </div>
 
-          <h3>La formule de calcul</h3>
-          <p>
-            La mensualite maximale se calcule ainsi :{" "}
-            <strong>Mensualite max = Revenus nets x 0,35 - Charges de credits en cours</strong>.
-            A partir de cette mensualite disponible, on determine le capital
-            empruntable en utilisant la formule d&apos;annuite inversee :
-          </p>
-          <p className="bg-gray-50 border border-gray-200 rounded-lg p-4 text-center font-mono text-lg">
-            C = M &times; (1 - (1 + t/12)<sup>-n&times;12</sup>) / (t/12)
-          </p>
-          <p>
-            Dans cette formule, <strong>C</strong> est le capital empruntable,{" "}
-            <strong>M</strong> la mensualite maximale disponible (hors
-            assurance), <strong>t</strong> le taux d&apos;interet annuel en decimal
-            et <strong>n</strong> la duree du pret en annees. Notre calculateur
-            prend egalement en compte le cout de l&apos;assurance emprunteur pour
-            vous donner un resultat conforme aux exigences reelles des banques.
-          </p>
+          <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-6">
+            <h3 className="font-bold text-gray-800 mb-3">Formule et methode de calcul</h3>
+            <p className="text-sm text-gray-600 leading-relaxed mb-3">
+              Le <strong>HCSF</strong> impose que vos charges de credit ne depassent pas <strong>35 % de vos revenus nets</strong>. La mensualite max = Revenus nets x 0,35 - Credits en cours. Le capital empruntable se deduit par la formule d&apos;annuite inversee :
+            </p>
+            <p className="bg-gray-50 border border-gray-200 rounded-lg p-3 text-center font-mono text-sm mb-3">
+              C = M &times; (1 - (1 + t/12)<sup>-n&times;12</sup>) / (t/12)
+            </p>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              <strong>Exemple</strong> : un couple gagnant 5 000 euros nets/mois avec un credit auto de 300 euros dispose de 1 450 euros de mensualite. A 3,5 % sur 20 ans, il peut emprunter environ <strong>240 000 euros</strong>.
+            </p>
+          </div>
 
-          <h3>Exemple concret</h3>
-          <p>
-            Prenons un couple avec des revenus nets mensuels de 5 000 euros et
-            un credit auto en cours de 300 euros par mois. Leur mensualite
-            maximale autorisee est de 5 000 x 0,35 = 1 750 euros. En retirant
-            le credit auto, il reste 1 450 euros disponibles pour le futur pret
-            immobilier. Avec un taux de 3,5 % sur 20 ans et une assurance a
-            0,34 %, ce couple pourrait emprunter environ 240 000 euros. En
-            ajoutant un eventuel apport personnel, on obtient la capacite
-            d&apos;achat totale.
-          </p>
+          <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-6">
+            <h3 className="font-bold text-gray-800 mb-3">Facteurs cles : revenus et charges</h3>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              Les banques privilegient les <strong>revenus reguliers</strong> : CDI (apres periode d&apos;essai), pensions, fonction publique. Les revenus variables sont ponderes sur plusieurs annees, les revenus fonciers retenus a 70 %. Chaque <strong>credit en cours</strong> (auto, consommation, renouvelable) et les pensions alimentaires reduisent mecaniquement la mensualite disponible. Solder ses credits avant de deposer un dossier immobilier est souvent judicieux.
+            </p>
+          </div>
 
-          <h2>Les facteurs qui influencent la capacite d&apos;emprunt</h2>
-          <p>
-            Plusieurs parametres jouent un role determinant dans le montant que
-            la banque acceptera de vous preter. Les connaitre permet
-            d&apos;optimiser son dossier et de maximiser sa capacite d&apos;emprunt.
-          </p>
+          <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-6">
+            <h3 className="font-bold text-gray-800 mb-3">Taux, duree et assurance</h3>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              Un <strong>taux d&apos;interet</strong> plus bas augmente le capital empruntable : 0,3 % d&apos;ecart sur 250 000 euros/20 ans represente ~10 000 euros. <strong>Allonger la duree</strong> de 20 a 25 ans augmente la capacite de 15-20 % (max HCSF : 25 ans, 27 ans en VEFA). L&apos;<strong>assurance emprunteur</strong> est incluse dans le taux d&apos;endettement a 35 % : la <strong>delegation d&apos;assurance</strong> (loi Lemoine) peut diviser son cout par 2 ou 3, liberant de la capacite d&apos;emprunt supplementaire.
+            </p>
+          </div>
 
-          <h3>Les revenus du menage</h3>
-          <p>
-            Plus vos revenus sont eleves et stables, plus votre capacite
-            d&apos;emprunt augmente. Les banques privilegient les revenus
-            reguliers : salaires en CDI (apres periode d&apos;essai), pensions de
-            retraite, revenus de la fonction publique. Les revenus variables
-            (primes, commissions, revenus d&apos;independants) sont souvent
-            ponderes ou moyennes sur plusieurs annees. Les revenus fonciers
-            sont generalement pris en compte a hauteur de 70 % pour tenir
-            compte des charges et du risque de vacance locative.
-          </p>
-
-          <h3>Les charges et credits en cours</h3>
-          <p>
-            Chaque credit en cours (credit auto, credit a la consommation,
-            credit renouvelable) reduit mecaniquement la mensualite disponible
-            pour un nouveau pret. C&apos;est pourquoi il est souvent judicieux de
-            solder ses credits a la consommation avant de deposer un dossier de
-            pret immobilier. Les pensions alimentaires versees sont egalement
-            comptees dans les charges.
-          </p>
-
-          <h3>Le taux d&apos;interet</h3>
-          <p>
-            Un taux d&apos;interet plus bas permet d&apos;emprunter davantage pour la
-            meme mensualite. Chaque dixieme de point compte : sur un pret de
-            250 000 euros sur 20 ans, une difference de 0,3 % de taux
-            represente environ 10 000 euros sur le cout total et modifie
-            significativement la capacite d&apos;emprunt. Comparer les offres de
-            plusieurs banques ou faire appel a un courtier peut vous permettre
-            de gagner en capacite d&apos;emprunt.
-          </p>
-
-          <h3>La duree du pret</h3>
-          <p>
-            Allonger la duree du pret permet de reduire la mensualite et donc
-            d&apos;emprunter un montant plus important. Passer de 20 a 25 ans peut
-            augmenter la capacite d&apos;emprunt de 15 a 20 %. Cependant, la
-            duree maximale autorisee par le HCSF est de 25 ans (27 ans en cas
-            d&apos;achat sur plan en VEFA ou de travaux representant au moins 25 %
-            du cout de l&apos;operation). Attention toutefois : une duree plus
-            longue signifie egalement un cout total du credit plus eleve.
-          </p>
-
-          <h3>L&apos;assurance emprunteur</h3>
-          <p>
-            Le taux d&apos;assurance emprunteur impacte directement la capacite
-            d&apos;emprunt car, depuis les regles du HCSF, la mensualite
-            d&apos;assurance est incluse dans le calcul du taux d&apos;endettement a
-            35 %. Reduire son taux d&apos;assurance en faisant jouer la delegation
-            (loi Lemoine) permet d&apos;augmenter la mensualite disponible pour le
-            remboursement du capital, et donc d&apos;emprunter davantage. Un
-            emprunteur jeune et en bonne sante peut obtenir un taux
-            d&apos;assurance inferieur a 0,10 %, contre 0,30 a 0,40 % pour les
-            contrats de groupe bancaires.
-          </p>
-
-          <h2>Conseils pour augmenter sa capacite d&apos;emprunt</h2>
-          <p>
-            Si votre capacite d&apos;emprunt est insuffisante pour votre projet,
-            plusieurs strategies peuvent vous aider a l&apos;ameliorer de maniere
-            significative.
-          </p>
-          <p>
-            <strong>Soldez vos credits en cours.</strong> C&apos;est le levier le
-            plus immediat. Rembourser un credit auto de 300 euros par mois
-            libere immediatement 300 euros de mensualite, ce qui peut
-            representer 50 000 a 60 000 euros de capacite d&apos;emprunt
-            supplementaire sur 20 ans. Si vous disposez d&apos;une epargne
-            suffisante, le calcul est souvent tres favorable.
-          </p>
-          <p>
-            <strong>Allongez la duree du pret.</strong> Passer de 20 a 25 ans
-            reduit la mensualite et augmente le capital empruntable. Cela
-            augmente aussi le cout total du credit, mais cette strategie peut
-            etre pertinente si elle vous permet d&apos;acceder a un bien mieux
-            situe ou plus grand, dont la plus-value potentielle compensera le
-            surcout d&apos;interets.
-          </p>
-          <p>
-            <strong>Negociez le taux d&apos;interet.</strong> Faites jouer la
-            concurrence entre les banques. Un courtier peut souvent obtenir des
-            taux plus bas grace aux volumes qu&apos;il apporte aux etablissements
-            partenaires. Chaque dixieme de point gagne sur le taux augmente
-            votre capacite d&apos;emprunt.
-          </p>
-          <p>
-            <strong>Optimisez votre assurance emprunteur.</strong> La delegation
-            d&apos;assurance (choisir un assureur externe a la banque) peut diviser
-            le cout de l&apos;assurance par deux, voire par trois. Cette economie
-            se traduit directement en capacite d&apos;emprunt supplementaire puisque
-            l&apos;assurance est incluse dans le calcul du taux d&apos;endettement.
-          </p>
-          <p>
-            <strong>Integrez un co-emprunteur.</strong> Emprunter a deux permet
-            de cumuler les revenus et donc d&apos;augmenter considerablement la
-            capacite d&apos;emprunt. C&apos;est particulierement avantageux lorsque les
-            deux emprunteurs disposent de revenus reguliers et stables.
-          </p>
-          <p>
-            <strong>Utilisez les prets aides.</strong> Le Pret a Taux Zero (PTZ)
-            pour les primo-accedants ou le pret Action Logement ne sont
-            generalement pas comptabilises dans le taux d&apos;endettement (ou
-            alors partiellement). Ils permettent donc de completer votre
-            financement sans grever votre capacite d&apos;emprunt bancaire
-            classique. Renseignez-vous egalement sur les aides locales proposees
-            par votre commune ou votre departement.
-          </p>
+          <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-6 md:col-span-2">
+            <h3 className="font-bold text-gray-800 mb-3">Conseils pour augmenter sa capacite d&apos;emprunt</h3>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              <strong>Soldez vos credits en cours</strong> : rembourser 300 euros/mois de credit auto libere 50 000-60 000 euros de capacite sur 20 ans. <strong>Allongez la duree</strong> jusqu&apos;a 25 ans pour reduire la mensualite, meme si le cout total augmente. <strong>Negociez le taux</strong> en comparant plusieurs banques ou via un courtier. <strong>Optimisez l&apos;assurance</strong> par la delegation, qui peut diviser le cout par 2 ou 3. <strong>Integrez un co-emprunteur</strong> pour cumuler les revenus. <strong>Utilisez les prets aides</strong> : le PTZ et le pret Action Logement ne sont generalement pas comptabilises dans le taux d&apos;endettement, completant votre financement sans grever votre capacite bancaire.
+            </p>
+          </div>
         </div>
       </section>
 

@@ -123,135 +123,39 @@ export default function PageCalculConsommationEssence() {
       </section>
 
       {/* Contenu SEO */}
-      <section className="max-w-4xl mx-auto px-4 py-12">
-        <div className="prose prose-lg prose-gray max-w-none">
-          <h2>Comment calculer sa consommation de carburant ?</h2>
-          <p>
-            La <strong>consommation de carburant</strong> s&apos;exprime en
-            litres pour 100 kilometres (L/100km) en France et dans la plupart
-            des pays europeens. Cette unite permet de comparer facilement
-            l&apos;efficacite energetique de differents vehicules, quel que soit
-            leur type de motorisation.
-          </p>
-          <p>
-            La formule est simple : <strong>Consommation (L/100km) =
-            (Volume de carburant en litres / Distance en km) x 100</strong>.
-            Pour obtenir un resultat fiable, il est recommande de faire le calcul
-            sur un plein complet : remplissez votre reservoir, notez le
-            kilometrage, roulez normalement, puis lors du prochain plein,
-            relevez le nombre de litres ajoutes et la nouvelle valeur du
-            compteur.
-          </p>
+      <section className="max-w-5xl mx-auto px-4 py-12">
+        <h2 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-8">
+          Tout savoir sur la consommation de carburant
+        </h2>
 
-          <h2>Qu&apos;est-ce que le L/100km ?</h2>
-          <p>
-            Le <strong>litre aux 100 kilometres</strong> est l&apos;unite de
-            mesure standard de la consommation en Europe. Plus le chiffre est
-            bas, plus le vehicule est econome. A titre de repere :
-          </p>
-          <ul>
-            <li>
-              <strong>Moins de 5 L/100km</strong> : vehicule tres econome
-              (petite citadine diesel, hybride)
-            </li>
-            <li>
-              <strong>5 a 7 L/100km</strong> : consommation moderee
-              (berline diesel, citadine essence recente)
-            </li>
-            <li>
-              <strong>7 a 9 L/100km</strong> : consommation moyenne
-              (berline essence, petit SUV)
-            </li>
-            <li>
-              <strong>Plus de 9 L/100km</strong> : consommation elevee
-              (gros SUV, vehicule ancien, sportive)
-            </li>
-          </ul>
-          <p>
-            Attention : les valeurs annoncees par les constructeurs (norme WLTP)
-            sont mesurees en laboratoire et sont generalement 10 a 20 %
-            inferieures a la consommation reelle en conditions quotidiennes.
-          </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-6">
+            <h3 className="font-bold text-gray-800 mb-3">Comment calculer sa consommation de carburant ?</h3>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              La <strong>consommation de carburant</strong> s&apos;exprime en <strong>L/100km</strong> en France et en Europe. La formule : <strong>Consommation = (Litres consommes / Distance en km) x 100</strong>. Pour un resultat fiable, faites le calcul sur un plein complet : remplissez le reservoir, notez le kilometrage, puis relevez les litres ajoutes et le compteur au plein suivant.
+            </p>
+          </div>
 
-          <h2>Conseils pour reduire sa consommation</h2>
-          <p>
-            Plusieurs habitudes de conduite permettent de reduire
-            significativement votre consommation de carburant et donc votre
-            budget :
-          </p>
-          <ul>
-            <li>
-              <strong>Adoptez une conduite souple</strong> : evitez les
-              accelerations brutales et les freinages tardifs. L&apos;eco-conduite
-              peut faire economiser jusqu&apos;a 20 % de carburant.
-            </li>
-            <li>
-              <strong>Respectez les limitations de vitesse</strong> : rouler a
-              110 km/h au lieu de 130 km/h sur autoroute reduit la consommation
-              d&apos;environ 20 %.
-            </li>
-            <li>
-              <strong>Verifiez la pression des pneus</strong> : des pneus
-              sous-gonfles de 0,5 bar augmentent la consommation de 2,4 % et
-              s&apos;usent plus vite.
-            </li>
-            <li>
-              <strong>Limitez la climatisation</strong> : elle augmente la
-              consommation de 10 a 15 %. Preferez l&apos;aeration naturelle en
-              ville et la climatisation sur autoroute (ou les vitres ouvertes
-              creent une resistance aerodynamique).
-            </li>
-            <li>
-              <strong>Allegez votre vehicule</strong> : retirez les charges
-              inutiles (coffre de toit, galerie). 100 kg supplementaires
-              augmentent la consommation de 5 % environ.
-            </li>
-            <li>
-              <strong>Entretenez votre vehicule</strong> : un filtre a air
-              encrasse, des bougies usees ou une huile moteur inadaptee peuvent
-              augmenter la consommation de 5 a 10 %.
-            </li>
-          </ul>
+          <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-6">
+            <h3 className="font-bold text-gray-800 mb-3">Qu&apos;est-ce que le L/100km ?</h3>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              Le <strong>litre aux 100 kilometres</strong> est l&apos;unite standard en Europe. Plus le chiffre est bas, plus le vehicule est econome. Reperes : <strong>moins de 5 L/100km</strong> (citadine diesel, hybride), <strong>5 a 7</strong> (berline diesel, citadine essence), <strong>7 a 9</strong> (berline essence, petit SUV), <strong>plus de 9</strong> (gros SUV, sportive). Les valeurs constructeur (norme WLTP) sont generalement 10 a 20 % inferieures a la consommation reelle.
+            </p>
+          </div>
 
-          <h2>Diesel, essence ou electrique : quelle motorisation choisir ?</h2>
-          <p>
-            Le choix de la motorisation a un impact direct sur le cout au
-            kilometre. Voici une comparaison pour un vehicule de segment C
-            (type Peugeot 308 / Renault Megane) :
-          </p>
-          <ul>
-            <li>
-              <strong>Essence</strong> : consommation moyenne de 7 L/100km a
-              environ 1,75 &euro;/L, soit <strong>0,123 &euro;/km</strong>. Cout
-              annuel pour 15 000 km : environ 1 838 &euro;.
-            </li>
-            <li>
-              <strong>Diesel</strong> : consommation moyenne de 5,5 L/100km a
-              environ 1,70 &euro;/L, soit <strong>0,094 &euro;/km</strong>. Cout
-              annuel pour 15 000 km : environ 1 403 &euro;. Le diesel reste
-              avantageux pour les gros rouleurs malgre un prix d&apos;achat plus
-              eleve.
-            </li>
-            <li>
-              <strong>Electrique</strong> : consommation moyenne de 17
-              kWh/100km a environ 0,25 &euro;/kWh (tarif reglemente), soit{" "}
-              <strong>0,043 &euro;/km</strong>. Cout annuel pour 15 000 km :
-              environ 638 &euro;. Le vehicule electrique est le plus econome a
-              l&apos;usage, mais son cout d&apos;achat reste plus eleve (aide de
-              l&apos;Etat deduites).
-            </li>
-            <li>
-              <strong>Hybride</strong> : consommation moyenne de 4,5 L/100km en
-              usage mixte, soit environ <strong>0,079 &euro;/km</strong>. Un bon
-              compromis si vous alternez ville et route.
-            </li>
-          </ul>
-          <p>
-            Au-dela du cout au kilometre, pensez egalement a l&apos;assurance,
-            a l&apos;entretien (moins cher pour l&apos;electrique), a la
-            decote, et aux eventuelles restrictions de circulation (ZFE) qui
-            peuvent affecter les vehicules thermiques anciens.
-          </p>
+          <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-6">
+            <h3 className="font-bold text-gray-800 mb-3">Conseils pour reduire sa consommation</h3>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              <strong>Conduite souple</strong> : jusqu&apos;a 20 % d&apos;economie en evitant accelerations brutales et freinages tardifs. <strong>Vitesse moderee</strong> : 110 km/h au lieu de 130 reduit la consommation de 20 %. <strong>Pression des pneus</strong> : -0,5 bar = +2,4 % de consommation. <strong>Climatisation</strong> : +10 a 15 %, a limiter en ville. <strong>Poids</strong> : 100 kg supplementaires = +5 %. <strong>Entretien</strong> : filtres, bougies et huile adaptes evitent 5 a 10 % de surconsommation.
+            </p>
+          </div>
+
+          <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-6">
+            <h3 className="font-bold text-gray-800 mb-3">Diesel, essence ou electrique ?</h3>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              Comparaison pour un vehicule segment C (15 000 km/an) : <strong>Essence</strong> 7 L/100km a 1,75 &euro;/L = <strong>0,123 &euro;/km</strong> (1 838 &euro;/an). <strong>Diesel</strong> 5,5 L/100km a 1,70 &euro;/L = <strong>0,094 &euro;/km</strong> (1 403 &euro;/an). <strong>Electrique</strong> 17 kWh/100km a 0,25 &euro;/kWh = <strong>0,043 &euro;/km</strong> (638 &euro;/an). <strong>Hybride</strong> 4,5 L/100km = <strong>0,079 &euro;/km</strong>. Pensez aussi a l&apos;assurance, l&apos;entretien, la decote et les restrictions ZFE.
+            </p>
+          </div>
         </div>
       </section>
 

@@ -124,113 +124,46 @@ export default function PageCalculDureeEntreDates() {
       </section>
 
       {/* Contenu SEO */}
-      <section className="max-w-4xl mx-auto px-4 py-12">
-        <div className="prose prose-lg prose-gray max-w-none">
-          <h2>Comment compter les jours entre deux dates ?</h2>
-          <p>
-            Compter le <strong>nombre de jours entre deux dates</strong> semble
-            simple en apparence, mais plusieurs subtilites rendent ce calcul
-            plus complexe qu'il n'y parait. Les mois n'ont pas tous le meme
-            nombre de jours (28, 29, 30 ou 31), et les{" "}
-            <strong>annees bissextiles</strong> ajoutent un jour supplementaire
-            tous les quatre ans. Notre calculateur gere automatiquement toutes
-            ces particularites pour vous fournir un resultat precis et fiable.
-          </p>
-          <p>
-            Le principe de base est simple : on soustrait la date de debut de
-            la date de fin. Par exemple, du 1er janvier au 31 janvier, il y a
-            30 jours. Mais du 1er janvier au 1er mars, le resultat depend de
-            l'annee : 59 jours en annee normale, 60 jours en annee bissextile
-            (grace au 29 fevrier).
-          </p>
+      <section className="max-w-5xl mx-auto px-4 py-12">
+        <h2 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-8">
+          Tout savoir sur le calcul de duree entre deux dates
+        </h2>
 
-          <h2>Annees bissextiles : comment ca marche ?</h2>
-          <p>
-            Une <strong>annee bissextile</strong> est une annee qui comporte
-            366 jours au lieu de 365. Elle se produit tous les 4 ans, avec une
-            exception : les annees divisibles par 100 ne sont pas bissextiles,
-            sauf si elles sont egalement divisibles par 400. Ainsi, l'an 2000
-            etait bissextile, mais 1900 ne l'etait pas.
-          </p>
-          <p>
-            Cette regle est essentielle pour calculer correctement la duree
-            entre deux dates qui enjambent un mois de fevrier. Notre outil
-            applique automatiquement cette regle du calendrier gregorien pour
-            garantir la precision du resultat, quelle que soit la periode
-            concernee.
-          </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-6">
+            <h3 className="font-bold text-gray-800 mb-3">Comment compter les jours entre deux dates ?</h3>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              Compter le <strong>nombre de jours entre deux dates</strong> implique de gerer des mois de longueurs differentes (28, 29, 30 ou 31 jours) et les <strong>annees bissextiles</strong>. Le principe : soustraire la date de debut de la date de fin. Du 1er janvier au 1er mars, le resultat varie selon l&apos;annee : 59 jours en annee normale, 60 en annee bissextile. Notre calculateur gere automatiquement toutes ces particularites.
+            </p>
+          </div>
 
-          <h2>Jours ouvres vs jours calendaires</h2>
-          <p>
-            La distinction entre <strong>jours ouvres</strong> et{" "}
-            <strong>jours calendaires</strong> est cruciale dans de nombreux
-            contextes professionnels et juridiques. Les jours calendaires
-            comptent chaque jour sans exception, tandis que les jours ouvres
-            excluent les samedis et dimanches.
-          </p>
-          <p>
-            En droit du travail francais, de nombreux delais sont exprimes en
-            jours ouvres : preavis de demission, delai de retractation, conges
-            payes, etc. Un mois calendaire (30 jours) correspond en moyenne a
-            environ 22 jours ouvres. Notre calculateur vous donne les deux
-            valeurs simultanement pour faciliter vos demarches.
-          </p>
-          <p>
-            Attention : les <strong>jours ouvres</strong> (lundi a vendredi,
-            5 jours) ne doivent pas etre confondus avec les{" "}
-            <strong>jours ouvrables</strong> (lundi a samedi, 6 jours), qui
-            sont utilises dans d'autres contextes juridiques comme le calcul
-            des conges payes dans certaines conventions collectives.
-          </p>
+          <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-6">
+            <h3 className="font-bold text-gray-800 mb-3">Annees bissextiles : comment ca marche ?</h3>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              Une <strong>annee bissextile</strong> comporte 366 jours au lieu de 365 et se produit tous les 4 ans. Exception : les annees divisibles par 100 ne sont pas bissextiles, sauf si elles sont aussi divisibles par 400. Ainsi, 2000 etait bissextile mais 1900 ne l&apos;etait pas. Notre outil applique automatiquement cette regle du <strong>calendrier gregorien</strong> pour garantir la precision du resultat.
+            </p>
+          </div>
 
-          <h2>Utilisations pratiques du calcul de duree</h2>
-          <p>
-            Le calcul de la duree entre deux dates intervient dans de nombreuses
-            situations de la vie courante et professionnelle :
-          </p>
-          <ul>
-            <li>
-              <strong>Gestion de projet :</strong> determiner le nombre de
-              jours ouvres disponibles pour respecter une echeance, planifier
-              les etapes d'un projet ou calculer la duree totale d'un chantier.
-            </li>
-            <li>
-              <strong>Ressources humaines :</strong> calculer l'anciennete
-              d'un salarie, le nombre de jours de conges restants, la duree
-              d'un preavis ou verifier le respect des delais legaux.
-            </li>
-            <li>
-              <strong>Finance et comptabilite :</strong> calculer les interets
-              sur une periode donnee, determiner la duree d'un pret ou d'un
-              placement, verifier l'echeance d'une facture a 30 ou 60 jours.
-            </li>
-            <li>
-              <strong>Vie personnelle :</strong> compter les jours avant un
-              evenement (mariage, vacances, naissance prevue), calculer son
-              age exact ou determiner la duree d'un voyage.
-            </li>
-            <li>
-              <strong>Juridique :</strong> verifier le respect des delais
-              legaux (prescription, recours, retractation), calculer la duree
-              d'un bail ou d'un contrat.
-            </li>
-          </ul>
+          <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-6">
+            <h3 className="font-bold text-gray-800 mb-3">Jours ouvres vs jours calendaires</h3>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              Les <strong>jours calendaires</strong> comptent chaque jour sans exception. Les <strong>jours ouvres</strong> excluent samedis et dimanches (lundi a vendredi, 5 jours). En droit du travail francais, de nombreux delais sont en jours ouvres : preavis, retractation, conges payes. Un mois calendaire (30 jours) correspond a environ 22 jours ouvres. Attention a ne pas confondre avec les <strong>jours ouvrables</strong> (lundi a samedi, 6 jours), utilises dans d&apos;autres contextes juridiques.
+            </p>
+          </div>
 
-          <h2>Decomposition en annees, mois et jours</h2>
-          <p>
-            En plus du nombre total de jours, notre calculateur decompose la
-            duree en <strong>annees, mois et jours</strong>. Cette
-            representation est souvent plus parlante : savoir qu'il y a
-            &laquo; 2 ans, 3 mois et 15 jours &raquo; entre deux dates est
-            plus intuitif que &laquo; 837 jours &raquo;.
-          </p>
-          <p>
-            Le calcul en semaines est egalement affiche, avec le nombre de
-            semaines completes et les jours restants. Cette information est
-            particulierement utile pour la planification de projets en sprints
-            ou pour le suivi de grossesse, qui se compte traditionnellement en
-            semaines.
-          </p>
+          <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-6">
+            <h3 className="font-bold text-gray-800 mb-3">Utilisations pratiques du calcul de duree</h3>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              <strong>Gestion de projet :</strong> planifier les etapes et calculer les jours ouvres disponibles. <strong>Ressources humaines :</strong> anciennete, conges, preavis et delais legaux. <strong>Finance :</strong> interets, duree d&apos;un pret, echeance de facture a 30 ou 60 jours. <strong>Vie personnelle :</strong> compte a rebours avant un evenement, age exact, duree d&apos;un voyage. <strong>Juridique :</strong> delais de prescription, recours, retractation, duree d&apos;un bail.
+            </p>
+          </div>
+
+          <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-6 md:col-span-2">
+            <h3 className="font-bold text-gray-800 mb-3">Decomposition en annees, mois et jours</h3>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              Notre calculateur decompose la duree en <strong>annees, mois et jours</strong> pour une lecture plus intuitive : &laquo;&nbsp;2 ans, 3 mois et 15 jours&nbsp;&raquo; est plus parlant que &laquo;&nbsp;837 jours&nbsp;&raquo;. Le nombre de <strong>semaines completes</strong> et jours restants est egalement affiche, particulierement utile pour la planification en sprints ou le suivi de grossesse.
+            </p>
+          </div>
         </div>
       </section>
 

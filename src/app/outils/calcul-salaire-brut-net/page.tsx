@@ -129,165 +129,53 @@ export default function PageSalaireBrutNet() {
       </section>
 
       {/* SEO Content */}
-      <section className="max-w-4xl mx-auto px-4 py-12">
-        <div className="prose prose-lg prose-gray max-w-none">
-          <h2>Comprendre le salaire brut et le salaire net en France</h2>
-          <p>
-            En France, le bulletin de salaire affiche deux montants bien
-            distincts : le <strong>salaire brut</strong> et le{" "}
-            <strong>salaire net</strong>. La difference entre les deux correspond
-            aux <strong>cotisations sociales salariales</strong>, un ensemble de
-            prelevements obligatoires qui financent la protection sociale
-            (maladie, retraite, chomage, etc.). Comprendre ce mecanisme est
-            essentiel pour tout salarie, qu'il soit en poste ou en recherche
-            d'emploi.
-          </p>
+      <section className="max-w-5xl mx-auto px-4 py-12">
+        <h2 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-8">
+          Comprendre le salaire brut et net en France
+        </h2>
 
-          <h3>Qu'est-ce que le salaire brut ?</h3>
-          <p>
-            Le salaire brut est le montant total convenu entre l'employeur et le
-            salarie avant toute deduction. C'est le montant qui figure dans
-            votre contrat de travail et qui sert de reference pour les
-            negociations salariales, surtout pour les postes cadres. Il inclut
-            le salaire de base, les primes eventuelles (13e mois, prime
-            d'anciennete), les heures supplementaires et tout autre element de
-            remuneration.
-          </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-6">
+            <h3 className="font-bold text-gray-800 mb-3">Salaire brut vs salaire net</h3>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              Le <strong>salaire brut</strong> est le montant total avant deduction, inscrit dans votre contrat de travail. Il inclut le salaire de base, les primes (13e mois, anciennete) et les heures supplementaires. Le <strong>salaire net</strong> (<strong>net a payer avant impot</strong>) est ce que vous recevez sur votre compte bancaire, apres deduction des <strong>cotisations sociales salariales</strong> qui financent la protection sociale (maladie, retraite, chomage). Depuis 2019, le prelevement a la source reduit encore le montant vire, mais le salaire net designe le net avant impot.
+            </p>
+          </div>
 
-          <h3>Qu'est-ce que le salaire net ?</h3>
-          <p>
-            Le salaire net, souvent appele{" "}
-            <strong>net a payer avant impot</strong>, est le montant que vous
-            recevez effectivement sur votre compte bancaire. Il correspond au
-            brut moins l'ensemble des cotisations salariales. Attention : depuis
-            2019, le prelevement a la source de l'impot sur le revenu vient
-            encore reduire le montant vire, mais le &laquo; salaire net &raquo;
-            au sens strict designe le net avant impot.
-          </p>
+          <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-6">
+            <h3 className="font-bold text-gray-800 mb-3">Detail des cotisations salariales</h3>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              Les cotisations representent environ <strong>22 % du brut pour un non-cadre</strong> et <strong>25 % pour un cadre</strong>. Elles se decomposent en : <strong>CSG-CRDS (~9,7 %)</strong>, le poste le plus important, finançant la Securite sociale ; <strong>retraite de base et complementaire (~11 %)</strong> via le regime general et AGIRC-ARRCO ; <strong>assurance chomage (0 % part salariale)</strong> depuis octobre 2018, seul l&apos;employeur cotise ; <strong>complementaire sante (~1,5 %)</strong>, mutuelle obligatoire partagee 50/50 avec l&apos;employeur depuis 2016.
+            </p>
+          </div>
 
-          <h3>Comment sont calculees les cotisations salariales ?</h3>
-          <p>
-            Les cotisations salariales representent en moyenne{" "}
-            <strong>22% du salaire brut pour un non-cadre</strong> et environ{" "}
-            <strong>25% pour un cadre</strong>. Elles se decomposent en
-            plusieurs postes :
-          </p>
-          <ul>
-            <li>
-              <strong>CSG-CRDS (~9,7%)</strong> : la Contribution Sociale
-              Generalisee et la Contribution au Remboursement de la Dette
-              Sociale financent la Securite sociale. C'est le poste le plus
-              important des cotisations salariales.
-            </li>
-            <li>
-              <strong>Retraite de base et complementaire (~11%)</strong> : les
-              cotisations retraite sont partagees entre employeur et salarie.
-              Elles permettent de constituer vos droits pour la retraite de base
-              (regime general) et complementaire (AGIRC-ARRCO).
-            </li>
-            <li>
-              <strong>Assurance chomage (0% part salariale)</strong> : depuis
-              octobre 2018, les salaries ne cotisent plus directement a
-              l'assurance chomage. Seul l'employeur supporte cette charge.
-            </li>
-            <li>
-              <strong>Complementaire sante (~1,5%)</strong> : depuis 2016,
-              l'employeur est tenu de proposer une mutuelle d'entreprise. La
-              cotisation est generalement partagee a 50/50 entre employeur et
-              salarie.
-            </li>
-          </ul>
+          <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-6">
+            <h3 className="font-bold text-gray-800 mb-3">Cadre vs non-cadre : les differences</h3>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              Depuis la fusion AGIRC-ARRCO en 2019, l&apos;ecart s&apos;est reduit mais reste notable. Les cadres cotisent a l&apos;<strong>APEC</strong> (~0,024 % du brut) et ont une tranche 2 de retraite complementaire plus elevee, augmentant leurs cotisations mais aussi leurs droits futurs. En moyenne, un cadre paie <strong>3 points de cotisations de plus</strong> qu&apos;un non-cadre (25 % contre 22 % du brut).
+            </p>
+          </div>
 
-          <h3>Cadre vs non-cadre : quelles differences sur la fiche de paie ?</h3>
-          <p>
-            Historiquement, la distinction entre cadre et non-cadre entrainait
-            des differences importantes en termes de cotisations sociales. Depuis
-            la fusion des regimes AGIRC et ARRCO en 2019, l'ecart s'est reduit,
-            mais il subsiste des differences notables :
-          </p>
-          <ul>
-            <li>
-              Les cadres cotisent a l'<strong>APEC</strong> (Association pour
-              l'emploi des cadres), une cotisation specifique d'environ 0,024%
-              du brut.
-            </li>
-            <li>
-              Les tranches de cotisation retraite complementaire different : les
-              cadres ont souvent une tranche 2 plus significative, ce qui
-              augmente leurs cotisations totales mais aussi leurs droits futurs.
-            </li>
-            <li>
-              En moyenne, un cadre paie environ{" "}
-              <strong>3 points de cotisations de plus</strong> qu'un non-cadre,
-              soit 25% contre 22% du brut.
-            </li>
-          </ul>
+          <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-6">
+            <h3 className="font-bold text-gray-800 mb-3">Les pieges a eviter</h3>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              <strong>Confondre brut et net</strong> : 40 000 euros brut annuel donne environ 2 600 euros net/mois (non-cadre) ou 2 500 euros (cadre). <strong>Oublier les avantages en nature</strong> : tickets restaurant, voiture de fonction, interessement peuvent representer plusieurs centaines d&apos;euros mensuels. <strong>Ne pas comparer sur la meme base</strong> : certaines offres sont sur 12, 13 ou 14 mois. Ramenez toujours au net mensuel pour comparer les propositions.
+            </p>
+          </div>
 
-          <h3>Salaire brut net : les pieges a eviter</h3>
-          <p>
-            Lors d'un entretien d'embauche ou d'une negociation salariale,
-            plusieurs erreurs sont courantes :
-          </p>
-          <ul>
-            <li>
-              <strong>Confondre brut et net</strong> : une offre a 40 000 euros
-              brut annuel correspond a environ 2 600 euros net par mois pour un
-              non-cadre, et 2 500 euros pour un cadre. La difference est
-              significative.
-            </li>
-            <li>
-              <strong>Oublier les avantages en nature</strong> : tickets
-              restaurant, voiture de fonction, mutuelle avantageuse ou
-              interessement peuvent representer plusieurs centaines d'euros par
-              mois en complement du salaire.
-            </li>
-            <li>
-              <strong>Ne pas comparer sur la meme base</strong> : certaines
-              offres sont exprimees en brut annuel sur 12 mois, d'autres sur 13
-              ou 14 mois. Ramenez toujours au net mensuel pour comparer.
-            </li>
-          </ul>
+          <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-6">
+            <h3 className="font-bold text-gray-800 mb-3">Conseils pour negocier votre salaire</h3>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              <strong>Renseignez-vous sur les salaires du marche</strong> via les etudes APEC, cabinets de recrutement et sites d&apos;emploi. <strong>Raisonnez en package global</strong> : variable, interessement/participation, conges supplementaires, teletravail et mutuelle comptent autant que le fixe. <strong>Preparez vos arguments</strong> en chiffrant vos realisations concretes. Utilisez notre <strong>convertisseur brut/net</strong> pour comparer les offres sans erreur.
+            </p>
+          </div>
 
-          <h3>Conseils pour negocier votre salaire</h3>
-          <p>
-            Que vous soyez en poste ou en recherche d'emploi, voici quelques
-            conseils pour aborder la question salariale sereinement :
-          </p>
-          <ul>
-            <li>
-              <strong>Renseignez-vous sur les salaires du marche</strong> :
-              consultez les etudes de remuneration de votre secteur (APEC,
-              cabinets de recrutement, sites d'emploi) pour connaitre la
-              fourchette habituelle pour votre poste et votre experience.
-            </li>
-            <li>
-              <strong>Raisonnez en package global</strong> : le salaire fixe
-              n'est qu'une composante. Pensez au variable, a
-              l'interessement/participation, aux jours de conge supplementaires,
-              au teletravail et a la qualite de la mutuelle.
-            </li>
-            <li>
-              <strong>Preparez vos arguments</strong> : vos competences, vos
-              realisations concretes et votre valeur ajoutee sont vos meilleurs
-              atouts. Chiffrez vos contributions passees quand c'est possible.
-            </li>
-            <li>
-              <strong>Utilisez un convertisseur fiable</strong> : notre outil
-              vous permet de comparer instantanement brut et net, pour etre sur
-              de ne pas vous tromper lors de la negociation.
-            </li>
-          </ul>
-
-          <h3>Quand utiliser un convertisseur brut/net ?</h3>
-          <p>
-            Un convertisseur salaire brut net est utile dans de nombreuses
-            situations : lorsque vous recevez une offre d'emploi exprimee en
-            brut annuel, quand vous souhaitez verifier votre fiche de paie,
-            pour preparer une demande d'augmentation, ou simplement pour
-            comprendre combien vous coutez reellement a votre employeur. Notre
-            outil est mis a jour avec les taux de cotisations 2026 et fournit
-            une estimation fiable en quelques secondes.
-          </p>
+          <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-6">
+            <h3 className="font-bold text-gray-800 mb-3">Quand utiliser un convertisseur brut/net ?</h3>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              Un <strong>convertisseur salaire brut net</strong> est utile pour evaluer une offre d&apos;emploi exprimee en brut annuel, verifier votre fiche de paie, preparer une demande d&apos;augmentation, ou comprendre votre cout reel pour l&apos;employeur. Notre outil est mis a jour avec les <strong>taux de cotisations 2026</strong> et fournit une estimation fiable en quelques secondes.
+            </p>
+          </div>
         </div>
       </section>
 

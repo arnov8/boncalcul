@@ -124,156 +124,39 @@ export default function PageCalculPoidsIdeal() {
       </div>
 
       {/* SEO Content */}
-      <section className="max-w-4xl mx-auto px-4 py-8">
-        <div className="prose prose-lg prose-gray max-w-none">
-          <h2>Qu&apos;est-ce que le poids ideal ?</h2>
-          <p>
-            Le <strong>poids ideal</strong> est une estimation theorique du
-            poids auquel une personne serait en meilleure sante, en fonction
-            de sa taille, de son sexe, de son age et de sa morphologie. Il ne
-            s&apos;agit pas d&apos;un chiffre absolu : chaque individu est
-            unique et le poids &laquo; ideal &raquo; varie considerablement
-            d&apos;une personne a l&apos;autre.
-          </p>
-          <p>
-            Il est important de distinguer le poids ideal du poids souhaite.
-            Le premier est une reference medicale basee sur des donnees
-            statistiques, tandis que le second est souvent influence par des
-            criteres esthetiques ou sociaux. Un poids de forme est celui
-            auquel vous vous sentez bien, avec de bons indicateurs de sante
-            (tension arterielle, glycemie, cholesterol).
-          </p>
+      <section className="max-w-5xl mx-auto px-4 py-12">
+        <h2 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-8">
+          Tout savoir sur le calcul du poids ideal
+        </h2>
 
-          <h2>Les differentes formules et leur histoire</h2>
-          <p>
-            Depuis le XIXe siecle, de nombreux medecins et chercheurs ont
-            propose des formules pour estimer le poids ideal. Chacune repose
-            sur des hypotheses et des populations d&apos;etude differentes :
-          </p>
-          <h3>La formule de Lorentz (1929)</h3>
-          <p>
-            Mise au point par le medecin allemand Paul Lorentz, cette formule
-            est la plus repandue en France. Elle tient compte du sexe et de
-            la taille. Pour les hommes :{" "}
-            <em>Poids = Taille (cm) - 100 - (Taille - 150) / 4</em>. Pour
-            les femmes :{" "}
-            <em>Poids = Taille (cm) - 100 - (Taille - 150) / 2,5</em>. Sa
-            limite principale est de ne pas considerer l&apos;age ni la
-            morphologie.
-          </p>
-          <h3>La formule de Devine (1974)</h3>
-          <p>
-            Initialement developpee par le Dr Ben J. Devine pour calculer les
-            doses de medicaments, cette formule est devenue une reference en
-            medecine anglo-saxonne. Elle utilise la taille en centimetres et
-            differe selon le sexe : pour les hommes,{" "}
-            <em>Poids = 50 + 0,9 x (Taille - 152,4)</em> ; pour les femmes,{" "}
-            <em>Poids = 45,5 + 0,9 x (Taille - 152,4)</em>. Cette formule
-            tend a donner des resultats plus bas que Lorentz pour les grandes
-            tailles.
-          </p>
-          <h3>La formule de Creff</h3>
-          <p>
-            Plus complete que les precedentes, la formule de Creff integre
-            trois facteurs : la taille, l&apos;age et la morphologie
-            (gracile, normale ou large). La formule est :{" "}
-            <em>
-              Poids = ((Taille - 100) + (Age / 10)) x 0,9 x Coefficient
-            </em>
-            , ou le coefficient vaut 0,9 pour une morphologie mince, 1,0
-            pour une morphologie normale et 1,1 pour une morphologie large.
-            C&apos;est la formule la plus personnalisee parmi les formules
-            classiques.
-          </p>
-          <h3>La fourchette IMC (OMS)</h3>
-          <p>
-            Plutot qu&apos;un poids ideal unique, l&apos;Organisation
-            mondiale de la sante recommande de se situer dans une{" "}
-            <strong>fourchette de poids</strong> correspondant a un IMC entre
-            18,5 et 25. Cette approche est plus realiste car elle reconnait
-            qu&apos;il n&apos;existe pas un seul poids ideal mais une zone
-            de poids sain.
-          </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-6">
+            <h3 className="font-bold text-gray-800 mb-3">Qu&apos;est-ce que le poids ideal ?</h3>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              Le <strong>poids ideal</strong> est une estimation theorique du poids optimal pour la sante, selon la taille, le sexe, l&apos;age et la morphologie. Il ne s&apos;agit pas d&apos;un chiffre absolu : il faut le distinguer du poids souhaite, souvent influence par des criteres esthetiques. Un vrai <strong>poids de forme</strong> est celui ou vous vous sentez bien, avec de bons indicateurs de sante (tension, glycemie, cholesterol).
+            </p>
+          </div>
 
-          <h2>Limites des formules de poids ideal</h2>
-          <p>
-            Toutes les formules de poids ideal presentent des{" "}
-            <strong>limites importantes</strong> qu&apos;il faut garder a
-            l&apos;esprit :
-          </p>
-          <ul>
-            <li>
-              <strong>
-                Elles ne tiennent pas compte de la masse musculaire.
-              </strong>{" "}
-              Un sportif ou une personne tres active peut avoir un poids
-              superieur a son poids ideal calcule sans que cela soit
-              preoccupant. Le muscle est plus dense que la graisse.
-            </li>
-            <li>
-              <strong>
-                Elles sont basees sur des populations specifiques.
-              </strong>{" "}
-              Les formules ont ete developpees a partir de populations
-              occidentales et peuvent ne pas etre adaptees a toutes les
-              origines ethniques.
-            </li>
-            <li>
-              <strong>
-                Elles ne considerent pas la repartition des graisses.
-              </strong>{" "}
-              La graisse abdominale est plus dangereuse pour la sante que la
-              graisse peripherique. Le tour de taille est un indicateur
-              complementaire essentiel.
-            </li>
-            <li>
-              <strong>
-                Elles donnent un chiffre unique (ou une fourchette etroite).
-              </strong>{" "}
-              Or, le poids ideal est en realite une zone assez large dans
-              laquelle votre corps fonctionne de maniere optimale.
-            </li>
-          </ul>
+          <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-6">
+            <h3 className="font-bold text-gray-800 mb-3">Les formules de calcul</h3>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              <strong>Lorentz (1929)</strong> : la plus repandue en France, tient compte du sexe et de la taille. <em>Hommes : Taille - 100 - (Taille - 150) / 4</em>. <em>Femmes : Taille - 100 - (Taille - 150) / 2,5</em>. <strong>Devine (1974)</strong> : reference anglo-saxonne, tend a donner des resultats plus bas pour les grandes tailles. <strong>Creff</strong> : la plus complete, integre taille, age et morphologie (gracile, normale, large). <strong>Fourchette IMC (OMS)</strong> : recommande un IMC entre 18,5 et 25, reconnaissant une zone de poids sain plutot qu&apos;un chiffre unique.
+            </p>
+          </div>
 
-          <h2>Approche saine du poids</h2>
-          <p>
-            Plutot que de chercher a atteindre un chiffre precis sur la
-            balance, les professionnels de sante recommandent une approche
-            globale du bien-etre :
-          </p>
-          <ul>
-            <li>
-              <strong>Privilegiez une alimentation equilibree</strong> : riche
-              en fruits, legumes, cereales completes et proteines de qualite.
-              Evitez les regimes restrictifs qui entrainent l&apos;effet yoyo.
-            </li>
-            <li>
-              <strong>Bougez regulierement</strong> : l&apos;activite
-              physique ameliore la composition corporelle, meme sans perte de
-              poids sur la balance. Elle augmente la masse musculaire et reduit
-              la masse graisseuse.
-            </li>
-            <li>
-              <strong>Ecoutez votre corps</strong> : la faim, la satiete et le
-              niveau d&apos;energie sont de meilleurs indicateurs que le
-              chiffre sur la balance. Un poids stable sans effort est souvent
-              un bon signe.
-            </li>
-            <li>
-              <strong>Consultez un professionnel</strong> : un medecin ou un
-              dieteticien peut evaluer votre composition corporelle (masse
-              grasse, masse maigre) et vous accompagner de maniere
-              personnalisee.
-            </li>
-          </ul>
-          <p>
-            Le poids ideal est un repere utile, mais il ne doit pas devenir
-            une obsession. Votre sante globale — physique et mentale — est
-            bien plus importante qu&apos;un chiffre issu d&apos;une formule
-            mathematique. Utilisez ces resultats comme point de depart pour
-            une reflexion sur votre hygiene de vie, pas comme un objectif
-            rigide a atteindre a tout prix.
-          </p>
+          <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-6">
+            <h3 className="font-bold text-gray-800 mb-3">Limites des formules</h3>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              Ces formules presentent des <strong>limites importantes</strong>. Elles ne tiennent pas compte de la <strong>masse musculaire</strong> : un sportif peut legitimement depasser son poids ideal calcule. Elles sont basees sur des populations occidentales et peuvent ne pas convenir a toutes les origines ethniques. Elles ignorent la <strong>repartition des graisses</strong> (la graisse abdominale est plus risquee) et donnent un chiffre unique alors que le poids ideal est une zone large.
+            </p>
+          </div>
+
+          <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-6">
+            <h3 className="font-bold text-gray-800 mb-3">Approche saine du poids</h3>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              Plutot qu&apos;un chiffre precis, privilegiez une <strong>alimentation equilibree</strong> (fruits, legumes, cereales completes, proteines de qualite) et evitez les regimes restrictifs. <strong>Bougez regulierement</strong> pour ameliorer votre composition corporelle. Ecoutez votre corps : faim, satiete et energie sont de meilleurs indicateurs que la balance. Consultez un <strong>professionnel de sante</strong> pour une evaluation personnalisee de votre composition corporelle.
+            </p>
+          </div>
         </div>
       </section>
 

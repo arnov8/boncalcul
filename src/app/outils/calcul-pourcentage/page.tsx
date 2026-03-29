@@ -123,168 +123,53 @@ export default function PageCalculPourcentage() {
       </section>
 
       {/* Contenu SEO */}
-      <section className="max-w-4xl mx-auto px-4 py-12">
-        <div className="prose prose-lg prose-gray max-w-none">
-          <h2>Qu'est-ce qu'un pourcentage ?</h2>
-          <p>
-            Un <strong>pourcentage</strong> est une facon d'exprimer une
-            proportion sous forme de fraction de 100. Le symbole % signifie
-            litteralement &laquo; pour cent &raquo;. Dire que 25 % des eleves
-            ont reussi un examen revient a dire que 25 eleves sur 100 l'ont
-            reussi, soit un quart du groupe. Les pourcentages sont
-            omnipresents dans la vie quotidienne : remises en magasin, taux
-            d'interet bancaires, resultats sportifs, statistiques de sondages,
-            notes scolaires, et bien plus encore.
-          </p>
-          <p>
-            Mathematiquement, un pourcentage est un rapport multiplie par 100.
-            Si vous avez 15 bonnes reponses sur 60 questions, votre taux de
-            reussite est (15 / 60) x 100 = 25 %. Cette notion simple est
-            pourtant a l'origine de nombreuses erreurs d'interpretation,
-            notamment lorsqu'on confond pourcentage et points de pourcentage.
-          </p>
+      <section className="max-w-5xl mx-auto px-4 py-12">
+        <h2 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-8">
+          Tout savoir sur le calcul de pourcentage
+        </h2>
 
-          <h2>Les 3 types de calcul de pourcentage</h2>
-          <p>
-            Il existe trois grands types de calculs de pourcentage que l'on
-            rencontre au quotidien. Notre calculateur couvre ces trois cas
-            de figure :
-          </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-6">
+            <h3 className="font-bold text-gray-800 mb-3">Qu&apos;est-ce qu&apos;un pourcentage ?</h3>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              Un <strong>pourcentage</strong> exprime une proportion sous forme de fraction de 100. Le symbole % signifie &laquo; pour cent &raquo;. Omnipresents dans la vie quotidienne (remises, taux d&apos;interet, statistiques, notes scolaires), les pourcentages sont un rapport multiplie par 100 : 15 bonnes reponses sur 60 questions = (15 / 60) x 100 = 25 %. Cette notion simple est pourtant source de nombreuses erreurs, notamment la confusion entre <strong>pourcentage</strong> et <strong>points de pourcentage</strong>.
+            </p>
+          </div>
 
-          <h3>1. Calculer X % d'un nombre</h3>
-          <p>
-            C'est le calcul le plus courant. Vous connaissez le pourcentage et
-            le nombre de reference, et vous cherchez la valeur
-            correspondante. La formule est :{" "}
-            <strong>resultat = nombre x pourcentage / 100</strong>.
-          </p>
-          <p>
-            <strong>Exemples concrets :</strong>
-          </p>
-          <ul>
-            <li>
-              <strong>Remise en magasin :</strong> un article a 80 euros avec
-              une reduction de 30 % coute 80 - (80 x 30 / 100) = 80 - 24 =
-              56 euros.
-            </li>
-            <li>
-              <strong>Pourboire :</strong> 15 % de pourboire sur une addition
-              de 45 euros = 45 x 15 / 100 = 6,75 euros.
-            </li>
-            <li>
-              <strong>Interets bancaires :</strong> un placement de 10 000
-              euros a 3 % par an rapporte 10 000 x 3 / 100 = 300 euros
-              d'interets annuels.
-            </li>
-          </ul>
+          <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-6">
+            <h3 className="font-bold text-gray-800 mb-3">Calculer X % d&apos;un nombre</h3>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              Le calcul le plus courant. Formule : <strong>resultat = nombre x pourcentage / 100</strong>. <strong>Remise :</strong> un article a 80 € avec -30 % = 80 - 24 = 56 €. <strong>Pourboire :</strong> 15 % sur 45 € = 6,75 €. <strong>Interets bancaires :</strong> 10 000 € a 3 % = 300 € d&apos;interets annuels.
+            </p>
+          </div>
 
-          <h3>2. Trouver quel pourcentage X represente de Y</h3>
-          <p>
-            Ici, vous connaissez deux nombres et vous cherchez la proportion
-            de l'un par rapport a l'autre. La formule est :{" "}
-            <strong>pourcentage = (X / Y) x 100</strong>.
-          </p>
-          <p>
-            <strong>Exemples concrets :</strong>
-          </p>
-          <ul>
-            <li>
-              <strong>Note scolaire :</strong> 14 points sur 20 = (14 / 20) x
-              100 = 70 % de reussite.
-            </li>
-            <li>
-              <strong>Part de marche :</strong> une entreprise qui realise 5
-              millions d'euros de chiffre d'affaires sur un marche de 50
-              millions = (5 / 50) x 100 = 10 % de part de marche.
-            </li>
-            <li>
-              <strong>Budget :</strong> si vous depensez 450 euros de loyer
-              sur un salaire de 1 800 euros, le loyer represente (450 / 1 800)
-              x 100 = 25 % de vos revenus.
-            </li>
-          </ul>
+          <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-6">
+            <h3 className="font-bold text-gray-800 mb-3">Trouver quel pourcentage X represente de Y</h3>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              Formule : <strong>pourcentage = (X / Y) x 100</strong>. <strong>Note scolaire :</strong> 14/20 = 70 %. <strong>Part de marche :</strong> 5 M€ sur un marche de 50 M€ = 10 %. <strong>Budget :</strong> 450 € de loyer sur 1 800 € de salaire = 25 % de vos revenus.
+            </p>
+          </div>
 
-          <h3>3. Calculer la variation en pourcentage</h3>
-          <p>
-            Ce calcul mesure l'evolution entre deux valeurs. La formule
-            est :{" "}
-            <strong>
-              variation = ((valeur finale - valeur initiale) / valeur
-              initiale) x 100
-            </strong>
-            .
-          </p>
-          <p>
-            <strong>Exemples concrets :</strong>
-          </p>
-          <ul>
-            <li>
-              <strong>Evolution de prix :</strong> un loyer passe de 800 a 850
-              euros, soit une hausse de ((850 - 800) / 800) x 100 = +6,25 %.
-            </li>
-            <li>
-              <strong>Performance boursiere :</strong> une action passe de 120
-              a 96 euros, soit une baisse de ((96 - 120) / 120) x 100 =
-              -20 %.
-            </li>
-            <li>
-              <strong>Evolution du chiffre d'affaires :</strong> un CA qui
-              passe de 200 000 a 260 000 euros a progresse de ((260 000 -
-              200 000) / 200 000) x 100 = +30 %.
-            </li>
-          </ul>
+          <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-6">
+            <h3 className="font-bold text-gray-800 mb-3">Calculer une variation en pourcentage</h3>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              Formule : <strong>variation = ((valeur finale - valeur initiale) / valeur initiale) x 100</strong>. <strong>Loyer :</strong> de 800 a 850 € = +6,25 %. <strong>Bourse :</strong> de 120 a 96 € = -20 %. <strong>Chiffre d&apos;affaires :</strong> de 200 000 a 260 000 € = +30 %. Un resultat positif indique une hausse, negatif une baisse.
+            </p>
+          </div>
 
-          <h2>Erreurs courantes avec les pourcentages</h2>
-          <p>
-            Les pourcentages sont source de nombreuses confusions. Voici les
-            erreurs les plus frequentes :
-          </p>
-          <ul>
-            <li>
-              <strong>
-                Confondre pourcentage et points de pourcentage :
-              </strong>{" "}
-              si un taux d'interet passe de 2 % a 3 %, il a augmente de 1
-              point de pourcentage, mais la hausse relative est de 50 %
-              (le taux a ete multiplie par 1,5).
-            </li>
-            <li>
-              <strong>Additionner des pourcentages :</strong> une hausse de
-              20 % suivie d'une baisse de 20 % ne ramene pas au prix initial.
-              Exemple : 100 euros + 20 % = 120 euros, puis 120 euros - 20 % =
-              96 euros (et non 100 euros).
-            </li>
-            <li>
-              <strong>Inverser la base de calcul :</strong> 30 est 50 % de 60,
-              mais 60 n'est pas 50 % de 30 (c'est 200 %). La base de
-              reference change tout.
-            </li>
-            <li>
-              <strong>Oublier la base de reference :</strong> dire &laquo; les
-              ventes ont augmente de 200 % &raquo; signifie qu'elles ont
-              triple (x3), et non double.
-            </li>
-          </ul>
+          <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-6">
+            <h3 className="font-bold text-gray-800 mb-3">Erreurs courantes avec les pourcentages</h3>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              <strong>Pourcentage vs points de pourcentage :</strong> un taux passant de 2 % a 3 % augmente de 1 point, mais de 50 % en relatif. <strong>Additionner des pourcentages :</strong> +20 % puis -20 % ne ramene pas au depart (100 € → 120 € → 96 €). <strong>Inverser la base :</strong> 30 est 50 % de 60, mais 60 est 200 % de 30. <strong>Base de reference :</strong> &laquo; +200 % &raquo; signifie tripler (x3), pas doubler.
+            </p>
+          </div>
 
-          <h2>Pourcentages et vie quotidienne</h2>
-          <p>
-            Les pourcentages interviennent dans de nombreux aspects de la vie
-            courante. Les <strong>soldes et promotions</strong> utilisent des
-            pourcentages pour exprimer les reductions : -30 %, -50 %, etc.
-            Les <strong>taux d'interet</strong> des prets immobiliers, des
-            livrets d'epargne et des placements financiers sont exprimes en
-            pourcentage annuel. Les <strong>impots</strong> sont souvent
-            calcules a partir de tranches exprimees en pourcentage du revenu.
-          </p>
-          <p>
-            En entreprise, les pourcentages servent a mesurer la{" "}
-            <strong>marge commerciale</strong>, le{" "}
-            <strong>taux de conversion</strong> d'un site web, le{" "}
-            <strong>taux de croissance</strong> du chiffre d'affaires, ou
-            encore le <strong>taux d'absenteisme</strong>. Maitriser le
-            calcul de pourcentage est donc une competence essentielle, tant
-            dans la vie personnelle que professionnelle.
-          </p>
+          <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-6">
+            <h3 className="font-bold text-gray-800 mb-3">Pourcentages et vie quotidienne</h3>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              Les <strong>soldes et promotions</strong> expriment les reductions en pourcentage (-30 %, -50 %). Les <strong>taux d&apos;interet</strong> des prets immobiliers, livrets d&apos;epargne et placements sont exprimes en pourcentage annuel. Les <strong>impots</strong> se calculent par tranches en pourcentage du revenu. En entreprise, les pourcentages mesurent la <strong>marge commerciale</strong>, le <strong>taux de conversion</strong>, le <strong>taux de croissance</strong> du CA ou le <strong>taux d&apos;absenteisme</strong>.
+            </p>
+          </div>
         </div>
       </section>
 

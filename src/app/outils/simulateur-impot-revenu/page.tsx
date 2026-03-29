@@ -125,174 +125,46 @@ export default function PageSimulateurImpot() {
       </section>
 
       {/* Contenu SEO */}
-      <section className="max-w-4xl mx-auto px-4 py-12">
-        <div className="prose prose-lg prose-gray max-w-none">
-          <h2>Comment fonctionne l&apos;impot sur le revenu en France ?</h2>
-          <p>
-            L&apos;<strong>impot sur le revenu (IR)</strong> est un impot direct
-            preleve sur les revenus des personnes physiques residant en France.
-            Il est calcule chaque annee sur la base des revenus percus l&apos;annee
-            precedente. Depuis 2019, le <strong>prelevement a la source</strong>{" "}
-            permet de collecter l&apos;impot directement sur les salaires, pensions
-            et revenus de remplacement chaque mois, evitant ainsi un decalage
-            d&apos;un an entre la perception du revenu et le paiement de l&apos;impot.
-          </p>
-          <p>
-            L&apos;impot sur le revenu est <strong>progressif</strong> : plus vos
-            revenus sont eleves, plus le taux d&apos;imposition augmente. Ce
-            principe de progressivite vise a repartir la charge fiscale de
-            maniere equitable en fonction de la capacite contributive de chaque
-            foyer. Il se distingue des impots proportionnels (comme la CSG) qui
-            appliquent un taux unique quel que soit le niveau de revenu.
-          </p>
+      <section className="max-w-5xl mx-auto px-4 py-12">
+        <h2 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-8">
+          Comprendre l&apos;impot sur le revenu en France
+        </h2>
 
-          <h2>Le bareme progressif de l&apos;impot sur le revenu 2025</h2>
-          <p>
-            Le bareme de l&apos;impot sur le revenu est compose de{" "}
-            <strong>5 tranches</strong> avec des taux croissants. Chaque tranche
-            ne s&apos;applique qu&apos;a la portion de revenu qui la concerne, et non a
-            l&apos;ensemble du revenu. Voici le bareme applicable aux revenus 2024
-            (declaration 2025) :
-          </p>
-          <ul>
-            <li>
-              <strong>Jusqu&apos;a 11 294 euros :</strong> 0 % (franchise d&apos;impot)
-            </li>
-            <li>
-              <strong>De 11 295 a 28 797 euros :</strong> 11 %
-            </li>
-            <li>
-              <strong>De 28 798 a 82 341 euros :</strong> 30 %
-            </li>
-            <li>
-              <strong>De 82 342 a 177 106 euros :</strong> 41 %
-            </li>
-            <li>
-              <strong>Au-dela de 177 106 euros :</strong> 45 %
-            </li>
-          </ul>
-          <p>
-            Ces seuils sont revalorises chaque annee par l&apos;administration
-            fiscale en fonction de l&apos;evolution de l&apos;indice des prix a la
-            consommation, afin d&apos;eviter que l&apos;inflation ne fasse mecaniquement
-            augmenter l&apos;impot des contribuables dont le pouvoir d&apos;achat reel
-            n&apos;a pas progresse.
-          </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-6">
+            <h3 className="font-bold text-gray-800 mb-3">Comment fonctionne l&apos;impot sur le revenu ?</h3>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              L&apos;<strong>impot sur le revenu (IR)</strong> est un impot direct preleve sur les revenus des personnes physiques residant en France, calcule chaque annee sur les revenus de l&apos;annee precedente. Depuis 2019, le <strong>prelevement a la source</strong> collecte l&apos;impot directement sur les salaires et pensions chaque mois. L&apos;IR est <strong>progressif</strong> : plus vos revenus sont eleves, plus le taux augmente, contrairement aux impots proportionnels comme la CSG.
+            </p>
+          </div>
 
-          <h2>Le quotient familial : comment ca marche ?</h2>
-          <p>
-            Le <strong>quotient familial</strong> est un mecanisme propre au
-            systeme fiscal francais qui permet d&apos;adapter l&apos;impot a la taille du
-            foyer. Le principe est simple : le revenu net imposable du foyer
-            est divise par un nombre de <strong>parts fiscales</strong>, qui
-            depend de la situation familiale et du nombre de personnes a charge.
-          </p>
-          <p>
-            Le nombre de parts se calcule ainsi :
-          </p>
-          <ul>
-            <li>
-              <strong>Celibataire, divorce ou veuf :</strong> 1 part
-            </li>
-            <li>
-              <strong>Marie ou pacse (declaration commune) :</strong> 2 parts
-            </li>
-            <li>
-              <strong>Chaque enfant a charge (les 2 premiers) :</strong>{" "}
-              + 0,5 part par enfant
-            </li>
-            <li>
-              <strong>A partir du 3e enfant a charge :</strong> + 1 part par
-              enfant supplementaire
-            </li>
-          </ul>
-          <p>
-            Le quotient familial (revenu divise par le nombre de parts) est
-            ensuite soumis au bareme progressif. L&apos;impot obtenu est alors
-            multiplie par le nombre de parts pour determiner l&apos;impot total du
-            foyer. Ce systeme avantage les familles nombreuses en reduisant le
-            taux marginal d&apos;imposition effectif.
-          </p>
-          <p>
-            Attention : l&apos;avantage fiscal lie au quotient familial est{" "}
-            <strong>plafonne</strong>. Pour chaque demi-part supplementaire
-            au-dela de 2 parts (couple) ou 1 part (celibataire), la reduction
-            d&apos;impot ne peut pas depasser un certain montant (1 759 euros par
-            demi-part en 2025). Ce plafonnement limite l&apos;avantage pour les
-            foyers a tres hauts revenus.
-          </p>
+          <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-6">
+            <h3 className="font-bold text-gray-800 mb-3">Le bareme progressif 2025</h3>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              Le bareme comporte <strong>5 tranches</strong> avec des taux croissants, chaque tranche ne s&apos;appliquant qu&apos;a la portion de revenu concernee. <strong>Jusqu&apos;a 11 294 euros :</strong> 0%. <strong>De 11 295 a 28 797 euros :</strong> 11%. <strong>De 28 798 a 82 341 euros :</strong> 30%. <strong>De 82 342 a 177 106 euros :</strong> 41%. <strong>Au-dela de 177 106 euros :</strong> 45%. Ces seuils sont revalorises chaque annee en fonction de l&apos;inflation.
+            </p>
+          </div>
 
-          <h2>Deductions, reductions et credits d&apos;impot</h2>
-          <p>
-            Au-dela du bareme et du quotient familial, plusieurs mecanismes
-            permettent de <strong>reduire son impot</strong> :
-          </p>
-          <ul>
-            <li>
-              <strong>Les deductions du revenu imposable :</strong> elles
-              diminuent le montant du revenu soumis au bareme. Par exemple,
-              les pensions alimentaires versees, les cotisations d&apos;epargne
-              retraite (PER), ou l&apos;abattement de 10 % pour frais
-              professionnels sur les salaires.
-            </li>
-            <li>
-              <strong>Les reductions d&apos;impot :</strong> elles diminuent
-              directement le montant de l&apos;impot a payer. Elles ne peuvent pas
-              generer de remboursement si l&apos;impot est nul. Exemples : dons aux
-              associations, investissements locatifs (Pinel), souscription au
-              capital de PME.
-            </li>
-            <li>
-              <strong>Les credits d&apos;impot :</strong> comme les reductions, ils
-              diminuent l&apos;impot, mais contrairement a celles-ci, ils peuvent
-              donner lieu a un remboursement si leur montant depasse l&apos;impot du.
-              Exemples : frais de garde d&apos;enfants de moins de 6 ans, emploi d&apos;un
-              salarie a domicile, travaux de renovation energetique.
-            </li>
-          </ul>
+          <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-6">
+            <h3 className="font-bold text-gray-800 mb-3">Le quotient familial</h3>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              Le <strong>quotient familial</strong> adapte l&apos;impot a la taille du foyer en divisant le revenu imposable par un nombre de <strong>parts fiscales</strong>. Celibataire : 1 part. Couple marie/pacse : 2 parts. Les 2 premiers enfants ajoutent 0,5 part chacun, puis 1 part par enfant supplementaire. Le quotient est soumis au bareme, puis l&apos;impot est multiplie par le nombre de parts. L&apos;avantage est <strong>plafonne</strong> a 1 759 euros par demi-part supplementaire en 2025.
+            </p>
+          </div>
 
-          <h2>Comment optimiser son impot sur le revenu ?</h2>
-          <p>
-            Plusieurs strategies legales permettent de reduire sa charge
-            fiscale :
-          </p>
-          <ul>
-            <li>
-              <strong>Epargne retraite (PER) :</strong> les versements sur un
-              Plan d&apos;Epargne Retraite sont deductibles du revenu imposable dans
-              la limite d&apos;un plafond annuel (10 % des revenus professionnels,
-              avec un minimum et un maximum). C&apos;est l&apos;un des leviers les plus
-              efficaces pour reduire son impot, notamment pour les
-              contribuables dans les tranches a 30 % ou plus.
-            </li>
-            <li>
-              <strong>Dons aux associations :</strong> un don a un organisme
-              d&apos;interet general ouvre droit a une reduction d&apos;impot de 66 % du
-              montant verse (dans la limite de 20 % du revenu imposable), voire
-              75 % pour les dons aux organismes d&apos;aide aux personnes en
-              difficulte (dans une limite annuelle).
-            </li>
-            <li>
-              <strong>Emploi a domicile :</strong> les depenses liees a
-              l&apos;emploi d&apos;un salarie a domicile (menage, garde d&apos;enfants, aide
-              aux personnes agees) ouvrent droit a un credit d&apos;impot de 50 %
-              des sommes versees, dans la limite de 12 000 euros par an
-              (majoree selon la composition du foyer).
-            </li>
-            <li>
-              <strong>Investissement locatif :</strong> des dispositifs comme le
-              Pinel (pour les logements neufs dans certaines zones) ou le Denormandie
-              (ancien avec travaux) permettent de beneficier de reductions
-              d&apos;impot etalees sur plusieurs annees.
-            </li>
-          </ul>
-          <p>
-            Ce simulateur vous permet d&apos;estimer rapidement votre impot brut
-            avant application de ces dispositifs. Pour une estimation complete
-            tenant compte des reductions et credits d&apos;impot, consultez le
-            simulateur officiel sur{" "}
-            <strong>impots.gouv.fr</strong>.
-          </p>
+          <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-6">
+            <h3 className="font-bold text-gray-800 mb-3">Deductions, reductions et credits d&apos;impot</h3>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              <strong>Les deductions</strong> diminuent le revenu soumis au bareme (pensions alimentaires, cotisations PER, abattement de 10% pour frais professionnels). <strong>Les reductions d&apos;impot</strong> diminuent directement l&apos;impot sans remboursement possible (dons aux associations, investissement Pinel, capital PME). <strong>Les credits d&apos;impot</strong> fonctionnent comme les reductions mais peuvent donner lieu a un remboursement (garde d&apos;enfants, emploi a domicile, renovation energetique).
+            </p>
+          </div>
+
+          <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-6 md:col-span-2">
+            <h3 className="font-bold text-gray-800 mb-3">Comment optimiser son impot sur le revenu ?</h3>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              <strong>Epargne retraite (PER) :</strong> versements deductibles du revenu imposable (plafond de 10% des revenus), particulierement efficace dans les tranches a 30% ou plus. <strong>Dons aux associations :</strong> reduction de 66% du montant verse (75% pour l&apos;aide aux personnes en difficulte), dans la limite de 20% du revenu imposable. <strong>Emploi a domicile :</strong> credit d&apos;impot de 50% des sommes versees, plafonne a 12 000 euros/an. <strong>Investissement locatif :</strong> dispositifs Pinel ou Denormandie pour des reductions etalees sur plusieurs annees. Pour une estimation complete, consultez <strong>impots.gouv.fr</strong>.
+            </p>
+          </div>
         </div>
       </section>
 
