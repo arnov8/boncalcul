@@ -9,10 +9,10 @@ export interface OutilMeta {
 }
 
 export const categories = [
-  { id: "finance", label: "Finance & Immobilier", icon: "💰" },
-  { id: "quotidien", label: "Vie quotidienne", icon: "🏠" },
-  { id: "auto", label: "Auto & Transport", icon: "🚗" },
-  { id: "sante", label: "Santé & Bien-être", icon: "❤️" },
+  { id: "finance", label: "Finance & Immobilier", icon: "coins" },
+  { id: "quotidien", label: "Vie quotidienne", icon: "home" },
+  { id: "auto", label: "Auto & Transport", icon: "car" },
+  { id: "sante", label: "Santé & Bien-être", icon: "heartbeat" },
 ] as const;
 
 export const outils: OutilMeta[] = [
@@ -23,7 +23,7 @@ export const outils: OutilMeta[] = [
     description:
       "Calculez vos mensualités de prêt immobilier, le coût total du crédit et le tableau d'amortissement. Simulateur gratuit et instantané.",
     categorie: "finance",
-    icon: "🏠",
+    icon: "home",
     keywords: [
       "simulateur prêt immobilier",
       "calcul mensualité",
@@ -38,7 +38,7 @@ export const outils: OutilMeta[] = [
     description:
       "Convertissez votre salaire brut en net (et inversement) en un clic. Taux de charges actualisés 2026 pour cadre et non-cadre.",
     categorie: "finance",
-    icon: "💶",
+    icon: "currency-euro",
     keywords: [
       "calcul salaire brut net",
       "convertisseur salaire",
@@ -53,7 +53,7 @@ export const outils: OutilMeta[] = [
     description:
       "Estimez les frais de notaire pour votre achat immobilier. Calcul détaillé selon le type de bien (ancien ou neuf) et le département.",
     categorie: "finance",
-    icon: "📋",
+    icon: "clipboard-list",
     keywords: [
       "frais de notaire",
       "calcul frais notaire",
@@ -68,7 +68,7 @@ export const outils: OutilMeta[] = [
     description:
       "Convertissez un montant HT en TTC (et inversement) avec tous les taux de TVA français : 20%, 10%, 5.5%, 2.1%.",
     categorie: "finance",
-    icon: "🧾",
+    icon: "receipt",
     keywords: ["calcul TVA", "HT TTC", "taux TVA", "convertisseur TVA"],
   },
   {
@@ -78,7 +78,7 @@ export const outils: OutilMeta[] = [
     description:
       "Calculez votre Indice de Masse Corporelle (IMC) et découvrez dans quelle catégorie vous vous situez. Interprétation selon l'OMS.",
     categorie: "sante",
-    icon: "⚖️",
+    icon: "scale",
     keywords: [
       "calcul IMC",
       "indice masse corporelle",
@@ -93,7 +93,7 @@ export const outils: OutilMeta[] = [
     description:
       "Calculez votre capacité d'emprunt immobilier en fonction de vos revenus, charges et du taux d'intérêt. Règle des 35% HCSF appliquée.",
     categorie: "finance",
-    icon: "🏦",
+    icon: "building-bank",
     keywords: [
       "capacité d'emprunt",
       "calcul emprunt",
@@ -108,7 +108,7 @@ export const outils: OutilMeta[] = [
     description:
       "Calculez un pourcentage facilement : X% d'un nombre, proportion, variation en pourcentage. Trois modes de calcul instantanés.",
     categorie: "quotidien",
-    icon: "🔢",
+    icon: "hash",
     keywords: [
       "calcul pourcentage",
       "calculer pourcentage",
@@ -123,7 +123,7 @@ export const outils: OutilMeta[] = [
     description:
       "Simulez la croissance de votre épargne grâce aux intérêts composés. Capital initial, versements mensuels et tableau d'évolution année par année.",
     categorie: "finance",
-    icon: "📈",
+    icon: "trending-up",
     keywords: [
       "intérêts composés",
       "simulateur épargne",
@@ -138,7 +138,7 @@ export const outils: OutilMeta[] = [
     description:
       "Estimez votre impôt sur le revenu 2026 avec le barème progressif, le quotient familial et le détail par tranche. Simulateur gratuit et instantané.",
     categorie: "finance",
-    icon: "🏛️",
+    icon: "building-columns",
     keywords: [
       "simulateur impôt",
       "calcul impôt revenu",
@@ -153,7 +153,7 @@ export const outils: OutilMeta[] = [
     description:
       "Calculez votre indemnité légale de licenciement ou de rupture conventionnelle en fonction de votre salaire et ancienneté.",
     categorie: "finance",
-    icon: "📄",
+    icon: "file-text",
     keywords: [
       "indemnité licenciement",
       "calcul indemnité",
@@ -169,7 +169,7 @@ export const outils: OutilMeta[] = [
     description:
       "Convertissez instantanément entre les unités de longueur, masse, volume, température, surface et vitesse.",
     categorie: "quotidien",
-    icon: "📏",
+    icon: "ruler",
     keywords: [
       "conversion unités",
       "convertisseur",
@@ -184,7 +184,7 @@ export const outils: OutilMeta[] = [
     description:
       "Calculez votre âge exact en années, mois, jours, semaines et heures. Découvrez votre jour de naissance et signe astrologique.",
     categorie: "quotidien",
-    icon: "🎂",
+    icon: "cake",
     keywords: [
       "calculer son âge",
       "âge exact",
@@ -199,7 +199,7 @@ export const outils: OutilMeta[] = [
     description:
       "Calculez le nombre de jours, semaines, mois entre deux dates. Jours ouvrés et week-ends inclus.",
     categorie: "quotidien",
-    icon: "📅",
+    icon: "calendar",
     keywords: [
       "jours entre deux dates",
       "durée entre dates",
@@ -214,7 +214,7 @@ export const outils: OutilMeta[] = [
     description:
       "Calculez votre consommation de carburant en L/100km et estimez le coût d'un trajet en fonction de la distance et du prix au litre.",
     categorie: "auto",
-    icon: "⛽",
+    icon: "gas-station",
     keywords: [
       "consommation essence",
       "L/100km",
@@ -229,7 +229,7 @@ export const outils: OutilMeta[] = [
     description:
       "Calculez le coût réel au kilomètre de votre voiture : carburant, assurance, entretien, décote et contrôle technique.",
     categorie: "auto",
-    icon: "🚗",
+    icon: "car",
     keywords: [
       "coût km voiture",
       "prix kilomètre",
@@ -245,7 +245,7 @@ export const outils: OutilMeta[] = [
     description:
       "Calculez votre date prévue d'accouchement à partir de la date de vos dernières règles ou de la date de conception.",
     categorie: "sante",
-    icon: "🤰",
+    icon: "baby-carriage",
     keywords: [
       "date accouchement",
       "DPA",
@@ -260,7 +260,7 @@ export const outils: OutilMeta[] = [
     description:
       "Calculez vos besoins caloriques journaliers selon votre âge, sexe, taille, poids et niveau d'activité. Formule Mifflin-St Jeor.",
     categorie: "sante",
-    icon: "🍎",
+    icon: "apple",
     keywords: [
       "calcul calories",
       "besoins caloriques",
@@ -275,7 +275,7 @@ export const outils: OutilMeta[] = [
     description:
       "Estimez votre poids idéal avec 4 formules reconnues : Lorentz, Devine, Creff et plage IMC. Résultats comparés.",
     categorie: "sante",
-    icon: "🏋️",
+    icon: "barbell",
     keywords: [
       "poids idéal",
       "calcul poids",
@@ -290,7 +290,7 @@ export const outils: OutilMeta[] = [
     description:
       "Calculez votre indice de masse grasse (IMG) avec la formule de Deurenberg. Interprétation par sexe et catégorie.",
     categorie: "sante",
-    icon: "📊",
+    icon: "chart-bar",
     keywords: [
       "calcul IMG",
       "indice masse grasse",
@@ -305,7 +305,7 @@ export const outils: OutilMeta[] = [
     description:
       "Calculez votre date d'ovulation et votre fenêtre de fertilité à partir de la date de vos dernières règles et la durée de votre cycle.",
     categorie: "sante",
-    icon: "🌸",
+    icon: "flower",
     keywords: [
       "calcul ovulation",
       "période fertile",

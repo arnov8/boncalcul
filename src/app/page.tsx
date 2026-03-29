@@ -1,4 +1,5 @@
 import OutilCard from "@/components/OutilCard";
+import TablerIcon from "@/components/TablerIcon";
 import { outils, categories } from "@/data/outils";
 import { JsonLd, faqJsonLd } from "@/lib/jsonld";
 import { AdBanner } from "@/lib/adsense";
@@ -42,7 +43,7 @@ export default function HomePage() {
       <JsonLd data={faqJsonLd(faqQuestions)} />
 
       {/* Hero */}
-      <section className="bg-gradient-to-b from-blue-50 to-gray-50 py-16">
+      <section className="bg-gradient-to-b from-blue-50 to-gray-50 py-10 md:py-16">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             Calculez tout, <span className="text-blue-600">simplement.</span>
@@ -56,7 +57,7 @@ export default function HomePage() {
       </section>
 
       {/* Outils par catégorie */}
-      <section className="max-w-6xl mx-auto px-4 py-12">
+      <section id="outils" className="max-w-6xl mx-auto px-4 py-8 md:py-12 scroll-mt-16">
         <AdBanner slot="home-top" format="horizontal" className="mb-8" />
 
         {categories.map((cat) => {
@@ -65,7 +66,7 @@ export default function HomePage() {
           return (
             <div key={cat.id} className="mb-10">
               <h2 className="text-2xl font-bold text-gray-800 mb-4 flex items-center gap-2">
-                <span>{cat.icon}</span> {cat.label}
+                <TablerIcon name={cat.icon} size={26} className="text-blue-600" /> {cat.label}
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {outilsCat.map((outil) => (
@@ -78,72 +79,72 @@ export default function HomePage() {
       </section>
 
       {/* Contenu SEO */}
-      <section className="max-w-4xl mx-auto px-4 py-12">
+      <section className="max-w-5xl mx-auto px-4 py-12">
         <AdBanner slot="home-mid" format="auto" className="mb-8" />
 
-        <div className="prose prose-gray max-w-none">
-          <h2>Pourquoi utiliser BonCalcul.fr ?</h2>
-          <p>
-            Que vous soyez en train de préparer un achat immobilier, de
-            négocier votre salaire ou simplement de vérifier un montant TTC,
-            avoir accès à des outils de calcul fiables fait toute la
-            différence. <strong>BonCalcul.fr</strong> met à votre disposition
-            une collection de simulateurs et calculateurs conçus pour être
-            simples, rapides et précis.
+        <div className="text-center mb-10">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">
+            Tous vos calculs du quotidien au même endroit
+          </h2>
+          <p className="text-gray-500 max-w-2xl mx-auto leading-relaxed">
+            BonCalcul.fr regroupe aujourd'hui <strong className="text-gray-700">plus de 20 outils de calcul gratuits</strong> couvrant
+            la finance, l'immobilier, la santé et l'automobile. Et ce n'est qu'un début : de nouveaux calculateurs sont ajoutés régulièrement.
           </p>
+        </div>
 
-          <h3>Des outils financiers pour vos projets</h3>
-          <p>
-            Notre <strong>simulateur de prêt immobilier</strong> vous permet de
-            calculer vos mensualités en quelques secondes, en tenant compte du
-            taux d'intérêt, de la durée du prêt et de l'assurance emprunteur.
-            Vous obtenez un tableau d'amortissement complet et le coût total de
-            votre crédit. Un outil indispensable avant de pousser la porte de
-            votre banque.
-          </p>
-          <p>
-            Le <strong>convertisseur salaire brut/net</strong> est l'un des
-            outils les plus recherchés en France. Que vous soyez candidat en
-            entretien d'embauche, salarié qui vérifie sa fiche de paie ou
-            employeur qui prépare une offre, notre calculateur utilise les taux
-            de cotisations à jour pour vous donner une estimation précise en un
-            clic.
-          </p>
-          <p>
-            Les <strong>frais de notaire</strong> représentent souvent une
-            surprise pour les acheteurs immobiliers. Notre outil décompose les
-            frais en détail : droits de mutation, émoluments du notaire, frais
-            de formalités et contributions de sécurité immobilière. Vous saurez
-            exactement combien prévoir en plus du prix d'achat.
-          </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-8">
+          <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-6">
+            <div className="flex items-center gap-2 mb-3">
+              <TablerIcon name="coins" size={22} className="text-blue-600" />
+              <h3 className="font-bold text-gray-800">Finance & Immobilier</h3>
+            </div>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              Simulez votre <strong>prêt immobilier</strong> avec tableau d'amortissement,
+              estimez vos <strong>frais de notaire</strong> par département,
+              calculez votre <strong>capacité d'emprunt</strong> (règle HCSF 35%),
+              convertissez votre <strong>salaire brut en net</strong> 2026,
+              projetez vos <strong>intérêts composés</strong>,
+              simulez votre <strong>impôt sur le revenu</strong> et calculez vos <strong>indemnités de licenciement</strong>.
+            </p>
+          </div>
 
-          <h3>Calculs du quotidien</h3>
-          <p>
-            Le <strong>calcul de TVA</strong> est un besoin quotidien pour les
-            entrepreneurs, auto-entrepreneurs et comptables. Convertissez
-            instantanément un montant HT en TTC (et inversement) avec tous les
-            taux français : 20%, 10%, 5,5% et 2,1%.
-          </p>
-          <p>
-            Côté santé, notre <strong>calculateur d'IMC</strong> (Indice de
-            Masse Corporelle) vous situe sur l'échelle de l'OMS et vous aide à
-            comprendre ce que signifie votre résultat, de l'insuffisance
-            pondérale à l'obésité.
-          </p>
+          <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-6">
+            <div className="flex items-center gap-2 mb-3">
+              <TablerIcon name="heartbeat" size={22} className="text-blue-600" />
+              <h3 className="font-bold text-gray-800">Santé & Bien-être</h3>
+            </div>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              Calculez votre <strong>IMC</strong>, estimez votre <strong>poids idéal</strong> selon 4 formules,
+              évaluez votre <strong>masse grasse (IMG)</strong>,
+              déterminez vos <strong>besoins caloriques</strong> journaliers,
+              suivez votre <strong>cycle d'ovulation</strong> et votre <strong>date d'accouchement</strong>.
+            </p>
+          </div>
 
-          <h3>Gratuit, rapide, respectueux de votre vie privée</h3>
-          <p>
-            Tous les calculs sont effectués{" "}
-            <strong>directement dans votre navigateur</strong>. Aucune donnée
-            n'est envoyée à nos serveurs. Pas d'inscription, pas de compte à
-            créer, pas de limite d'utilisation. Nos outils sont disponibles
-            24h/24 et fonctionnent sur ordinateur, tablette et mobile.
-          </p>
-          <p>
-            BonCalcul.fr est un projet indépendant, financé par la publicité
-            non intrusive. Nous ajoutons régulièrement de nouveaux outils pour
-            couvrir toujours plus de besoins du quotidien.
-          </p>
+          <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-6">
+            <div className="flex items-center gap-2 mb-3">
+              <TablerIcon name="home" size={22} className="text-blue-600" />
+              <h3 className="font-bold text-gray-800">Quotidien & Auto</h3>
+            </div>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              <strong>Calcul de TVA</strong> HT/TTC, <strong>pourcentages</strong>,
+              <strong> conversion d'unités</strong>, <strong>durée entre deux dates</strong>,
+              <strong> calcul d'âge</strong> exact, <strong>consommation d'essence</strong> en L/100km
+              et <strong>coût réel au kilomètre</strong> de votre véhicule.
+            </p>
+          </div>
+
+          <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-6">
+            <div className="flex items-center gap-2 mb-3">
+              <TablerIcon name="lock" size={22} className="text-blue-600" />
+              <h3 className="font-bold text-gray-800">Gratuit & respectueux de votre vie privée</h3>
+            </div>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              Tous les calculs sont effectués <strong>directement dans votre navigateur</strong>.
+              Aucune donnée envoyée à nos serveurs. Pas d'inscription, pas de limite, disponible
+              24h/24 sur tous vos appareils.
+            </p>
+          </div>
         </div>
       </section>
 

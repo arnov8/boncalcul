@@ -398,7 +398,7 @@ export default function ArticleCapaciteEmprunt() {
               href="/outils/calcul-capacite-emprunt"
               className="bg-white rounded-xl shadow p-5 hover:shadow-md transition"
             >
-              <span className="text-2xl">🏦</span>
+              <span className="text-blue-600"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M3 21l18 0" /><path d="M3 10l18 0" /><path d="M5 6l7 -3l7 3" /><path d="M4 10l0 11" /><path d="M20 10l0 11" /><path d="M8 14l0 3" /><path d="M12 14l0 3" /><path d="M16 14l0 3" /></svg></span>
               <h4 className="font-semibold mt-2">
                 Calcul de capacite d'emprunt
               </h4>
@@ -410,7 +410,7 @@ export default function ArticleCapaciteEmprunt() {
               href="/outils/simulateur-pret-immobilier"
               className="bg-white rounded-xl shadow p-5 hover:shadow-md transition"
             >
-              <span className="text-2xl">🏠</span>
+              <span className="text-blue-600"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12l-2 0l9 -9l9 9l-2 0" /><path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" /><path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" /></svg></span>
               <h4 className="font-semibold mt-2">
                 Simulateur de pret immobilier
               </h4>

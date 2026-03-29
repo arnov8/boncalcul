@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { OutilMeta } from "@/data/outils";
+import TablerIcon from "@/components/TablerIcon";
 
 export default function OutilCard({ outil }: { outil: OutilMeta }) {
   return (
@@ -7,7 +8,7 @@ export default function OutilCard({ outil }: { outil: OutilMeta }) {
       href={`/outils/${outil.slug}`}
       className="bg-white rounded-xl shadow hover:shadow-md transition p-6 flex items-start gap-4 group"
     >
-      <span className="text-3xl">{outil.icon}</span>
+      <TablerIcon name={outil.icon} size={30} className="text-blue-600 shrink-0 mt-0.5" />
       <div>
         <h3 className="font-semibold text-gray-800 group-hover:text-blue-600 transition">
           {outil.shortTitle}

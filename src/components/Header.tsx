@@ -1,11 +1,12 @@
 import Link from "next/link";
+import { IconCalculator } from "@tabler/icons-react";
 
 export default function Header() {
   return (
     <header className="bg-white shadow-sm sticky top-0 z-50">
       <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2">
-          <span className="text-2xl">🧮</span>
+          <IconCalculator size={28} className="text-blue-600" stroke={1.5} />
           <span className="text-lg font-bold text-gray-800">
             Bon<span className="text-blue-600">Calcul</span>
             <span className="text-gray-400">.fr</span>
@@ -43,10 +44,10 @@ export default function Header() {
             IMC
           </Link>
           <Link
-            href="/blog"
+            href="/#outils"
             className="text-gray-600 hover:text-blue-600 transition"
           >
-            Blog
+            Tous les outils
           </Link>
         </nav>
         <Link

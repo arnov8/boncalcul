@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { IconLock, IconCircleCheck, IconBolt, IconDeviceMobile } from "@tabler/icons-react";
 
 export const metadata: Metadata = {
   title: "À propos",
@@ -39,7 +40,7 @@ export default function APropos() {
           <h2>Nos engagements</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 not-prose mt-4">
             <div className="bg-blue-50 rounded-xl p-5">
-              <span className="text-2xl">🔒</span>
+              <IconLock size={28} className="text-blue-600" stroke={1.5} />
               <h3 className="font-semibold mt-2 text-gray-800">
                 Respect de la vie privée
               </h3>
@@ -49,7 +50,7 @@ export default function APropos() {
               </p>
             </div>
             <div className="bg-green-50 rounded-xl p-5">
-              <span className="text-2xl">✅</span>
+              <IconCircleCheck size={28} className="text-green-600" stroke={1.5} />
               <h3 className="font-semibold mt-2 text-gray-800">
                 Résultats fiables
               </h3>
@@ -59,7 +60,7 @@ export default function APropos() {
               </p>
             </div>
             <div className="bg-yellow-50 rounded-xl p-5">
-              <span className="text-2xl">⚡</span>
+              <IconBolt size={28} className="text-yellow-600" stroke={1.5} />
               <h3 className="font-semibold mt-2 text-gray-800">
                 Rapide et gratuit
               </h3>
@@ -69,7 +70,7 @@ export default function APropos() {
               </p>
             </div>
             <div className="bg-purple-50 rounded-xl p-5">
-              <span className="text-2xl">📱</span>
+              <IconDeviceMobile size={28} className="text-purple-600" stroke={1.5} />
               <h3 className="font-semibold mt-2 text-gray-800">
                 Accessible partout
               </h3>

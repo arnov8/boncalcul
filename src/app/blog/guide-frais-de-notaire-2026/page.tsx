@@ -341,7 +341,7 @@ export default function ArticleFraisNotaire() {
               href="/outils/simulateur-pret-immobilier"
               className="bg-white rounded-xl shadow p-5 hover:shadow-md transition"
             >
-              <span className="text-2xl">🏠</span>
+              <span className="text-blue-600"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12l-2 0l9 -9l9 9l-2 0" /><path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" /><path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" /></svg></span>
               <h4 className="font-semibold mt-2">
                 Simulateur de prêt immobilier
               </h4>
@@ -353,7 +353,7 @@ export default function ArticleFraisNotaire() {
               href="/outils/calcul-tva"
               className="bg-white rounded-xl shadow p-5 hover:shadow-md transition"
             >
-              <span className="text-2xl">🧾</span>
+              <span className="text-blue-600"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 21v-16a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v16l-3 -2l-2 2l-2 -2l-2 2l-2 -2l-3 2" /><path d="M14 8h-2.5a1.5 1.5 0 0 0 0 3h1a1.5 1.5 0 0 1 0 3h-2.5" /><path d="M12 6v2m0 8v2" /></svg></span>
               <h4 className="font-semibold mt-2">Calcul de TVA</h4>
               <p className="text-sm text-gray-500 mt-1">
                 Convertissez un montant HT en TTC instantanément.
