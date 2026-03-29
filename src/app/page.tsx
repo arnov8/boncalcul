@@ -87,8 +87,8 @@ export default function HomePage() {
             Tous vos calculs du quotidien au même endroit
           </h2>
           <p className="text-gray-500 max-w-2xl mx-auto leading-relaxed">
-            BonCalcul.fr regroupe aujourd'hui <strong className="text-gray-700">plus de 20 outils de calcul gratuits</strong> couvrant
-            la finance, l'immobilier, la santé et l'automobile. Et ce n'est qu'un début : de nouveaux calculateurs sont ajoutés régulièrement.
+            BonCalcul.fr regroupe aujourd'hui <strong className="text-gray-700">plus de 30 outils de calcul gratuits</strong> couvrant
+            la finance, l'immobilier, l'emploi, la santé et l'automobile. Et ce n'est qu'un début : de nouveaux calculateurs sont ajoutés régulièrement.
           </p>
         </div>
 
@@ -118,6 +118,32 @@ export default function HomePage() {
               évaluez votre <strong>masse grasse (IMG)</strong>,
               déterminez vos <strong>besoins caloriques</strong> journaliers,
               suivez votre <strong>cycle d'ovulation</strong> et votre <strong>date d'accouchement</strong>.
+            </p>
+          </div>
+
+          <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-6">
+            <div className="flex items-center gap-2 mb-3">
+              <TablerIcon name="briefcase" size={22} className="text-blue-600" />
+              <h3 className="font-bold text-gray-800">Emploi & Juridique</h3>
+            </div>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              Simulez votre <strong>allocation chômage (ARE)</strong>,
+              calculez le <strong>coût d'un salarié</strong> pour l'employeur,
+              estimez une <strong>pension alimentaire</strong>,
+              vos <strong>heures supplémentaires</strong> et consultez le <strong>SMIC 2026</strong>.
+            </p>
+          </div>
+
+          <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-6">
+            <div className="flex items-center gap-2 mb-3">
+              <TablerIcon name="building-bank" size={22} className="text-blue-600" />
+              <h3 className="font-bold text-gray-800">Immobilier avancé</h3>
+            </div>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              Calculez la <strong>rentabilité locative</strong> de votre investissement,
+              estimez votre <strong>plus-value immobilière</strong> et l'impôt associé,
+              mesurez la <strong>surface Carrez</strong>,
+              simulez un <strong>crédit consommation</strong> ou un <strong>rachat de crédit</strong>.
             </p>
           </div>
 

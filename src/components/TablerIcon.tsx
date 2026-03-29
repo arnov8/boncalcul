@@ -28,6 +28,15 @@ import {
   IconCircleCheck,
   IconBolt,
   IconDeviceMobile,
+  IconUmbrella,
+  IconUsers,
+  IconGavel,
+  IconClock,
+  IconWallet,
+  IconPig,
+  IconCreditCard,
+  IconRefresh,
+  IconBriefcase,
 } from "@tabler/icons-react";
 import type { ComponentType } from "react";
 
@@ -59,6 +68,15 @@ const iconMap: Record<string, ComponentType<{ size?: number; stroke?: number; cl
   "circle-check": IconCircleCheck,
   bolt: IconBolt,
   "device-mobile": IconDeviceMobile,
+  umbrella: IconUmbrella,
+  users: IconUsers,
+  gavel: IconGavel,
+  clock: IconClock,
+  wallet: IconWallet,
+  pig: IconPig,
+  "credit-card": IconCreditCard,
+  refresh: IconRefresh,
+  briefcase: IconBriefcase,
 };
 
 interface TablerIconProps {

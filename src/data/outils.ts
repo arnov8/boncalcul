@@ -10,6 +10,8 @@ export interface OutilMeta {
 
 export const categories = [
   { id: "finance", label: "Finance & Immobilier", icon: "coins" },
+  { id: "emploi", label: "Emploi & Juridique", icon: "briefcase" },
+  { id: "immobilier", label: "Immobilier avancé", icon: "building-bank" },
   { id: "quotidien", label: "Vie quotidienne", icon: "home" },
   { id: "auto", label: "Auto & Transport", icon: "car" },
   { id: "sante", label: "Santé & Bien-être", icon: "heartbeat" },
@@ -159,6 +161,158 @@ export const outils: OutilMeta[] = [
       "calcul indemnité",
       "rupture conventionnelle",
       "indemnité légale",
+    ],
+  },
+  // --- Batch 3 : Emploi & Juridique ---
+  {
+    slug: "simulateur-chomage-are",
+    title: "Simulateur allocation chômage (ARE) 2026 — Calcul gratuit",
+    shortTitle: "Allocation chômage (ARE)",
+    description:
+      "Estimez le montant de votre allocation chômage (ARE) en fonction de votre salaire brut et de votre durée d'emploi. Calcul gratuit.",
+    categorie: "emploi",
+    icon: "umbrella",
+    keywords: [
+      "allocation chômage",
+      "calcul ARE",
+      "indemnité chômage",
+      "Pôle emploi",
+    ],
+  },
+  {
+    slug: "cout-salarie-employeur",
+    title: "Coût d'un salarié pour l'employeur 2026 — Simulateur gratuit",
+    shortTitle: "Coût salarié employeur",
+    description:
+      "Calculez le coût total d'un salarié pour l'employeur : salaire brut, charges patronales, mutuelle et taxes. Simulateur 2026.",
+    categorie: "emploi",
+    icon: "users",
+    keywords: [
+      "coût salarié employeur",
+      "charges patronales",
+      "coût embauche",
+      "super brut",
+    ],
+  },
+  {
+    slug: "calcul-pension-alimentaire",
+    title: "Calcul pension alimentaire 2026 — Estimation gratuite",
+    shortTitle: "Pension alimentaire",
+    description:
+      "Estimez le montant indicatif de la pension alimentaire selon le barème du ministère de la Justice, vos revenus et le nombre d'enfants.",
+    categorie: "emploi",
+    icon: "gavel",
+    keywords: [
+      "calcul pension alimentaire",
+      "barème pension",
+      "divorce pension",
+      "garde enfant",
+    ],
+  },
+  {
+    slug: "calcul-heures-supplementaires",
+    title: "Calcul heures supplémentaires 2026 — Simulateur gratuit",
+    shortTitle: "Heures supplémentaires",
+    description:
+      "Calculez la rémunération de vos heures supplémentaires avec les majorations légales de 25% et 50%. Brut et net estimés.",
+    categorie: "emploi",
+    icon: "clock",
+    keywords: [
+      "heures supplémentaires",
+      "majoration heures sup",
+      "calcul heures sup",
+      "25% 50%",
+    ],
+  },
+  {
+    slug: "simulateur-smic",
+    title: "SMIC 2026 — Simulateur horaire, mensuel, annuel",
+    shortTitle: "SMIC 2026",
+    description:
+      "Consultez le SMIC 2026 horaire, mensuel et annuel (brut et net). Simulez le salaire pour un temps partiel.",
+    categorie: "emploi",
+    icon: "wallet",
+    keywords: [
+      "SMIC 2026",
+      "SMIC horaire",
+      "SMIC mensuel",
+      "SMIC net",
+    ],
+  },
+  // --- Batch 6 : Immobilier avancé ---
+  {
+    slug: "calcul-rentabilite-locative",
+    title: "Calcul rentabilité locative — Simulateur gratuit",
+    shortTitle: "Rentabilité locative",
+    description:
+      "Calculez la rentabilité brute, nette et nette-nette de votre investissement locatif. Simulateur gratuit et détaillé.",
+    categorie: "immobilier",
+    icon: "pig",
+    keywords: [
+      "rentabilité locative",
+      "rendement locatif",
+      "investissement immobilier",
+      "rendement brut net",
+    ],
+  },
+  {
+    slug: "calcul-plus-value-immobiliere",
+    title: "Calcul plus-value immobilière 2026 — Simulateur gratuit",
+    shortTitle: "Plus-value immobilière",
+    description:
+      "Calculez la plus-value imposable et l'impôt lors de la vente d'un bien immobilier. Abattements pour durée de détention inclus.",
+    categorie: "immobilier",
+    icon: "trending-up",
+    keywords: [
+      "plus-value immobilière",
+      "impôt plus-value",
+      "abattement durée détention",
+      "vente bien immobilier",
+    ],
+  },
+  {
+    slug: "calcul-surface-carrez",
+    title: "Calcul surface Carrez — Calculateur gratuit",
+    shortTitle: "Surface Carrez",
+    description:
+      "Calculez la surface Carrez de votre bien immobilier pièce par pièce. Hauteur sous plafond minimale de 1,80 m appliquée.",
+    categorie: "immobilier",
+    icon: "ruler",
+    keywords: [
+      "surface Carrez",
+      "loi Carrez",
+      "calcul surface",
+      "mesurage Carrez",
+    ],
+  },
+  {
+    slug: "simulateur-credit-consommation",
+    title: "Simulateur crédit consommation — Calcul mensualités gratuit",
+    shortTitle: "Crédit consommation",
+    description:
+      "Simulez votre crédit à la consommation : mensualités, coût total et TAEG. Comparaison des durées et taux.",
+    categorie: "immobilier",
+    icon: "credit-card",
+    keywords: [
+      "crédit consommation",
+      "simulateur prêt personnel",
+      "mensualité crédit",
+      "TAEG",
+    ],
+  },
+  {
+    slug: "simulateur-rachat-credit",
+    title: "Simulateur rachat de crédit 2026 — Estimation gratuite",
+    shortTitle: "Rachat de crédit",
+    description:
+      "Estimez les économies d'un rachat de crédit : nouvelle mensualité, durée, coût total et économie réalisée.",
+    categorie: "immobilier",
+    icon: "refresh",
+    keywords: [
+      "rachat de crédit",
+      "regroupement crédit",
+      "renégociation prêt",
+      "simulation rachat",
     ],
   },
   // --- Batch 4 : Quotidien & Pratique ---
