@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import CalculIMG from "./CalculIMG";
 import { JsonLd, webApplicationJsonLd, faqJsonLd } from "@/lib/jsonld";
 import { AdBanner } from "@/lib/adsense";
+import InfographieIMG from "@/components/infographics/InfographieIMG";
 
 export const metadata: Metadata = {
   title: "Calcul IMG — Indice de masse grasse en ligne",
@@ -26,6 +27,14 @@ export const metadata: Metadata = {
       "Estimez votre pourcentage de graisse corporelle instantanement avec la formule de Deurenberg. Gratuit, sans inscription.",
     url: "https://boncalcul.fr/outils/calcul-img",
     type: "website",
+    images: [
+      {
+        url: `https://boncalcul.fr/api/og?slug=calcul-img`,
+        width: 1200,
+        height: 630,
+        alt: "Calcul Img — BonCalcul.fr",
+      },
+    ],
   },
 };
 
@@ -91,6 +100,8 @@ export default function PageCalculIMG() {
       </section>
 
       <AdBanner slot="tool-after-result" format="auto" className="mt-8" />
+
+        <InfographieIMG />
 
       {/* FAQ */}
       <section className="bg-gray-50 py-12">

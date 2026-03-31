@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useMemo } from "react";
+import ShareResult from "@/components/ShareResult";
 
 type Mode = "ddr" | "conception";
 
@@ -313,6 +314,15 @@ export default function CalculDateAccouchement() {
             </p>
           </div>
         </div>
+      )}
+
+      {result && (
+        <ShareResult
+          toolName="Date d'accouchement"
+          result={`DPA : ${formatDate(result.dpa)}`}
+          details={`${result.saComplete} SA + ${result.saJours} j | ${result.trimestre?.label ?? ""} | ${result.joursRestants > 0 ? `Dans ${result.joursRestants} jour${result.joursRestants > 1 ? "s" : ""}` : "Terme atteint"}`}
+          toolSlug="calcul-date-accouchement"
+        />
       )}
 
       {/* Empty state */}

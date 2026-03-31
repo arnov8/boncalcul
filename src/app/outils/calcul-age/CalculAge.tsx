@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useMemo } from "react";
+import ShareResult from "@/components/ShareResult";
 
 interface AgeResult {
   annees: number;
@@ -305,6 +306,15 @@ export default function CalculAge() {
             </p>
           </div>
         </div>
+      )}
+
+      {result && (
+        <ShareResult
+          toolName="Calcul d'age"
+          result={`${result.annees} ans, ${result.mois} mois et ${result.jours} jour${result.jours > 1 ? "s" : ""}`}
+          details={`${formatNombre(result.totalJours)} jours | Ne un ${result.jourNaissance} | ${result.signEmoji} ${result.signe} | Prochain anniversaire dans ${result.joursRestants} jour${result.joursRestants > 1 ? "s" : ""}`}
+          toolSlug="calcul-age"
+        />
       )}
 
       {/* Empty state */}

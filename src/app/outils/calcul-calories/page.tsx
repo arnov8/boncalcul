@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import CalculCalories from "./CalculCalories";
 import { JsonLd, webApplicationJsonLd, faqJsonLd } from "@/lib/jsonld";
 import { AdBanner } from "@/lib/adsense";
+import InfographieCalories from "@/components/infographics/InfographieCalories";
 
 export const metadata: Metadata = {
   title: "Calcul calories par jour — Besoins caloriques gratuit",
@@ -27,6 +28,14 @@ export const metadata: Metadata = {
       "Calculez vos besoins caloriques journaliers instantanement. Metabolisme de base, TDEE et objectifs de poids. Gratuit, sans inscription.",
     url: "https://boncalcul.fr/outils/calcul-calories",
     type: "website",
+    images: [
+      {
+        url: `https://boncalcul.fr/api/og?slug=calcul-calories`,
+        width: 1200,
+        height: 630,
+        alt: "Calcul Calories — BonCalcul.fr",
+      },
+    ],
   },
 };
 
@@ -92,6 +101,8 @@ export default function PageCalculCalories() {
       </section>
 
       <AdBanner slot="tool-after-result" format="auto" className="mt-8" />
+
+        <InfographieCalories />
 
       {/* FAQ */}
       <section className="bg-gray-50 py-12">

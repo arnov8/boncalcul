@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import CalculDateAccouchement from "./CalculDateAccouchement";
 import { JsonLd, webApplicationJsonLd, faqJsonLd } from "@/lib/jsonld";
 import { AdBanner } from "@/lib/adsense";
+import InfographieAccouchement from "@/components/infographics/InfographieAccouchement";
 
 export const metadata: Metadata = {
   title: "Calcul date d'accouchement — Date prevue gratuit",
@@ -27,6 +28,14 @@ export const metadata: Metadata = {
       "Calculez votre date prevue d'accouchement instantanement. Gratuit, sans inscription.",
     url: "https://boncalcul.fr/outils/calcul-date-accouchement",
     type: "website",
+    images: [
+      {
+        url: `https://boncalcul.fr/api/og?slug=calcul-date-accouchement`,
+        width: 1200,
+        height: 630,
+        alt: "Calcul Date Accouchement — BonCalcul.fr",
+      },
+    ],
   },
 };
 
@@ -91,6 +100,8 @@ export default function PageCalculDateAccouchement() {
       </section>
 
       <AdBanner slot="tool-after-result" format="auto" className="mt-8" />
+
+        <InfographieAccouchement />
 
       {/* FAQ */}
       <section className="bg-gray-50 py-12">

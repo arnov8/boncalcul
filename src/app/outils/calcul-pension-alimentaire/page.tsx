@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import CalculPension from "./CalculPension";
 import { AdBanner } from "@/lib/adsense";
 import { JsonLd, webApplicationJsonLd, faqJsonLd } from "@/lib/jsonld";
+import InfographiePension from "@/components/infographics/InfographiePension";
 
 export const metadata: Metadata = {
   title: "Calcul pension alimentaire 2026 — Simulateur bareme Justice",
@@ -27,6 +28,14 @@ export const metadata: Metadata = {
       "Estimez la pension alimentaire selon le bareme du ministere de la Justice. Garde classique, alternee ou reduite.",
     url: "https://boncalcul.fr/outils/calcul-pension-alimentaire",
     type: "website",
+    images: [
+      {
+        url: `https://boncalcul.fr/api/og?slug=calcul-pension-alimentaire`,
+        width: 1200,
+        height: 630,
+        alt: "Calcul Pension Alimentaire — BonCalcul.fr",
+      },
+    ],
   },
 };
 
@@ -90,6 +99,8 @@ export default function PagePensionAlimentaire() {
         <CalculPension />
 
         <AdBanner slot="tool-after-result" format="auto" className="mt-8" />
+
+        <InfographiePension />
       </section>
 
       {/* FAQ */}

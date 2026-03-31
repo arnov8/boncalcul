@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { JsonLd, webApplicationJsonLd, faqJsonLd } from "@/lib/jsonld";
 import { AdBanner } from "@/lib/adsense";
 import SimulateurPret from "./SimulateurPret";
+import InfographiePret from "@/components/infographics/InfographiePret";
 
 export const metadata: Metadata = {
   title: "Simulateur de Pret Immobilier Gratuit - Calcul Mensualites",
@@ -25,16 +26,16 @@ export const metadata: Metadata = {
       "Calculez vos mensualites de pret immobilier avec notre simulateur gratuit. Tableau d'amortissement et cout total inclus.",
     url: "https://boncalcul.fr/outils/simulateur-pret-immobilier",
     type: "website",
-    locale: "fr_FR",
-    siteName: "BonCalcul.fr",
     images: [
       {
-        url: "/og-image.png",
+        url: `https://boncalcul.fr/api/og?slug=simulateur-pret-immobilier`,
         width: 1200,
         height: 630,
-        alt: "Simulateur de Pret Immobilier - BonCalcul.fr",
+        alt: "Simulateur Pret Immobilier — BonCalcul.fr",
       },
     ],
+    locale: "fr_FR",
+    siteName: "BonCalcul.fr",
   },
   twitter: {
     card: "summary_large_image",
@@ -109,6 +110,8 @@ export default function SimulateurPretImmobilierPage() {
         <SimulateurPret />
 
         <AdBanner slot="tool-after-result" format="auto" className="mt-8" />
+
+        <InfographiePret />
       </section>
 
       {/* FAQ */}

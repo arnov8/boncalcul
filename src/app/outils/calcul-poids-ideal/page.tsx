@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import CalculPoidsIdeal from "./CalculPoidsIdeal";
 import { JsonLd, webApplicationJsonLd, faqJsonLd } from "@/lib/jsonld";
 import { AdBanner } from "@/lib/adsense";
+import InfographiePoidsIdeal from "@/components/infographics/InfographiePoidsIdeal";
 
 export const metadata: Metadata = {
   title: "Calcul poids ideal — Estimez votre poids de forme",
@@ -27,6 +28,14 @@ export const metadata: Metadata = {
       "Estimez votre poids ideal selon 4 formules medicales reconnues. Gratuit, sans inscription.",
     url: "https://boncalcul.fr/outils/calcul-poids-ideal",
     type: "website",
+    images: [
+      {
+        url: `https://boncalcul.fr/api/og?slug=calcul-poids-ideal`,
+        width: 1200,
+        height: 630,
+        alt: "Calcul Poids Ideal — BonCalcul.fr",
+      },
+    ],
   },
 };
 
@@ -91,6 +100,8 @@ export default function PageCalculPoidsIdeal() {
       </section>
 
       <AdBanner slot="tool-after-result" format="auto" className="mt-8" />
+
+        <InfographiePoidsIdeal />
 
       {/* FAQ */}
       <section className="bg-gray-50 py-12">

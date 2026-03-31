@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import CalculRentabilite from "./CalculRentabilite";
 import { AdBanner } from "@/lib/adsense";
+import InfographieRentabilite from "@/components/infographics/InfographieRentabilite";
 import {
   JsonLd,
   webApplicationJsonLd,
@@ -30,6 +31,14 @@ export const metadata: Metadata = {
       "Calculez gratuitement la rentabilit\u00e9 locative brute et nette de votre investissement immobilier. R\u00e9sultat instantan\u00e9.",
     url: "https://boncalcul.fr/outils/calcul-rentabilite-locative",
     type: "website",
+    images: [
+      {
+        url: `https://boncalcul.fr/api/og?slug=calcul-rentabilite-locative`,
+        width: 1200,
+        height: 630,
+        alt: "Calcul Rentabilite Locative — BonCalcul.fr",
+      },
+    ],
   },
 };
 
@@ -90,6 +99,8 @@ export default function PageRentabiliteLocative() {
         <CalculRentabilite />
 
         <AdBanner slot="tool-after-result" format="auto" className="mt-8" />
+
+        <InfographieRentabilite />
 
         {/* ---------- FAQ ---------- */}
         <section className="bg-gray-50 rounded-2xl py-10 px-6 mb-10">

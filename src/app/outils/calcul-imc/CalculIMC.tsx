@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useMemo } from "react";
+import ShareResult from "@/components/ShareResult";
 
 interface Categorie {
   label: string;
@@ -239,6 +240,13 @@ export default function CalculIMC() {
               </div>
             ))}
           </div>
+
+          <ShareResult
+            toolName="Calcul IMC"
+            result={`IMC : ${result.imc.toFixed(1)} — ${result.cat.label}`}
+            details={`Poids ideal pour ${taille} cm : ${result.poidsIdealMin.toFixed(1)} kg a ${result.poidsIdealMax.toFixed(1)} kg`}
+            toolSlug="calcul-imc"
+          />
 
           {/* Poids ideal */}
           <div className="bg-blue-50 rounded-xl p-4 text-center">

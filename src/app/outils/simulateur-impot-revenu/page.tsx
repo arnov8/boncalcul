@@ -6,6 +6,7 @@ import {
   webApplicationJsonLd,
 } from "@/lib/jsonld";
 import { AdBanner } from "@/lib/adsense";
+import InfographieImpot from "@/components/infographics/InfographieImpot";
 
 export const metadata: Metadata = {
   title: "Simulateur impôt sur le revenu 2026 — Calcul gratuit et instantané",
@@ -29,6 +30,14 @@ export const metadata: Metadata = {
       "Calculez votre impôt sur le revenu 2026 avec le barème progressif, le quotient familial et le détail par tranche. Gratuit et instantané.",
     url: "https://boncalcul.fr/outils/simulateur-impot-revenu",
     type: "website",
+    images: [
+      {
+        url: `https://boncalcul.fr/api/og?slug=simulateur-impot-revenu`,
+        width: 1200,
+        height: 630,
+        alt: "Simulateur Impot Revenu — BonCalcul.fr",
+      },
+    ],
   },
   alternates: {
     canonical: "https://boncalcul.fr/outils/simulateur-impot-revenu",
@@ -95,6 +104,8 @@ export default function PageSimulateurImpot() {
         <SimulateurImpot />
 
         <AdBanner slot="tool-after-result" format="auto" className="mt-8" />
+
+        <InfographieImpot />
       </section>
 
       {/* FAQ */}

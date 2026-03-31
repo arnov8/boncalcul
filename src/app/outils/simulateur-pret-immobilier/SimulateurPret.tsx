@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useMemo } from "react";
+import ShareResult from "@/components/ShareResult";
 
 interface Amortissement {
   mois: number;
@@ -268,6 +269,13 @@ export default function SimulateurPret() {
               </p>
             </div>
           </div>
+
+          <ShareResult
+            toolName="Simulateur de pret immobilier"
+            result={`Mensualite : ${formatEur(resultats.mensualiteTotale)}`}
+            details={`Emprunt de ${formatEur(resultats.capitalEmprunte)} sur ${duree} ans a ${taux} % — Cout total : ${formatEur(resultats.montantTotalRembourse)}`}
+            toolSlug="simulateur-pret-immobilier"
+          />
 
           {/* Tableau d'amortissement */}
           <div className="mt-6">

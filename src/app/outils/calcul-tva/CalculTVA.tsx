@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useMemo } from "react";
+import ShareResult from "@/components/ShareResult";
 
 const TAUX_TVA = [
   { label: "20 %", value: 20, description: "Normal" },
@@ -225,6 +226,15 @@ export default function CalculTVA() {
           </p>
         </div>
       </div>
+
+      <ShareResult
+        toolName="Calcul TVA"
+        result={direction === "ht-to-ttc"
+          ? `${formatEuro(result.ht)} € HT = ${formatEuro(result.ttc)} € TTC`
+          : `${formatEuro(result.ttc)} € TTC = ${formatEuro(result.ht)} € HT`}
+        details={`TVA de ${formatEuro(result.tva)} € (taux : ${useCustom ? customTaux || "0" : TAUX_TVA[tauxIndex].label})`}
+        toolSlug="calcul-tva"
+      />
 
       {/* --------------- Tableau comparatif --------------- */}
       <div className="bg-white rounded-2xl shadow-lg p-6 md:p-8">

@@ -6,6 +6,7 @@ import {
   webApplicationJsonLd,
 } from "@/lib/jsonld";
 import { AdBanner } from "@/lib/adsense";
+import InfographiePourcentage from "@/components/infographics/InfographiePourcentage";
 
 export const metadata: Metadata = {
   title: "Calcul Pourcentage — Calculer un pourcentage en ligne",
@@ -28,6 +29,14 @@ export const metadata: Metadata = {
       "Calculez un pourcentage en ligne : X% d'un nombre, proportion, variation. Resultat immediat et gratuit.",
     url: "https://boncalcul.fr/outils/calcul-pourcentage",
     type: "website",
+    images: [
+      {
+        url: `https://boncalcul.fr/api/og?slug=calcul-pourcentage`,
+        width: 1200,
+        height: 630,
+        alt: "Calcul Pourcentage — BonCalcul.fr",
+      },
+    ],
   },
   alternates: {
     canonical: "https://boncalcul.fr/outils/calcul-pourcentage",
@@ -93,6 +102,8 @@ export default function PageCalculPourcentage() {
         <CalculPourcentage />
 
         <AdBanner slot="tool-after-result" format="auto" className="mt-8" />
+
+        <InfographiePourcentage />
       </section>
 
       {/* FAQ */}

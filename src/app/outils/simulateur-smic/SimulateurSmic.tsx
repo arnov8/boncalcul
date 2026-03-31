@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useMemo } from "react";
+import ShareResult from "@/components/ShareResult";
 
 type Statut = "non-cadre" | "cadre";
 
@@ -225,6 +226,13 @@ export default function SimulateurSmic() {
             </p>
           </div>
         </div>
+
+        <ShareResult
+          toolName="Simulateur SMIC 2026"
+          result={`SMIC net : ${formatMontant(result.mensuelNet)} € / mois`}
+          details={`${heures}h/semaine | ${statut} | Brut : ${formatMontant(result.mensuelBrut)} € | Annuel net : ${formatMontant(result.annuelNet)} €`}
+          toolSlug="simulateur-smic"
+        />
 
         <p className="text-xs text-gray-400 mt-4 text-center">
           Estimation indicative basee sur le SMIC horaire brut 2026 (11,88&nbsp;&euro;) et les taux

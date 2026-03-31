@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useMemo } from "react";
+import ShareResult from "@/components/ShareResult";
 
 type Mode = "pourcentage-de" | "proportion" | "variation";
 
@@ -376,6 +377,18 @@ export default function CalculPourcentage() {
           </>
         )}
       </div>
+
+      <ShareResult
+        toolName="Calcul pourcentage"
+        result={
+          mode === "pourcentage-de"
+            ? `${formatNumber(resultatPourcentageDe.pct)} % de ${formatNumber(resultatPourcentageDe.num)} = ${formatNumber(resultatPourcentageDe.resultat)}`
+            : mode === "proportion"
+              ? `${formatNumber(resultatProportion.partielle)} sur ${formatNumber(resultatProportion.totale)} = ${formatNumber(resultatProportion.pct)} %`
+              : `Variation de ${formatNumber(resultatVariation.initiale)} a ${formatNumber(resultatVariation.finale)} = ${resultatVariation.variation >= 0 ? "+" : ""}${formatNumber(resultatVariation.variation)} %`
+        }
+        toolSlug="calcul-pourcentage"
+      />
 
       {/* --------------- Exemples rapides --------------- */}
       <div className="bg-white rounded-2xl shadow-lg p-6 md:p-8">

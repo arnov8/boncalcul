@@ -1,15 +1,24 @@
 import type { MetadataRoute } from "next";
 import { outils } from "@/data/outils";
+import { outilsImages } from "@/data/outils-images";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = "https://boncalcul.fr";
 
-  const outilPages = outils.map((o) => ({
-    url: `${base}/outils/${o.slug}`,
-    lastModified: new Date(),
-    changeFrequency: "monthly" as const,
-    priority: 0.9,
-  }));
+  const outilPages = outils.map((o) => {
+    const imageEntry = outilsImages.find((i) => i.slug === o.slug);
+    return {
+      url: `${base}/outils/${o.slug}`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.9,
+      ...(imageEntry && imageEntry.images.length > 0
+        ? {
+            images: imageEntry.images.map((img) => `${base}${img.url}`),
+          }
+        : {}),
+    };
+  });
 
   return [
     {

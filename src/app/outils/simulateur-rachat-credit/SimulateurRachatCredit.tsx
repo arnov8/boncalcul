@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useMemo } from "react";
+import ShareResult from "@/components/ShareResult";
 
 function parseNum(val: string): number {
   const n = parseFloat(val.replace(",", ".").replace(/\s/g, ""));
@@ -327,6 +328,13 @@ export default function SimulateurRachatCredit() {
               </p>
             </div>
           </div>
+
+          <ShareResult
+            toolName="Rachat de credit"
+            result={`${resultat.economieTotale >= 0 ? "Economie" : "Surcout"} : ${formatEuro(Math.abs(resultat.economieTotale))} €`}
+            details={`Mensualite : ${formatEuro(mensActNum)} € -> ${formatEuro(resultat.nouvelleMensualite)} € | Economie mensuelle : ${resultat.economieMensuelle >= 0 ? "+" : ""}${formatEuro(resultat.economieMensuelle)} €`}
+            toolSlug="simulateur-rachat-credit"
+          />
 
           {/* Info box */}
           <div className="bg-blue-50 border border-blue-200 rounded-xl p-5">

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import CalculSalaire from "./CalculSalaire";
 import { AdBanner } from "@/lib/adsense";
 import { JsonLd, webApplicationJsonLd, faqJsonLd } from "@/lib/jsonld";
+import InfographieSalaire from "@/components/infographics/InfographieSalaire";
 
 export const metadata: Metadata = {
   title: "Calcul salaire brut net 2026 — Convertisseur instantane",
@@ -27,6 +28,14 @@ export const metadata: Metadata = {
       "Convertissez votre salaire brut en net et inversement. Cadre ou non-cadre, taux 2026 a jour.",
     url: "https://boncalcul.fr/outils/calcul-salaire-brut-net",
     type: "website",
+    images: [
+      {
+        url: `https://boncalcul.fr/api/og?slug=calcul-salaire-brut-net`,
+        width: 1200,
+        height: 630,
+        alt: "Calcul Salaire Brut Net — BonCalcul.fr",
+      },
+    ],
   },
 };
 
@@ -93,6 +102,8 @@ export default function PageSalaireBrutNet() {
         <CalculSalaire />
 
         <AdBanner slot="tool-after-result" format="auto" className="mt-8" />
+
+        <InfographieSalaire />
       </section>
 
       {/* FAQ */}

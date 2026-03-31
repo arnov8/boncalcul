@@ -6,6 +6,7 @@ import {
   webApplicationJsonLd,
 } from "@/lib/jsonld";
 import { AdBanner } from "@/lib/adsense";
+import InfographieDuree from "@/components/infographics/InfographieDuree";
 
 export const metadata: Metadata = {
   title: "Calcul de jours entre deux dates — Calculateur gratuit",
@@ -28,6 +29,14 @@ export const metadata: Metadata = {
       "Calculez le nombre de jours entre deux dates : jours calendaires, semaines, mois, annees, jours ouvres. Resultat immediat et gratuit.",
     url: "https://boncalcul.fr/outils/calcul-duree-entre-dates",
     type: "website",
+    images: [
+      {
+        url: `https://boncalcul.fr/api/og?slug=calcul-duree-entre-dates`,
+        width: 1200,
+        height: 630,
+        alt: "Calcul Duree Entre Dates — BonCalcul.fr",
+      },
+    ],
   },
   alternates: {
     canonical: "https://boncalcul.fr/outils/calcul-duree-entre-dates",
@@ -93,6 +102,8 @@ export default function PageCalculDureeEntreDates() {
       <section className="max-w-3xl mx-auto px-4 py-10">
         <CalculDureeEntreDates />
         <AdBanner slot="tool-after-result" format="auto" className="mt-8" />
+
+        <InfographieDuree />
       </section>
 
       {/* FAQ */}

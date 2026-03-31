@@ -6,6 +6,7 @@ import {
   webApplicationJsonLd,
 } from "@/lib/jsonld";
 import { AdBanner } from "@/lib/adsense";
+import InfographieTVA from "@/components/infographics/InfographieTVA";
 
 export const metadata: Metadata = {
   title: "Calcul TVA — Convertisseur HT ↔ TTC instantane",
@@ -28,6 +29,14 @@ export const metadata: Metadata = {
       "Convertissez un montant HT en TTC ou TTC en HT avec tous les taux de TVA francais. Resultat immediat.",
     url: "https://boncalcul.fr/outils/calcul-tva",
     type: "website",
+    images: [
+      {
+        url: `https://boncalcul.fr/api/og?slug=calcul-tva`,
+        width: 1200,
+        height: 630,
+        alt: "Calcul Tva — BonCalcul.fr",
+      },
+    ],
   },
   alternates: {
     canonical: "https://boncalcul.fr/outils/calcul-tva",
@@ -93,6 +102,8 @@ export default function PageCalculTVA() {
         <CalculTVA />
 
         <AdBanner slot="tool-after-result" format="auto" className="mt-8" />
+
+        <InfographieTVA />
       </section>
 
       {/* FAQ */}

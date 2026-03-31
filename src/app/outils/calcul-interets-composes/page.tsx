@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { JsonLd, webApplicationJsonLd, faqJsonLd } from "@/lib/jsonld";
 import { AdBanner } from "@/lib/adsense";
 import CalculInteretsComposes from "./CalculInteretsComposes";
+import InfographieInteretsComposes from "@/components/infographics/InfographieInteretsComposes";
 
 export const metadata: Metadata = {
   title: "Calcul Interets Composes — Simulateur d'Epargne Gratuit",
@@ -25,16 +26,16 @@ export const metadata: Metadata = {
       "Simulez la croissance de votre epargne grace aux interets composes. Versements mensuels, tableau d'evolution et comparaison avec les interets simples.",
     url: "https://boncalcul.fr/outils/calcul-interets-composes",
     type: "website",
-    locale: "fr_FR",
-    siteName: "BonCalcul.fr",
     images: [
       {
-        url: "/og-image.png",
+        url: `https://boncalcul.fr/api/og?slug=calcul-interets-composes`,
         width: 1200,
         height: 630,
-        alt: "Calcul Interets Composes - BonCalcul.fr",
+        alt: "Calcul Interets Composes — BonCalcul.fr",
       },
     ],
+    locale: "fr_FR",
+    siteName: "BonCalcul.fr",
   },
   twitter: {
     card: "summary_large_image",
@@ -110,6 +111,8 @@ export default function CalculInteretsComposesPage() {
         <CalculInteretsComposes />
 
         <AdBanner slot="tool-after-result" format="auto" className="mt-8" />
+
+        <InfographieInteretsComposes />
       </section>
 
       {/* FAQ */}

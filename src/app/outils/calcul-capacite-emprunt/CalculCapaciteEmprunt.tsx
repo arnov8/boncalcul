@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useMemo } from "react";
+import ShareResult from "@/components/ShareResult";
 
 function formatEur(n: number) {
   return n.toLocaleString("fr-FR", {
@@ -301,6 +302,15 @@ export default function CalculCapaciteEmprunt() {
             </div>
           </div>
         </div>
+      )}
+
+      {resultats && (
+        <ShareResult
+          toolName="Capacite d'emprunt"
+          result={`${formatEur(resultats.capitalEmpruntable)} empruntables`}
+          details={`Mensualite : ${formatEur(resultats.mensualiteTotale)} sur ${duree} ans a ${taux} % | Taux d'endettement : ${formatNumber(resultats.tauxEndettement)} %`}
+          toolSlug="calcul-capacite-emprunt"
+        />
       )}
     </div>
   );

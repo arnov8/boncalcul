@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useMemo } from "react";
+import ShareResult from "@/components/ShareResult";
 
 type TypeBien = "ancien" | "neuf";
 
@@ -384,6 +385,13 @@ export default function CalculNotaire() {
               </div>
             </dl>
           </div>
+
+          <ShareResult
+            toolName="Calcul frais de notaire"
+            result={`Frais de notaire : ${formatEuro(resultats.totalFrais)}`}
+            details={`Pour un bien ${typeBien} a ${formatEuro(prix)} — soit ${resultats.pourcentage.toFixed(2)} % du prix d'achat`}
+            toolSlug="calcul-frais-de-notaire"
+          />
 
           {/* Barème émoluments */}
           <details className="bg-gray-50 rounded-xl p-5">

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import SimulateurCreditConso from "./SimulateurCreditConso";
 import { AdBanner } from "@/lib/adsense";
+import InfographieCreditConso from "@/components/infographics/InfographieCreditConso";
 import {
   JsonLd,
   webApplicationJsonLd,
@@ -30,6 +31,14 @@ export const metadata: Metadata = {
       "Simulez gratuitement votre cr\u00e9dit \u00e0 la consommation. Mensualit\u00e9, co\u00fbt total et comparaison par dur\u00e9e.",
     url: "https://boncalcul.fr/outils/simulateur-credit-consommation",
     type: "website",
+    images: [
+      {
+        url: `https://boncalcul.fr/api/og?slug=simulateur-credit-consommation`,
+        width: 1200,
+        height: 630,
+        alt: "Simulateur Credit Consommation — BonCalcul.fr",
+      },
+    ],
   },
 };
 
@@ -91,6 +100,8 @@ export default function PageCreditConso() {
         <SimulateurCreditConso />
 
         <AdBanner slot="tool-after-result" format="auto" className="mt-8" />
+
+        <InfographieCreditConso />
 
         {/* ---------- FAQ ---------- */}
         <section className="bg-gray-50 rounded-2xl py-10 px-6 mb-10">

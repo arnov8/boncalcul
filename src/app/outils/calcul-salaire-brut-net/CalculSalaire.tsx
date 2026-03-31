@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useMemo } from "react";
+import ShareResult from "@/components/ShareResult";
 
 type Direction = "brut-to-net" | "net-to-brut";
 type Statut = "non-cadre" | "cadre";
@@ -322,6 +323,13 @@ export default function CalculSalaire() {
             </div>
           </div>
         </div>
+
+        <ShareResult
+          toolName="Calcul salaire brut / net"
+          result={`${convertedLabel} : ${formatMontant(convertedMensuel)} € / mois`}
+          details={`Soit ${formatMontant(convertedAnnuel)} € / an (statut ${statut}, cotisations ~${(result.tauxTotal * 100).toFixed(0)} %)`}
+          toolSlug="calcul-salaire-brut-net"
+        />
 
         <p className="text-xs text-gray-400 mt-4 text-center">
           Estimation indicative basee sur les taux moyens de cotisations

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useMemo } from "react";
+import ShareResult from "@/components/ShareResult";
 
 type Mode = "consommation" | "cout";
 
@@ -271,6 +272,21 @@ export default function CalculConsommationEssence() {
           </>
         )}
       </div>
+
+      <ShareResult
+        toolName="Consommation essence"
+        result={
+          mode === "consommation"
+            ? `${formatNumber(resultatConsommation)} L/100km`
+            : `${formatNumber(resultatCout.coutTotal)} € pour ${formatNumber(parseInput(distanceCout))} km`
+        }
+        details={
+          mode === "consommation"
+            ? `${formatNumber(parseInput(volume))} litres pour ${formatNumber(parseInput(distance))} km`
+            : `${formatNumber(parseInput(consommation))} L/100km a ${prixLitre} €/L`
+        }
+        toolSlug="calcul-consommation-essence"
+      />
 
       {/* --------------- Tableau comparatif --------------- */}
       <div className="bg-white rounded-2xl shadow-lg p-6 md:p-8">

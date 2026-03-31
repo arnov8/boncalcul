@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import CalculSurfaceCarrez from "./CalculSurfaceCarrez";
 import { AdBanner } from "@/lib/adsense";
+import InfographieCarrez from "@/components/infographics/InfographieCarrez";
 import {
   JsonLd,
   webApplicationJsonLd,
@@ -30,6 +31,14 @@ export const metadata: Metadata = {
       "Calculez gratuitement la surface loi Carrez de votre logement. R\u00e9sultat instantan\u00e9.",
     url: "https://boncalcul.fr/outils/calcul-surface-carrez",
     type: "website",
+    images: [
+      {
+        url: `https://boncalcul.fr/api/og?slug=calcul-surface-carrez`,
+        width: 1200,
+        height: 630,
+        alt: "Calcul Surface Carrez — BonCalcul.fr",
+      },
+    ],
   },
 };
 
@@ -91,6 +100,8 @@ export default function PageSurfaceCarrez() {
         <CalculSurfaceCarrez />
 
         <AdBanner slot="tool-after-result" format="auto" className="mt-8" />
+
+        <InfographieCarrez />
 
         {/* ---------- FAQ ---------- */}
         <section className="bg-gray-50 rounded-2xl py-10 px-6 mb-10">

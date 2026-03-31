@@ -6,6 +6,7 @@ import {
   webApplicationJsonLd,
   faqJsonLd,
 } from "@/lib/jsonld";
+import InfographieNotaire from "@/components/infographics/InfographieNotaire";
 
 export const metadata: Metadata = {
   title: "Calcul frais de notaire 2026 — Estimation gratuite",
@@ -30,6 +31,14 @@ export const metadata: Metadata = {
       "Estimez gratuitement vos frais de notaire pour un achat immobilier ancien ou neuf. Résultat instantané.",
     url: "https://boncalcul.fr/outils/calcul-frais-de-notaire",
     type: "website",
+    images: [
+      {
+        url: `https://boncalcul.fr/api/og?slug=calcul-frais-de-notaire`,
+        width: 1200,
+        height: 630,
+        alt: "Calcul Frais De Notaire — BonCalcul.fr",
+      },
+    ],
   },
 };
 
@@ -92,6 +101,8 @@ export default function PageFraisNotaire() {
         <CalculNotaire />
 
         <AdBanner slot="tool-after-result" format="auto" className="mt-8" />
+
+        <InfographieNotaire />
 
         {/* ---------- FAQ ---------- */}
         <section className="bg-gray-50 rounded-2xl py-10 px-6 mb-10">

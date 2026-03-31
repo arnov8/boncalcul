@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import CalculIMC from "./CalculIMC";
 import { JsonLd, webApplicationJsonLd, faqJsonLd } from "@/lib/jsonld";
 import { AdBanner } from "@/lib/adsense";
+import InfographieIMC from "@/components/infographics/InfographieIMC";
 
 export const metadata: Metadata = {
   title: "Calcul IMC — Indice de masse corporelle gratuit",
@@ -26,6 +27,14 @@ export const metadata: Metadata = {
       "Calculez votre IMC instantanement et decouvrez votre categorie selon l'OMS. Gratuit, sans inscription.",
     url: "https://boncalcul.fr/outils/calcul-imc",
     type: "website",
+    images: [
+      {
+        url: `https://boncalcul.fr/api/og?slug=calcul-imc`,
+        width: 1200,
+        height: 630,
+        alt: "Calcul Imc — BonCalcul.fr",
+      },
+    ],
   },
 };
 
@@ -89,6 +98,8 @@ export default function PageCalculIMC() {
         <CalculIMC />
 
         <AdBanner slot="tool-after-result" format="auto" className="mt-8" />
+
+        <InfographieIMC />
       </section>
 
       {/* FAQ */}

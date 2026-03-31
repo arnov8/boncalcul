@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import SimulateurSmic from "./SimulateurSmic";
 import { AdBanner } from "@/lib/adsense";
 import { JsonLd, webApplicationJsonLd, faqJsonLd } from "@/lib/jsonld";
+import InfographieSmic from "@/components/infographics/InfographieSmic";
 
 export const metadata: Metadata = {
   title: "Simulateur SMIC 2026 — Calcul brut et net, temps partiel",
@@ -28,6 +29,14 @@ export const metadata: Metadata = {
       "Calculez le SMIC 2026 brut et net selon vos heures. Temps partiel, cadre ou non-cadre, horaire, mensuel et annuel.",
     url: "https://boncalcul.fr/outils/simulateur-smic",
     type: "website",
+    images: [
+      {
+        url: `https://boncalcul.fr/api/og?slug=simulateur-smic`,
+        width: 1200,
+        height: 630,
+        alt: "Simulateur Smic — BonCalcul.fr",
+      },
+    ],
   },
 };
 
@@ -91,6 +100,8 @@ export default function PageSimulateurSmic() {
         <SimulateurSmic />
 
         <AdBanner slot="tool-after-result" format="auto" className="mt-8" />
+
+        <InfographieSmic />
       </section>
 
       {/* FAQ */}

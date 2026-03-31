@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useMemo } from "react";
+import ShareResult from "@/components/ShareResult";
 
 type ModeGarde = "classique" | "alternee" | "reduite";
 
@@ -203,6 +204,13 @@ export default function CalculPension() {
             </div>
           </div>
         </div>
+
+        <ShareResult
+          toolName="Pension alimentaire"
+          result={`${formatMontant(result.pensionTotaleMensuelle)} € / mois`}
+          details={`${nbEnfants} enfant${nbEnfants > 1 ? "s" : ""} | ${formatMontant(result.pensionParEnfant)} € par enfant | ${modeLabels[mode]} | ${formatMontant(result.pensionAnnuelle)} € / an`}
+          toolSlug="calcul-pension-alimentaire"
+        />
 
         <p className="text-xs text-gray-400 mt-4 text-center">
           Estimation indicative bas&eacute;e sur le bar&egrave;me du minist&egrave;re de la Justice (table de r&eacute;f&eacute;rence 2026).

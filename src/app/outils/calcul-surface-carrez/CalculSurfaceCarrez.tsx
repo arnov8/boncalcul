@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useMemo } from "react";
+import ShareResult from "@/components/ShareResult";
 
 interface Room {
   id: number;
@@ -297,6 +298,13 @@ export default function CalculSurfaceCarrez() {
               </table>
             </div>
           </div>
+
+          <ShareResult
+            toolName="Surface Carrez"
+            result={`${formatM2(totalCarrez)} m² Carrez`}
+            details={`Surface brute : ${formatM2(totalBrute)} m² | ${rooms.length} piece${rooms.length > 1 ? "s" : ""} | ${excludedCount} exclue${excludedCount > 1 ? "s" : ""}`}
+            toolSlug="calcul-surface-carrez"
+          />
 
           {/* Info box */}
           <div className="bg-blue-50 border border-blue-200 rounded-xl p-5">

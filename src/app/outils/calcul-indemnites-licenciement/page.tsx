@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import CalculIndemnites from "./CalculIndemnites";
 import { AdBanner } from "@/lib/adsense";
 import { JsonLd, webApplicationJsonLd, faqJsonLd } from "@/lib/jsonld";
+import InfographieIndemnites from "@/components/infographics/InfographieIndemnites";
 
 export const metadata: Metadata = {
   title: "Calcul indemnité licenciement 2026 — Simulateur gratuit",
@@ -26,6 +27,14 @@ export const metadata: Metadata = {
       "Calculez votre indemnité légale de licenciement ou de rupture conventionnelle. Simulateur 2026 gratuit.",
     url: "https://boncalcul.fr/outils/calcul-indemnites-licenciement",
     type: "website",
+    images: [
+      {
+        url: `https://boncalcul.fr/api/og?slug=calcul-indemnites-licenciement`,
+        width: 1200,
+        height: 630,
+        alt: "Calcul Indemnites Licenciement — BonCalcul.fr",
+      },
+    ],
   },
 };
 
@@ -95,6 +104,8 @@ export default function PageIndemnitesLicenciement() {
       <section className="max-w-4xl mx-auto px-4 py-8">
         <CalculIndemnites />
         <AdBanner slot="tool-after-result" format="auto" className="mt-8" />
+
+        <InfographieIndemnites />
       </section>
 
       {/* FAQ */}

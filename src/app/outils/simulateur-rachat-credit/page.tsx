@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import SimulateurRachatCredit from "./SimulateurRachatCredit";
 import { AdBanner } from "@/lib/adsense";
+import InfographieRachat from "@/components/infographics/InfographieRachat";
 import {
   JsonLd,
   webApplicationJsonLd,
@@ -30,6 +31,14 @@ export const metadata: Metadata = {
       "Simulez votre rachat de cr\u00e9dit et d\u00e9couvrez vos \u00e9conomies potentielles. Comparaison d\u00e9taill\u00e9e.",
     url: "https://boncalcul.fr/outils/simulateur-rachat-credit",
     type: "website",
+    images: [
+      {
+        url: `https://boncalcul.fr/api/og?slug=simulateur-rachat-credit`,
+        width: 1200,
+        height: 630,
+        alt: "Simulateur Rachat Credit — BonCalcul.fr",
+      },
+    ],
   },
 };
 
@@ -91,6 +100,8 @@ export default function PageRachatCredit() {
         <SimulateurRachatCredit />
 
         <AdBanner slot="tool-after-result" format="auto" className="mt-8" />
+
+        <InfographieRachat />
 
         {/* ---------- FAQ ---------- */}
         <section className="bg-gray-50 rounded-2xl py-10 px-6 mb-10">

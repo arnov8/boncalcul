@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import CalculAge from "./CalculAge";
 import { JsonLd, webApplicationJsonLd, faqJsonLd } from "@/lib/jsonld";
 import { AdBanner } from "@/lib/adsense";
+import InfographieAge from "@/components/infographics/InfographieAge";
 
 export const metadata: Metadata = {
   title: "Calculer son age exact — Calculateur en ligne gratuit",
@@ -26,6 +27,14 @@ export const metadata: Metadata = {
       "Calculez votre age exact en annees, mois et jours. Jour de naissance, signe astrologique, prochain anniversaire. Gratuit, sans inscription.",
     url: "https://boncalcul.fr/outils/calcul-age",
     type: "website",
+    images: [
+      {
+        url: `https://boncalcul.fr/api/og?slug=calcul-age`,
+        width: 1200,
+        height: 630,
+        alt: "Calcul Age — BonCalcul.fr",
+      },
+    ],
   },
 };
 
@@ -89,6 +98,8 @@ export default function PageCalculAge() {
         <CalculAge />
 
         <AdBanner slot="tool-after-result" format="auto" className="mt-8" />
+
+        <InfographieAge />
       </section>
 
       {/* FAQ */}

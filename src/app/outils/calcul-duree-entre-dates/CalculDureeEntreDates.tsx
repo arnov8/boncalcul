@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useMemo } from "react";
+import ShareResult from "@/components/ShareResult";
 
 function toDateString(date: Date): string {
   const y = date.getFullYear();
@@ -285,6 +286,15 @@ export default function CalculDureeEntreDates() {
             </div>
           </div>
         </div>
+      )}
+
+      {resultats && (
+        <ShareResult
+          toolName="Duree entre deux dates"
+          result={`${formatNumber(resultats.totalJours)} jour${resultats.totalJours > 1 ? "s" : ""}`}
+          details={`${resultats.annees > 0 ? `${resultats.annees} an${resultats.annees > 1 ? "s" : ""}, ` : ""}${resultats.mois > 0 ? `${resultats.mois} mois, ` : ""}${resultats.joursRestantsYMD} jour${resultats.joursRestantsYMD > 1 ? "s" : ""} | ${formatNumber(resultats.joursOuvres)} jours ouvres`}
+          toolSlug="calcul-duree-entre-dates"
+        />
       )}
 
       {/* --------------- Exemples rapides --------------- */}

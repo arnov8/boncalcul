@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useMemo } from "react";
+import ShareResult from "@/components/ShareResult";
 
 type Frequence = "mensuelle" | "trimestrielle" | "annuelle";
 
@@ -324,6 +325,15 @@ export default function CalculInteretsComposes() {
             )}
           </div>
         </div>
+      )}
+
+      {resultats && (
+        <ShareResult
+          toolName="Interets composes"
+          result={`Capital final : ${formatEur(resultats.capitalFinal)}`}
+          details={`${formatEur(resultats.totalVerse)} verses + ${formatEur(resultats.interetsGagnes)} d'interets sur ${duree} ans a ${tauxAnnuel} %`}
+          toolSlug="calcul-interets-composes"
+        />
       )}
     </div>
   );

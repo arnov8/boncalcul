@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useMemo } from "react";
+import ShareResult from "@/components/ShareResult";
 
 type Situation = "celibataire" | "marie" | "veuf";
 
@@ -265,6 +266,15 @@ export default function SimulateurImpot() {
           </p>
         </div>
       </div>
+
+      {revenuNum > 0 && (
+        <ShareResult
+          toolName="Simulateur impot sur le revenu"
+          result={`Impot : ${formatEuro(result.impotTotal)} € / an`}
+          details={`Revenu : ${formatEuro(revenuNum)} € | ${parts} part${parts > 1 ? "s" : ""} | TMI : ${formatPercent(result.tmi)} % | Taux moyen : ${formatPercent(result.tauxMoyen)} %`}
+          toolSlug="simulateur-impot-revenu"
+        />
+      )}
 
       {/* --------------- Detail par tranche --------------- */}
       <div className="bg-white rounded-2xl shadow-lg p-6 md:p-8">

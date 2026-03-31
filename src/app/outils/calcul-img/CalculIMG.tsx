@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useMemo } from "react";
+import ShareResult from "@/components/ShareResult";
 
 type Sexe = "homme" | "femme";
 
@@ -362,6 +363,15 @@ export default function CalculIMG() {
             professionnelle (impedancemetrie, DEXA, plis cutanes).
           </p>
         </div>
+      )}
+
+      {result && (
+        <ShareResult
+          toolName="Calcul IMG"
+          result={`IMG : ${result.img.toFixed(1)} % - ${result.cat.label}`}
+          details={`IMC : ${result.imc.toFixed(1)} | ${sexe === "homme" ? "Homme" : "Femme"}, ${age} ans, ${taille} cm, ${poids} kg`}
+          toolSlug="calcul-img"
+        />
       )}
 
       {/* Empty state */}

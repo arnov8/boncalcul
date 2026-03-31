@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useMemo } from "react";
+import ShareResult from "@/components/ShareResult";
 
 function formatEuro(n: number): string {
   return n.toLocaleString("fr-FR", {
@@ -255,6 +256,15 @@ export default function SimulateurChomage() {
             </p>
           </div>
         </div>
+      )}
+
+      {result && result.dureeIndemnisation > 0 && (
+        <ShareResult
+          toolName="Simulateur chomage ARE"
+          result={`ARE : ${formatEuro(result.areMensuelle)} € / mois`}
+          details={`Duree : ${result.dureeIndemnisation} mois | ARE journaliere : ${formatEuro(result.areJournaliere)} € | Total estime : ${formatEuro(result.totalEstime)} €`}
+          toolSlug="simulateur-chomage-are"
+        />
       )}
 
       {/* --------------- Message si duree insuffisante --------------- */}

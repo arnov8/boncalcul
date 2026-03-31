@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useMemo } from "react";
+import ShareResult from "@/components/ShareResult";
 
 type Statut = "non-cadre" | "cadre";
 
@@ -269,6 +270,13 @@ export default function CoutSalarie() {
               </div>
             </div>
           </div>
+
+          <ShareResult
+            toolName="Cout salarie employeur"
+            result={`Cout total : ${formatEuro(resultats.coutTotal)} € / mois`}
+            details={`Brut : ${formatEuro(resultats.brut)} € | Charges patronales : ${formatEuro(resultats.totalCharges)} € | Ratio : x${formatPct(resultats.ratio)} | Statut : ${statut}`}
+            toolSlug="cout-salarie-employeur"
+          />
 
           {/* --------------- Detail des charges --------------- */}
           <div className="bg-white rounded-2xl shadow-lg p-6 md:p-8">

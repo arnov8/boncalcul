@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useMemo } from "react";
+import ShareResult from "@/components/ShareResult";
 
 function formatEuro(n: number): string {
   return n.toLocaleString("fr-FR", {
@@ -312,6 +313,13 @@ export default function CoutKmVoiture() {
             {formatEuro(result.coutKm)} &euro; / km
           </p>
         </div>
+
+        <ShareResult
+          toolName="Cout km voiture"
+          result={`${formatEuro(result.coutKm)} € / km`}
+          details={`${formatEuro(result.km)} km/an | Cout annuel : ${formatEuro(result.totalAnnuel)} € | Mensuel : ${formatEuro(result.totalMensuel)} €`}
+          toolSlug="cout-km-voiture"
+        />
 
         {/* Breakdown */}
         <h4 className="text-sm font-semibold text-gray-700 mb-3">

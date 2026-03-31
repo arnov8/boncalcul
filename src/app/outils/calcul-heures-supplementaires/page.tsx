@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import CalculHeuresSup from "./CalculHeuresSup";
 import { AdBanner } from "@/lib/adsense";
 import { JsonLd, webApplicationJsonLd, faqJsonLd } from "@/lib/jsonld";
+import InfographieHeures from "@/components/infographics/InfographieHeures";
 
 export const metadata: Metadata = {
   title: "Calcul heures supplementaires 2026 — Simulateur majoration",
@@ -27,6 +28,14 @@ export const metadata: Metadata = {
       "Calculez vos heures sup avec majoration 25% et 50%. Estimation nette et exoneration fiscale.",
     url: "https://boncalcul.fr/outils/calcul-heures-supplementaires",
     type: "website",
+    images: [
+      {
+        url: `https://boncalcul.fr/api/og?slug=calcul-heures-supplementaires`,
+        width: 1200,
+        height: 630,
+        alt: "Calcul Heures Supplementaires — BonCalcul.fr",
+      },
+    ],
   },
 };
 
@@ -89,6 +98,8 @@ export default function PageHeuresSupplementaires() {
         <CalculHeuresSup />
 
         <AdBanner slot="tool-after-result" format="auto" className="mt-8" />
+
+        <InfographieHeures />
       </section>
 
       {/* FAQ */}

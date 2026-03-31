@@ -9,6 +9,9 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ["/api/"],
       },
     ],
-    sitemap: "https://boncalcul.fr/sitemap.xml",
+    sitemap: [
+      "https://boncalcul.fr/sitemap.xml",
+      "https://boncalcul.fr/sitemap-images",
+    ],
   };
 }

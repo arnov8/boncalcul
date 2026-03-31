@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useMemo } from "react";
+import ShareResult from "@/components/ShareResult";
 
 type Motif = "licenciement" | "rupture-conventionnelle";
 
@@ -327,6 +328,15 @@ export default function CalculIndemnites() {
               </div>
             )}
           </>
+        )}
+
+        {result.eligible && (
+          <ShareResult
+            toolName="Indemnite de licenciement"
+            result={`${formatMontant(result.indemniteLegale)} € brut`}
+            details={`Salaire ref. : ${formatMontant(result.salaireReference)} € | Anciennete : ${parseInt(annees) || 0} ans ${parseInt(moisAnciennete) || 0} mois | ${motif === "rupture-conventionnelle" ? "Rupture conventionnelle" : "Licenciement"}`}
+            toolSlug="calcul-indemnites-licenciement"
+          />
         )}
 
         <p className="text-xs text-gray-400 mt-4 text-center">

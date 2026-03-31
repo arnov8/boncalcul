@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useMemo } from "react";
+import ShareResult from "@/components/ShareResult";
 
 type Sexe = "homme" | "femme";
 
@@ -329,6 +330,15 @@ export default function CalculCalories() {
             </div>
           </div>
         </div>
+      )}
+
+      {result && (
+        <ShareResult
+          toolName="Calcul calories"
+          result={`${Math.round(result.tdee)} kcal / jour`}
+          details={`BMR : ${Math.round(result.bmr)} kcal | ${niveauxActivite[activiteIndex].label} | ${sexe === "homme" ? "Homme" : "Femme"}, ${age} ans, ${taille} cm, ${poids} kg`}
+          toolSlug="calcul-calories"
+        />
       )}
 
       {/* Empty state */}

@@ -6,6 +6,7 @@ import {
   webApplicationJsonLd,
 } from "@/lib/jsonld";
 import { AdBanner } from "@/lib/adsense";
+import InfographieConversion from "@/components/infographics/InfographieConversion";
 
 export const metadata: Metadata = {
   title: "Conversion d'unites — Convertisseur en ligne gratuit",
@@ -28,6 +29,14 @@ export const metadata: Metadata = {
       "Convertissez instantanement toutes les unites : longueur, masse, volume, temperature, surface, vitesse. Gratuit et sans inscription.",
     url: "https://boncalcul.fr/outils/conversion-unites",
     type: "website",
+    images: [
+      {
+        url: `https://boncalcul.fr/api/og?slug=conversion-unites`,
+        width: 1200,
+        height: 630,
+        alt: "Conversion Unites — BonCalcul.fr",
+      },
+    ],
   },
   alternates: {
     canonical: "https://boncalcul.fr/outils/conversion-unites",
@@ -92,6 +101,8 @@ export default function PageConversionUnites() {
       <section className="max-w-3xl mx-auto px-4 py-10">
         <ConversionUnites />
         <AdBanner slot="tool-after-result" format="auto" className="mt-8" />
+
+        <InfographieConversion />
       </section>
 
       {/* FAQ */}

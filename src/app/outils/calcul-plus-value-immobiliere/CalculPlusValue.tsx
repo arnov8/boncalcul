@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useMemo } from "react";
+import ShareResult from "@/components/ShareResult";
 
 type FraisMode = "forfait" | "reel";
 type TravauxMode = "forfait" | "reel";
@@ -427,6 +428,13 @@ export default function CalculPlusValue() {
               {formatEuro(resultats.totalImpot)}&nbsp;&euro;
             </p>
           </div>
+
+          <ShareResult
+            toolName="Plus-value immobiliere"
+            result={`Plus-value nette : ${resultats.plusValueNette >= 0 ? "+" : ""}${formatEuro(resultats.plusValueNette)} €`}
+            details={`PV brute : ${resultats.plusValueBrute >= 0 ? "+" : ""}${formatEuro(resultats.plusValueBrute)} € | Imposition : ${formatEuro(resultats.totalImpot)} € | Detention : ${dureeDetention} ans`}
+            toolSlug="calcul-plus-value-immobiliere"
+          />
 
           {/* Détail du calcul */}
           <div className="bg-gray-50 rounded-xl p-5">

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useMemo } from "react";
+import ShareResult from "@/components/ShareResult";
 
 type Sexe = "homme" | "femme";
 type Morphologie = "mince" | "normal" | "large";
@@ -371,6 +372,15 @@ export default function CalculPoidsIdeal() {
             </p>
           </div>
         </div>
+      )}
+
+      {results && (
+        <ShareResult
+          toolName="Poids ideal"
+          result={`${results.moyennePoids.toFixed(1)} kg`}
+          details={`Fourchette : ${results.minPoids.toFixed(1)} - ${results.maxPoids.toFixed(1)} kg | ${sexe === "homme" ? "Homme" : "Femme"}, ${taille} cm, ${age} ans | IMC sain : ${results.imcRange.min.toFixed(1)} - ${results.imcRange.max.toFixed(1)} kg`}
+          toolSlug="calcul-poids-ideal"
+        />
       )}
 
       {/* Empty state */}

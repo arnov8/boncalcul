@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useMemo } from "react";
+import ShareResult from "@/components/ShareResult";
 
 const HEURES_MENSUELLES = 151.67;
 const TAUX_CHARGES_SALARIALES = 0.22;
@@ -243,6 +244,13 @@ export default function CalculHeuresSup() {
             </p>
           </div>
         </div>
+
+        <ShareResult
+          toolName="Heures supplementaires"
+          result={`+${formatMontant(result.totalNetHSMois)} € net / mois`}
+          details={`${heuresSup} HS/semaine | Taux horaire : ${formatMontant(result.tauxHoraire)} € | Gain annuel net : ${formatMontant(result.totalNetHSAnnuel)} €`}
+          toolSlug="calcul-heures-supplementaires"
+        />
 
         <p className="text-xs text-gray-400 mt-4 text-center">
           Estimation indicative bas&eacute;e sur les taux l&eacute;gaux de majoration 2026. Le montant r&eacute;el peut varier

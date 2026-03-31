@@ -6,6 +6,7 @@ import {
   webApplicationJsonLd,
 } from "@/lib/jsonld";
 import { AdBanner } from "@/lib/adsense";
+import InfographieEssence from "@/components/infographics/InfographieEssence";
 
 export const metadata: Metadata = {
   title: "Calcul consommation essence — Calculateur gratuit",
@@ -28,6 +29,14 @@ export const metadata: Metadata = {
       "Calculez votre consommation en L/100km et estimez le cout d'un trajet. Comparaison essence, diesel et electrique.",
     url: "https://boncalcul.fr/outils/calcul-consommation-essence",
     type: "website",
+    images: [
+      {
+        url: `https://boncalcul.fr/api/og?slug=calcul-consommation-essence`,
+        width: 1200,
+        height: 630,
+        alt: "Calcul Consommation Essence — BonCalcul.fr",
+      },
+    ],
   },
   alternates: {
     canonical: "https://boncalcul.fr/outils/calcul-consommation-essence",
@@ -92,6 +101,8 @@ export default function PageCalculConsommationEssence() {
       <section className="max-w-3xl mx-auto px-4 py-10">
         <CalculConsommationEssence />
         <AdBanner slot="tool-after-result" format="auto" className="mt-8" />
+
+        <InfographieEssence />
       </section>
 
       {/* FAQ */}

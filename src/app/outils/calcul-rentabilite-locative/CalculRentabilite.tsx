@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useMemo } from "react";
+import ShareResult from "@/components/ShareResult";
 
 type FraisNotaireMode = "pourcentage" | "montant";
 
@@ -356,6 +357,13 @@ export default function CalculRentabilite() {
               </p>
             </div>
           </div>
+
+          <ShareResult
+            toolName="Rentabilite locative"
+            result={`Brute : ${resultats.rentaBrute.toFixed(2)} % | Nette : ${resultats.rentaNette.toFixed(2)} %`}
+            details={`Loyer : ${formatEuro(parseNum(loyerMensuel))} €/mois | Cout total : ${formatEuro(resultats.coutTotal)} € | Cash-flow : ${resultats.cashFlowMensuel >= 0 ? "+" : ""}${formatEuro(resultats.cashFlowMensuel)} €/mois`}
+            toolSlug="calcul-rentabilite-locative"
+          />
 
           {/* Détail du calcul */}
           <div className="bg-gray-50 rounded-xl p-5">

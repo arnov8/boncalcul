@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useMemo } from "react";
+import ShareResult from "@/components/ShareResult";
 
 /* ------------------------------------------------------------------ */
 /*  Types                                                              */
@@ -373,6 +374,12 @@ export default function ConversionUnites() {
           </p>
         </div>
       </div>
+
+      <ShareResult
+        toolName="Conversion d'unites"
+        result={`${formatNumber(parseInput(inputValue))} ${fromUnitDef?.symbol} = ${formatPrecise(result)} ${toUnitDef?.symbol}`}
+        toolSlug="conversion-unites"
+      />
 
       {/* --------------- Tableau de reference --------------- */}
       <div className="bg-white rounded-2xl shadow-lg p-6 md:p-8">

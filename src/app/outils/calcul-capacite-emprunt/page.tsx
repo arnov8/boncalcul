@@ -6,6 +6,7 @@ import {
   webApplicationJsonLd,
 } from "@/lib/jsonld";
 import { AdBanner } from "@/lib/adsense";
+import InfographieCapaciteEmprunt from "@/components/infographics/InfographieCapaciteEmprunt";
 
 export const metadata: Metadata = {
   title: "Calcul Capacité d'Emprunt — Combien pouvez-vous emprunter ?",
@@ -29,16 +30,16 @@ export const metadata: Metadata = {
       "Estimez le montant maximum que vous pouvez emprunter selon vos revenus et la règle des 35 % du HCSF. Gratuit et instantané.",
     url: "https://boncalcul.fr/outils/calcul-capacite-emprunt",
     type: "website",
-    locale: "fr_FR",
-    siteName: "BonCalcul.fr",
     images: [
       {
-        url: "/og-image.png",
+        url: `https://boncalcul.fr/api/og?slug=calcul-capacite-emprunt`,
         width: 1200,
         height: 630,
-        alt: "Calcul Capacité d'Emprunt - BonCalcul.fr",
+        alt: "Calcul Capacite Emprunt — BonCalcul.fr",
       },
     ],
+    locale: "fr_FR",
+    siteName: "BonCalcul.fr",
   },
   twitter: {
     card: "summary_large_image",
@@ -111,6 +112,8 @@ export default function PageCalculCapaciteEmprunt() {
         <CalculCapaciteEmprunt />
 
         <AdBanner slot="tool-after-result" format="auto" className="mt-8" />
+
+        <InfographieCapaciteEmprunt />
       </section>
 
       {/* FAQ */}

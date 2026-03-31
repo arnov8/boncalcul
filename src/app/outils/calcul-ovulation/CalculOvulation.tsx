@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useMemo } from "react";
+import ShareResult from "@/components/ShareResult";
 
 function addDays(date: Date, days: number): Date {
   const result = new Date(date);
@@ -294,6 +295,15 @@ export default function CalculOvulation() {
             </p>
           </div>
         </div>
+      )}
+
+      {result && (
+        <ShareResult
+          toolName="Calcul ovulation"
+          result={`Ovulation : ${formatDate(result.current.ovulation)}`}
+          details={`Periode fertile : ${formatDateShort(result.current.fertileStart)} - ${formatDateShort(result.current.fertileEnd)} | Prochaines regles : ${formatDateShort(result.current.nextPeriod)} | Cycle : ${dureeCycle} jours`}
+          toolSlug="calcul-ovulation"
+        />
       )}
 
       {/* Empty state */}
