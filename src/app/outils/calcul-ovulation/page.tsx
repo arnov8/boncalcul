@@ -96,11 +96,11 @@ export default function PageCalculOvulation() {
       {/* Calculator */}
       <section className="max-w-3xl mx-auto px-4 -mt-4 relative z-10">
         <CalculOvulation />
-      </section>
 
-      <AdBanner slot="tool-after-result" format="auto" className="mt-8" />
+        <AdBanner slot="tool-after-result" format="auto" className="mt-8" />
 
         <InfographieOvulation />
+      </section>
 
       {/* FAQ */}
       <section className="bg-gray-50 py-12">
