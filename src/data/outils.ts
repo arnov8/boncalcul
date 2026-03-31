@@ -467,6 +467,97 @@ export const outils: OutilMeta[] = [
       "fenêtre fertilité",
     ],
   },
+  // --- Nouveaux outils ---
+  {
+    slug: "simulateur-retraite",
+    title: "Simulateur retraite 2026 — Estimez votre pension gratuit",
+    shortTitle: "Simulateur retraite",
+    description:
+      "Estimez le montant de votre future pension de retraite en fonction de votre salaire, durée de cotisation et âge de départ.",
+    categorie: "emploi",
+    icon: "beach",
+    keywords: [
+      "simulateur retraite",
+      "pension retraite",
+      "calcul retraite",
+      "âge départ retraite",
+    ],
+  },
+  {
+    slug: "simulateur-ptz-2026",
+    title: "Simulateur PTZ 2026 — Calculez votre Prêt à Taux Zéro",
+    shortTitle: "Prêt à Taux Zéro (PTZ)",
+    description:
+      "Calculez votre éligibilité et le montant de votre Prêt à Taux Zéro 2026 selon votre zone, revenus et composition du foyer.",
+    categorie: "immobilier",
+    icon: "key",
+    keywords: [
+      "PTZ 2026",
+      "prêt taux zéro",
+      "primo-accédant",
+      "aide achat immobilier",
+    ],
+  },
+  {
+    slug: "simulateur-apl",
+    title: "Simulateur APL 2026 — Estimez votre aide au logement",
+    shortTitle: "Aide au logement (APL)",
+    description:
+      "Estimez le montant de votre APL selon votre loyer, vos revenus, votre zone et la composition de votre foyer.",
+    categorie: "quotidien",
+    icon: "home-dollar",
+    keywords: [
+      "APL",
+      "aide au logement",
+      "CAF",
+      "allocation logement",
+    ],
+  },
+  {
+    slug: "calcul-charges-micro-entrepreneur",
+    title: "Calcul charges micro-entrepreneur 2026 — Simulateur gratuit",
+    shortTitle: "Charges micro-entrepreneur",
+    description:
+      "Calculez vos charges sociales, CFP et revenu net en micro-entreprise. Taux 2026, ACRE et versement libératoire inclus.",
+    categorie: "emploi",
+    icon: "receipt-2",
+    keywords: [
+      "micro-entrepreneur",
+      "auto-entrepreneur",
+      "charges sociales",
+      "URSSAF",
+    ],
+  },
+  {
+    slug: "simulateur-rupture-conventionnelle",
+    title: "Simulateur rupture conventionnelle 2026 — Calcul indemnité gratuit",
+    shortTitle: "Rupture conventionnelle",
+    description:
+      "Calculez votre indemnité de rupture conventionnelle et estimez vos droits au chômage (ARE). Simulateur gratuit 2026.",
+    categorie: "emploi",
+    icon: "handshake",
+    keywords: [
+      "rupture conventionnelle",
+      "indemnité rupture",
+      "chômage ARE",
+      "négociation départ",
+    ],
+  },
+  {
+    slug: "calcul-frais-kilometriques",
+    title: "Calcul frais kilométriques 2026 — Barème fiscal gratuit",
+    shortTitle: "Frais kilométriques",
+    description:
+      "Calculez vos frais kilométriques déductibles avec le barème fiscal 2026. Voitures, motos, véhicules électriques (+20%).",
+    categorie: "auto",
+    icon: "road",
+    keywords: [
+      "frais kilométriques",
+      "barème km",
+      "indemnités kilométriques",
+      "frais réels impôts",
+    ],
+  },
 ];
 
 export function getOutil(slug: string) {

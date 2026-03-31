@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { JsonLd, webApplicationJsonLd, faqJsonLd } from "@/lib/jsonld";
 import { AdBanner } from "@/lib/adsense";
 import CalculInteretsComposes from "./CalculInteretsComposes";
-import InfographieInteretsComposes from "@/components/infographics/InfographieInteretsComposes";
 
 export const metadata: Metadata = {
   title: "Calcul Interets Composes — Simulateur d'Epargne Gratuit",
@@ -26,16 +26,16 @@ export const metadata: Metadata = {
       "Simulez la croissance de votre epargne grace aux interets composes. Versements mensuels, tableau d'evolution et comparaison avec les interets simples.",
     url: "https://boncalcul.fr/outils/calcul-interets-composes",
     type: "website",
-    images: [
-      {
-        url: `https://boncalcul.fr/api/og?slug=calcul-interets-composes`,
-        width: 1200,
-        height: 630,
-        alt: "Calcul Interets Composes — BonCalcul.fr",
-      },
-    ],
     locale: "fr_FR",
     siteName: "BonCalcul.fr",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Calcul Interets Composes - BonCalcul.fr",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
@@ -111,8 +111,6 @@ export default function CalculInteretsComposesPage() {
         <CalculInteretsComposes />
 
         <AdBanner slot="tool-after-result" format="auto" className="mt-8" />
-
-        <InfographieInteretsComposes />
       </section>
 
       {/* FAQ */}
@@ -142,6 +140,24 @@ export default function CalculInteretsComposesPage() {
 
       <div className="max-w-5xl mx-auto px-4 py-4">
         <AdBanner slot="tool-after-faq" format="horizontal" />
+      </div>
+
+      {/* Article associe */}
+      <div className="max-w-4xl mx-auto px-4 mb-10">
+        <Link
+          href="/blog/interets-composes-guide-epargne"
+          className="block bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-100 rounded-2xl p-6 hover:shadow-md transition group"
+        >
+          <p className="text-xs font-medium text-blue-500 uppercase tracking-wide mb-1">
+            Article associe
+          </p>
+          <h3 className="text-lg font-bold text-gray-800 group-hover:text-blue-600 transition">
+            Interets composes : comment faire fructifier votre epargne en 2026
+          </h3>
+          <p className="text-sm text-gray-500 mt-1">
+            Comprendre les interets composes, la formule, des exemples concrets avec les placements francais et les strategies pour optimiser votre epargne.
+          </p>
+        </Link>
       </div>
 
       {/* Contenu SEO */}

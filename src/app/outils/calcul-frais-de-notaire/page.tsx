@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import CalculNotaire from "./CalculNotaire";
 import { AdBanner } from "@/lib/adsense";
 import {
@@ -6,7 +7,6 @@ import {
   webApplicationJsonLd,
   faqJsonLd,
 } from "@/lib/jsonld";
-import InfographieNotaire from "@/components/infographics/InfographieNotaire";
 
 export const metadata: Metadata = {
   title: "Calcul frais de notaire 2026 — Estimation gratuite",
@@ -31,14 +31,6 @@ export const metadata: Metadata = {
       "Estimez gratuitement vos frais de notaire pour un achat immobilier ancien ou neuf. Résultat instantané.",
     url: "https://boncalcul.fr/outils/calcul-frais-de-notaire",
     type: "website",
-    images: [
-      {
-        url: `https://boncalcul.fr/api/og?slug=calcul-frais-de-notaire`,
-        width: 1200,
-        height: 630,
-        alt: "Calcul Frais De Notaire — BonCalcul.fr",
-      },
-    ],
   },
 };
 
@@ -102,8 +94,6 @@ export default function PageFraisNotaire() {
 
         <AdBanner slot="tool-after-result" format="auto" className="mt-8" />
 
-        <InfographieNotaire />
-
         {/* ---------- FAQ ---------- */}
         <section className="bg-gray-50 rounded-2xl py-10 px-6 mb-10">
           <h2 className="text-2xl font-bold text-gray-800 mb-6">
@@ -129,6 +119,24 @@ export default function PageFraisNotaire() {
 
         <div className="max-w-5xl mx-auto px-4 py-4">
           <AdBanner slot="tool-after-faq" format="horizontal" />
+        </div>
+
+        {/* Article associe */}
+        <div className="max-w-4xl mx-auto px-4 mb-10">
+          <Link
+            href="/blog/guide-frais-de-notaire-2026"
+            className="block bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-100 rounded-2xl p-6 hover:shadow-md transition group"
+          >
+            <p className="text-xs font-medium text-blue-500 uppercase tracking-wide mb-1">
+              Article associe
+            </p>
+            <h3 className="text-lg font-bold text-gray-800 group-hover:text-blue-600 transition">
+              Frais de notaire 2026 : guide complet pour bien estimer vos frais d&apos;achat immobilier
+            </h3>
+            <p className="text-sm text-gray-500 mt-1">
+              Tout savoir sur les frais de notaire en 2026 : calcul detaille, difference ancien/neuf, baremes en vigueur et astuces pour les reduire.
+            </p>
+          </Link>
         </div>
 
         {/* ---------- Contenu SEO ---------- */}

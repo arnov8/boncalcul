@@ -37,6 +37,12 @@ import {
   IconCreditCard,
   IconRefresh,
   IconBriefcase,
+  IconBeach,
+  IconKey,
+  IconHomeDollar,
+  IconReceipt2,
+  IconContract,
+  IconRoad,
 } from "@tabler/icons-react";
 import type { ComponentType } from "react";
 
@@ -77,6 +83,12 @@ const iconMap: Record<string, ComponentType<{ size?: number; stroke?: number; cl
   "credit-card": IconCreditCard,
   refresh: IconRefresh,
   briefcase: IconBriefcase,
+  beach: IconBeach,
+  key: IconKey,
+  "home-dollar": IconHomeDollar,
+  "receipt-2": IconReceipt2,
+  handshake: IconContract,
+  road: IconRoad,
 };
 
 interface TablerIconProps {

@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import CalculSalaire from "./CalculSalaire";
 import { AdBanner } from "@/lib/adsense";
 import { JsonLd, webApplicationJsonLd, faqJsonLd } from "@/lib/jsonld";
-import InfographieSalaire from "@/components/infographics/InfographieSalaire";
 
 export const metadata: Metadata = {
   title: "Calcul salaire brut net 2026 — Convertisseur instantane",
@@ -28,14 +28,6 @@ export const metadata: Metadata = {
       "Convertissez votre salaire brut en net et inversement. Cadre ou non-cadre, taux 2026 a jour.",
     url: "https://boncalcul.fr/outils/calcul-salaire-brut-net",
     type: "website",
-    images: [
-      {
-        url: `https://boncalcul.fr/api/og?slug=calcul-salaire-brut-net`,
-        width: 1200,
-        height: 630,
-        alt: "Calcul Salaire Brut Net — BonCalcul.fr",
-      },
-    ],
   },
 };
 
@@ -102,8 +94,6 @@ export default function PageSalaireBrutNet() {
         <CalculSalaire />
 
         <AdBanner slot="tool-after-result" format="auto" className="mt-8" />
-
-        <InfographieSalaire />
       </section>
 
       {/* FAQ */}
@@ -133,6 +123,24 @@ export default function PageSalaireBrutNet() {
 
       <div className="max-w-5xl mx-auto px-4 py-4">
         <AdBanner slot="tool-after-faq" format="horizontal" />
+      </div>
+
+      {/* Article associe */}
+      <div className="max-w-4xl mx-auto px-4 mb-10">
+        <Link
+          href="/blog/declaration-impots-2026-guide"
+          className="block bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-100 rounded-2xl p-6 hover:shadow-md transition group"
+        >
+          <p className="text-xs font-medium text-blue-500 uppercase tracking-wide mb-1">
+            Article associe
+          </p>
+          <h3 className="text-lg font-bold text-gray-800 group-hover:text-blue-600 transition">
+            Declaration d&apos;impots 2026 : guide complet pour bien declarer vos revenus 2025
+          </h3>
+          <p className="text-sm text-gray-500 mt-1">
+            Comprenez le lien entre votre salaire net et votre declaration d&apos;impots. Guide complet avec le bareme 2026.
+          </p>
+        </Link>
       </div>
 
       {/* SEO Content */}

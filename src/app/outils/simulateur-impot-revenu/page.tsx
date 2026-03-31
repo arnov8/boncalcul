@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import SimulateurImpot from "./SimulateurImpot";
 import {
   JsonLd,
@@ -6,7 +7,6 @@ import {
   webApplicationJsonLd,
 } from "@/lib/jsonld";
 import { AdBanner } from "@/lib/adsense";
-import InfographieImpot from "@/components/infographics/InfographieImpot";
 
 export const metadata: Metadata = {
   title: "Simulateur impôt sur le revenu 2026 — Calcul gratuit et instantané",
@@ -30,14 +30,6 @@ export const metadata: Metadata = {
       "Calculez votre impôt sur le revenu 2026 avec le barème progressif, le quotient familial et le détail par tranche. Gratuit et instantané.",
     url: "https://boncalcul.fr/outils/simulateur-impot-revenu",
     type: "website",
-    images: [
-      {
-        url: `https://boncalcul.fr/api/og?slug=simulateur-impot-revenu`,
-        width: 1200,
-        height: 630,
-        alt: "Simulateur Impot Revenu — BonCalcul.fr",
-      },
-    ],
   },
   alternates: {
     canonical: "https://boncalcul.fr/outils/simulateur-impot-revenu",
@@ -104,8 +96,6 @@ export default function PageSimulateurImpot() {
         <SimulateurImpot />
 
         <AdBanner slot="tool-after-result" format="auto" className="mt-8" />
-
-        <InfographieImpot />
       </section>
 
       {/* FAQ */}
@@ -135,6 +125,24 @@ export default function PageSimulateurImpot() {
 
       <div className="max-w-5xl mx-auto px-4 py-4">
         <AdBanner slot="tool-after-faq" format="horizontal" />
+      </div>
+
+      {/* Article associe */}
+      <div className="max-w-4xl mx-auto px-4 mb-10">
+        <Link
+          href="/blog/declaration-impots-2026-guide"
+          className="block bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-100 rounded-2xl p-6 hover:shadow-md transition group"
+        >
+          <p className="text-xs font-medium text-blue-500 uppercase tracking-wide mb-1">
+            Article associe
+          </p>
+          <h3 className="text-lg font-bold text-gray-800 group-hover:text-blue-600 transition">
+            Declaration d&apos;impots 2026 : guide complet pour bien declarer vos revenus 2025
+          </h3>
+          <p className="text-sm text-gray-500 mt-1">
+            Calendrier, bareme, nouveautes, deductions et erreurs a eviter : tout savoir pour reussir votre declaration d&apos;impots 2026.
+          </p>
+        </Link>
       </div>
 
       {/* Contenu SEO */}

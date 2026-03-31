@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import CalculCapaciteEmprunt from "./CalculCapaciteEmprunt";
 import {
   JsonLd,
@@ -6,7 +7,6 @@ import {
   webApplicationJsonLd,
 } from "@/lib/jsonld";
 import { AdBanner } from "@/lib/adsense";
-import InfographieCapaciteEmprunt from "@/components/infographics/InfographieCapaciteEmprunt";
 
 export const metadata: Metadata = {
   title: "Calcul Capacité d'Emprunt — Combien pouvez-vous emprunter ?",
@@ -30,16 +30,16 @@ export const metadata: Metadata = {
       "Estimez le montant maximum que vous pouvez emprunter selon vos revenus et la règle des 35 % du HCSF. Gratuit et instantané.",
     url: "https://boncalcul.fr/outils/calcul-capacite-emprunt",
     type: "website",
-    images: [
-      {
-        url: `https://boncalcul.fr/api/og?slug=calcul-capacite-emprunt`,
-        width: 1200,
-        height: 630,
-        alt: "Calcul Capacite Emprunt — BonCalcul.fr",
-      },
-    ],
     locale: "fr_FR",
     siteName: "BonCalcul.fr",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Calcul Capacité d'Emprunt - BonCalcul.fr",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
@@ -112,8 +112,6 @@ export default function PageCalculCapaciteEmprunt() {
         <CalculCapaciteEmprunt />
 
         <AdBanner slot="tool-after-result" format="auto" className="mt-8" />
-
-        <InfographieCapaciteEmprunt />
       </section>
 
       {/* FAQ */}
@@ -143,6 +141,24 @@ export default function PageCalculCapaciteEmprunt() {
 
       <div className="max-w-5xl mx-auto px-4 py-4">
         <AdBanner slot="tool-after-faq" format="horizontal" />
+      </div>
+
+      {/* Article associe */}
+      <div className="max-w-4xl mx-auto px-4 mb-10">
+        <Link
+          href="/blog/comment-calculer-capacite-emprunt-2026"
+          className="block bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-100 rounded-2xl p-6 hover:shadow-md transition group"
+        >
+          <p className="text-xs font-medium text-blue-500 uppercase tracking-wide mb-1">
+            Article associe
+          </p>
+          <h3 className="text-lg font-bold text-gray-800 group-hover:text-blue-600 transition">
+            Comment calculer sa capacite d&apos;emprunt en 2026 : le guide complet
+          </h3>
+          <p className="text-sm text-gray-500 mt-1">
+            Decouvrez comment calculer votre capacite d&apos;emprunt immobilier : regle des 35%, facteurs cles et astuces pour emprunter plus.
+          </p>
+        </Link>
       </div>
 
       {/* Contenu SEO */}
