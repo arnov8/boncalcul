@@ -1,6 +1,6 @@
 import OutilCard from "@/components/OutilCard";
 import TablerIcon from "@/components/TablerIcon";
-import { outils, categories } from "@/data/outils";
+import { outils } from "@/data/outils";
 import { JsonLd, faqJsonLd } from "@/lib/jsonld";
 import { AdBanner } from "@/lib/adsense";
 
@@ -56,26 +56,15 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Outils par catégorie */}
-      <section id="outils" className="max-w-6xl mx-auto px-4 py-8 md:py-12 scroll-mt-16">
+      {/* Tous les outils — grille dense */}
+      <section id="outils" className="max-w-6xl mx-auto px-4 py-10 scroll-mt-16">
         <AdBanner slot="home-after-hero" format="horizontal" className="mb-8" />
 
-        {categories.map((cat) => {
-          const outilsCat = outils.filter((o) => o.categorie === cat.id);
-          if (outilsCat.length === 0) return null;
-          return (
-            <div key={cat.id} className="mb-10">
-              <h2 className="text-2xl font-bold text-gray-800 mb-4 flex items-center gap-2">
-                <TablerIcon name={cat.icon} size={26} className="text-blue-600" /> {cat.label}
-              </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                {outilsCat.map((outil) => (
-                  <OutilCard key={outil.slug} outil={outil} />
-                ))}
-              </div>
-            </div>
-          );
-        })}
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 sm:gap-4">
+          {outils.map((outil) => (
+            <OutilCard key={outil.slug} outil={outil} />
+          ))}
+        </div>
       </section>
 
       {/* Contenu SEO */}
