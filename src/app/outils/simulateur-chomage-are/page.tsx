@@ -6,6 +6,7 @@ import {
   webApplicationJsonLd,
 } from "@/lib/jsonld";
 import { AdBanner } from "@/lib/adsense";
+import ToolSourcesBadge from "@/components/ToolSourcesBadge";
 import InfographieChomage from "@/components/infographics/InfographieChomage";
 
 export const metadata: Metadata = {
@@ -104,6 +105,7 @@ export default function PageSimulateurChomage() {
         <SimulateurChomage />
 
         <AdBanner slot="tool-after-result" format="auto" className="mt-8" />
+        <ToolSourcesBadge slug="simulateur-chomage-are" />
 
         <InfographieChomage />
       </section>

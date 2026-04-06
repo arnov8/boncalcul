@@ -6,6 +6,7 @@ import {
   webApplicationJsonLd,
 } from "@/lib/jsonld";
 import { AdBanner } from "@/lib/adsense";
+import ToolSourcesBadge from "@/components/ToolSourcesBadge";
 import InfographieEssence from "@/components/infographics/InfographieEssence";
 
 export const metadata: Metadata = {
@@ -101,6 +102,7 @@ export default function PageCalculConsommationEssence() {
       <section className="max-w-3xl mx-auto px-4 py-10">
         <CalculConsommationEssence />
         <AdBanner slot="tool-after-result" format="auto" className="mt-8" />
+        <ToolSourcesBadge slug="calcul-consommation-essence" />
 
         <InfographieEssence />
       </section>

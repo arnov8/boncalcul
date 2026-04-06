@@ -6,6 +6,7 @@ import {
   webApplicationJsonLd,
 } from "@/lib/jsonld";
 import { AdBanner } from "@/lib/adsense";
+import ToolSourcesBadge from "@/components/ToolSourcesBadge";
 
 export const metadata: Metadata = {
   title: "Simulateur APL 2026 — Estimez votre aide au logement",
@@ -95,6 +96,7 @@ export default function PageSimulateurAPL() {
         <SimulateurAPL />
 
         <AdBanner slot="tool-after-result" format="auto" className="mt-8" />
+        <ToolSourcesBadge slug="simulateur-apl" />
       </section>
 
       {/* FAQ */}

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import SimulateurSmic from "./SimulateurSmic";
 import { AdBanner } from "@/lib/adsense";
+import ToolSourcesBadge from "@/components/ToolSourcesBadge";
 import { JsonLd, webApplicationJsonLd, faqJsonLd } from "@/lib/jsonld";
 import InfographieSmic from "@/components/infographics/InfographieSmic";
 
@@ -100,6 +101,7 @@ export default function PageSimulateurSmic() {
         <SimulateurSmic />
 
         <AdBanner slot="tool-after-result" format="auto" className="mt-8" />
+        <ToolSourcesBadge slug="simulateur-smic" />
 
         <InfographieSmic />
       </section>

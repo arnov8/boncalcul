@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import CalculChargesMicro from "./CalculChargesMicro";
 import { JsonLd, webApplicationJsonLd, faqJsonLd } from "@/lib/jsonld";
 import { AdBanner } from "@/lib/adsense";
+import ToolSourcesBadge from "@/components/ToolSourcesBadge";
 
 export const metadata: Metadata = {
   title: "Calcul charges micro-entrepreneur 2026 — Simulateur gratuit",
@@ -97,6 +98,7 @@ export default function PageChargesMicroEntrepreneur() {
         <CalculChargesMicro />
 
         <AdBanner slot="tool-after-result" format="auto" className="mt-8" />
+        <ToolSourcesBadge slug="calcul-charges-micro-entrepreneur" />
       </section>
 
       {/* FAQ */}

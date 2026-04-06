@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer className="bg-white border-t mt-16">
       <div className="max-w-6xl mx-auto px-4 py-10">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
           {/* Marque */}
           <div>
             <span className="text-lg font-bold text-gray-800">
@@ -12,9 +12,58 @@ export default function Footer() {
               <span className="text-gray-400">.fr</span>
             </span>
             <p className="text-sm text-gray-500 mt-2">
-              Outils de calcul gratuits pour le quotidien. Simulateurs fiables,
-              rapides et sans inscription.
+              Outils de calcul gratuits, sourcés et respectueux de votre vie
+              privée. Barèmes officiels à jour.
             </p>
+          </div>
+
+          {/* Catégories (silos) */}
+          <div>
+            <h3 className="font-semibold text-gray-800 mb-3 text-sm">
+              Catégories
+            </h3>
+            <ul className="space-y-2 text-sm text-gray-500">
+              <li>
+                <Link
+                  href="/immobilier"
+                  className="hover:text-blue-600 transition"
+                >
+                  Immobilier
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/emploi"
+                  className="hover:text-blue-600 transition"
+                >
+                  Emploi & Salaire
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/fiscalite"
+                  className="hover:text-blue-600 transition"
+                >
+                  Fiscalité
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/sante"
+                  className="hover:text-blue-600 transition"
+                >
+                  Santé
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/auto-transport"
+                  className="hover:text-blue-600 transition"
+                >
+                  Auto & Transport
+                </Link>
+              </li>
+            </ul>
           </div>
 
           {/* Outils populaires */}
@@ -28,7 +77,7 @@ export default function Footer() {
                   href="/outils/simulateur-pret-immobilier"
                   className="hover:text-blue-600 transition"
                 >
-                  Simulateur prêt immobilier
+                  Prêt immobilier
                 </Link>
               </li>
               <li>
@@ -49,10 +98,10 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/outils/calcul-tva"
+                  href="/outils/simulateur-impot-revenu"
                   className="hover:text-blue-600 transition"
                 >
-                  Calcul TVA
+                  Impôt sur le revenu
                 </Link>
               </li>
               <li>
@@ -86,6 +135,14 @@ export default function Footer() {
                   className="hover:text-blue-600 transition"
                 >
                   À propos
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/methodologie"
+                  className="hover:text-blue-600 transition"
+                >
+                  Méthodologie
                 </Link>
               </li>
             </ul>
@@ -123,7 +180,10 @@ export default function Footer() {
           </p>
           <p className="mt-1">
             Les résultats fournis sont indicatifs et ne constituent pas un
-            conseil professionnel.
+            conseil professionnel.{" "}
+            <Link href="/methodologie" className="underline hover:text-blue-500">
+              En savoir plus sur notre méthodologie.
+            </Link>
           </p>
         </div>
       </div>

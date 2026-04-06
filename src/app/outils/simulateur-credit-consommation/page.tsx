@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import SimulateurCreditConso from "./SimulateurCreditConso";
 import { AdBanner } from "@/lib/adsense";
+import ToolSourcesBadge from "@/components/ToolSourcesBadge";
 import InfographieCreditConso from "@/components/infographics/InfographieCreditConso";
 import {
   JsonLd,
@@ -100,6 +101,7 @@ export default function PageCreditConso() {
         <SimulateurCreditConso />
 
         <AdBanner slot="tool-after-result" format="auto" className="mt-8" />
+        <ToolSourcesBadge slug="simulateur-credit-consommation" />
 
         <InfographieCreditConso />
 

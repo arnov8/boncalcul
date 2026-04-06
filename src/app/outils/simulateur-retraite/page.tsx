@@ -6,6 +6,7 @@ import {
   webApplicationJsonLd,
 } from "@/lib/jsonld";
 import { AdBanner } from "@/lib/adsense";
+import ToolSourcesBadge from "@/components/ToolSourcesBadge";
 
 export const metadata: Metadata = {
   title: "Simulateur retraite 2026 — Estimez votre pension gratuit",
@@ -95,6 +96,7 @@ export default function PageSimulateurRetraite() {
         <SimulateurRetraite />
 
         <AdBanner slot="tool-after-result" format="auto" className="mt-8" />
+        <ToolSourcesBadge slug="simulateur-retraite" />
       </section>
 
       {/* FAQ */}

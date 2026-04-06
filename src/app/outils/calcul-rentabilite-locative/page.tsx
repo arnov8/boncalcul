@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import CalculRentabilite from "./CalculRentabilite";
 import { AdBanner } from "@/lib/adsense";
+import ToolSourcesBadge from "@/components/ToolSourcesBadge";
 import InfographieRentabilite from "@/components/infographics/InfographieRentabilite";
 import {
   JsonLd,
@@ -99,6 +100,7 @@ export default function PageRentabiliteLocative() {
         <CalculRentabilite />
 
         <AdBanner slot="tool-after-result" format="auto" className="mt-8" />
+        <ToolSourcesBadge slug="calcul-rentabilite-locative" />
 
         <InfographieRentabilite />
 

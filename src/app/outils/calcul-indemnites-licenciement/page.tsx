@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import CalculIndemnites from "./CalculIndemnites";
 import { AdBanner } from "@/lib/adsense";
+import ToolSourcesBadge from "@/components/ToolSourcesBadge";
 import { JsonLd, webApplicationJsonLd, faqJsonLd } from "@/lib/jsonld";
 import InfographieIndemnites from "@/components/infographics/InfographieIndemnites";
 
@@ -104,6 +105,7 @@ export default function PageIndemnitesLicenciement() {
       <section className="max-w-4xl mx-auto px-4 py-8">
         <CalculIndemnites />
         <AdBanner slot="tool-after-result" format="auto" className="mt-8" />
+        <ToolSourcesBadge slug="calcul-indemnites-licenciement" />
 
         <InfographieIndemnites />
       </section>

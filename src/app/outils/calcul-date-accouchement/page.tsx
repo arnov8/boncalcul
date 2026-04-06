@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import CalculDateAccouchement from "./CalculDateAccouchement";
 import { JsonLd, webApplicationJsonLd, faqJsonLd } from "@/lib/jsonld";
 import { AdBanner } from "@/lib/adsense";
+import ToolSourcesBadge from "@/components/ToolSourcesBadge";
 import InfographieAccouchement from "@/components/infographics/InfographieAccouchement";
 
 export const metadata: Metadata = {
@@ -99,6 +100,7 @@ export default function PageCalculDateAccouchement() {
         <CalculDateAccouchement />
 
         <AdBanner slot="tool-after-result" format="auto" className="mt-8" />
+        <ToolSourcesBadge slug="calcul-date-accouchement" />
 
         <InfographieAccouchement />
       </section>

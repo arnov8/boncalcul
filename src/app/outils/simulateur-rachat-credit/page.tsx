@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import SimulateurRachatCredit from "./SimulateurRachatCredit";
 import { AdBanner } from "@/lib/adsense";
+import ToolSourcesBadge from "@/components/ToolSourcesBadge";
 import InfographieRachat from "@/components/infographics/InfographieRachat";
 import {
   JsonLd,
@@ -100,6 +101,7 @@ export default function PageRachatCredit() {
         <SimulateurRachatCredit />
 
         <AdBanner slot="tool-after-result" format="auto" className="mt-8" />
+        <ToolSourcesBadge slug="simulateur-rachat-credit" />
 
         <InfographieRachat />
 

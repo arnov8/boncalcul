@@ -6,6 +6,7 @@ import {
   webApplicationJsonLd,
 } from "@/lib/jsonld";
 import { AdBanner } from "@/lib/adsense";
+import ToolSourcesBadge from "@/components/ToolSourcesBadge";
 import InfographieTVA from "@/components/infographics/InfographieTVA";
 
 export const metadata: Metadata = {
@@ -102,6 +103,7 @@ export default function PageCalculTVA() {
         <CalculTVA />
 
         <AdBanner slot="tool-after-result" format="auto" className="mt-8" />
+        <ToolSourcesBadge slug="calcul-tva" />
 
         <InfographieTVA />
       </section>

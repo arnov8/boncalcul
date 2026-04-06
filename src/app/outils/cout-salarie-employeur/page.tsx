@@ -6,6 +6,7 @@ import {
   webApplicationJsonLd,
 } from "@/lib/jsonld";
 import { AdBanner } from "@/lib/adsense";
+import ToolSourcesBadge from "@/components/ToolSourcesBadge";
 import InfographieCoutSalarie from "@/components/infographics/InfographieCoutSalarie";
 
 export const metadata: Metadata = {
@@ -102,6 +103,7 @@ export default function PageCoutSalarieEmployeur() {
         <CoutSalarie />
 
         <AdBanner slot="tool-after-result" format="auto" className="mt-8" />
+        <ToolSourcesBadge slug="cout-salarie-employeur" />
 
         <InfographieCoutSalarie />
       </section>

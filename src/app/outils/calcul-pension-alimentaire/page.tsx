@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import CalculPension from "./CalculPension";
 import { AdBanner } from "@/lib/adsense";
+import ToolSourcesBadge from "@/components/ToolSourcesBadge";
 import { JsonLd, webApplicationJsonLd, faqJsonLd } from "@/lib/jsonld";
 import InfographiePension from "@/components/infographics/InfographiePension";
 
@@ -99,6 +100,7 @@ export default function PagePensionAlimentaire() {
         <CalculPension />
 
         <AdBanner slot="tool-after-result" format="auto" className="mt-8" />
+        <ToolSourcesBadge slug="calcul-pension-alimentaire" />
 
         <InfographiePension />
       </section>

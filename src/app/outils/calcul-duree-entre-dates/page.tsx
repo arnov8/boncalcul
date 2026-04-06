@@ -6,6 +6,7 @@ import {
   webApplicationJsonLd,
 } from "@/lib/jsonld";
 import { AdBanner } from "@/lib/adsense";
+import ToolSourcesBadge from "@/components/ToolSourcesBadge";
 import InfographieDuree from "@/components/infographics/InfographieDuree";
 
 export const metadata: Metadata = {
@@ -102,6 +103,7 @@ export default function PageCalculDureeEntreDates() {
       <section className="max-w-3xl mx-auto px-4 py-10">
         <CalculDureeEntreDates />
         <AdBanner slot="tool-after-result" format="auto" className="mt-8" />
+        <ToolSourcesBadge slug="calcul-duree-entre-dates" />
 
         <InfographieDuree />
       </section>

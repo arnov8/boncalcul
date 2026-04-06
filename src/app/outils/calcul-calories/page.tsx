@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import CalculCalories from "./CalculCalories";
 import { JsonLd, webApplicationJsonLd, faqJsonLd } from "@/lib/jsonld";
 import { AdBanner } from "@/lib/adsense";
+import ToolSourcesBadge from "@/components/ToolSourcesBadge";
 import InfographieCalories from "@/components/infographics/InfographieCalories";
 
 export const metadata: Metadata = {
@@ -100,6 +101,7 @@ export default function PageCalculCalories() {
         <CalculCalories />
 
         <AdBanner slot="tool-after-result" format="auto" className="mt-8" />
+        <ToolSourcesBadge slug="calcul-calories" />
 
         <InfographieCalories />
       </section>

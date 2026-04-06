@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { JsonLd, webApplicationJsonLd, faqJsonLd } from "@/lib/jsonld";
 import { AdBanner } from "@/lib/adsense";
+import ToolSourcesBadge from "@/components/ToolSourcesBadge";
 import CalculInteretsComposes from "./CalculInteretsComposes";
 
 export const metadata: Metadata = {
@@ -111,6 +112,7 @@ export default function CalculInteretsComposesPage() {
         <CalculInteretsComposes />
 
         <AdBanner slot="tool-after-result" format="auto" className="mt-8" />
+        <ToolSourcesBadge slug="calcul-interets-composes" />
       </section>
 
       {/* FAQ */}

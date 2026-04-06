@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import CalculOvulation from "./CalculOvulation";
 import { JsonLd, webApplicationJsonLd, faqJsonLd } from "@/lib/jsonld";
 import { AdBanner } from "@/lib/adsense";
+import ToolSourcesBadge from "@/components/ToolSourcesBadge";
 import InfographieOvulation from "@/components/infographics/InfographieOvulation";
 
 export const metadata: Metadata = {
@@ -98,6 +99,7 @@ export default function PageCalculOvulation() {
         <CalculOvulation />
 
         <AdBanner slot="tool-after-result" format="auto" className="mt-8" />
+        <ToolSourcesBadge slug="calcul-ovulation" />
 
         <InfographieOvulation />
       </section>

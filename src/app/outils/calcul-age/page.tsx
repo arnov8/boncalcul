@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import CalculAge from "./CalculAge";
 import { JsonLd, webApplicationJsonLd, faqJsonLd } from "@/lib/jsonld";
 import { AdBanner } from "@/lib/adsense";
+import ToolSourcesBadge from "@/components/ToolSourcesBadge";
 import InfographieAge from "@/components/infographics/InfographieAge";
 
 export const metadata: Metadata = {
@@ -98,6 +99,7 @@ export default function PageCalculAge() {
         <CalculAge />
 
         <AdBanner slot="tool-after-result" format="auto" className="mt-8" />
+        <ToolSourcesBadge slug="calcul-age" />
 
         <InfographieAge />
       </section>

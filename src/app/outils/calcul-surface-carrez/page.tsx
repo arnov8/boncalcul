@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import CalculSurfaceCarrez from "./CalculSurfaceCarrez";
 import { AdBanner } from "@/lib/adsense";
+import ToolSourcesBadge from "@/components/ToolSourcesBadge";
 import InfographieCarrez from "@/components/infographics/InfographieCarrez";
 import {
   JsonLd,
@@ -100,6 +101,7 @@ export default function PageSurfaceCarrez() {
         <CalculSurfaceCarrez />
 
         <AdBanner slot="tool-after-result" format="auto" className="mt-8" />
+        <ToolSourcesBadge slug="calcul-surface-carrez" />
 
         <InfographieCarrez />
 

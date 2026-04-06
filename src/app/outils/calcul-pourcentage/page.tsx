@@ -6,6 +6,7 @@ import {
   webApplicationJsonLd,
 } from "@/lib/jsonld";
 import { AdBanner } from "@/lib/adsense";
+import ToolSourcesBadge from "@/components/ToolSourcesBadge";
 import InfographiePourcentage from "@/components/infographics/InfographiePourcentage";
 
 export const metadata: Metadata = {
@@ -102,6 +103,7 @@ export default function PageCalculPourcentage() {
         <CalculPourcentage />
 
         <AdBanner slot="tool-after-result" format="auto" className="mt-8" />
+        <ToolSourcesBadge slug="calcul-pourcentage" />
 
         <InfographiePourcentage />
       </section>

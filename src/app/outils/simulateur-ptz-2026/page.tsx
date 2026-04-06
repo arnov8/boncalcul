@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import SimulateurPTZ from "./SimulateurPTZ";
 import { JsonLd, webApplicationJsonLd, faqJsonLd } from "@/lib/jsonld";
 import { AdBanner } from "@/lib/adsense";
+import ToolSourcesBadge from "@/components/ToolSourcesBadge";
 
 export const metadata: Metadata = {
   title: "Simulateur PTZ 2026 — Calculez votre Pret a Taux Zero",
@@ -107,6 +108,7 @@ export default function SimulateurPTZ2026Page() {
         <SimulateurPTZ />
 
         <AdBanner slot="tool-after-result" format="auto" className="mt-8" />
+        <ToolSourcesBadge slug="simulateur-ptz-2026" />
       </section>
 
       {/* FAQ */}

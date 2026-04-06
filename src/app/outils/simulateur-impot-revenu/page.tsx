@@ -7,6 +7,7 @@ import {
   webApplicationJsonLd,
 } from "@/lib/jsonld";
 import { AdBanner } from "@/lib/adsense";
+import ToolSourcesBadge from "@/components/ToolSourcesBadge";
 
 export const metadata: Metadata = {
   title: "Simulateur impôt sur le revenu 2026 — Calcul gratuit et instantané",
@@ -96,6 +97,7 @@ export default function PageSimulateurImpot() {
         <SimulateurImpot />
 
         <AdBanner slot="tool-after-result" format="auto" className="mt-8" />
+        <ToolSourcesBadge slug="simulateur-impot-revenu" />
       </section>
 
       {/* FAQ */}

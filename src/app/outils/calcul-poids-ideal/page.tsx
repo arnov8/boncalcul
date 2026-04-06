@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import CalculPoidsIdeal from "./CalculPoidsIdeal";
 import { JsonLd, webApplicationJsonLd, faqJsonLd } from "@/lib/jsonld";
 import { AdBanner } from "@/lib/adsense";
+import ToolSourcesBadge from "@/components/ToolSourcesBadge";
 import InfographiePoidsIdeal from "@/components/infographics/InfographiePoidsIdeal";
 
 export const metadata: Metadata = {
@@ -99,6 +100,7 @@ export default function PageCalculPoidsIdeal() {
         <CalculPoidsIdeal />
 
         <AdBanner slot="tool-after-result" format="auto" className="mt-8" />
+        <ToolSourcesBadge slug="calcul-poids-ideal" />
 
         <InfographiePoidsIdeal />
       </section>

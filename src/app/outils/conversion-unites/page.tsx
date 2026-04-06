@@ -6,6 +6,7 @@ import {
   webApplicationJsonLd,
 } from "@/lib/jsonld";
 import { AdBanner } from "@/lib/adsense";
+import ToolSourcesBadge from "@/components/ToolSourcesBadge";
 import InfographieConversion from "@/components/infographics/InfographieConversion";
 
 export const metadata: Metadata = {
@@ -101,6 +102,7 @@ export default function PageConversionUnites() {
       <section className="max-w-3xl mx-auto px-4 py-10">
         <ConversionUnites />
         <AdBanner slot="tool-after-result" format="auto" className="mt-8" />
+        <ToolSourcesBadge slug="conversion-unites" />
 
         <InfographieConversion />
       </section>

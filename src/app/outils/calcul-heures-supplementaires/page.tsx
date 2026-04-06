@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import CalculHeuresSup from "./CalculHeuresSup";
 import { AdBanner } from "@/lib/adsense";
+import ToolSourcesBadge from "@/components/ToolSourcesBadge";
 import { JsonLd, webApplicationJsonLd, faqJsonLd } from "@/lib/jsonld";
 import InfographieHeures from "@/components/infographics/InfographieHeures";
 
@@ -98,6 +99,7 @@ export default function PageHeuresSupplementaires() {
         <CalculHeuresSup />
 
         <AdBanner slot="tool-after-result" format="auto" className="mt-8" />
+        <ToolSourcesBadge slug="calcul-heures-supplementaires" />
 
         <InfographieHeures />
       </section>

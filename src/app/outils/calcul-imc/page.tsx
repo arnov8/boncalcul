@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import CalculIMC from "./CalculIMC";
 import { JsonLd, webApplicationJsonLd, faqJsonLd } from "@/lib/jsonld";
 import { AdBanner } from "@/lib/adsense";
+import ToolSourcesBadge from "@/components/ToolSourcesBadge";
 import InfographieIMC from "@/components/infographics/InfographieIMC";
 
 export const metadata: Metadata = {
@@ -98,6 +99,7 @@ export default function PageCalculIMC() {
         <CalculIMC />
 
         <AdBanner slot="tool-after-result" format="auto" className="mt-8" />
+        <ToolSourcesBadge slug="calcul-imc" />
 
         <InfographieIMC />
       </section>

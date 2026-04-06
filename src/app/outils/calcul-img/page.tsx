@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import CalculIMG from "./CalculIMG";
 import { JsonLd, webApplicationJsonLd, faqJsonLd } from "@/lib/jsonld";
 import { AdBanner } from "@/lib/adsense";
+import ToolSourcesBadge from "@/components/ToolSourcesBadge";
 import InfographieIMG from "@/components/infographics/InfographieIMG";
 
 export const metadata: Metadata = {
@@ -99,6 +100,7 @@ export default function PageCalculIMG() {
         <CalculIMG />
 
         <AdBanner slot="tool-after-result" format="auto" className="mt-8" />
+        <ToolSourcesBadge slug="calcul-img" />
 
         <InfographieIMG />
       </section>

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { JsonLd, webApplicationJsonLd, faqJsonLd } from "@/lib/jsonld";
 import { AdBanner } from "@/lib/adsense";
+import ToolSourcesBadge from "@/components/ToolSourcesBadge";
 import SimulateurPret from "./SimulateurPret";
 
 export const metadata: Metadata = {
@@ -110,6 +111,7 @@ export default function SimulateurPretImmobilierPage() {
         <SimulateurPret />
 
         <AdBanner slot="tool-after-result" format="auto" className="mt-8" />
+        <ToolSourcesBadge slug="simulateur-pret-immobilier" />
       </section>
 
       {/* FAQ */}

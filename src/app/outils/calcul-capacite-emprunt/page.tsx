@@ -7,6 +7,7 @@ import {
   webApplicationJsonLd,
 } from "@/lib/jsonld";
 import { AdBanner } from "@/lib/adsense";
+import ToolSourcesBadge from "@/components/ToolSourcesBadge";
 
 export const metadata: Metadata = {
   title: "Calcul Capacité d'Emprunt — Combien pouvez-vous emprunter ?",
@@ -112,6 +113,7 @@ export default function PageCalculCapaciteEmprunt() {
         <CalculCapaciteEmprunt />
 
         <AdBanner slot="tool-after-result" format="auto" className="mt-8" />
+        <ToolSourcesBadge slug="calcul-capacite-emprunt" />
       </section>
 
       {/* FAQ */}

@@ -6,6 +6,7 @@ import {
   webApplicationJsonLd,
 } from "@/lib/jsonld";
 import { AdBanner } from "@/lib/adsense";
+import ToolSourcesBadge from "@/components/ToolSourcesBadge";
 
 export const metadata: Metadata = {
   title: "Calcul frais kilometriques 2026 — Bareme fiscal gratuit",
@@ -93,6 +94,7 @@ export default function PageCalculFraisKilometriques() {
       <section className="max-w-3xl mx-auto px-4 py-10">
         <CalculFraisKm />
         <AdBanner slot="tool-after-result" format="auto" className="mt-8" />
+        <ToolSourcesBadge slug="calcul-frais-kilometriques" />
       </section>
 
       {/* FAQ */}

@@ -6,6 +6,7 @@ import {
   webApplicationJsonLd,
 } from "@/lib/jsonld";
 import { AdBanner } from "@/lib/adsense";
+import ToolSourcesBadge from "@/components/ToolSourcesBadge";
 import InfographieCoutKm from "@/components/infographics/InfographieCoutKm";
 
 export const metadata: Metadata = {
@@ -103,6 +104,7 @@ export default function PageCoutKmVoiture() {
       <section className="max-w-3xl mx-auto px-4 py-10">
         <CoutKmVoiture />
         <AdBanner slot="tool-after-result" format="auto" className="mt-8" />
+        <ToolSourcesBadge slug="cout-km-voiture" />
 
         <InfographieCoutKm />
       </section>

@@ -14,38 +14,38 @@ export default function Header() {
         </Link>
         <nav className="hidden md:flex items-center gap-6 text-sm">
           <Link
-            href="/outils/simulateur-pret-immobilier"
+            href="/immobilier"
             className="text-gray-600 hover:text-blue-600 transition"
           >
-            Prêt immobilier
+            Immobilier
           </Link>
           <Link
-            href="/outils/calcul-salaire-brut-net"
+            href="/emploi"
             className="text-gray-600 hover:text-blue-600 transition"
           >
-            Salaire brut/net
+            Emploi
           </Link>
           <Link
-            href="/outils/calcul-frais-de-notaire"
+            href="/fiscalite"
             className="text-gray-600 hover:text-blue-600 transition"
           >
-            Frais de notaire
+            Fiscalité
           </Link>
           <Link
-            href="/outils/calcul-tva"
+            href="/sante"
             className="text-gray-600 hover:text-blue-600 transition"
           >
-            TVA
+            Santé
           </Link>
           <Link
-            href="/outils/calcul-imc"
+            href="/auto-transport"
             className="text-gray-600 hover:text-blue-600 transition"
           >
-            IMC
+            Auto
           </Link>
           <Link
             href="/#outils"
-            className="text-gray-600 hover:text-blue-600 transition"
+            className="text-blue-600 font-medium hover:text-blue-700 transition"
           >
             Tous les outils
           </Link>

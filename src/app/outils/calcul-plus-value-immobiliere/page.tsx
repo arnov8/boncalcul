@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import CalculPlusValue from "./CalculPlusValue";
 import { AdBanner } from "@/lib/adsense";
+import ToolSourcesBadge from "@/components/ToolSourcesBadge";
 import InfographiePlusValue from "@/components/infographics/InfographiePlusValue";
 import {
   JsonLd,
@@ -100,6 +101,7 @@ export default function PagePlusValueImmobiliere() {
         <CalculPlusValue />
 
         <AdBanner slot="tool-after-result" format="auto" className="mt-8" />
+        <ToolSourcesBadge slug="calcul-plus-value-immobiliere" />
 
         <InfographiePlusValue />
 
