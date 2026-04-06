@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
+import SimulateurPret from "./SimulateurPret";
 import Link from "next/link";
 import { JsonLd, webApplicationJsonLd, faqJsonLd } from "@/lib/jsonld";
 import { AdBanner } from "@/lib/adsense";
 import ToolSourcesBadge from "@/components/ToolSourcesBadge";
-import SimulateurPret from "./SimulateurPret";
 
 export const metadata: Metadata = {
   title: "Simulateur de Pret Immobilier Gratuit - Calcul Mensualites",

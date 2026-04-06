@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 import { outils } from "@/data/outils";
 import { outilsImages } from "@/data/outils-images";
 import { silos } from "@/data/silos";
+import { articles } from "@/data/articles";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = "https://www.boncalcul.fr";
@@ -28,6 +29,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
+  const articlePages = articles.map((a) => ({
+    url: `${base}/blog/${a.slug}`,
+    lastModified: new Date(a.dateModified),
+    changeFrequency: "monthly" as const,
+    priority: 0.6,
+  }));
+
   return [
     {
       url: base,
@@ -43,24 +51,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 0.7,
     },
-    {
-      url: `${base}/blog/guide-frais-de-notaire-2026`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.6,
-    },
-    {
-      url: `${base}/blog/comment-calculer-capacite-emprunt-2026`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.6,
-    },
-    {
-      url: `${base}/blog/interets-composes-guide-epargne`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.6,
-    },
+    ...articlePages,
     {
       url: `${base}/methodologie`,
       lastModified: new Date(),

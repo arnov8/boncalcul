@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import CalculSalaire from "./CalculSalaire";
+import Link from "next/link";
 import { AdBanner } from "@/lib/adsense";
 import ToolSourcesBadge from "@/components/ToolSourcesBadge";
 import { JsonLd, webApplicationJsonLd, faqJsonLd } from "@/lib/jsonld";

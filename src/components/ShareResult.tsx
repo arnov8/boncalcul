@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import ExportPDF from "./ExportPDF";
 
 interface ShareResultProps {
   toolName: string;
@@ -62,7 +63,7 @@ export default function ShareResult({
 
   if (!open) {
     return (
-      <div className="mt-4 text-center">
+      <div className="mt-4 flex flex-wrap items-center justify-center gap-3">
         <button
           onClick={() => setOpen(true)}
           className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-sm font-semibold shadow hover:from-blue-700 hover:to-indigo-700 transition"
@@ -82,6 +83,7 @@ export default function ShareResult({
           </svg>
           Partager mon resultat
         </button>
+        <ExportPDF title={toolName} toolSlug={toolSlug} />
       </div>
     );
   }
@@ -217,6 +219,11 @@ export default function ShareResult({
               </>
             )}
           </button>
+        </div>
+
+        {/* Export PDF */}
+        <div className="flex justify-center">
+          <ExportPDF title={toolName} toolSlug={toolSlug} />
         </div>
 
         {/* Embed code */}

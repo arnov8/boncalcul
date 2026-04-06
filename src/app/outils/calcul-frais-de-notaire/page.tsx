@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import CalculNotaire from "./CalculNotaire";
+import Link from "next/link";
 import { AdBanner } from "@/lib/adsense";
 import ToolSourcesBadge from "@/components/ToolSourcesBadge";
 import {

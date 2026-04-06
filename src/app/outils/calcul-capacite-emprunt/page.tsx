@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import CalculCapaciteEmprunt from "./CalculCapaciteEmprunt";
+import Link from "next/link";
 import {
   JsonLd,
   faqJsonLd,

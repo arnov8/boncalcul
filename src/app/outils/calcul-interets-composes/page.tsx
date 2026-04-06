@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
+import CalculInteretsComposes from "./CalculInteretsComposes";
 import Link from "next/link";
 import { JsonLd, webApplicationJsonLd, faqJsonLd } from "@/lib/jsonld";
 import { AdBanner } from "@/lib/adsense";
 import ToolSourcesBadge from "@/components/ToolSourcesBadge";
-import CalculInteretsComposes from "./CalculInteretsComposes";
 
 export const metadata: Metadata = {
   title: "Calcul Interets Composes — Simulateur d'Epargne Gratuit",

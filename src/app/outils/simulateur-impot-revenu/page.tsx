@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import SimulateurImpot from "./SimulateurImpot";
+import Link from "next/link";
 import {
   JsonLd,
   faqJsonLd,

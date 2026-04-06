@@ -65,6 +65,61 @@ export const articles: Article[] = [
     readTime: "12 min",
     tags: ["immobilier", "taux immobilier", "achat immobilier", "2026"],
   },
+  {
+    slug: "bareme-impot-revenu-2026",
+    title:
+      "Barème impôt sur le revenu 2026 : tranches, taux et exemples de calcul",
+    description:
+      "Découvrez le barème progressif de l'impôt sur le revenu 2026 (revenus 2025) : tranches, taux, quotient familial et exemples chiffrés.",
+    datePublished: "2026-04-06",
+    dateModified: "2026-04-06",
+    readTime: "6 min",
+    tags: ["fiscalité", "impôt revenu", "barème 2026", "quotient familial"],
+  },
+  {
+    slug: "smic-2026-montant-horaire-mensuel",
+    title:
+      "SMIC 2026 : montant horaire, mensuel et annuel (brut et net)",
+    description:
+      "Le SMIC 2026 en détail : montant horaire brut et net, mensuel et annuel. Tableau récapitulatif et simulateur de salaire à temps partiel.",
+    datePublished: "2026-04-06",
+    dateModified: "2026-04-06",
+    readTime: "4 min",
+    tags: ["emploi", "SMIC", "salaire minimum", "2026"],
+  },
+  {
+    slug: "salaire-brut-net-comment-calculer",
+    title:
+      "Comment calculer son salaire brut en net en 2026 (avec exemples)",
+    description:
+      "Apprenez à convertir votre salaire brut en net : taux de cotisations 2026, différences cadre/non-cadre, exemples chiffrés et erreurs à éviter.",
+    datePublished: "2026-04-06",
+    dateModified: "2026-04-06",
+    readTime: "5 min",
+    tags: ["emploi", "salaire brut net", "cotisations", "2026"],
+  },
+  {
+    slug: "bareme-kilometrique-2026",
+    title:
+      "Barème kilométrique 2026 : tableau, calcul et exemple",
+    description:
+      "Le barème kilométrique fiscal 2026 pour les voitures, motos et véhicules électriques. Tableau officiel, formule de calcul et exemples concrets.",
+    datePublished: "2026-04-06",
+    dateModified: "2026-04-06",
+    readTime: "5 min",
+    tags: ["fiscalité", "frais kilométriques", "barème km", "frais réels"],
+  },
+  {
+    slug: "allocation-chomage-are-2026-calcul",
+    title:
+      "Allocation chômage (ARE) 2026 : calcul, montant et durée",
+    description:
+      "Comment est calculée l'allocation chômage ARE en 2026 ? Formule, montant journalier, durée d'indemnisation et exemples chiffrés.",
+    datePublished: "2026-04-06",
+    dateModified: "2026-04-06",
+    readTime: "6 min",
+    tags: ["emploi", "chômage", "ARE", "France Travail"],
+  },
 ];
 
 export function getArticle(slug: string) {
