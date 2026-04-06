@@ -20,14 +20,14 @@ export const metadata: Metadata = {
     "CFP micro-entreprise",
   ],
   alternates: {
-    canonical: "https://boncalcul.fr/outils/calcul-charges-micro-entrepreneur",
+    canonical: "https://www.boncalcul.fr/outils/calcul-charges-micro-entrepreneur",
   },
   openGraph: {
     title:
       "Calcul charges micro-entrepreneur 2026 — Simulateur gratuit | BonCalcul.fr",
     description:
       "Calculez vos charges de micro-entrepreneur : cotisations URSSAF, CFP, versement liberatoire, ACRE. Taux 2026 a jour.",
-    url: "https://boncalcul.fr/outils/calcul-charges-micro-entrepreneur",
+    url: "https://www.boncalcul.fr/outils/calcul-charges-micro-entrepreneur",
     type: "website",
   },
 };
@@ -69,7 +69,7 @@ export default function PageChargesMicroEntrepreneur() {
     name: "Calculateur charges micro-entrepreneur 2026",
     description:
       "Simulateur gratuit pour calculer vos charges de micro-entrepreneur : cotisations sociales, CFP, versement liberatoire, ACRE. Taux 2026 a jour.",
-    url: "https://boncalcul.fr/outils/calcul-charges-micro-entrepreneur",
+    url: "https://www.boncalcul.fr/outils/calcul-charges-micro-entrepreneur",
   });
 
   return (

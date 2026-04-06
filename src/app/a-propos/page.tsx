@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "À propos",
   description:
     "Découvrez BonCalcul.fr : des outils de calcul gratuits, fiables et respectueux de votre vie privée.",
-  alternates: { canonical: "https://boncalcul.fr/a-propos" },
+  alternates: { canonical: "https://www.boncalcul.fr/a-propos" },
 };
 
 export default function APropos() {

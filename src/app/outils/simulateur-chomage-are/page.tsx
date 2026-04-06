@@ -28,11 +28,11 @@ export const metadata: Metadata = {
     title: "Simulateur allocation chomage ARE 2026 — Calcul gratuit | BonCalcul.fr",
     description:
       "Calculez votre allocation chomage ARE avec le SJR, le montant journalier et mensuel, et la duree d'indemnisation. Gratuit et instantane.",
-    url: "https://boncalcul.fr/outils/simulateur-chomage-are",
+    url: "https://www.boncalcul.fr/outils/simulateur-chomage-are",
     type: "website",
     images: [
       {
-        url: `https://boncalcul.fr/api/og?slug=simulateur-chomage-are`,
+        url: `https://www.boncalcul.fr/api/og?slug=simulateur-chomage-are`,
         width: 1200,
         height: 630,
         alt: "Simulateur Chomage Are — BonCalcul.fr",
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: "https://boncalcul.fr/outils/simulateur-chomage-are",
+    canonical: "https://www.boncalcul.fr/outils/simulateur-chomage-are",
   },
 };
 
@@ -80,7 +80,7 @@ export default function PageSimulateurChomage() {
           name: "Simulateur allocation chomage ARE 2026",
           description:
             "Calculez votre allocation chomage ARE gratuitement. Salaire journalier de reference, montant journalier et mensuel, duree d'indemnisation.",
-          url: "https://boncalcul.fr/outils/simulateur-chomage-are",
+          url: "https://www.boncalcul.fr/outils/simulateur-chomage-are",
         })}
       />
       <JsonLd data={faqJsonLd(faqQuestions)} />

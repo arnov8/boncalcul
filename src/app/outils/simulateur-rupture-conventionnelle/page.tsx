@@ -19,14 +19,14 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical:
-      "https://boncalcul.fr/outils/simulateur-rupture-conventionnelle",
+      "https://www.boncalcul.fr/outils/simulateur-rupture-conventionnelle",
   },
   openGraph: {
     title:
       "Simulateur rupture conventionnelle 2026 — Calcul indemnite gratuit | BonCalcul.fr",
     description:
       "Calculez votre indemnite de rupture conventionnelle et votre allocation chomage ARE. Simulateur 2026 gratuit et instantane.",
-    url: "https://boncalcul.fr/outils/simulateur-rupture-conventionnelle",
+    url: "https://www.boncalcul.fr/outils/simulateur-rupture-conventionnelle",
     type: "website",
   },
 };
@@ -71,7 +71,7 @@ export default function PageSimulateurRuptureConventionnelle() {
           name: "Simulateur rupture conventionnelle 2026",
           description:
             "Calculez gratuitement votre indemnite de rupture conventionnelle et votre allocation chomage ARE. Simulateur 2026.",
-          url: "https://boncalcul.fr/outils/simulateur-rupture-conventionnelle",
+          url: "https://www.boncalcul.fr/outils/simulateur-rupture-conventionnelle",
         })}
       />
       <JsonLd data={faqJsonLd(faqQuestions)} />

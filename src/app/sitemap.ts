@@ -3,7 +3,7 @@ import { outils } from "@/data/outils";
 import { outilsImages } from "@/data/outils-images";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const base = "https://boncalcul.fr";
+  const base = "https://www.boncalcul.fr";
 
   const outilPages = outils.map((o) => {
     const imageEntry = outilsImages.find((i) => i.slug === o.slug);

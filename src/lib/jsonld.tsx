@@ -73,7 +73,7 @@ export function articleJsonLd({
     url,
     datePublished,
     dateModified: dateModified || datePublished,
-    image: image || "https://boncalcul.fr/og-image.png",
+    image: image || "https://www.boncalcul.fr/og-image.png",
     author: {
       "@type": "Organization",
       name: "BonCalcul.fr",
@@ -83,7 +83,7 @@ export function articleJsonLd({
       name: "BonCalcul.fr",
       logo: {
         "@type": "ImageObject",
-        url: "https://boncalcul.fr/favicon.svg",
+        url: "https://www.boncalcul.fr/favicon.svg",
       },
     },
   };

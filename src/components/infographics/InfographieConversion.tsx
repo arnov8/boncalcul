@@ -13,7 +13,7 @@ export default function InfographieConversion() {
   return (
     <Infographic
       title="Tableau des conversions d'unites courantes"
-      sourceUrl="https://boncalcul.fr/outils/conversion-unites"
+      sourceUrl="https://www.boncalcul.fr/outils/conversion-unites"
       sourceLabel="BonCalcul.fr - Conversion d'unites"
     >
       <div className="grid md:grid-cols-2 gap-4 mb-6">

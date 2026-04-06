@@ -14,7 +14,7 @@ export default function InfographieCalories() {
   return (
     <Infographic
       title="Besoins caloriques : formule de Mifflin-St Jeor"
-      sourceUrl="https://boncalcul.fr/outils/calcul-calories"
+      sourceUrl="https://www.boncalcul.fr/outils/calcul-calories"
       sourceLabel="BonCalcul.fr - Calcul calories"
     >
       {/* Formule */}

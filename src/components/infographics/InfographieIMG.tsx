@@ -22,7 +22,7 @@ export default function InfographieIMG() {
   return (
     <Infographic
       title="Indice de Masse Grasse : echelle par sexe"
-      sourceUrl="https://boncalcul.fr/outils/calcul-img"
+      sourceUrl="https://www.boncalcul.fr/outils/calcul-img"
       sourceLabel="BonCalcul.fr - Calcul IMG"
     >
       {/* Formule */}

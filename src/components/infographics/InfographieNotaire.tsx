@@ -41,7 +41,7 @@ export default function InfographieNotaire() {
   return (
     <Infographic
       title="Repartition des frais de notaire pour un achat immobilier"
-      sourceUrl="https://boncalcul.fr/outils/calcul-frais-de-notaire"
+      sourceUrl="https://www.boncalcul.fr/outils/calcul-frais-de-notaire"
       sourceLabel="BonCalcul.fr - Calcul frais de notaire"
     >
       {/* Price header */}

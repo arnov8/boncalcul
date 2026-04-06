@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     authors: ["BonCalcul.fr"],
   },
   alternates: {
-    canonical: "https://boncalcul.fr/blog/guide-frais-de-notaire-2026",
+    canonical: "https://www.boncalcul.fr/blog/guide-frais-de-notaire-2026",
   },
 };
 
@@ -37,7 +37,7 @@ export default function ArticleFraisNotaire() {
             "Frais de notaire 2026 : guide complet pour estimer vos frais d'achat immobilier",
           description:
             "Tout savoir sur les frais de notaire en 2026 : calcul détaillé, différence ancien/neuf, barèmes en vigueur et astuces pour les réduire.",
-          url: "https://boncalcul.fr/blog/guide-frais-de-notaire-2026",
+          url: "https://www.boncalcul.fr/blog/guide-frais-de-notaire-2026",
           datePublished: "2026-03-27",
         })}
       />

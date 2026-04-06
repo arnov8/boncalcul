@@ -23,17 +23,17 @@ export const metadata: Metadata = {
     "diagnostic carrez",
   ],
   alternates: {
-    canonical: "https://boncalcul.fr/outils/calcul-surface-carrez",
+    canonical: "https://www.boncalcul.fr/outils/calcul-surface-carrez",
   },
   openGraph: {
     title: "Calcul surface loi Carrez 2026 — Simulateur gratuit | BonCalcul.fr",
     description:
       "Calculez gratuitement la surface loi Carrez de votre logement. R\u00e9sultat instantan\u00e9.",
-    url: "https://boncalcul.fr/outils/calcul-surface-carrez",
+    url: "https://www.boncalcul.fr/outils/calcul-surface-carrez",
     type: "website",
     images: [
       {
-        url: `https://boncalcul.fr/api/og?slug=calcul-surface-carrez`,
+        url: `https://www.boncalcul.fr/api/og?slug=calcul-surface-carrez`,
         width: 1200,
         height: 630,
         alt: "Calcul Surface Carrez — BonCalcul.fr",
@@ -78,7 +78,7 @@ export default function PageSurfaceCarrez() {
           name: "Calcul surface loi Carrez 2026",
           description:
             "Calculez gratuitement la surface loi Carrez de votre logement en ajoutant vos pi\u00e8ces une par une.",
-          url: "https://boncalcul.fr/outils/calcul-surface-carrez",
+          url: "https://www.boncalcul.fr/outils/calcul-surface-carrez",
         })}
       />
       <JsonLd data={faqJsonLd(faqQuestions)} />

@@ -19,18 +19,18 @@ export const metadata: Metadata = {
     "calendrier grossesse",
   ],
   alternates: {
-    canonical: "https://boncalcul.fr/outils/calcul-date-accouchement",
+    canonical: "https://www.boncalcul.fr/outils/calcul-date-accouchement",
   },
   openGraph: {
     title:
       "Calcul date d'accouchement — Date prevue gratuit | BonCalcul.fr",
     description:
       "Calculez votre date prevue d'accouchement instantanement. Gratuit, sans inscription.",
-    url: "https://boncalcul.fr/outils/calcul-date-accouchement",
+    url: "https://www.boncalcul.fr/outils/calcul-date-accouchement",
     type: "website",
     images: [
       {
-        url: `https://boncalcul.fr/api/og?slug=calcul-date-accouchement`,
+        url: `https://www.boncalcul.fr/api/og?slug=calcul-date-accouchement`,
         width: 1200,
         height: 630,
         alt: "Calcul Date Accouchement — BonCalcul.fr",
@@ -75,7 +75,7 @@ export default function PageCalculDateAccouchement() {
           name: "Calcul date d'accouchement — Date prevue gratuit",
           description:
             "Calculez votre date prevue d'accouchement (DPA) gratuitement a partir de la date de vos dernieres regles ou de la date de conception.",
-          url: "https://boncalcul.fr/outils/calcul-date-accouchement",
+          url: "https://www.boncalcul.fr/outils/calcul-date-accouchement",
         })}
       />
       <JsonLd data={faqJsonLd(faqQuestions)} />

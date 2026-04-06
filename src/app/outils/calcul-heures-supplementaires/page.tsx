@@ -20,17 +20,17 @@ export const metadata: Metadata = {
     "taux horaire majore",
   ],
   alternates: {
-    canonical: "https://boncalcul.fr/outils/calcul-heures-supplementaires",
+    canonical: "https://www.boncalcul.fr/outils/calcul-heures-supplementaires",
   },
   openGraph: {
     title: "Calcul heures supplementaires 2026 — Simulateur majoration | BonCalcul.fr",
     description:
       "Calculez vos heures sup avec majoration 25% et 50%. Estimation nette et exoneration fiscale.",
-    url: "https://boncalcul.fr/outils/calcul-heures-supplementaires",
+    url: "https://www.boncalcul.fr/outils/calcul-heures-supplementaires",
     type: "website",
     images: [
       {
-        url: `https://boncalcul.fr/api/og?slug=calcul-heures-supplementaires`,
+        url: `https://www.boncalcul.fr/api/og?slug=calcul-heures-supplementaires`,
         width: 1200,
         height: 630,
         alt: "Calcul Heures Supplementaires — BonCalcul.fr",
@@ -72,7 +72,7 @@ export default function PageHeuresSupplementaires() {
     name: "Simulateur heures supplementaires 2026",
     description:
       "Outil gratuit pour calculer le montant de vos heures supplementaires avec majoration 25% et 50%, estimation nette et exoneration fiscale.",
-    url: "https://boncalcul.fr/outils/calcul-heures-supplementaires",
+    url: "https://www.boncalcul.fr/outils/calcul-heures-supplementaires",
   });
 
   return (

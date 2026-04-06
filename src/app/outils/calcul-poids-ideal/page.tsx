@@ -20,17 +20,17 @@ export const metadata: Metadata = {
     "poids ideal homme",
   ],
   alternates: {
-    canonical: "https://boncalcul.fr/outils/calcul-poids-ideal",
+    canonical: "https://www.boncalcul.fr/outils/calcul-poids-ideal",
   },
   openGraph: {
     title: "Calcul poids ideal — Estimez votre poids de forme | BonCalcul.fr",
     description:
       "Estimez votre poids ideal selon 4 formules medicales reconnues. Gratuit, sans inscription.",
-    url: "https://boncalcul.fr/outils/calcul-poids-ideal",
+    url: "https://www.boncalcul.fr/outils/calcul-poids-ideal",
     type: "website",
     images: [
       {
-        url: `https://boncalcul.fr/api/og?slug=calcul-poids-ideal`,
+        url: `https://www.boncalcul.fr/api/og?slug=calcul-poids-ideal`,
         width: 1200,
         height: 630,
         alt: "Calcul Poids Ideal — BonCalcul.fr",
@@ -75,7 +75,7 @@ export default function PageCalculPoidsIdeal() {
           name: "Calcul poids ideal — Estimez votre poids de forme",
           description:
             "Calculez votre poids ideal gratuitement selon plusieurs formules medicales reconnues : Lorentz, Devine, Creff et IMC.",
-          url: "https://boncalcul.fr/outils/calcul-poids-ideal",
+          url: "https://www.boncalcul.fr/outils/calcul-poids-ideal",
         })}
       />
       <JsonLd data={faqJsonLd(faqQuestions)} />

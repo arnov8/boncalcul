@@ -28,11 +28,11 @@ export const metadata: Metadata = {
     title: "Cout au kilometre voiture — Calculateur gratuit | BonCalcul.fr",
     description:
       "Calculez le cout reel au kilometre de votre voiture en incluant tous les postes de depenses : carburant, assurance, entretien, decote et controle technique.",
-    url: "https://boncalcul.fr/outils/cout-km-voiture",
+    url: "https://www.boncalcul.fr/outils/cout-km-voiture",
     type: "website",
     images: [
       {
-        url: `https://boncalcul.fr/api/og?slug=cout-km-voiture`,
+        url: `https://www.boncalcul.fr/api/og?slug=cout-km-voiture`,
         width: 1200,
         height: 630,
         alt: "Cout Km Voiture — BonCalcul.fr",
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: "https://boncalcul.fr/outils/cout-km-voiture",
+    canonical: "https://www.boncalcul.fr/outils/cout-km-voiture",
   },
 };
 
@@ -80,7 +80,7 @@ export default function PageCoutKmVoiture() {
           name: "Cout au kilometre voiture — Calculateur gratuit",
           description:
             "Calculez le cout reel au kilometre de votre voiture : carburant, assurance, entretien, decote, controle technique. Simulateur gratuit et complet.",
-          url: "https://boncalcul.fr/outils/cout-km-voiture",
+          url: "https://www.boncalcul.fr/outils/cout-km-voiture",
         })}
       />
       <JsonLd data={faqJsonLd(faqQuestions)} />

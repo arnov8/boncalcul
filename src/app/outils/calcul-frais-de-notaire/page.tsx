@@ -23,13 +23,13 @@ export const metadata: Metadata = {
     "frais acquisition immobilier",
   ],
   alternates: {
-    canonical: "https://boncalcul.fr/outils/calcul-frais-de-notaire",
+    canonical: "https://www.boncalcul.fr/outils/calcul-frais-de-notaire",
   },
   openGraph: {
     title: "Calcul frais de notaire 2026 — Estimation gratuite | BonCalcul.fr",
     description:
       "Estimez gratuitement vos frais de notaire pour un achat immobilier ancien ou neuf. Résultat instantané.",
-    url: "https://boncalcul.fr/outils/calcul-frais-de-notaire",
+    url: "https://www.boncalcul.fr/outils/calcul-frais-de-notaire",
     type: "website",
   },
 };
@@ -71,7 +71,7 @@ export default function PageFraisNotaire() {
           name: "Calcul frais de notaire 2026",
           description:
             "Estimez gratuitement vos frais de notaire pour un achat immobilier ancien ou neuf avec le barème officiel.",
-          url: "https://boncalcul.fr/outils/calcul-frais-de-notaire",
+          url: "https://www.boncalcul.fr/outils/calcul-frais-de-notaire",
         })}
       />
       <JsonLd data={faqJsonLd(faqQuestions)} />

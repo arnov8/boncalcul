@@ -1,7 +1,7 @@
 import { outils } from "@/data/outils";
 import { outilsImages } from "@/data/outils-images";
 
-const BASE = "https://boncalcul.fr";
+const BASE = "https://www.boncalcul.fr";
 
 function escapeXml(str: string): string {
   return str

@@ -4,7 +4,7 @@ export const metadata: Metadata = {
   title: "Mentions légales",
   description: "Mentions légales du site BonCalcul.fr",
   robots: { index: true, follow: true },
-  alternates: { canonical: "https://boncalcul.fr/mentions-legales" },
+  alternates: { canonical: "https://www.boncalcul.fr/mentions-legales" },
 };
 
 export default function MentionsLegales() {

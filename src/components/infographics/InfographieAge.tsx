@@ -6,7 +6,7 @@ export default function InfographieAge() {
   return (
     <Infographic
       title="Votre age en chiffres : le saviez-vous ?"
-      sourceUrl="https://boncalcul.fr/outils/calcul-age"
+      sourceUrl="https://www.boncalcul.fr/outils/calcul-age"
       sourceLabel="BonCalcul.fr - Calcul d'age"
     >
       {/* Timeline 30 ans */}

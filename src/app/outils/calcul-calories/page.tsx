@@ -20,17 +20,17 @@ export const metadata: Metadata = {
     "prise de masse",
   ],
   alternates: {
-    canonical: "https://boncalcul.fr/outils/calcul-calories",
+    canonical: "https://www.boncalcul.fr/outils/calcul-calories",
   },
   openGraph: {
     title: "Calcul calories par jour — Besoins caloriques gratuit | BonCalcul.fr",
     description:
       "Calculez vos besoins caloriques journaliers instantanement. Metabolisme de base, TDEE et objectifs de poids. Gratuit, sans inscription.",
-    url: "https://boncalcul.fr/outils/calcul-calories",
+    url: "https://www.boncalcul.fr/outils/calcul-calories",
     type: "website",
     images: [
       {
-        url: `https://boncalcul.fr/api/og?slug=calcul-calories`,
+        url: `https://www.boncalcul.fr/api/og?slug=calcul-calories`,
         width: 1200,
         height: 630,
         alt: "Calcul Calories — BonCalcul.fr",
@@ -75,7 +75,7 @@ export default function PageCalculCalories() {
           name: "Calcul calories par jour — Besoins caloriques gratuit",
           description:
             "Calculez vos besoins caloriques journaliers gratuitement avec la formule Mifflin-St Jeor. Metabolisme de base, TDEE et objectifs de poids.",
-          url: "https://boncalcul.fr/outils/calcul-calories",
+          url: "https://www.boncalcul.fr/outils/calcul-calories",
         })}
       />
       <JsonLd data={faqJsonLd(faqQuestions)} />

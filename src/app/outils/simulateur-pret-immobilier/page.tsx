@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     title: "Simulateur de Pret Immobilier Gratuit - BonCalcul.fr",
     description:
       "Calculez vos mensualites de pret immobilier avec notre simulateur gratuit. Tableau d'amortissement et cout total inclus.",
-    url: "https://boncalcul.fr/outils/simulateur-pret-immobilier",
+    url: "https://www.boncalcul.fr/outils/simulateur-pret-immobilier",
     type: "website",
     locale: "fr_FR",
     siteName: "BonCalcul.fr",
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
       "Calculez vos mensualites de pret immobilier avec notre simulateur gratuit.",
   },
   alternates: {
-    canonical: "https://boncalcul.fr/outils/simulateur-pret-immobilier",
+    canonical: "https://www.boncalcul.fr/outils/simulateur-pret-immobilier",
   },
 };
 
@@ -86,7 +86,7 @@ export default function SimulateurPretImmobilierPage() {
           name: "Simulateur de Pret Immobilier",
           description:
             "Calculez vos mensualites de pret immobilier gratuitement avec tableau d'amortissement et assurance emprunteur.",
-          url: "https://boncalcul.fr/outils/simulateur-pret-immobilier",
+          url: "https://www.boncalcul.fr/outils/simulateur-pret-immobilier",
         })}
       />
       <JsonLd data={faqJsonLd(faqQuestions)} />

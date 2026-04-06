@@ -27,11 +27,11 @@ export const metadata: Metadata = {
     title: "Simulateur retraite 2026 — Estimez votre pension | BonCalcul.fr",
     description:
       "Estimez gratuitement votre future pension de retraite selon votre salaire et votre carriere.",
-    url: "https://boncalcul.fr/outils/simulateur-retraite",
+    url: "https://www.boncalcul.fr/outils/simulateur-retraite",
     type: "website",
   },
   alternates: {
-    canonical: "https://boncalcul.fr/outils/simulateur-retraite",
+    canonical: "https://www.boncalcul.fr/outils/simulateur-retraite",
   },
 };
 
@@ -71,7 +71,7 @@ export default function PageSimulateurRetraite() {
           name: "Simulateur retraite 2026",
           description:
             "Estimez le montant de votre future pension de retraite gratuitement. Salaire, trimestres, age de depart, taux plein ou decote.",
-          url: "https://boncalcul.fr/outils/simulateur-retraite",
+          url: "https://www.boncalcul.fr/outils/simulateur-retraite",
         })}
       />
       <JsonLd data={faqJsonLd(faqQuestions)} />

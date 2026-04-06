@@ -13,7 +13,7 @@ export default function InfographieCapaciteEmprunt() {
   return (
     <Infographic
       title="Capacite d'emprunt : la regle des 35% du HCSF expliquee"
-      sourceUrl="https://boncalcul.fr/outils/calcul-capacite-emprunt"
+      sourceUrl="https://www.boncalcul.fr/outils/calcul-capacite-emprunt"
       sourceLabel="BonCalcul.fr - Calcul capacite d'emprunt"
     >
       {/* Rule visualization */}

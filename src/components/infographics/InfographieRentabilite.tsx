@@ -15,7 +15,7 @@ export default function InfographieRentabilite() {
   return (
     <Infographic
       title="Rentabilite locative : brute, nette et nette-nette"
-      sourceUrl="https://boncalcul.fr/outils/calcul-rentabilite-locative"
+      sourceUrl="https://www.boncalcul.fr/outils/calcul-rentabilite-locative"
       sourceLabel="BonCalcul.fr - Calcul rentabilite locative"
     >
       {/* 3 formules */}

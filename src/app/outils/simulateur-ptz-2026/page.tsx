@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     title: "Simulateur PTZ 2026 — Calculez votre Pret a Taux Zero - BonCalcul.fr",
     description:
       "Simulateur PTZ 2026 gratuit : verifiez votre eligibilite et calculez le montant de votre Pret a Taux Zero.",
-    url: "https://boncalcul.fr/outils/simulateur-ptz-2026",
+    url: "https://www.boncalcul.fr/outils/simulateur-ptz-2026",
     type: "website",
     locale: "fr_FR",
     siteName: "BonCalcul.fr",
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
       "Calculez votre eligibilite et le montant de votre PTZ 2026 gratuitement.",
   },
   alternates: {
-    canonical: "https://boncalcul.fr/outils/simulateur-ptz-2026",
+    canonical: "https://www.boncalcul.fr/outils/simulateur-ptz-2026",
   },
 };
 
@@ -83,7 +83,7 @@ export default function SimulateurPTZ2026Page() {
           name: "Simulateur PTZ 2026",
           description:
             "Calculez votre eligibilite au Pret a Taux Zero 2026, le montant du PTZ et l'economie realisee. Gratuit et instantane.",
-          url: "https://boncalcul.fr/outils/simulateur-ptz-2026",
+          url: "https://www.boncalcul.fr/outils/simulateur-ptz-2026",
         })}
       />
       <JsonLd data={faqJsonLd(faqQuestions)} />

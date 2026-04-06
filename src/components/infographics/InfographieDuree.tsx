@@ -6,7 +6,7 @@ export default function InfographieDuree() {
   return (
     <Infographic
       title="Calculer une duree entre deux dates : jours calendaires vs ouvres"
-      sourceUrl="https://boncalcul.fr/outils/calcul-duree-entre-dates"
+      sourceUrl="https://www.boncalcul.fr/outils/calcul-duree-entre-dates"
       sourceLabel="BonCalcul.fr - Calcul duree entre dates"
     >
       {/* Comparison */}

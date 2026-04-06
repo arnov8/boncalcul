@@ -20,17 +20,17 @@ export const metadata: Metadata = {
     "pension par enfant",
   ],
   alternates: {
-    canonical: "https://boncalcul.fr/outils/calcul-pension-alimentaire",
+    canonical: "https://www.boncalcul.fr/outils/calcul-pension-alimentaire",
   },
   openGraph: {
     title: "Calcul pension alimentaire 2026 — Simulateur bareme Justice | BonCalcul.fr",
     description:
       "Estimez la pension alimentaire selon le bareme du ministere de la Justice. Garde classique, alternee ou reduite.",
-    url: "https://boncalcul.fr/outils/calcul-pension-alimentaire",
+    url: "https://www.boncalcul.fr/outils/calcul-pension-alimentaire",
     type: "website",
     images: [
       {
-        url: `https://boncalcul.fr/api/og?slug=calcul-pension-alimentaire`,
+        url: `https://www.boncalcul.fr/api/og?slug=calcul-pension-alimentaire`,
         width: 1200,
         height: 630,
         alt: "Calcul Pension Alimentaire — BonCalcul.fr",
@@ -72,7 +72,7 @@ export default function PagePensionAlimentaire() {
     name: "Simulateur pension alimentaire 2026",
     description:
       "Outil gratuit pour calculer le montant indicatif de la pension alimentaire selon le bareme du ministere de la Justice.",
-    url: "https://boncalcul.fr/outils/calcul-pension-alimentaire",
+    url: "https://www.boncalcul.fr/outils/calcul-pension-alimentaire",
   });
 
   return (

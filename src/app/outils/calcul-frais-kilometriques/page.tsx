@@ -27,11 +27,11 @@ export const metadata: Metadata = {
     title: "Calcul frais kilometriques 2026 — Bareme fiscal gratuit | BonCalcul.fr",
     description:
       "Calculez vos frais kilometriques avec le bareme fiscal 2026. Voiture, moto, cyclomoteur, majoration vehicule electrique.",
-    url: "https://boncalcul.fr/outils/calcul-frais-kilometriques",
+    url: "https://www.boncalcul.fr/outils/calcul-frais-kilometriques",
     type: "website",
   },
   alternates: {
-    canonical: "https://boncalcul.fr/outils/calcul-frais-kilometriques",
+    canonical: "https://www.boncalcul.fr/outils/calcul-frais-kilometriques",
   },
 };
 
@@ -71,7 +71,7 @@ export default function PageCalculFraisKilometriques() {
           name: "Calcul frais kilometriques 2026 — Bareme fiscal gratuit",
           description:
             "Calculez vos frais kilometriques avec le bareme fiscal 2026. Voiture, moto, cyclomoteur, majoration vehicule electrique.",
-          url: "https://boncalcul.fr/outils/calcul-frais-kilometriques",
+          url: "https://www.boncalcul.fr/outils/calcul-frais-kilometriques",
         })}
       />
       <JsonLd data={faqJsonLd(faqQuestions)} />

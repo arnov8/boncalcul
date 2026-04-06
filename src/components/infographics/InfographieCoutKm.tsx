@@ -15,7 +15,7 @@ export default function InfographieCoutKm() {
   return (
     <Infographic
       title="Cout reel au kilometre d'une voiture"
-      sourceUrl="https://boncalcul.fr/outils/cout-km-voiture"
+      sourceUrl="https://www.boncalcul.fr/outils/cout-km-voiture"
       sourceLabel="BonCalcul.fr - Cout km voiture"
     >
       <div className="text-center mb-6">

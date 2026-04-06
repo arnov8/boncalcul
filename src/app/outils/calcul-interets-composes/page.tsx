@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     title: "Calcul Interets Composes — Simulateur d'Epargne | BonCalcul.fr",
     description:
       "Simulez la croissance de votre epargne grace aux interets composes. Versements mensuels, tableau d'evolution et comparaison avec les interets simples.",
-    url: "https://boncalcul.fr/outils/calcul-interets-composes",
+    url: "https://www.boncalcul.fr/outils/calcul-interets-composes",
     type: "website",
     locale: "fr_FR",
     siteName: "BonCalcul.fr",
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
       "Simulez la croissance de votre epargne grace aux interets composes avec notre calculateur gratuit.",
   },
   alternates: {
-    canonical: "https://boncalcul.fr/outils/calcul-interets-composes",
+    canonical: "https://www.boncalcul.fr/outils/calcul-interets-composes",
   },
 };
 
@@ -87,7 +87,7 @@ export default function CalculInteretsComposesPage() {
           name: "Calcul Interets Composes",
           description:
             "Calculez vos interets composes gratuitement avec versements mensuels, tableau d'evolution et comparaison interets simples vs composes.",
-          url: "https://boncalcul.fr/outils/calcul-interets-composes",
+          url: "https://www.boncalcul.fr/outils/calcul-interets-composes",
         })}
       />
       <JsonLd data={faqJsonLd(faqQuestions)} />

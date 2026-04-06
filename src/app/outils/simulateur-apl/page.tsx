@@ -27,11 +27,11 @@ export const metadata: Metadata = {
     title: "Simulateur APL 2026 — Estimez votre aide au logement | BonCalcul.fr",
     description:
       "Calculez votre APL gratuitement selon votre loyer, vos revenus et votre situation. Estimation instantanee et detaillee.",
-    url: "https://boncalcul.fr/outils/simulateur-apl",
+    url: "https://www.boncalcul.fr/outils/simulateur-apl",
     type: "website",
   },
   alternates: {
-    canonical: "https://boncalcul.fr/outils/simulateur-apl",
+    canonical: "https://www.boncalcul.fr/outils/simulateur-apl",
   },
 };
 
@@ -71,7 +71,7 @@ export default function PageSimulateurAPL() {
           name: "Simulateur APL 2026",
           description:
             "Calculez votre APL (Aide Personnalisee au Logement) gratuitement. Estimation du montant mensuel selon votre loyer, vos revenus et votre situation familiale.",
-          url: "https://boncalcul.fr/outils/simulateur-apl",
+          url: "https://www.boncalcul.fr/outils/simulateur-apl",
         })}
       />
       <JsonLd data={faqJsonLd(faqQuestions)} />

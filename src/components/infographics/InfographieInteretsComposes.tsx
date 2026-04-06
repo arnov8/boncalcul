@@ -12,7 +12,7 @@ export default function InfographieInteretsComposes() {
   return (
     <Infographic
       title="La magie des interets composes : 10 000 EUR a 5% par an"
-      sourceUrl="https://boncalcul.fr/outils/calcul-interets-composes"
+      sourceUrl="https://www.boncalcul.fr/outils/calcul-interets-composes"
       sourceLabel="BonCalcul.fr - Calcul interets composes"
     >
       {/* Growth bars */}

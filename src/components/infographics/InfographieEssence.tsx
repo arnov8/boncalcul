@@ -14,7 +14,7 @@ export default function InfographieEssence() {
   return (
     <Infographic
       title="Consommation de carburant : formule et comparaison"
-      sourceUrl="https://boncalcul.fr/outils/calcul-consommation-essence"
+      sourceUrl="https://www.boncalcul.fr/outils/calcul-consommation-essence"
       sourceLabel="BonCalcul.fr - Calcul consommation essence"
     >
       {/* Formule */}

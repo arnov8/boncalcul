@@ -13,7 +13,7 @@ export default function InfographiePension() {
   return (
     <Infographic
       title="Pension alimentaire : bareme du Ministere de la Justice"
-      sourceUrl="https://boncalcul.fr/outils/calcul-pension-alimentaire"
+      sourceUrl="https://www.boncalcul.fr/outils/calcul-pension-alimentaire"
       sourceLabel="BonCalcul.fr - Calcul pension alimentaire"
     >
       {/* Table */}

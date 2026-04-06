@@ -11,7 +11,7 @@ export default function InfographieIndemnites() {
   return (
     <Infographic
       title="Indemnite de licenciement : le bareme legal"
-      sourceUrl="https://boncalcul.fr/outils/calcul-indemnites-licenciement"
+      sourceUrl="https://www.boncalcul.fr/outils/calcul-indemnites-licenciement"
       sourceLabel="BonCalcul.fr - Calcul indemnites licenciement"
     >
       {/* Barème */}

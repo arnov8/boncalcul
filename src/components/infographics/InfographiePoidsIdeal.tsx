@@ -13,7 +13,7 @@ export default function InfographiePoidsIdeal() {
   return (
     <Infographic
       title="Poids ideal : comparaison des 4 formules"
-      sourceUrl="https://boncalcul.fr/outils/calcul-poids-ideal"
+      sourceUrl="https://www.boncalcul.fr/outils/calcul-poids-ideal"
       sourceLabel="BonCalcul.fr - Calcul poids ideal"
     >
       <div className="text-center mb-6">

@@ -8,7 +8,7 @@ import { JsonLd } from "@/lib/jsonld";
 const GA_ID = "G-1SRYNGFWJE";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://boncalcul.fr"),
+  metadataBase: new URL("https://www.boncalcul.fr"),
   title: {
     default: "BonCalcul.fr — Outils de calcul gratuits en ligne",
     template: "%s | BonCalcul.fr",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "fr_FR",
-    url: "https://boncalcul.fr",
+    url: "https://www.boncalcul.fr",
     siteName: "BonCalcul.fr",
     title: "BonCalcul.fr — Outils de calcul gratuits en ligne",
     description:
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
       "Simulateurs et calculateurs gratuits pour le quotidien. Résultats instantanés.",
   },
   robots: { index: true, follow: true },
-  alternates: { canonical: "https://boncalcul.fr" },
+  alternates: { canonical: "https://www.boncalcul.fr" },
 };
 
 export default function RootLayout({
@@ -61,12 +61,12 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "WebSite",
     name: "BonCalcul.fr",
-    url: "https://boncalcul.fr",
+    url: "https://www.boncalcul.fr",
     description:
       "Outils de calcul et simulateurs gratuits en ligne pour le quotidien.",
     potentialAction: {
       "@type": "SearchAction",
-      target: "https://boncalcul.fr/?q={search_term_string}",
+      target: "https://www.boncalcul.fr/?q={search_term_string}",
       "query-input": "required name=search_term_string",
     },
   };

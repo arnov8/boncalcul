@@ -21,17 +21,17 @@ export const metadata: Metadata = {
     "SMIC cadre non-cadre",
   ],
   alternates: {
-    canonical: "https://boncalcul.fr/outils/simulateur-smic",
+    canonical: "https://www.boncalcul.fr/outils/simulateur-smic",
   },
   openGraph: {
     title: "Simulateur SMIC 2026 — Calcul brut et net | BonCalcul.fr",
     description:
       "Calculez le SMIC 2026 brut et net selon vos heures. Temps partiel, cadre ou non-cadre, horaire, mensuel et annuel.",
-    url: "https://boncalcul.fr/outils/simulateur-smic",
+    url: "https://www.boncalcul.fr/outils/simulateur-smic",
     type: "website",
     images: [
       {
-        url: `https://boncalcul.fr/api/og?slug=simulateur-smic`,
+        url: `https://www.boncalcul.fr/api/og?slug=simulateur-smic`,
         width: 1200,
         height: 630,
         alt: "Simulateur Smic — BonCalcul.fr",
@@ -73,7 +73,7 @@ export default function PageSimulateurSmic() {
     name: "Simulateur SMIC 2026",
     description:
       "Outil gratuit pour calculer le SMIC 2026 brut et net. Temps partiel ou temps plein, cadre ou non-cadre.",
-    url: "https://boncalcul.fr/outils/simulateur-smic",
+    url: "https://www.boncalcul.fr/outils/simulateur-smic",
   });
 
   return (

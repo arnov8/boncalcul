@@ -27,11 +27,11 @@ export const metadata: Metadata = {
     title: "Cout d'un salarie pour l'employeur — Simulateur charges patronales | BonCalcul.fr",
     description:
       "Calculez le cout total d'un salarie pour l'employeur : charges patronales, super brut, detail des cotisations. Cadre et non-cadre.",
-    url: "https://boncalcul.fr/outils/cout-salarie-employeur",
+    url: "https://www.boncalcul.fr/outils/cout-salarie-employeur",
     type: "website",
     images: [
       {
-        url: `https://boncalcul.fr/api/og?slug=cout-salarie-employeur`,
+        url: `https://www.boncalcul.fr/api/og?slug=cout-salarie-employeur`,
         width: 1200,
         height: 630,
         alt: "Cout Salarie Employeur — BonCalcul.fr",
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: "https://boncalcul.fr/outils/cout-salarie-employeur",
+    canonical: "https://www.boncalcul.fr/outils/cout-salarie-employeur",
   },
 };
 
@@ -79,7 +79,7 @@ export default function PageCoutSalarieEmployeur() {
           name: "Cout d'un salarie pour l'employeur — Simulateur charges patronales 2026",
           description:
             "Calculez le cout total d'un salarie pour l'employeur en France : charges patronales, super brut, detail des cotisations.",
-          url: "https://boncalcul.fr/outils/cout-salarie-employeur",
+          url: "https://www.boncalcul.fr/outils/cout-salarie-employeur",
         })}
       />
       <JsonLd data={faqJsonLd(faqQuestions)} />

@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     authors: ["BonCalcul.fr"],
   },
   alternates: {
-    canonical: "https://boncalcul.fr/blog/comment-calculer-capacite-emprunt-2026",
+    canonical: "https://www.boncalcul.fr/blog/comment-calculer-capacite-emprunt-2026",
   },
 };
 
@@ -37,7 +37,7 @@ export default function ArticleCapaciteEmprunt() {
             "Comment calculer sa capacite d'emprunt en 2026 : le guide complet",
           description:
             "Decouvrez comment calculer votre capacite d'emprunt en 2026 : regle des 35%, methode de calcul detaillee, exemple concret et astuces pour emprunter plus.",
-          url: "https://boncalcul.fr/blog/comment-calculer-capacite-emprunt-2026",
+          url: "https://www.boncalcul.fr/blog/comment-calculer-capacite-emprunt-2026",
           datePublished: "2026-03-27",
         })}
       />

@@ -33,7 +33,7 @@ export default function InfographiePourcentage() {
   return (
     <Infographic
       title="Les 3 types de calcul de pourcentage"
-      sourceUrl="https://boncalcul.fr/outils/calcul-pourcentage"
+      sourceUrl="https://www.boncalcul.fr/outils/calcul-pourcentage"
       sourceLabel="BonCalcul.fr - Calcul pourcentage"
     >
       <div className="grid md:grid-cols-3 gap-4 mb-6">

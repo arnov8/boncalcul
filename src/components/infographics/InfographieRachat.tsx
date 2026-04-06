@@ -6,7 +6,7 @@ export default function InfographieRachat() {
   return (
     <Infographic
       title="Rachat de credit : avant vs apres"
-      sourceUrl="https://boncalcul.fr/outils/simulateur-rachat-credit"
+      sourceUrl="https://www.boncalcul.fr/outils/simulateur-rachat-credit"
       sourceLabel="BonCalcul.fr - Simulateur rachat credit"
     >
       {/* Before / After comparison */}

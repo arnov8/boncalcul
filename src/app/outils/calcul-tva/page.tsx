@@ -27,11 +27,11 @@ export const metadata: Metadata = {
     title: "Calcul TVA — Convertisseur HT ↔ TTC instantane | BonCalcul.fr",
     description:
       "Convertissez un montant HT en TTC ou TTC en HT avec tous les taux de TVA francais. Resultat immediat.",
-    url: "https://boncalcul.fr/outils/calcul-tva",
+    url: "https://www.boncalcul.fr/outils/calcul-tva",
     type: "website",
     images: [
       {
-        url: `https://boncalcul.fr/api/og?slug=calcul-tva`,
+        url: `https://www.boncalcul.fr/api/og?slug=calcul-tva`,
         width: 1200,
         height: 630,
         alt: "Calcul Tva — BonCalcul.fr",
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: "https://boncalcul.fr/outils/calcul-tva",
+    canonical: "https://www.boncalcul.fr/outils/calcul-tva",
   },
 };
 
@@ -79,7 +79,7 @@ export default function PageCalculTVA() {
           name: "Calcul TVA — Convertisseur HT ↔ TTC",
           description:
             "Calculez la TVA instantanement : convertissez un montant HT en TTC ou TTC en HT avec les taux francais (20 %, 10 %, 5,5 %, 2,1 %).",
-          url: "https://boncalcul.fr/outils/calcul-tva",
+          url: "https://www.boncalcul.fr/outils/calcul-tva",
         })}
       />
       <JsonLd data={faqJsonLd(faqQuestions)} />

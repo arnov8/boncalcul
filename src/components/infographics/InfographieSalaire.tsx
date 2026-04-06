@@ -18,7 +18,7 @@ export default function InfographieSalaire() {
   return (
     <Infographic
       title="De votre salaire brut a votre salaire net : ou va l'argent ?"
-      sourceUrl="https://boncalcul.fr/outils/calcul-salaire-brut-net"
+      sourceUrl="https://www.boncalcul.fr/outils/calcul-salaire-brut-net"
       sourceLabel="BonCalcul.fr - Calcul salaire brut/net"
     >
       {/* Example salary header */}

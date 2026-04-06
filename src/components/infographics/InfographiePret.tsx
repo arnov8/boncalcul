@@ -40,7 +40,7 @@ export default function InfographiePret() {
   return (
     <Infographic
       title="Cout total d'un pret immobilier : capital, interets et assurance"
-      sourceUrl="https://boncalcul.fr/outils/simulateur-pret-immobilier"
+      sourceUrl="https://www.boncalcul.fr/outils/simulateur-pret-immobilier"
       sourceLabel="BonCalcul.fr - Simulateur pret immobilier"
     >
       {/* Loan parameters */}

@@ -27,11 +27,11 @@ export const metadata: Metadata = {
     title: "Calcul consommation essence — Calculateur gratuit | BonCalcul.fr",
     description:
       "Calculez votre consommation en L/100km et estimez le cout d'un trajet. Comparaison essence, diesel et electrique.",
-    url: "https://boncalcul.fr/outils/calcul-consommation-essence",
+    url: "https://www.boncalcul.fr/outils/calcul-consommation-essence",
     type: "website",
     images: [
       {
-        url: `https://boncalcul.fr/api/og?slug=calcul-consommation-essence`,
+        url: `https://www.boncalcul.fr/api/og?slug=calcul-consommation-essence`,
         width: 1200,
         height: 630,
         alt: "Calcul Consommation Essence — BonCalcul.fr",
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: "https://boncalcul.fr/outils/calcul-consommation-essence",
+    canonical: "https://www.boncalcul.fr/outils/calcul-consommation-essence",
   },
 };
 
@@ -79,7 +79,7 @@ export default function PageCalculConsommationEssence() {
           name: "Calcul consommation essence — Calculateur gratuit",
           description:
             "Calculez votre consommation de carburant en L/100km et estimez le cout d'un trajet en essence, diesel ou electrique.",
-          url: "https://boncalcul.fr/outils/calcul-consommation-essence",
+          url: "https://www.boncalcul.fr/outils/calcul-consommation-essence",
         })}
       />
       <JsonLd data={faqJsonLd(faqQuestions)} />

@@ -15,7 +15,7 @@ export default function InfographiePlusValue() {
   return (
     <Infographic
       title="Plus-value immobiliere : abattements par duree de detention"
-      sourceUrl="https://boncalcul.fr/outils/calcul-plus-value-immobiliere"
+      sourceUrl="https://www.boncalcul.fr/outils/calcul-plus-value-immobiliere"
       sourceLabel="BonCalcul.fr - Calcul plus-value immobiliere"
     >
       {/* Tax rates */}

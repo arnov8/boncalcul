@@ -13,7 +13,7 @@ export default function InfographieTVA() {
   return (
     <Infographic
       title="Les 4 taux de TVA en France"
-      sourceUrl="https://boncalcul.fr/outils/calcul-tva"
+      sourceUrl="https://www.boncalcul.fr/outils/calcul-tva"
       sourceLabel="BonCalcul.fr - Calcul TVA"
     >
       <div className="space-y-4 mb-6">

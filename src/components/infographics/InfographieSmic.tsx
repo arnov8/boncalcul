@@ -14,7 +14,7 @@ export default function InfographieSmic() {
   return (
     <Infographic
       title="SMIC 2026 : montants et evolution"
-      sourceUrl="https://boncalcul.fr/outils/simulateur-smic"
+      sourceUrl="https://www.boncalcul.fr/outils/simulateur-smic"
       sourceLabel="BonCalcul.fr - Simulateur SMIC"
     >
       {/* Cards montants actuels */}

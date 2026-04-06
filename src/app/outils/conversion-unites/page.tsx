@@ -27,11 +27,11 @@ export const metadata: Metadata = {
     title: "Conversion d'unites — Convertisseur en ligne gratuit | BonCalcul.fr",
     description:
       "Convertissez instantanement toutes les unites : longueur, masse, volume, temperature, surface, vitesse. Gratuit et sans inscription.",
-    url: "https://boncalcul.fr/outils/conversion-unites",
+    url: "https://www.boncalcul.fr/outils/conversion-unites",
     type: "website",
     images: [
       {
-        url: `https://boncalcul.fr/api/og?slug=conversion-unites`,
+        url: `https://www.boncalcul.fr/api/og?slug=conversion-unites`,
         width: 1200,
         height: 630,
         alt: "Conversion Unites — BonCalcul.fr",
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: "https://boncalcul.fr/outils/conversion-unites",
+    canonical: "https://www.boncalcul.fr/outils/conversion-unites",
   },
 };
 
@@ -79,7 +79,7 @@ export default function PageConversionUnites() {
           name: "Conversion d'unites — Convertisseur en ligne gratuit",
           description:
             "Convertissez instantanement toutes les unites : longueur, masse, volume, temperature, surface, vitesse. Resultat immediat et gratuit.",
-          url: "https://boncalcul.fr/outils/conversion-unites",
+          url: "https://www.boncalcul.fr/outils/conversion-unites",
         })}
       />
       <JsonLd data={faqJsonLd(faqQuestions)} />

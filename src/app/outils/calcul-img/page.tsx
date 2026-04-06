@@ -19,17 +19,17 @@ export const metadata: Metadata = {
     "IMG calcul en ligne",
   ],
   alternates: {
-    canonical: "https://boncalcul.fr/outils/calcul-img",
+    canonical: "https://www.boncalcul.fr/outils/calcul-img",
   },
   openGraph: {
     title: "Calcul IMG — Indice de masse grasse en ligne | BonCalcul.fr",
     description:
       "Estimez votre pourcentage de graisse corporelle instantanement avec la formule de Deurenberg. Gratuit, sans inscription.",
-    url: "https://boncalcul.fr/outils/calcul-img",
+    url: "https://www.boncalcul.fr/outils/calcul-img",
     type: "website",
     images: [
       {
-        url: `https://boncalcul.fr/api/og?slug=calcul-img`,
+        url: `https://www.boncalcul.fr/api/og?slug=calcul-img`,
         width: 1200,
         height: 630,
         alt: "Calcul Img — BonCalcul.fr",
@@ -75,7 +75,7 @@ export default function PageCalculIMG() {
           name: "Calcul IMG — Indice de masse grasse en ligne",
           description:
             "Calculez votre Indice de Masse Grasse (IMG) gratuitement avec la formule de Deurenberg. Estimez votre pourcentage de graisse corporelle.",
-          url: "https://boncalcul.fr/outils/calcul-img",
+          url: "https://www.boncalcul.fr/outils/calcul-img",
         })}
       />
       <JsonLd data={faqJsonLd(faqQuestions)} />

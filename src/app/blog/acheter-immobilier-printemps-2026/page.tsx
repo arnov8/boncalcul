@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical:
-      "https://boncalcul.fr/blog/acheter-immobilier-printemps-2026",
+      "https://www.boncalcul.fr/blog/acheter-immobilier-printemps-2026",
   },
 };
 
@@ -41,7 +41,7 @@ export default function ArticleAcheterImmobilier2026() {
             "Acheter en 2026 : taux immobiliers, frais de notaire et capacite d'emprunt, le guide complet",
           description:
             "Guide complet pour acheter un bien immobilier au printemps 2026. Taux actuels, frais de notaire, capacite d'emprunt, aides disponibles et simulateurs gratuits.",
-          url: "https://boncalcul.fr/blog/acheter-immobilier-printemps-2026",
+          url: "https://www.boncalcul.fr/blog/acheter-immobilier-printemps-2026",
           datePublished: "2026-03-31",
         })}
       />

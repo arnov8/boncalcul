@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     authors: ["BonCalcul.fr"],
   },
   alternates: {
-    canonical: "https://boncalcul.fr/blog/declaration-impots-2026-guide",
+    canonical: "https://www.boncalcul.fr/blog/declaration-impots-2026-guide",
   },
 };
 
@@ -40,7 +40,7 @@ export default function ArticleDeclarationImpots2026() {
             "Declaration d'impots 2026 : guide complet pour bien declarer vos revenus 2025",
           description:
             "Guide complet declaration impots 2026 : calendrier, dates limites, nouveautes du bareme, deductions, credits d'impot et erreurs a eviter. Estimez votre impot avec notre simulateur gratuit.",
-          url: "https://boncalcul.fr/blog/declaration-impots-2026-guide",
+          url: "https://www.boncalcul.fr/blog/declaration-impots-2026-guide",
           datePublished: "2026-03-31",
         })}
       />

@@ -14,7 +14,7 @@ export default function InfographieCreditConso() {
   return (
     <Infographic
       title="Credit consommation : duree courte vs longue"
-      sourceUrl="https://boncalcul.fr/outils/simulateur-credit-consommation"
+      sourceUrl="https://www.boncalcul.fr/outils/simulateur-credit-consommation"
       sourceLabel="BonCalcul.fr - Simulateur credit consommation"
     >
       <div className="text-center mb-6">

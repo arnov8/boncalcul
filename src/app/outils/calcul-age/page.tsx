@@ -19,17 +19,17 @@ export const metadata: Metadata = {
     "signe astrologique",
   ],
   alternates: {
-    canonical: "https://boncalcul.fr/outils/calcul-age",
+    canonical: "https://www.boncalcul.fr/outils/calcul-age",
   },
   openGraph: {
     title: "Calculer son age exact — Calculateur en ligne gratuit | BonCalcul.fr",
     description:
       "Calculez votre age exact en annees, mois et jours. Jour de naissance, signe astrologique, prochain anniversaire. Gratuit, sans inscription.",
-    url: "https://boncalcul.fr/outils/calcul-age",
+    url: "https://www.boncalcul.fr/outils/calcul-age",
     type: "website",
     images: [
       {
-        url: `https://boncalcul.fr/api/og?slug=calcul-age`,
+        url: `https://www.boncalcul.fr/api/og?slug=calcul-age`,
         width: 1200,
         height: 630,
         alt: "Calcul Age — BonCalcul.fr",
@@ -74,7 +74,7 @@ export default function PageCalculAge() {
           name: "Calculer son age exact — Calculateur en ligne gratuit",
           description:
             "Calculez votre age exact en annees, mois et jours. Decouvrez votre jour de naissance, signe astrologique et prochain anniversaire.",
-          url: "https://boncalcul.fr/outils/calcul-age",
+          url: "https://www.boncalcul.fr/outils/calcul-age",
         })}
       />
       <JsonLd data={faqJsonLd(faqQuestions)} />

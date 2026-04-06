@@ -12,7 +12,7 @@ export default function InfographieHeures() {
   return (
     <Infographic
       title="Heures supplementaires : majorations legales"
-      sourceUrl="https://boncalcul.fr/outils/calcul-heures-supplementaires"
+      sourceUrl="https://www.boncalcul.fr/outils/calcul-heures-supplementaires"
       sourceLabel="BonCalcul.fr - Calcul heures supplementaires"
     >
       {/* Visualisation en barres */}

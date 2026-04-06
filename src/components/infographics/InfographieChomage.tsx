@@ -6,7 +6,7 @@ export default function InfographieChomage() {
   return (
     <Infographic
       title="Allocation chomage (ARE) : comment est-elle calculee ?"
-      sourceUrl="https://boncalcul.fr/outils/simulateur-chomage-are"
+      sourceUrl="https://www.boncalcul.fr/outils/simulateur-chomage-are"
       sourceLabel="BonCalcul.fr - Simulateur chomage ARE"
     >
       {/* Formule */}

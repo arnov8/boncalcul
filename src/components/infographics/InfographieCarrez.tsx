@@ -6,7 +6,7 @@ export default function InfographieCarrez() {
   return (
     <Infographic
       title="Loi Carrez : quelles surfaces comptent ?"
-      sourceUrl="https://boncalcul.fr/outils/calcul-surface-carrez"
+      sourceUrl="https://www.boncalcul.fr/outils/calcul-surface-carrez"
       sourceLabel="BonCalcul.fr - Calcul surface Carrez"
     >
       {/* Height rule */}

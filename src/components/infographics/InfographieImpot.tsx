@@ -61,7 +61,7 @@ export default function InfographieImpot() {
   return (
     <Infographic
       title="Bareme progressif de l'impot sur le revenu 2025"
-      sourceUrl="https://boncalcul.fr/outils/simulateur-impot-revenu"
+      sourceUrl="https://www.boncalcul.fr/outils/simulateur-impot-revenu"
       sourceLabel="BonCalcul.fr - Simulateur impot sur le revenu"
     >
       {/* Intro */}

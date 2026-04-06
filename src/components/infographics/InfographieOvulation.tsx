@@ -8,7 +8,7 @@ export default function InfographieOvulation() {
   return (
     <Infographic
       title="Cycle menstruel de 28 jours et fenetre de fertilite"
-      sourceUrl="https://boncalcul.fr/outils/calcul-ovulation"
+      sourceUrl="https://www.boncalcul.fr/outils/calcul-ovulation"
       sourceLabel="BonCalcul.fr - Calcul ovulation"
     >
       {/* Cycle visuel */}

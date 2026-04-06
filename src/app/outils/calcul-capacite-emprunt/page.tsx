@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     title: "Calcul Capacité d'Emprunt — BonCalcul.fr",
     description:
       "Estimez le montant maximum que vous pouvez emprunter selon vos revenus et la règle des 35 % du HCSF. Gratuit et instantané.",
-    url: "https://boncalcul.fr/outils/calcul-capacite-emprunt",
+    url: "https://www.boncalcul.fr/outils/calcul-capacite-emprunt",
     type: "website",
     locale: "fr_FR",
     siteName: "BonCalcul.fr",
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
       "Estimez le montant maximum que vous pouvez emprunter selon vos revenus et charges.",
   },
   alternates: {
-    canonical: "https://boncalcul.fr/outils/calcul-capacite-emprunt",
+    canonical: "https://www.boncalcul.fr/outils/calcul-capacite-emprunt",
   },
 };
 
@@ -88,7 +88,7 @@ export default function PageCalculCapaciteEmprunt() {
           name: "Calcul Capacite d'Emprunt",
           description:
             "Calculez votre capacite d'emprunt immobilier gratuitement selon vos revenus, charges et la regle des 35 % du HCSF.",
-          url: "https://boncalcul.fr/outils/calcul-capacite-emprunt",
+          url: "https://www.boncalcul.fr/outils/calcul-capacite-emprunt",
         })}
       />
       <JsonLd data={faqJsonLd(faqQuestions)} />

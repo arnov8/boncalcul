@@ -23,17 +23,17 @@ export const metadata: Metadata = {
     "r\u00e9duire mensualit\u00e9",
   ],
   alternates: {
-    canonical: "https://boncalcul.fr/outils/simulateur-rachat-credit",
+    canonical: "https://www.boncalcul.fr/outils/simulateur-rachat-credit",
   },
   openGraph: {
     title: "Simulateur rachat de cr\u00e9dit 2026 — Calculez vos \u00e9conomies | BonCalcul.fr",
     description:
       "Simulez votre rachat de cr\u00e9dit et d\u00e9couvrez vos \u00e9conomies potentielles. Comparaison d\u00e9taill\u00e9e.",
-    url: "https://boncalcul.fr/outils/simulateur-rachat-credit",
+    url: "https://www.boncalcul.fr/outils/simulateur-rachat-credit",
     type: "website",
     images: [
       {
-        url: `https://boncalcul.fr/api/og?slug=simulateur-rachat-credit`,
+        url: `https://www.boncalcul.fr/api/og?slug=simulateur-rachat-credit`,
         width: 1200,
         height: 630,
         alt: "Simulateur Rachat Credit — BonCalcul.fr",
@@ -78,7 +78,7 @@ export default function PageRachatCredit() {
           name: "Simulateur rachat de cr\u00e9dit 2026",
           description:
             "Simulez votre rachat de cr\u00e9dit et d\u00e9couvrez l\u2019\u00e9conomie r\u00e9alisable en comparant ancien et nouveau cr\u00e9dit.",
-          url: "https://boncalcul.fr/outils/simulateur-rachat-credit",
+          url: "https://www.boncalcul.fr/outils/simulateur-rachat-credit",
         })}
       />
       <JsonLd data={faqJsonLd(faqQuestions)} />

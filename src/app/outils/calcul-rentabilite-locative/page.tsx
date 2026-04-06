@@ -23,17 +23,17 @@ export const metadata: Metadata = {
     "simulateur rentabilit\u00e9",
   ],
   alternates: {
-    canonical: "https://boncalcul.fr/outils/calcul-rentabilite-locative",
+    canonical: "https://www.boncalcul.fr/outils/calcul-rentabilite-locative",
   },
   openGraph: {
     title: "Calcul rentabilit\u00e9 locative 2026 \u2014 Brute, nette et cash-flow | BonCalcul.fr",
     description:
       "Calculez gratuitement la rentabilit\u00e9 locative brute et nette de votre investissement immobilier. R\u00e9sultat instantan\u00e9.",
-    url: "https://boncalcul.fr/outils/calcul-rentabilite-locative",
+    url: "https://www.boncalcul.fr/outils/calcul-rentabilite-locative",
     type: "website",
     images: [
       {
-        url: `https://boncalcul.fr/api/og?slug=calcul-rentabilite-locative`,
+        url: `https://www.boncalcul.fr/api/og?slug=calcul-rentabilite-locative`,
         width: 1200,
         height: 630,
         alt: "Calcul Rentabilite Locative — BonCalcul.fr",
@@ -78,7 +78,7 @@ export default function PageRentabiliteLocative() {
           name: "Calcul rentabilit\u00e9 locative 2026",
           description:
             "Calculez gratuitement la rentabilit\u00e9 locative brute et nette de votre investissement immobilier.",
-          url: "https://boncalcul.fr/outils/calcul-rentabilite-locative",
+          url: "https://www.boncalcul.fr/outils/calcul-rentabilite-locative",
         })}
       />
       <JsonLd data={faqJsonLd(faqQuestions)} />

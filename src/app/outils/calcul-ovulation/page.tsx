@@ -19,17 +19,17 @@ export const metadata: Metadata = {
     "conception",
   ],
   alternates: {
-    canonical: "https://boncalcul.fr/outils/calcul-ovulation",
+    canonical: "https://www.boncalcul.fr/outils/calcul-ovulation",
   },
   openGraph: {
     title: "Calcul ovulation — Calculez votre periode fertile | BonCalcul.fr",
     description:
       "Calculez votre date d'ovulation et identifiez votre fenetre de fertilite. Gratuit, sans inscription.",
-    url: "https://boncalcul.fr/outils/calcul-ovulation",
+    url: "https://www.boncalcul.fr/outils/calcul-ovulation",
     type: "website",
     images: [
       {
-        url: `https://boncalcul.fr/api/og?slug=calcul-ovulation`,
+        url: `https://www.boncalcul.fr/api/og?slug=calcul-ovulation`,
         width: 1200,
         height: 630,
         alt: "Calcul Ovulation — BonCalcul.fr",
@@ -74,7 +74,7 @@ export default function PageCalculOvulation() {
           name: "Calcul ovulation — Calculez votre periode fertile",
           description:
             "Calculez votre date d'ovulation et votre periode fertile gratuitement. Identifiez les jours les plus propices a la conception.",
-          url: "https://boncalcul.fr/outils/calcul-ovulation",
+          url: "https://www.boncalcul.fr/outils/calcul-ovulation",
         })}
       />
       <JsonLd data={faqJsonLd(faqQuestions)} />

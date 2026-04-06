@@ -23,17 +23,17 @@ export const metadata: Metadata = {
     "simulateur plus-value",
   ],
   alternates: {
-    canonical: "https://boncalcul.fr/outils/calcul-plus-value-immobiliere",
+    canonical: "https://www.boncalcul.fr/outils/calcul-plus-value-immobiliere",
   },
   openGraph: {
     title: "Calcul plus-value immobili\u00e8re 2026 \u2014 Imp\u00f4t et abattements | BonCalcul.fr",
     description:
       "Calculez gratuitement la plus-value immobili\u00e8re et l\u2019imp\u00f4t \u00e0 payer lors de la vente de votre bien. R\u00e9sultat instantan\u00e9.",
-    url: "https://boncalcul.fr/outils/calcul-plus-value-immobiliere",
+    url: "https://www.boncalcul.fr/outils/calcul-plus-value-immobiliere",
     type: "website",
     images: [
       {
-        url: `https://boncalcul.fr/api/og?slug=calcul-plus-value-immobiliere`,
+        url: `https://www.boncalcul.fr/api/og?slug=calcul-plus-value-immobiliere`,
         width: 1200,
         height: 630,
         alt: "Calcul Plus Value Immobiliere — BonCalcul.fr",
@@ -78,7 +78,7 @@ export default function PagePlusValueImmobiliere() {
           name: "Calcul plus-value immobili\u00e8re 2026",
           description:
             "Calculez gratuitement la plus-value immobili\u00e8re et l\u2019imp\u00f4t \u00e0 payer lors de la vente de votre bien.",
-          url: "https://boncalcul.fr/outils/calcul-plus-value-immobiliere",
+          url: "https://www.boncalcul.fr/outils/calcul-plus-value-immobiliere",
         })}
       />
       <JsonLd data={faqJsonLd(faqQuestions)} />

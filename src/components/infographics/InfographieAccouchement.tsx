@@ -12,7 +12,7 @@ export default function InfographieAccouchement() {
   return (
     <Infographic
       title="Timeline de la grossesse : les 3 trimestres"
-      sourceUrl="https://boncalcul.fr/outils/calcul-date-accouchement"
+      sourceUrl="https://www.boncalcul.fr/outils/calcul-date-accouchement"
       sourceLabel="BonCalcul.fr - Calcul date d'accouchement"
     >
       {/* Formula */}

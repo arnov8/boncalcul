@@ -20,7 +20,7 @@ export default function ShareResult({
   const [copiedText, setCopiedText] = useState(false);
   const [copiedEmbed, setCopiedEmbed] = useState(false);
 
-  const toolUrl = `https://boncalcul.fr/outils/${toolSlug}`;
+  const toolUrl = `https://www.boncalcul.fr/outils/${toolSlug}`;
 
   const shareText = [
     `${toolName} : ${result}`,

@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     authors: ["BonCalcul.fr"],
   },
   alternates: {
-    canonical: "https://boncalcul.fr/blog/interets-composes-guide-epargne",
+    canonical: "https://www.boncalcul.fr/blog/interets-composes-guide-epargne",
   },
 };
 
@@ -37,7 +37,7 @@ export default function ArticleInteretsComposes() {
             "Interets composes : comment faire fructifier votre epargne en 2026",
           description:
             "Decouvrez comment les interets composes peuvent transformer votre epargne. Guide complet avec formules, exemples concrets sur les placements francais et simulateur gratuit.",
-          url: "https://boncalcul.fr/blog/interets-composes-guide-epargne",
+          url: "https://www.boncalcul.fr/blog/interets-composes-guide-epargne",
           datePublished: "2026-03-27",
         })}
       />

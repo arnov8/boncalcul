@@ -10,8 +10,8 @@ export default function robots(): MetadataRoute.Robots {
       },
     ],
     sitemap: [
-      "https://boncalcul.fr/sitemap.xml",
-      "https://boncalcul.fr/sitemap-images",
+      "https://www.boncalcul.fr/sitemap.xml",
+      "https://www.boncalcul.fr/sitemap-images",
     ],
   };
 }

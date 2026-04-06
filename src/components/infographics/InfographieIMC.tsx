@@ -61,7 +61,7 @@ export default function InfographieIMC() {
   return (
     <Infographic
       title="Echelle de l'Indice de Masse Corporelle (IMC) selon l'OMS"
-      sourceUrl="https://boncalcul.fr/outils/calcul-imc"
+      sourceUrl="https://www.boncalcul.fr/outils/calcul-imc"
       sourceLabel="BonCalcul.fr - Calcul IMC"
     >
       {/* Formula */}

@@ -20,13 +20,13 @@ export const metadata: Metadata = {
     "simulateur salaire 2026",
   ],
   alternates: {
-    canonical: "https://boncalcul.fr/outils/calcul-salaire-brut-net",
+    canonical: "https://www.boncalcul.fr/outils/calcul-salaire-brut-net",
   },
   openGraph: {
     title: "Calcul salaire brut net 2026 — Convertisseur instantane | BonCalcul.fr",
     description:
       "Convertissez votre salaire brut en net et inversement. Cadre ou non-cadre, taux 2026 a jour.",
-    url: "https://boncalcul.fr/outils/calcul-salaire-brut-net",
+    url: "https://www.boncalcul.fr/outils/calcul-salaire-brut-net",
     type: "website",
   },
 };
@@ -66,7 +66,7 @@ export default function PageSalaireBrutNet() {
     name: "Convertisseur salaire brut net 2026",
     description:
       "Outil gratuit pour convertir un salaire brut en net et inversement. Cadre ou non-cadre, mensuel ou annuel.",
-    url: "https://boncalcul.fr/outils/calcul-salaire-brut-net",
+    url: "https://www.boncalcul.fr/outils/calcul-salaire-brut-net",
   });
 
   return (

@@ -27,11 +27,11 @@ export const metadata: Metadata = {
     title: "Calcul Pourcentage — Calculer un pourcentage en ligne | BonCalcul.fr",
     description:
       "Calculez un pourcentage en ligne : X% d'un nombre, proportion, variation. Resultat immediat et gratuit.",
-    url: "https://boncalcul.fr/outils/calcul-pourcentage",
+    url: "https://www.boncalcul.fr/outils/calcul-pourcentage",
     type: "website",
     images: [
       {
-        url: `https://boncalcul.fr/api/og?slug=calcul-pourcentage`,
+        url: `https://www.boncalcul.fr/api/og?slug=calcul-pourcentage`,
         width: 1200,
         height: 630,
         alt: "Calcul Pourcentage — BonCalcul.fr",
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: "https://boncalcul.fr/outils/calcul-pourcentage",
+    canonical: "https://www.boncalcul.fr/outils/calcul-pourcentage",
   },
 };
 
@@ -79,7 +79,7 @@ export default function PageCalculPourcentage() {
           name: "Calcul Pourcentage — Calculer un pourcentage en ligne",
           description:
             "Calculez un pourcentage instantanement : X% d'un nombre, quel pourcentage represente X de Y, variation en pourcentage entre deux valeurs.",
-          url: "https://boncalcul.fr/outils/calcul-pourcentage",
+          url: "https://www.boncalcul.fr/outils/calcul-pourcentage",
         })}
       />
       <JsonLd data={faqJsonLd(faqQuestions)} />

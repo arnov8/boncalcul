@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "Blog — Guides et conseils pratiques",
   description:
     "Articles et guides pratiques sur la finance, l'immobilier et le quotidien. Conseils pour mieux calculer et optimiser vos projets.",
-  alternates: { canonical: "https://boncalcul.fr/blog" },
+  alternates: { canonical: "https://www.boncalcul.fr/blog" },
 };
 
 export default function BlogPage() {

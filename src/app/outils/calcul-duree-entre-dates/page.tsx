@@ -27,11 +27,11 @@ export const metadata: Metadata = {
     title: "Calcul de jours entre deux dates — Calculateur gratuit | BonCalcul.fr",
     description:
       "Calculez le nombre de jours entre deux dates : jours calendaires, semaines, mois, annees, jours ouvres. Resultat immediat et gratuit.",
-    url: "https://boncalcul.fr/outils/calcul-duree-entre-dates",
+    url: "https://www.boncalcul.fr/outils/calcul-duree-entre-dates",
     type: "website",
     images: [
       {
-        url: `https://boncalcul.fr/api/og?slug=calcul-duree-entre-dates`,
+        url: `https://www.boncalcul.fr/api/og?slug=calcul-duree-entre-dates`,
         width: 1200,
         height: 630,
         alt: "Calcul Duree Entre Dates — BonCalcul.fr",
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: "https://boncalcul.fr/outils/calcul-duree-entre-dates",
+    canonical: "https://www.boncalcul.fr/outils/calcul-duree-entre-dates",
   },
 };
 
@@ -79,7 +79,7 @@ export default function PageCalculDureeEntreDates() {
           name: "Calcul de jours entre deux dates — Calculateur gratuit",
           description:
             "Calculez le nombre de jours entre deux dates instantanement : jours calendaires, semaines, mois, annees, jours ouvres et week-ends.",
-          url: "https://boncalcul.fr/outils/calcul-duree-entre-dates",
+          url: "https://www.boncalcul.fr/outils/calcul-duree-entre-dates",
         })}
       />
       <JsonLd data={faqJsonLd(faqQuestions)} />

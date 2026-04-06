@@ -23,17 +23,17 @@ export const metadata: Metadata = {
     "simulation pr\u00eat consommation",
   ],
   alternates: {
-    canonical: "https://boncalcul.fr/outils/simulateur-credit-consommation",
+    canonical: "https://www.boncalcul.fr/outils/simulateur-credit-consommation",
   },
   openGraph: {
     title: "Simulateur cr\u00e9dit consommation 2026 — Calcul mensualit\u00e9 | BonCalcul.fr",
     description:
       "Simulez gratuitement votre cr\u00e9dit \u00e0 la consommation. Mensualit\u00e9, co\u00fbt total et comparaison par dur\u00e9e.",
-    url: "https://boncalcul.fr/outils/simulateur-credit-consommation",
+    url: "https://www.boncalcul.fr/outils/simulateur-credit-consommation",
     type: "website",
     images: [
       {
-        url: `https://boncalcul.fr/api/og?slug=simulateur-credit-consommation`,
+        url: `https://www.boncalcul.fr/api/og?slug=simulateur-credit-consommation`,
         width: 1200,
         height: 630,
         alt: "Simulateur Credit Consommation — BonCalcul.fr",
@@ -78,7 +78,7 @@ export default function PageCreditConso() {
           name: "Simulateur cr\u00e9dit consommation 2026",
           description:
             "Simulez votre cr\u00e9dit \u00e0 la consommation : mensualit\u00e9, co\u00fbt total et comparaison par dur\u00e9e.",
-          url: "https://boncalcul.fr/outils/simulateur-credit-consommation",
+          url: "https://www.boncalcul.fr/outils/simulateur-credit-consommation",
         })}
       />
       <JsonLd data={faqJsonLd(faqQuestions)} />

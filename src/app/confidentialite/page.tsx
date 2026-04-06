@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description:
     "Politique de confidentialité et protection des données personnelles de BonCalcul.fr",
   robots: { index: true, follow: true },
-  alternates: { canonical: "https://boncalcul.fr/confidentialite" },
+  alternates: { canonical: "https://www.boncalcul.fr/confidentialite" },
 };
 
 export default function Confidentialite() {

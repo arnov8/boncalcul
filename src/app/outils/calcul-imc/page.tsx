@@ -19,17 +19,17 @@ export const metadata: Metadata = {
     "surpoids",
   ],
   alternates: {
-    canonical: "https://boncalcul.fr/outils/calcul-imc",
+    canonical: "https://www.boncalcul.fr/outils/calcul-imc",
   },
   openGraph: {
     title: "Calcul IMC — Indice de masse corporelle gratuit | BonCalcul.fr",
     description:
       "Calculez votre IMC instantanement et decouvrez votre categorie selon l'OMS. Gratuit, sans inscription.",
-    url: "https://boncalcul.fr/outils/calcul-imc",
+    url: "https://www.boncalcul.fr/outils/calcul-imc",
     type: "website",
     images: [
       {
-        url: `https://boncalcul.fr/api/og?slug=calcul-imc`,
+        url: `https://www.boncalcul.fr/api/og?slug=calcul-imc`,
         width: 1200,
         height: 630,
         alt: "Calcul Imc — BonCalcul.fr",
@@ -74,7 +74,7 @@ export default function PageCalculIMC() {
           name: "Calcul IMC — Indice de masse corporelle gratuit",
           description:
             "Calculez votre Indice de Masse Corporelle (IMC) gratuitement et interpretez votre resultat selon les categories de l'OMS.",
-          url: "https://boncalcul.fr/outils/calcul-imc",
+          url: "https://www.boncalcul.fr/outils/calcul-imc",
         })}
       />
       <JsonLd data={faqJsonLd(faqQuestions)} />

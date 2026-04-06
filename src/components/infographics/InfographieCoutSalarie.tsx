@@ -18,7 +18,7 @@ export default function InfographieCoutSalarie() {
   return (
     <Infographic
       title="Cout reel d'un salarie pour l'employeur"
-      sourceUrl="https://boncalcul.fr/outils/cout-salarie-employeur"
+      sourceUrl="https://www.boncalcul.fr/outils/cout-salarie-employeur"
       sourceLabel="BonCalcul.fr - Cout salarie employeur"
     >
       {/* Header cards */}

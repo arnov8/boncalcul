@@ -28,11 +28,11 @@ export const metadata: Metadata = {
     title: "Simulateur impôt sur le revenu 2026 — Calcul gratuit | BonCalcul.fr",
     description:
       "Calculez votre impôt sur le revenu 2026 avec le barème progressif, le quotient familial et le détail par tranche. Gratuit et instantané.",
-    url: "https://boncalcul.fr/outils/simulateur-impot-revenu",
+    url: "https://www.boncalcul.fr/outils/simulateur-impot-revenu",
     type: "website",
   },
   alternates: {
-    canonical: "https://boncalcul.fr/outils/simulateur-impot-revenu",
+    canonical: "https://www.boncalcul.fr/outils/simulateur-impot-revenu",
   },
 };
 
@@ -72,7 +72,7 @@ export default function PageSimulateurImpot() {
           name: "Simulateur impot sur le revenu 2026",
           description:
             "Simulez votre impot sur le revenu 2026 gratuitement. Bareme progressif, quotient familial, taux marginal et moyen d'imposition.",
-          url: "https://boncalcul.fr/outils/simulateur-impot-revenu",
+          url: "https://www.boncalcul.fr/outils/simulateur-impot-revenu",
         })}
       />
       <JsonLd data={faqJsonLd(faqQuestions)} />

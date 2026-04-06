@@ -19,17 +19,17 @@ export const metadata: Metadata = {
     "indemnité licenciement 2026",
   ],
   alternates: {
-    canonical: "https://boncalcul.fr/outils/calcul-indemnites-licenciement",
+    canonical: "https://www.boncalcul.fr/outils/calcul-indemnites-licenciement",
   },
   openGraph: {
     title: "Calcul indemnité licenciement 2026 — Simulateur gratuit | BonCalcul.fr",
     description:
       "Calculez votre indemnité légale de licenciement ou de rupture conventionnelle. Simulateur 2026 gratuit.",
-    url: "https://boncalcul.fr/outils/calcul-indemnites-licenciement",
+    url: "https://www.boncalcul.fr/outils/calcul-indemnites-licenciement",
     type: "website",
     images: [
       {
-        url: `https://boncalcul.fr/api/og?slug=calcul-indemnites-licenciement`,
+        url: `https://www.boncalcul.fr/api/og?slug=calcul-indemnites-licenciement`,
         width: 1200,
         height: 630,
         alt: "Calcul Indemnites Licenciement — BonCalcul.fr",
@@ -76,7 +76,7 @@ export default function PageIndemnitesLicenciement() {
     name: "Calculateur indemnite de licenciement 2026",
     description:
       "Outil gratuit pour calculer votre indemnite legale de licenciement ou de rupture conventionnelle. Estimation basee sur votre salaire et votre anciennete.",
-    url: "https://boncalcul.fr/outils/calcul-indemnites-licenciement",
+    url: "https://www.boncalcul.fr/outils/calcul-indemnites-licenciement",
   });
 
   return (
