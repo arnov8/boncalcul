@@ -3,6 +3,20 @@ import { outils } from "@/data/outils";
 import { outilsImages } from "@/data/outils-images";
 import { silos } from "@/data/silos";
 import { articles } from "@/data/articles";
+import {
+  TVA_MONTANTS,
+  TVA_TAUX,
+  buildTVASlug,
+  SALAIRE_MONTANTS,
+  SALAIRE_STATUTS,
+  buildSalaireSlug,
+  PRET_MONTANTS,
+  PRET_DUREES,
+  buildPretSlug,
+  NOTAIRE_MONTANTS,
+  NOTAIRE_TYPES,
+  buildNotaireSlug,
+} from "@/lib/seo-boncalcul";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = "https://www.boncalcul.fr";
@@ -35,6 +49,43 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: "monthly" as const,
     priority: 0.6,
   }));
+
+  // ─── SEO programmatique ────────────────────────────────────────────────────
+  const tvaPages: MetadataRoute.Sitemap = TVA_MONTANTS.flatMap((montant) =>
+    TVA_TAUX.map(({ taux }) => ({
+      url: `${base}/outils/calcul-tva/${buildTVASlug(montant, taux)}`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.75,
+    }))
+  );
+
+  const salairePages: MetadataRoute.Sitemap = SALAIRE_MONTANTS.flatMap((montant) =>
+    SALAIRE_STATUTS.map(({ statut }) => ({
+      url: `${base}/outils/calcul-salaire-brut-net/${buildSalaireSlug(montant, statut)}`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.75,
+    }))
+  );
+
+  const pretPages: MetadataRoute.Sitemap = PRET_MONTANTS.flatMap((montant) =>
+    PRET_DUREES.map((duree) => ({
+      url: `${base}/outils/simulateur-pret-immobilier/${buildPretSlug(montant, duree)}`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.75,
+    }))
+  );
+
+  const notairePages: MetadataRoute.Sitemap = NOTAIRE_MONTANTS.flatMap((montant) =>
+    NOTAIRE_TYPES.map(({ type }) => ({
+      url: `${base}/outils/calcul-frais-de-notaire/${buildNotaireSlug(montant, type)}`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.75,
+    }))
+  );
 
   return [
     {
@@ -76,5 +127,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "yearly",
       priority: 0.2,
     },
+    ...tvaPages,
+    ...salairePages,
+    ...pretPages,
+    ...notairePages,
   ];
 }
