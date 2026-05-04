@@ -1,24 +1,19 @@
 "use client";
 
 import { useEffect } from "react";
+import Script from "next/script";
 
-// Remplace par ton vrai ID AdSense une fois approuvé
-const ADSENSE_CLIENT_ID = "ca-pub-XXXXXXXXXXXXXXXX";
+const ADSENSE_CLIENT_ID = "ca-pub-3309542681536044";
 
-/**
- * Script AdSense à inclure une seule fois dans le layout.
- * Décommente quand ton compte AdSense est approuvé.
- */
 export function AdSenseScript() {
-  return null;
-  // Décommente quand prêt :
-  // return (
-  //   <script
-  //     async
-  //     src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT_ID}`}
-  //     crossOrigin="anonymous"
-  //   />
-  // );
+  return (
+    <Script
+      async
+      src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT_ID}`}
+      crossOrigin="anonymous"
+      strategy="afterInteractive"
+    />
+  );
 }
 
 /**

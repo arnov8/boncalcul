@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { JsonLd } from "@/lib/jsonld";
+import { AdSenseScript } from "@/lib/adsense";
 
 const GA_ID = "G-1SRYNGFWJE";
 
@@ -91,6 +92,7 @@ export default function RootLayout({
           `}
         </Script>
         <JsonLd data={websiteJsonLd} />
+        <AdSenseScript />
       </head>
       <body className="min-h-screen flex flex-col">
         <Header />
