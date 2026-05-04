@@ -4,7 +4,6 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { JsonLd } from "@/lib/jsonld";
-import { AdSenseScript } from "@/lib/adsense";
 
 const GA_ID = "G-1SRYNGFWJE";
 
@@ -92,7 +91,12 @@ export default function RootLayout({
           `}
         </Script>
         <JsonLd data={websiteJsonLd} />
-        <AdSenseScript />
+        {/* AdSense — script natif dans le head pour détection par les bots */}
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3309542681536044"
+          crossOrigin="anonymous"
+        />
       </head>
       <body className="min-h-screen flex flex-col">
         <Header />
