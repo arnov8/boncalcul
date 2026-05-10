@@ -120,6 +120,61 @@ export const articles: Article[] = [
     readTime: "6 min",
     tags: ["emploi", "chômage", "ARE", "France Travail"],
   },
+  {
+    slug: "simulateur-retraite-2026-calcul-pension",
+    title:
+      "Calcul retraite 2026 : comment estimer sa future pension (avec exemples)",
+    description:
+      "Comment calculer votre retraite en 2026 : âge légal, trimestres requis, taux plein, décote et surcote. Exemples chiffrés pour les régimes général et complémentaire.",
+    datePublished: "2026-05-10",
+    dateModified: "2026-05-10",
+    readTime: "8 min",
+    tags: ["retraite", "pension retraite", "trimestres", "emploi"],
+  },
+  {
+    slug: "comment-calculer-rentabilite-locative",
+    title:
+      "Rentabilité locative : comment la calculer (et les pièges à éviter)",
+    description:
+      "Comprendre la rentabilité brute, nette et nette-nette de votre investissement locatif. Formules, exemples chiffrés et erreurs fréquentes des investisseurs débutants.",
+    datePublished: "2026-05-10",
+    dateModified: "2026-05-10",
+    readTime: "7 min",
+    tags: ["immobilier", "investissement locatif", "rendement locatif", "rentabilité"],
+  },
+  {
+    slug: "charges-micro-entrepreneur-2026",
+    title:
+      "Charges micro-entrepreneur 2026 : taux, calcul et simulation",
+    description:
+      "Tous les taux de cotisations sociales du micro-entrepreneur en 2026 par activité. Exemples de calcul, plafonds de chiffre d'affaires et franchise TVA expliqués.",
+    datePublished: "2026-05-10",
+    dateModified: "2026-05-10",
+    readTime: "6 min",
+    tags: ["micro-entrepreneur", "auto-entrepreneur", "charges sociales", "2026"],
+  },
+  {
+    slug: "calcul-imc-poids-ideal-guide",
+    title:
+      "Calculer son IMC : ce que l'indice vous dit (et ce qu'il ne dit pas)",
+    description:
+      "Comment calculer votre IMC, interpréter votre résultat et comprendre ses limites. Tour d'horizon des indicateurs complémentaires pour une vision plus juste de votre santé.",
+    datePublished: "2026-05-10",
+    dateModified: "2026-05-10",
+    readTime: "5 min",
+    tags: ["santé", "IMC", "poids idéal", "indice de masse corporelle"],
+  },
+  {
+    slug: "indemnites-licenciement-calcul-2026",
+    title:
+      "Indemnités de licenciement 2026 : calcul, montant et comparaison rupture conventionnelle",
+    description:
+      "Comment calculer vos indemnités légales de licenciement en 2026 : formule détaillée, salaire de référence, ancienneté et différences avec la rupture conventionnelle.",
+    datePublished: "2026-05-10",
+    dateModified: "2026-05-10",
+    readTime: "7 min",
+    tags: ["emploi", "licenciement", "rupture conventionnelle", "indemnités"],
+  },
 ];
 
 export function getArticle(slug: string) {
