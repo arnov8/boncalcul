@@ -18,7 +18,7 @@ export default function BlogPage() {
       </p>
 
       <div className="space-y-6">
-        {articles.map((article) => (
+        {[...articles].reverse().map((article) => (
           <Link
             key={article.slug}
             href={`/blog/${article.slug}`}
