@@ -3,133 +3,79 @@
 ## Stack technique
 - **Framework** : Next.js 16 (App Router), TypeScript strict, React 19
 - **Styling** : Tailwind CSS 4 (PostCSS), pas de CSS modules
-- **Icons** : @tabler/icons-react
-- **Hébergement** : Vercel (deploy auto sur push main)
-- **Analytics** : Google Analytics (G-1SRYNGFWJE), chargé en `lazyOnload`
-- **Monétisation** : Google AdSense via `src/lib/adsense.tsx`
+- **Hébergement** : Vercel — PAS d'auto-deploy, toujours `npx vercel --prod` manuellement
+- **Repo local** : `/Users/arnaudvalere/Documents/Projects/boncalcul`
+- **Analytics** : Google Analytics (G-1SRYNGFWJE), lazyOnload
+- **Monétisation** : Ezoic Incubator (en attente approbation) + AdSense en attente
 
-## Architecture du projet
+## Monétisation — état au 12 mai 2026
+
+### Ezoic Incubator
+- Candidature déposée, review "In Progress" (1-2 semaines)
+- Scripts intégrés dans `layout.tsx` : GateKeeper privacy + sa.min.js + ezoicanalytics
+- `EzoicPageView.tsx` : rechargement annonces sur navigation SPA
+- `next.config.ts` : redirect `/ads.txt` → `srv.adstxtmanager.com/EZOIC_PUBLISHER_ID/boncalcul.fr`
+  → **remplacer EZOIC_PUBLISHER_ID** par le vrai ID une fois approuvé
+
+### Placements Ezoic (à créer dans le dashboard une fois approuvé)
+- slot `home-after-hero` → ID 101
+- slot `home-after-tools` → ID 102
+- slot `home-after-faq` → ID 103
+- slot `hub-after-hero` → ID 104
+- slot `hub-bottom` → ID 105
+- slot `tool-after-result` → ID 106
+- slot `tool-after-faq` → ID 107
+- slot `tool-bottom` → ID 108
+
+### AdSense
+- Publisher ID : ca-pub-3309542681536044
+- Script dans `<head>` de layout.tsx
+- Refusé (contenu insuffisant) — à repostuler dans 6-8 semaines
+
+## Architecture
 
 ```
 src/
 ├── app/
-│   ├── layout.tsx              # Root layout (metadata globale, GA, Header/Footer, JSON-LD WebSite)
-│   ├── page.tsx                # Homepage (hero + grille outils + FAQ + SEO content)
-│   ├── sitemap.ts              # Sitemap dynamique (outils, silos, articles, pages)
-│   ├── robots.ts               # Robots.txt
-│   │
-│   ├── outils/                 # 36 calculateurs — chacun dans son dossier
-│   │   └── [slug]/
-│   │       ├── page.tsx        # Page serveur (metadata, JSON-LD, FAQ, SEO content, AdBanner)
-│   │       └── Component.tsx   # Composant client ("use client") avec le formulaire et calculs
-│   │
-│   ├── blog/                   # Articles SEO
-│   │   ├── page.tsx            # Listing dynamique depuis articles.ts
-│   │   └── [slug]/page.tsx     # Page article
-│   │
-│   ├── immobilier/             # Hubs catégories (silos SEO)
-│   ├── emploi/
-│   ├── fiscalite/
-│   ├── sante/
-│   ├── auto-transport/
-│   │
-│   ├── methodologie/           # Page méthodologie E-E-A-T
-│   ├── a-propos/               # Page à propos (crédibilité E-E-A-T)
-│   ├── mentions-legales/
-│   └── confidentialite/
+│   ├── layout.tsx          # Ezoic scripts + AdSense + GA + Header/Footer
+│   ├── page.tsx            # Homepage
+│   ├── blog/               # 45 articles (listing + pages individuelles)
+│   └── outils/             # 36 calculateurs
 │
 ├── components/
-│   ├── Header.tsx              # Navigation avec liens silos
-│   ├── Footer.tsx              # Footer 5 colonnes (catégories, outils, ressources, légal)
-│   ├── OutilCard.tsx           # Card outil pour les grilles
-│   ├── SiloHub.tsx             # Composant réutilisable pour les pages hub catégories
-│   ├── SourcesBadge.tsx        # Bloc E-E-A-T (sources, barèmes, date MAJ, disclaimer)
-│   ├── ToolSourcesBadge.tsx    # Wrapper SourcesBadge + liens catégories parentes
-│   ├── ShareResult.tsx         # Partage résultat (copier, embed, PDF)
-│   ├── ExportPDF.tsx           # Export PDF via window.print()
-│   ├── TablerIcon.tsx          # Wrapper icônes Tabler
-│   ├── Infographic.tsx         # Container infographie embedable
-│   └── infographics/           # 30+ composants infographie
+│   ├── EzoicPageView.tsx   # showAds() sur chaque navigation
+│   └── SiloHub.tsx         # Composant réutilisable hubs catégories
 │
 ├── data/
-│   ├── outils.ts               # Metadata des 36 outils (slug, title, categorie, icon, keywords)
-│   ├── outils-images.ts        # Images pour sitemap
-│   ├── articles.ts             # Metadata des articles blog
-│   ├── silos.ts                # Définition des 5 silos (slugs outils, intro, meta)
-│   └── sources.ts              # Sources E-E-A-T par outil (sources officielles, barèmes, date MAJ)
+│   ├── articles.ts         # 45 articles — ajouter ici pour tout nouvel article
+│   ├── outils.ts           # 36 outils
+│   └── silos.ts            # 5 silos SEO
 │
 └── lib/
-    ├── jsonld.tsx              # Helpers JSON-LD (WebApplication, FAQPage, Article)
-    └── adsense.tsx             # Composant AdBanner
+    └── adsense.tsx         # AdBanner → Ezoic placeholders (mapping slot → ID numérique)
 ```
 
-## Conventions de création
+## Conventions
 
-### Nouvel outil (`/outils/[slug]`)
+### Nouvel outil
+1. `data/outils.ts` + `data/sources.ts` + `data/silos.ts`
+2. `outils/[slug]/Component.tsx` (use client) + `page.tsx` (server)
+3. Structure page.tsx : metadata → JsonLd → hero → composant → AdBanner(tool-after-result) → FAQ → AdBanner(tool-after-faq) → SEO → AdBanner(tool-bottom)
 
-1. **Ajouter dans `data/outils.ts`** : slug, title, shortTitle, description, categorie, icon, keywords
-2. **Créer `src/app/outils/[slug]/`** avec :
-   - `Component.tsx` : composant `"use client"` avec formulaire, calculs, résultats, `ShareResult`
-   - `page.tsx` : page serveur avec :
-     - `export const metadata` (title, description, keywords, canonical, openGraph)
-     - `JsonLd` : `webApplicationJsonLd` + `faqJsonLd`
-     - Hero section avec h1 + description
-     - Le composant calculateur
-     - `AdBanner slot="tool-after-result"`
-     - `ToolSourcesBadge slug="..."` (sources E-E-A-T)
-     - Section FAQ avec `<details>` accordéons
-     - `AdBanner slot="tool-after-faq"`
-     - Lien vers article associé (si existant)
-     - Section contenu SEO (grille de cards explicatives)
-     - `AdBanner slot="tool-bottom"`
-3. **Ajouter dans `data/sources.ts`** : sources officielles, barèmes, date MAJ, disclaimer
-4. **Ajouter dans les silos** (`data/silos.ts`) : ajouter le slug dans le(s) silo(s) pertinent(s)
-5. **Optionnel** : créer une infographie dans `components/infographics/`
+### Nouvel article blog
+1. `data/articles.ts` (slug, title, description, datePublished, dateModified, readTime, tags)
+2. `blog/[slug]/page.tsx` : 700-900 mots, tableaux, CTAs vers outils
+3. Sitemap et listing se mettent à jour automatiquement
 
-### Nouvel article blog (`/blog/[slug]`)
+## Déploiement
+```bash
+npm run build        # toujours vérifier 0 erreur avant push
+git add . && git commit -m "feat: ..."
+git push origin main
+npx vercel --prod    # depuis /Users/arnaudvalere/Documents/Projects/boncalcul
+```
 
-1. **Ajouter dans `data/articles.ts`** : slug, title, description, datePublished, dateModified, readTime, tags
-2. **Créer `src/app/blog/[slug]/page.tsx`** avec :
-   - `export const metadata` (title, description, keywords, canonical, openGraph type article)
-   - `JsonLd` : `articleJsonLd`
-   - Breadcrumb (Blog / Catégorie)
-   - Contenu éditorial (h2, exemples chiffrés, tableaux, erreurs fréquentes)
-   - CTA vers l'outil associé (Link bleu gradient)
-   - Liens vers articles liés
-3. Le sitemap et la page listing blog se mettent à jour automatiquement
-
-### Nouveau silo / hub catégorie
-
-1. **Ajouter dans `data/silos.ts`** : slug, title, shortTitle, description, metaDescription, icon, color, intro, toolSlugs
-2. **Créer `src/app/[slug]/page.tsx`** utilisant le composant `SiloHub`
-3. **Mettre à jour** : Header.tsx, Footer.tsx (liens navigation)
-4. Les couleurs disponibles : blue, emerald, amber, rose, violet
-
-## SEO et E-E-A-T
-
-- **Chaque outil** doit avoir : sources officielles citées, barèmes/formules listés, date de dernière MAJ, disclaimer adapté au domaine
-- **JSON-LD obligatoire** : `WebApplication` + `FAQPage` sur chaque outil, `Article` sur chaque article blog
-- **Maillage interne** : les outils lient vers leur(s) silo(s) parent(s) via ToolSourcesBadge, les silos lient vers tous leurs outils, les articles lient vers les outils avec des CTA
-- **Canonical URL** : toujours `https://www.boncalcul.fr/...`
-- **Sources dans `data/sources.ts`** : impots.gouv.fr, URSSAF, Service-public.fr, OMS, Ameli, Legifrance, etc.
-
-## Performance
-
-- **Scripts tiers** : GA en `lazyOnload`, preconnect vers googletagmanager et googlesyndication
-- **Calculs côté client** : tous les calculs dans le navigateur, aucune API, pas de données envoyées
-- **Static generation** : toutes les pages sont pré-rendues (○ Static dans le build)
-- **Pas de `ssr: false`** dans les dynamic imports : les composants `"use client"` sont déjà code-split par l'App Router
-
-## Commits
-
-- Format : `feat:`, `fix:`, `docs:`, `style:`, `refactor:`
-- Courts et descriptifs
-- Push direct sur `main` (pas de PR)
-- Toujours builder (`next build`) avant de push pour vérifier 0 erreur
-
-## À ne pas faire
-
-- Ne pas utiliser `next/dynamic` avec `ssr: false` dans les Server Components (erreur Next.js 16)
-- Ne pas hardcoder les articles dans le sitemap (utiliser `articles.ts`)
-- Ne pas ajouter de dépendances lourdes pour l'export PDF (window.print suffit)
-- Ne pas oublier le ToolSourcesBadge sur les nouvelles pages outils
+## Interdits
+- `next/dynamic` avec `ssr: false` dans les Server Components
+- Hardcoder les articles dans le sitemap (toujours passer par articles.ts)
+- Pousser sans builder
