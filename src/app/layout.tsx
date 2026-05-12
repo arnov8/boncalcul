@@ -74,6 +74,18 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <head>
+        {/* Ezoic — Privacy scripts (must load first) */}
+        <script data-cfasync="false" src="https://cmp.gatekeeperconsent.com/min.js" />
+        <script data-cfasync="false" src="https://the.gatekeeperconsent.com/cmp.min.js" />
+        {/* Ezoic — Header script */}
+        <script async src="//www.ezojs.com/ezoic/sa.min.js" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.ezstandalone = window.ezstandalone || {}; ezstandalone.cmd = ezstandalone.cmd || [];`,
+          }}
+        />
+        {/* Ezoic — Analytics */}
+        <script src="//ezoicanalytics.com/analytics.js" />
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com" />
