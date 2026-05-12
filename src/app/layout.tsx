@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { JsonLd } from "@/lib/jsonld";
+import EzoicPageView from "@/components/EzoicPageView";
 
 const GA_ID = "G-1SRYNGFWJE";
 
@@ -111,6 +112,7 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-screen flex flex-col">
+        <EzoicPageView />
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />

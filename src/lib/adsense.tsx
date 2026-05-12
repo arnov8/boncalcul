@@ -1,64 +1,56 @@
 "use client";
 
 import { useEffect } from "react";
-import Script from "next/script";
 
-const ADSENSE_CLIENT_ID = "ca-pub-3309542681536044";
+// Mapping des slots nommés → IDs Ezoic (à assigner dans le dashboard Ezoic)
+const EZOIC_PLACEMENTS: Record<string, number> = {
+  "home-after-hero":    101,
+  "home-after-tools":   102,
+  "home-after-faq":     103,
+  "hub-after-hero":     104,
+  "hub-bottom":         105,
+  "tool-after-result":  106,
+  "tool-after-faq":     107,
+  "tool-bottom":        108,
+};
 
-export function AdSenseScript() {
-  return (
-    <Script
-      async
-      src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT_ID}`}
-      crossOrigin="anonymous"
-      strategy="afterInteractive"
-    />
-  );
-}
-
-/**
- * Bannière publicitaire AdSense réutilisable.
- * Props :
- *   slot  — l'ID du bloc publicitaire (trouvé dans AdSense)
- *   format — "auto" | "horizontal" | "vertical" | "rectangle"
- *   className — classes CSS additionnelles
- */
 export function AdBanner({
   slot,
-  format = "auto",
   className = "",
 }: {
   slot: string;
   format?: string;
   className?: string;
 }) {
-  useEffect(() => {
-    try {
-      ((window as any).adsbygoogle = (window as any).adsbygoogle || []).push(
-        {}
-      );
-    } catch {}
-  }, []);
+  const placementId = EZOIC_PLACEMENTS[slot];
 
-  // Placeholder visible en dev, pub réelle en prod
+  useEffect(() => {
+    if (!placementId) return;
+    try {
+      const ez = (window as any).ezstandalone;
+      if (ez?.cmd) {
+        ez.cmd.push(() => {
+          ez.showAds(placementId);
+        });
+      }
+    } catch {}
+  }, [placementId]);
+
+  if (!placementId) return null;
+
   if (process.env.NODE_ENV === "development") {
     return (
       <div
-        className={`bg-gray-200 border-2 border-dashed border-gray-400 rounded-lg flex items-center justify-center text-gray-500 text-sm py-4 ${className}`}
+        className={`bg-gray-100 border-2 border-dashed border-gray-300 rounded-lg flex items-center justify-center text-gray-400 text-xs py-4 ${className}`}
       >
-        Emplacement publicitaire ({format})
+        Ezoic #{placementId} ({slot})
       </div>
     );
   }
 
   return (
-    <ins
-      className={`adsbygoogle ${className}`}
-      style={{ display: "block" }}
-      data-ad-client={ADSENSE_CLIENT_ID}
-      data-ad-slot={slot}
-      data-ad-format={format}
-      data-full-width-responsive="true"
-    />
+    <div className={className}>
+      <div id={`ezoic-pub-ad-placeholder-${placementId}`} />
+    </div>
   );
 }
