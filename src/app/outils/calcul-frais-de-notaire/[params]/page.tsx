@@ -172,6 +172,15 @@ export default async function NotaireParamsPage({
           </div>
         </div>
 
+        {type === 'ancien' && (
+          <div className="mb-8 bg-amber-50 border border-amber-100 rounded-xl p-5">
+            <h2 className="text-base font-bold text-gray-800 mb-2">Ce taux varie selon le département</h2>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              Ce calcul applique un taux de droits de mutation de 4,5 %, retenu par la grande majorité des départements français depuis 2014. Selon votre département, ce taux peut varier entre 3,80 % et 5 % — vérifiez le taux exact auprès du notaire ou du conseil départemental de votre lieu d&apos;achat, l&apos;écart peut représenter plusieurs centaines d&apos;euros pour un bien à {fmtNum(montant)} €.
+            </p>
+          </div>
+        )}
+
         {/* Comparer ancien vs neuf */}
         <div className="mb-8">
           <h2 className="text-lg font-bold text-gray-800 mb-3">

@@ -12,6 +12,29 @@ export const TVA_TAUX: { taux: number; slug: string; label: string }[] = [
   { taux: 2.1, slug: 'taux-2-1', label: '2,1 %' },
 ];
 
+export const TVA_USAGE: Record<number, { nom: string; description: string }> = {
+  20: {
+    nom: 'Taux normal',
+    description:
+      "S'applique par défaut à la majorité des biens et services : électronique, habillement, prestations de services courantes, automobile, alcool.",
+  },
+  10: {
+    nom: 'Taux intermédiaire',
+    description:
+      'Concerne la restauration et vente à consommer sur place, les transports de voyageurs, les travaux de rénovation dans les logements de plus de 2 ans, et certains produits agricoles non transformés.',
+  },
+  5.5: {
+    nom: 'Taux réduit',
+    description:
+      "S'applique aux produits alimentaires, aux abonnements gaz et électricité, aux livres, aux équipements pour personnes handicapées, et aux travaux d'amélioration énergétique du logement.",
+  },
+  2.1: {
+    nom: 'Taux particulier',
+    description:
+      'Réservé aux médicaments remboursables par la Sécurité sociale et à la presse. C\'est le taux de TVA le plus bas en France.',
+  },
+};
+
 export function parseTVAParams(params: string): { montant: number; taux: number } | null {
   // Format: "{montant}-euros-taux-{slug}" e.g. "1000-euros-taux-20" or "1000-euros-taux-5-5"
   const tauxEntry = TVA_TAUX.find((t) => params.endsWith(`-${t.slug}`));
@@ -58,6 +81,9 @@ export function buildSalaireSlug(montant: number, statut: 'non-cadre' | 'cadre')
 export const PRET_MONTANTS = [50000, 80000, 100000, 150000, 200000, 250000, 300000, 400000, 500000];
 export const PRET_DUREES = [10, 15, 20, 25, 30];
 export const PRET_TAUX_DEFAULT = 3.5;
+export const PRET_TAUX_COMPARAISON = [3, 3.5, 4, 4.5];
+
+export const SMIC_BRUT_MENSUEL = 1801.84; // 11,88 €/h x 151,67h (2026)
 
 export function parsePretParams(params: string): { montant: number; duree: number } | null {
   // Format: "{montant}-euros-{duree}-ans"

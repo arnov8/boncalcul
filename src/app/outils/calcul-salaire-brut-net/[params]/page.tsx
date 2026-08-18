@@ -5,6 +5,7 @@ import { JsonLd, faqJsonLd } from '@/lib/jsonld';
 import {
   SALAIRE_MONTANTS,
   SALAIRE_STATUTS,
+  SMIC_BRUT_MENSUEL,
   parseSalaireParams,
   buildSalaireSlug,
   breadcrumbJsonLd,
@@ -167,6 +168,22 @@ export default async function SalaireParamsPage({
               Calculer un autre salaire →
             </Link>
           </div>
+        </div>
+
+        {/* Comparaison SMIC */}
+        <div className="mb-8 bg-blue-50 border border-blue-100 rounded-xl p-5">
+          <h2 className="text-base font-bold text-gray-800 mb-2">
+            {fmtNum(montant)} € brut, ça représente combien de SMIC ?
+          </h2>
+          <p className="text-sm text-gray-600 leading-relaxed">
+            Le SMIC brut mensuel 2026 est de {fmtEurDec(SMIC_BRUT_MENSUEL)} € (base 35h/semaine). Un salaire brut de {fmtNum(montant)} € représente donc{' '}
+            <span className="font-semibold text-blue-700">{(montant / SMIC_BRUT_MENSUEL).toFixed(2).replace('.', ',')} fois le SMIC</span>
+            {montant < SMIC_BRUT_MENSUEL
+              ? ", soit un montant inférieur au SMIC (temps partiel ou erreur de saisie probable)."
+              : montant / SMIC_BRUT_MENSUEL < 1.5
+              ? ", un niveau proche du salaire minimum."
+              : "."}
+          </p>
         </div>
 
         {/* Même montant, autre statut */}

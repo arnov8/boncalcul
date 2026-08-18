@@ -5,6 +5,7 @@ import { JsonLd, faqJsonLd } from '@/lib/jsonld';
 import {
   TVA_MONTANTS,
   TVA_TAUX,
+  TVA_USAGE,
   parseTVAParams,
   buildTVASlug,
   breadcrumbJsonLd,
@@ -158,6 +159,15 @@ export default async function TVAParamsPage({
               Calculer un autre montant →
             </Link>
           </div>
+        </div>
+
+        {/* À quoi s'applique ce taux */}
+        <div className="mb-8 bg-orange-50 border border-orange-100 rounded-xl p-5">
+          <h2 className="text-base font-bold text-gray-800 mb-2">
+            À quoi s&apos;applique la TVA à {tauxEntry.label} ?
+          </h2>
+          <p className="text-sm font-semibold text-orange-700 mb-1">{TVA_USAGE[taux].nom}</p>
+          <p className="text-sm text-gray-600 leading-relaxed">{TVA_USAGE[taux].description}</p>
         </div>
 
         {/* Autres taux */}

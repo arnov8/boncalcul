@@ -6,6 +6,7 @@ import {
   PRET_MONTANTS,
   PRET_DUREES,
   PRET_TAUX_DEFAULT,
+  PRET_TAUX_COMPARAISON,
   parsePretParams,
   buildPretSlug,
   breadcrumbJsonLd,
@@ -176,6 +177,32 @@ export default async function PretParamsPage({
             >
               Simuler avec d&apos;autres paramètres →
             </Link>
+          </div>
+        </div>
+
+        {/* Sensibilité au taux */}
+        <div className="mb-8">
+          <h2 className="text-lg font-bold text-gray-800 mb-3">
+            Mensualité de {fmtNum(montant)} € sur {duree} ans selon le taux
+          </h2>
+          <p className="text-sm text-gray-500 mb-3">
+            Le taux réellement proposé dépend de votre profil (apport, revenus, durée) et de la banque. Voici la mensualité pour {fmtNum(montant)} € sur {duree} ans selon plusieurs taux constatés sur le marché.
+          </p>
+          <div className="bg-white rounded-xl border border-gray-200 divide-y divide-gray-100">
+            {PRET_TAUX_COMPARAISON.map((t) => {
+              const r = calculerPret(montant, duree, t);
+              return (
+                <div
+                  key={t}
+                  className={`flex items-center justify-between px-5 py-3 ${t === PRET_TAUX_DEFAULT ? 'bg-blue-50' : ''}`}
+                >
+                  <span className="text-sm text-gray-600">
+                    Taux {fmtNum(t).replace(/\s/g, '')} % {t === PRET_TAUX_DEFAULT && <span className="text-blue-500 text-xs">(taux retenu ci-dessus)</span>}
+                  </span>
+                  <span className="font-semibold text-gray-800">{fmtEurDec(r.mensualiteTotale)} €/mois</span>
+                </div>
+              );
+            })}
           </div>
         </div>
 
