@@ -5,32 +5,30 @@
 - **Styling** : Tailwind CSS 4 (PostCSS), pas de CSS modules
 - **Hébergement** : Vercel — PAS d'auto-deploy, toujours `npx vercel --prod` manuellement
 - **Repo local** : `/Users/arnaudvalere/Documents/Projects/boncalcul`
-- **Analytics** : Google Analytics (G-1SRYNGFWJE), lazyOnload
-- **Monétisation** : Ezoic Incubator (en attente approbation) + AdSense en attente
+- **Analytics** : Google Analytics (G-1SRYNGFWJE), lazyOnload. Accès API via compte de service GA4 (`ga4-reader@boncalculbonnedemarche.iam.gserviceaccount.com`, Lecteur sur `properties/530185792`) — clé JSON hors repo, dans le scratchpad de session Claude.
+- **Monétisation** : Ezoic refusé (Incubator), AdSense en cours de re-demande — voir détail ci-dessous
 
-## Monétisation — état au 12 mai 2026
+## Monétisation — état au 19/08/2026
+
+### Trafic réel (GA4, 28 derniers jours au 18/08)
+~900 sessions/mois, ~920 pages vues/mois. Top pages : simulateur SMIC, heures sup, calcul poids idéal. Aucune des 145 pages `[params]` (TVA/salaire/prêt/notaire) n'apparaît dans le top trafic — trop faible pour Mediavine (50k sessions/mois) ou Raptive (100k pages vues/mois) ; seul Ezoic n'a pas de seuil, mais refusé quand même.
 
 ### Ezoic Incubator
-- Candidature déposée, review "In Progress" (1-2 semaines)
-- Scripts intégrés dans `layout.tsx` : GateKeeper privacy + sa.min.js + ezoicanalytics
-- `EzoicPageView.tsx` : rechargement annonces sur navigation SPA
-- `next.config.ts` : redirect `/ads.txt` → `srv.adstxtmanager.com/EZOIC_PUBLISHER_ID/boncalcul.fr`
-  → **remplacer EZOIC_PUBLISHER_ID** par le vrai ID une fois approuvé
-
-### Placements Ezoic (à créer dans le dashboard une fois approuvé)
-- slot `home-after-hero` → ID 101
-- slot `home-after-tools` → ID 102
-- slot `home-after-faq` → ID 103
-- slot `hub-after-hero` → ID 104
-- slot `hub-bottom` → ID 105
-- slot `tool-after-result` → ID 106
-- slot `tool-after-faq` → ID 107
-- slot `tool-bottom` → ID 108
+- **Refusé** ("Not Approved", raison non détaillée par Ezoic). Ne pas retenter tant que le trafic n'a pas significativement augmenté.
+- Scripts encore intégrés dans `layout.tsx` (GateKeeper privacy + sa.min.js + ezoicanalytics) — inertes tant que non approuvé, à retirer si on abandonne définitivement la piste.
+- ⚠️ Le redirect `/ads.txt` vers Ezoic dans `next.config.ts` a été **supprimé** le 18/08 (pointait vers un `EZOIC_PUBLISHER_ID` placeholder jamais rempli → 404 en prod, cassait le vrai ads.txt AdSense depuis mai).
+- Placements prévus si approbation future : home-after-hero(101), home-after-tools(102), home-after-faq(103), hub-after-hero(104), hub-bottom(105), tool-after-result(106), tool-after-faq(107), tool-bottom(108) — mapping dans `lib/adsense.tsx`.
 
 ### AdSense
-- Publisher ID : ca-pub-3309542681536044
-- Script dans `<head>` de layout.tsx
-- Refusé (contenu insuffisant) — à repostuler dans 6-8 semaines
+- Publisher ID : ca-pub-3309542681536044 (compte partagé avec BonneDemarche — un seul compte AdSense par personne, recommandé par Google)
+- 1er refus 12/05 : "contenu insuffisant"
+- 2e refus (constaté 18/08) : **"Contenu à faible valeur informative"** — cause identifiée : 145 pages générées par combinaison de paramètres (TVA 52, salaire 26, prêt 45, notaire 22) contre 81 pages rédigées à la main (36 outils + 45 articles), donc majorité du site en gabarits quasi-dupliqués.
+- **Fix appliqué et déployé le 18/08** (commit `a5ead36`) : ajout d'un bloc de contenu réel et différenciant par gabarit — PAS de noindex/masquage (décision explicite : pas de manip qui se ferait démasquer par un re-contrôle AdSense après approbation) :
+  - Prêt immobilier → tableau mensualité selon 4 taux (3%/3,5%/4%/4,5%)
+  - TVA → encadré "à quoi s'applique ce taux" (usage réel par taux en France)
+  - Frais de notaire → note sur la variation départementale du taux (biens anciens)
+  - Salaire brut/net → comparaison en % du SMIC
+- **Prochaine étape** : attendre le recrawl Google (3-5 jours après déploiement, donc ~22-23/08) avant de recocher "Je confirme que j'ai corrigé les problèmes" + "Demander un examen" dans le dashboard AdSense. Ne PAS redemander l'examen avant ce délai.
 
 ## Architecture
 
